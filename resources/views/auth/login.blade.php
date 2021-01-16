@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     @if($setting != null)
-        <title>{{$setting->title}} | تسجيل الدخول</title>
+        <title>{{$setting->title}} | login</title>
     @else
         <title>CMS | Log in</title>
     @endif
@@ -47,14 +47,14 @@
 
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">برجاء تسجيل الدخول</p>
+        <p class="login-box-msg">login</p>
         @include('includes.admin.error')
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <div class="form-group has-feedback">
                 <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                       placeholder="البريد المستخدم"
+                       placeholder="email"
                        id="email" name="email" value="{{ old('email') }}" required autofocus>
                 @if ($errors->has('email'))
                     <span class="invalid-feedback" role="alert">
@@ -67,7 +67,7 @@
 
             <div class="form-group has-feedback">
                 <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                       placeholder="كلمه السر" name="password" required>
+                       placeholder="password" name="password" required>
                 @if ($errors->has('password'))
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -87,7 +87,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit"  class="btn btn-primary btn-block btn-flat">تسجيل الدخول</button>
+                    <button type="submit"  class="btn btn-primary btn-block btn-flat">login</button>
                 </div>
                 <div class="col-xs-4">
                 </div>

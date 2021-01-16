@@ -12,7 +12,7 @@
             <!-- Content Header (Page header) -->
             <!-- Main content -->
             <section class="content">
-                <h1>لا يمكنك الدخول للصفحه لان غير مصرح لك برجاء الاتصال بالدعم الفنى</h1>
+                <h1>no permission</h1>
             </section>
             <!-- /.content -->
         </div>
