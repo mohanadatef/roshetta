@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Setting_Detail extends Model
 {
     protected $fillable = [
-        'title','language_id'
+        'title','language_id','setting_id'
     ];
     protected $table = 'setting_details';
     public $timestamps = true;

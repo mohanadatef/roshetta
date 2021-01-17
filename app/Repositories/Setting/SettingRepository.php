@@ -7,20 +7,23 @@ use App\Http\Requests\Admin\Setting\Setting\CreateRequest;
 use App\Http\Requests\Admin\Setting\Setting\EditRequest;
 use App\Interfaces\Setting\SettingInterface;
 use App\Models\Setting\Setting;
+use App\Models\Setting\Setting_Detail;
 
 class SettingRepository implements SettingInterface
 {
 
     protected $setting;
+    protected $setting_detail;
 
-    public function __construct(Setting $setting)
+    public function __construct(Setting $setting,Setting_Detail $setting_detail)
     {
         $this->setting = $setting;
+        $this->setting_detail = $setting_detail;
     }
 
     public function Get_All_Data()
     {
-        return $this->setting->all();
+        return $this->setting->where('status',1)->get();
     }
 
     public function Create_Data(CreateRequest $request)
