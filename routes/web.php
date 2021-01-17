@@ -15,13 +15,26 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::group([ 'middleware' => 'admin', 'auth'], function () {
-    Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index']);
-});
 Route::get('/clear-cache', function () {
     Artisan::call('cache:clear');
     Artisan::call('route:clear');
     Artisan::call('config:clear');
     Artisan::call('view:clear');
     return redirect('/admin');
+});
+Route::group(['middleware' => 'admin', 'auth'], function () {
+    Route::prefix('/admin')->group(function () {
+        Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+
+        Route::prefix('/language')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'update']);
+            Route::get('/change_status/{id}', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'change_status']);
+            Route::get('/change_many_status', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'change_many_status']);
+        });
+
+    });
 });

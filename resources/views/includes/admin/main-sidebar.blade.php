@@ -4,19 +4,19 @@
         <!-- Left side column. contains the logo and sidebar -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="treeview">
-                <a href="#"><i class="fa fa-group"></i> <span>setting</span><span class="pull-right-container"><i
+                <a href="#"><i class="fa fa-group"></i> <span>Core Data</span><span class="pull-right-container"><i
                                 class="fa fa-angle-right pull-left"></i></span></a>
                 <ul class="treeview-menu">
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-circle-o"></i> <span>setting</span>
+                            <i class="fa fa-circle-o"></i> <span>Language</span>
                             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ url('/admin/setting/index') }}"><i
-                                            class="fa fa-group"></i><span>index setting</span></a>
+                            <li><a href="{{ url('/admin/language/index') }}"><i
+                                            class="fa fa-group"></i><span>index language</span></a>
                             </li>
                         </ul>
                     </li>

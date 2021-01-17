@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Language extends Model
 {
     protected $fillable = [
-        'status','code','image','title'
+        'status','code','image','title','order'
     ];
     protected $table = 'languages';
     public $timestamps = true;
