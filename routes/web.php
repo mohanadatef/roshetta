@@ -15,4 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group([ 'middleware' => 'admin', 'auth'], function () {
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+});
+Route::get('/clear-cache', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('route:clear');
+    Artisan::call('config:clear');
+    Artisan::call('view:clear');
+    return redirect('/admin');
+});

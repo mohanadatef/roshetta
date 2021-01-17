@@ -27,7 +27,6 @@ class EditRequest extends FormRequest
                 'facebook'=> 'required',
                 'youtube'=> 'required',
                 'twitter'=> 'required',
-                'image' => 'image|mimes:jpg,jpeg,png,gif|max:2048',
                 'logo' => 'image|mimes:jpg,jpeg,png,gif|max:2048',
             ];
 

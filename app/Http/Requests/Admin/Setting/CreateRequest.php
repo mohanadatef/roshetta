@@ -27,7 +27,6 @@ class CreateRequest extends FormRequest
             'facebook'=> 'required',
             'youtube'=> 'required',
             'twitter'=> 'required',
-            'image'=> 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
             'logo'=> 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
         ];
     }

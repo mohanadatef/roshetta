@@ -9,7 +9,7 @@
         <title>CMS | Log in</title>
     @endif
     @if($setting != null)
-        <link rel="icon" type="image/png" href="{{asset('public/images/setting/'.$setting->image)}}"/>
+        <link rel="icon" type="image/png" href="{{asset('public/images/setting/'.$setting->logo)}}"/>
 @endif
 <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -38,7 +38,7 @@
 <div class="login-box">
     <div class="login-logo">
         @if($setting != null)
-            <img  src="{{asset('public/images/setting/'.$setting->image)}}" style="width:100px;height: 100px"/>
+            <img  src="{{asset('public/images/setting/'.$setting->logo)}}" style="width:100px;height: 100px"/>
             <b>{{$setting->title}}</b>
         @else
             <b>CMS</b>

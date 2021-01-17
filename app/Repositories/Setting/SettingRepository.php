@@ -28,9 +28,6 @@ class SettingRepository implements SettingInterface
 
     public function Create_Data(CreateRequest $request)
     {
-        $imageName = $request->image->getClientOriginalname().'-'.time() .'.'.Request()->image->getClientOriginalExtension();
-        Request()->image->move(public_path('images/setting'), $imageName);
-        $data['image'] = $imageName;
         $logoName = $request->logo->getClientOriginalname().'-'.time().'-logo.'.Request()->logo->getClientOriginalExtension();
         Request()->logo->move(public_path('images/setting'), $logoName);
         $data['logo'] = $logoName;
@@ -44,20 +41,11 @@ class SettingRepository implements SettingInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $data[]=null;
         $setting = $this->Get_One_Data($id);
-        if ($request->image != null) {
-            $imageName = $request->image->getClientOriginalname().'-'.time().'.'.Request()->image->getClientOriginalExtension();
-            Request()->image->move(public_path('images/setting'), $imageName);
-            $data['image'] = $imageName;
-        }
         if ($request->logo != null) {
             $logoName = $request->logo->getClientOriginalname().'-'.time().'-logo.'.Request()->logo->getClientOriginalExtension();
             Request()->logo->move(public_path('images/setting'), $logoName);
             $data['logo'] = $logoName;
-        }
-        if($data != null)
-        {
             $setting->update(array_merge($request->all(),$data));
         }
         else

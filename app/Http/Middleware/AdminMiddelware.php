@@ -19,21 +19,12 @@ class AdminMiddelware
 
         if(Auth::User() == true && Auth::User()->status==1 )
         {
-            foreach (Auth::User()->role as $role)
-            {
-               if($role->id == 2 || $role->id == 1)
-               {
-                   return $next($request);
-               }
-            }
-            Auth::logout();
-            return redirect('/login')->with('message_fales','برجاء الاتصال بالدعم الفنى');
+               return $next($request);
         }
         else
         {
             Auth::logout();
             return redirect('/login')->with('message_fales','برجاء الاتصال بالدعم الفنى');
-
         }
     }
 }

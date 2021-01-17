@@ -8,7 +8,7 @@
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 @if($setting != null)
-<link rel="icon" type="image/png" href="{{asset('public/images/setting/'.$setting->image)}}"/>
+<link rel="icon" type="image/png" href="{{asset('public/images/setting/'.$setting->logo)}}"/>
 @endif
 <!-- Bootstrap 3.3.7 -->
 <link rel="stylesheet" href="{{asset('public/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
