@@ -20,11 +20,9 @@
         <form method="get" action="{{ url('/admin/setting/change_many_status')}}">
             <div class="box">
                 <div class="box-header" align="right">
-                    @permission('setting-create')
                     @if($datas->count() == 0)
                         <a href="{{  url('/admin/setting/create') }}" class="btn btn-primary">اضافه</a>
                     @endif
-                    @endpermission
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -52,9 +50,7 @@
                                         <td class="center"><img src="{{ asset('public/images/setting/' . $data->image ) }}" style="width:100px;height: 100px"></td>
                                         <td class="center"><img src="{{ asset('public/images/setting/' . $data->logo ) }}" style="width:100px;height: 100px"></td>
                                         <td class="center">
-                                            @permission('setting-edit')
                                             <a href="{{ url('/admin/setting/edit/'.$data->id)}}"><i class="btn btn-sm btn-primary ace-icon fa fa-edit bigger-120  edit" data-id=""> تعديل</i></a>
-                                            @endpermission
                                         </td>
                                     </tr>
                                 @endforeach
