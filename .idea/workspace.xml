@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/Commands/.gitkeep" beforeDir="false" />
@@ -19,24 +18,15 @@
       <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExampleController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AdminMiddelware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/AdminMiddelware.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ExampleMiddleware.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/Setting/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/Setting/CreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/Setting/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/Setting/EditRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Jobs/ExampleJob.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Jobs/Job.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Listeners/ExampleListener.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Setting/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Setting/Setting.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Setting/SettingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Setting/SettingRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
@@ -47,9 +37,6 @@
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/ExampleTest.php" beforeDir="false" />
@@ -93,14 +80,23 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+            <state relative-caret-position="279">
+              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding>
                 <element signature="e#34#65#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Language.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -119,15 +115,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="40" column="70" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/master_admin.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -195,6 +182,7 @@
         <option value="$PROJECT_DIR$/resources/views/includes/admin/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Models/Core_Data/Language.php" />
       </list>
     </option>
   </component>
@@ -349,19 +337,20 @@
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Setting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
@@ -412,11 +401,11 @@
       <recent name="C:\xampp\htdocs\roshetta\app\Models\Setting" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\roshetta\app\Models\Core_Data" />
       <recent name="C:\xampp\htdocs\roshetta\resources\views\admin" />
       <recent name="C:\xampp\htdocs\roshetta\app\Http\Middleware" />
       <recent name="C:\xampp\htdocs\roshetta\resources\lang\ar" />
       <recent name="C:\xampp\htdocs\roshetta\resources\views\admin\setting" />
-      <recent name="C:\xampp\htdocs\roshetta\app\Interfaces\Setting" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -447,19 +436,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610791804600</updated>
-      <workItem from="1610791806101" duration="20977000" />
+      <workItem from="1610791806101" duration="21216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20977000" />
+    <option name="totallyTimeSpent" value="21216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -483,9 +472,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -797,11 +783,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        <state relative-caret-position="279">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding>
             <element signature="e#34#65#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Language.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
         </state>
       </provider>
     </entry>
