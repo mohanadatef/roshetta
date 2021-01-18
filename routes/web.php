@@ -36,6 +36,13 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::get('/change_many_status', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'change_many_status']);
             Route::post('/setLang', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'language']);
         });
+        Route::prefix('/setting')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Admin\Setting\SettingController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Admin\Setting\SettingController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Admin\Setting\SettingController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Admin\Setting\SettingController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Admin\Setting\SettingController::class, 'update']);
+        });
 
     });
 });

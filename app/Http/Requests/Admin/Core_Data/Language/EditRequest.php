@@ -43,7 +43,6 @@ class EditRequest extends FormRequest
                 'code.unique' => 'لا يمكن ادخال كود متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
-                'image.required' => 'برجاء ادخال الصوره',
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
             ];

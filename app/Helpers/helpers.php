@@ -1,12 +1,17 @@
 <?php
 
-if (!function_exists('language'))
+if (!function_exists('Language_Locale'))
 {
-    function language($ar, $en)
+    function Language_Locale()
     {
-        if( \Illuminate\Support\Facades\App::getLocale() == 'en' )
-            return $en;
-        else
-            return $ar;
+        return \Illuminate\Support\Facades\App::getLocale() ;
+    }
+}
+
+if (!function_exists('Language'))
+{
+    function Language()
+    {
+        return  \App\Models\Core_Data\Language::all();
     }
 }

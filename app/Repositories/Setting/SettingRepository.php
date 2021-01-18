@@ -23,7 +23,7 @@ class SettingRepository implements SettingInterface
 
     public function Get_All_Data()
     {
-        return $this->setting->where('status',1)->get();
+        return $this->setting->all();
     }
 
     public function Create_Data(CreateRequest $request)
@@ -32,6 +32,8 @@ class SettingRepository implements SettingInterface
         Request()->logo->move(public_path('images/setting'), $logoName);
         $data['logo'] = $logoName;
         $this->setting->create(array_merge($request->all(),$data));
+        $data['setting_id']=$this->setting->id;
+        $this->setting_detail->create(array_merge($request->all(),$data));
     }
 
     public function Get_One_Data($id)

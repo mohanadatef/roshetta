@@ -27,7 +27,7 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer(['auth.login', 'includes.admin.head', 'includes.admin.header'], function ($view) {
+        view()->composer(['*'], function ($view) {
             $setting = Setting::first();
            $language = Language::all();
             $view->with('setting', $setting);

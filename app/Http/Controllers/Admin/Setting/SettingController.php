@@ -30,7 +30,7 @@ class SettingController extends Controller
     public function store(CreateRequest $request)
     {
         $this->settingRepository->Create_Data($request);
-        return redirect('/admin/setting/index')->with('message', 'اضافه بيانات بنجاح');
+        return redirect('/admin/setting/index')->with('message', trans('lang.Message_Store'));
     }
 
     public function edit($id)
@@ -42,7 +42,7 @@ class SettingController extends Controller
     public function update(EditRequest $request, $id)
     {
         $this->settingRepository->Update_Data($request, $id);
-        return redirect('/admin/setting/index')->with('message', 'تم تعديل البيانات بنجاح');
+        return redirect('/admin/setting/index')->with('message', trans('lang.Message_Edit'));
     }
 
 }
