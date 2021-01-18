@@ -24,10 +24,32 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'code'=> 'required|string|unique:languages',
-            'title'=> 'required|string|unique:languages',
-            'order'=> 'required|unique:languages',
-            'image'=> 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
+            'title' => 'required|string|unique:languages',
+            'code' => 'required|string|unique:languages',
+            'order' => 'required|unique:languages',
+            'image' => 'required|mimes:jpg,jpeg,png,gif|max:2048',
         ];
+    }
+
+    public function messages()
+    {
+        if (\Illuminate\Support\Facades\App::getLocale() == 'ar') {
+            return [
+                'title.required' => 'برجاء ادخال الاسم',
+                'title.string' => 'برجاء ادخال الاسم حروف',
+                'title.unique' => 'لا يمكن ادخال الاسم متكرر',
+                'code.required' => 'برجاء ادخال كود',
+                'code.string' => 'برجاء ادخال كود حروف',
+                'code.unique' => 'لا يمكن ادخال كود متكرر',
+                'order.required' => 'برجاء ادخال الترتيب',
+                'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
+                'image.required' => 'برجاء ادخال الصوره',
+                'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
+                'image.max' => 'برجاء ادخال الصوره اقل من 2048',
+            ];
+        }
+        else{
+            return [];
+        }
     }
 }

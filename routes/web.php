@@ -22,7 +22,7 @@ Route::get('/clear-cache', function () {
     Artisan::call('view:clear');
     return redirect('/admin');
 });
-Route::group(['middleware' => 'admin', 'auth'], function () {
+Route::group(['middleware' => 'admin', 'auth','language'], function () {
     Route::prefix('/admin')->group(function () {
         Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
@@ -34,6 +34,7 @@ Route::group(['middleware' => 'admin', 'auth'], function () {
             Route::patch('/update/{id}', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'update']);
             Route::get('/change_status/{id}', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'change_many_status']);
+            Route::post('/setLang', [App\Http\Controllers\Admin\Core_Data\LanguageController::class, 'language']);
         });
 
     });

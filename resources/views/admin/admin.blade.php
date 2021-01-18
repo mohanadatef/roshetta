@@ -1,15 +1,15 @@
 @extends('includes.admin.master_admin')
 @section('title')
-    لوحه التحكم
+    {{ trans('lang.DashBoard') }}
 @endsection
 @section('content')
     <section class="content-header">
         <h1>
-            لوحه التحكم
-            <small>لوحه التحكم</small>
+            {{ trans('lang.DashBoard') }}
+            <small>{{ trans('lang.DashBoard') }}</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> لوحه التحكم</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
         </ol>
     </section>
     <!-- Main content -->

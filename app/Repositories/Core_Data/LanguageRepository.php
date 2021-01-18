@@ -8,7 +8,7 @@ use App\Http\Requests\Admin\Core_Data\Language\EditRequest;
 use App\Http\Requests\Admin\Core_Data\Language\StatusEditRequest;
 use App\Interfaces\Core_Data\LanguageInterface;
 use App\Models\Core_Data\Language;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class LanguageRepository implements LanguageInterface
 {
@@ -22,7 +22,7 @@ class LanguageRepository implements LanguageInterface
 
     public function Get_All_Data()
     {
-        return $this->language->where('status',1)->get();
+        return $this->language->all();
     }
 
     public function Create_Data(CreateRequest $request)
@@ -71,6 +71,7 @@ class LanguageRepository implements LanguageInterface
 
     public function Update_Status_Datas(StatusEditRequest $request)
     {
+
         $languages = $this->Get_Many_Data($request);
         foreach($languages as $language)
         {

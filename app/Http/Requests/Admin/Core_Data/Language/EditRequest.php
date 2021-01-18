@@ -31,4 +31,25 @@ class EditRequest extends FormRequest
             ];
 
     }
+    public function messages()
+    {
+        if (\Illuminate\Support\Facades\App::getLocale() == 'ar') {
+            return [
+                'title.required' => 'برجاء ادخال الاسم',
+                'title.string' => 'برجاء ادخال الاسم حروف',
+                'title.unique' => 'لا يمكن ادخال الاسم متكرر',
+                'code.required' => 'برجاء ادخال كود',
+                'code.string' => 'برجاء ادخال كود حروف',
+                'code.unique' => 'لا يمكن ادخال كود متكرر',
+                'order.required' => 'برجاء ادخال الترتيب',
+                'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
+                'image.required' => 'برجاء ادخال الصوره',
+                'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
+                'image.max' => 'برجاء ادخال الصوره اقل من 2048',
+            ];
+        }
+        else{
+            return [];
+        }
+    }
 }

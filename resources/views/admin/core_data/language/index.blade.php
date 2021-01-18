@@ -1,6 +1,6 @@
 @extends('includes.admin.master_admin')
 @section('title')
-    قائمه الدوائر
+    {{ trans('lang.Index') }}
 @endsection
 @section('head_style')
     @include('includes.admin.header_datatable')
@@ -8,20 +8,20 @@
 @section('content')
     <section class="content-header">
         <h1>
-            الدوائر
-            <small>كل الدوائر</small>
+            {{ trans('lang.Language') }}
+            <small>{{ trans('lang.All') }}</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i> لوحه التحكم</a></li>
-            <li><a href="{{ url('/admin/language/index') }}"><i class="fa fa-languages"></i> الدوائر</a></li>
+            <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
+            <li><a href="{{ url('/admin/language/index') }}"><i class="fa fa-languages"></i>{{ trans('lang.Index') }}</a></li>
         </ol>
     </section>
     <section class="content">
         <form method="get" id="status" action="{{ url('/admin/language/change_many_status')}}">
             <div class="box">
                 <div class="box-header" align="right">
-                    <a href="{{  url('/admin/language/create') }}" class="btn btn-primary">اضافه</a>
-                    <input type="submit" value="تغير الحاله" class="btn btn-primary">
+                    <a href="{{  url('/admin/language/create') }}" class="btn btn-primary">{{ trans('lang.Create') }}</a>
+                    <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -31,9 +31,9 @@
                                 <thead>
                                 <tr>
                                     <th align="center">#</th>
-                                    <th align="center">الاسم</th>
-                                    <th align="center">الحاله</th>
-                                    <th align="center">التحكم</th>
+                                    <th align="center">{{ trans('lang.Title') }}</th>
+                                    <th align="center">{{ trans('lang.Status') }}</th>
+                                    <th align="center">{{ trans('lang.Controller') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -46,16 +46,16 @@
                                         <td align="center">
                                                 @if($data->status ==1)
                                                     <a href="{{ url('/admin/language/change_status/'.$data->id)}}"><i
-                                                                class="btn btn-danger ace-icon fa fa-close"> غير مفعل</i></a>
+                                                                class="btn btn-danger ace-icon fa fa-close">{{ trans('lang.An_active') }}</i></a>
                                                 @elseif($data->status ==0)
                                                     <a href="{{ url('/admin/language/change_status/'.$data->id)}}"><i
-                                                                class="btn btn-primary ace-icon fa fa-check-language"> مفعل</i></a>
+                                                                class="btn btn-primary ace-icon fa fa-check-language"> {{ trans('lang.Active') }}</i></a>
                                                 @endif
                                         </td>
                                         <td align="center">
                                                 <a href="{{ url('/admin/language/edit/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-edit bigger-120  edit"
-                                                            data-id=""> تعديل</i></a>
+                                                            data-id=""> {{ trans('lang.Edit') }}</i></a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -63,15 +63,15 @@
                                 <tfoot>
                                 <tr>
                                     <th align="center">#</th>
-                                    <th align="center">الاسم</th>
-                                    <th align="center">الحاله</th>
-                                    <th align="center">التحكم</th>
+                                    <th align="center">{{ trans('lang.Title') }}</th>
+                                    <th align="center">{{ trans('lang.Status') }}</th>
+                                    <th align="center">{{ trans('lang.Controller') }}</th>
                                 </tr>
                                 </tfoot>
                             </table>
                         </div>
                     @else
-                        <div align="center">لا يوجد بيانات لعرضها</div>
+                        <div align="center">{{ trans('lang.Message_Index') }}</div>
                     @endif
                 </div>
                 <!-- /.box-body -->
