@@ -36,13 +36,13 @@
                     </div>
                     @foreach($language as $lang)
                         <div class="form-group{{ $errors->has('address['.$lang->code.']') ? ' has-error' : "" }}">
-                            {{  $lang->title . trans('lang.Address') }} : <input type="text" value="{{Request::old('address['.$lang->code.']')}}"
+                            {{  $lang->title .' '. trans('lang.Address') }} : <input type="text" value="{{Request::old('address['.$lang->code.']')}}"
                                                                                  class="form-control" name="address[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Address') }}">
                         </div>
                     @endforeach
                     @foreach($language as $lang)
                         <div class="form-group{{ $errors->has('time_work['.$lang->code.']') ? ' has-error' : "" }}">
-                            {{  $lang->title . trans('lang.Time_Work') }} : <input type="text" value="{{Request::old('time_work['.$lang->code.']')}}"
+                            {{  $lang->title .' '. trans('lang.Time_Work') }} : <input type="text" value="{{Request::old('time_work['.$lang->code.']')}}"
                                                                                    class="form-control" name="time_work[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Time_Work') }}">
                         </div>
                     @endforeach

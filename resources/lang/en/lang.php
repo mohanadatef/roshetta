@@ -58,4 +58,5 @@ return[
     'Time_Work'=>'Time Work',
     'Message_Time_Work'=>'Plase Enter Your Time Work',
     'Country'=>'Country',
+    'City'=>'City',
 ];

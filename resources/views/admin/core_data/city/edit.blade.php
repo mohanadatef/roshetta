@@ -5,13 +5,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            {{ trans('lang.Country') }}
+            {{ trans('lang.City') }}
             <small>{{ trans('lang.Edit') }}</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
-            <li><a href="{{ url('/admin/country/index') }}"><i class="fa fa-permsissions"></i> {{ trans('lang.Country') }}</a></li>
-            <li><a href="{{ url('/admin/country/edit/'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{$data['title'][Language_Locale()]}}  </a></li>
+            <li><a href="{{ url('/admin/city/index') }}"><i class="fa fa-permsissions"></i> {{ trans('lang.City') }}</a></li>
+            <li><a href="{{ url('/admin/city/edit/'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{$data['title'][Language_Locale()]}}  </a></li>
         </ol>
     </section>
     <section class="content">
@@ -21,7 +21,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <form id="edit" action="{{url('admin/country/update/'.$data['id'])}}" method="POST" enctype="multipart/form-data">
+                <form id="edit" action="{{url('admin/city/update/'.$data['id'])}}" method="POST">
                     {{csrf_field()}}
                     {{method_field('patch')}}
                     @foreach($language as $lang)
@@ -35,21 +35,6 @@
                                                           class="form-control" name="order" placeholder="{{ trans('lang.Message_Order') }}">
                     </div>
                     <div align="center">
-                    <img src="{{url('public/images/country/'.$data['image'])}}" style="width: 50%;height: 50%">
-                    <div class="form-group{{ $errors->has('image') ? ' has-error' : "" }}">
-                        <table class="table">
-                            <tr>
-                                <td width="40%" align="right"><label>{{ trans('lang.Message_Image') }}</label></td>
-                                <td width="30"><input type="file" value="{{Request::old('image')}}" name="image"/></td>
-                            </tr>
-                            <tr>
-                                <td width="40%" align="right"></td>
-                                <td width="30"><span class="text-muted">jpg, png, gif</span></td>
-                            </tr>
-                        </table>
-                    </div>
-                    </div>
-                    <div align="center">
                         <input type="submit" class="btn btn-primary" value="{{ trans('lang.Edit') }}">
                     </div>
                 </form>
@@ -58,5 +43,5 @@
     </section>
 @endsection
 @section('script_style')
-    {!! JsValidator::formRequest('App\Http\Requests\Core_Data\Country\EditRequest','#edit') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\Core_Data\City\EditRequest','#edit') !!}
 @endsection

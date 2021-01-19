@@ -57,4 +57,5 @@ return[
     'Time_Work'=>'وقت العمل',
     'Message_Time_Work'=>'برجاء ادخال وقت العمل',
     'Country'=>'البلد',
+    'City'=>'مدينه',
 ];

@@ -26,7 +26,7 @@
                     {{method_field('patch')}}
                     @foreach($language as $lang)
                         <div class="form-group{{ $errors->has('detail['.$lang->code.']') ? ' has-error' : "" }}">
-                            {{  $lang->title . trans('lang.Detail') }} :  <textarea type="text" id="detail" class="form-control"
+                            {{  $lang->title .' '. trans('lang.Detail') }} :  <textarea type="text" id="detail" class="form-control"
                                               name="detail"
                                               placeholder="{{ trans('lang.Message_Detail') }}">{{$data['detail'][$lang->code]}}</textarea>
                         </div>

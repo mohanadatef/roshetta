@@ -71,6 +71,16 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\CountryController::class, 'update']);
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\CountryController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\CountryController::class, 'change_many_status']);
+            Route::get('/Get_List_Country_Json', [App\Http\Controllers\Core_Data\CountryController::class, 'Get_List_Country_Json']);
+        });
+        Route::prefix('/city')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Core_Data\CityController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Core_Data\CityController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Core_Data\CityController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Core_Data\CityController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\CityController::class, 'update']);
+            Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\CityController::class, 'change_status']);
+            Route::get('/change_many_status', [App\Http\Controllers\Core_Data\CityController::class, 'change_many_status']);
         });
     });
 });
