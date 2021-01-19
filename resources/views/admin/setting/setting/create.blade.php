@@ -26,10 +26,10 @@
                     {{csrf_field()}}
                     @foreach($language as $lang)
                         {{ trans('lang.Language') }} : {{$lang->title}}
-                    <div class="form-group{{ $errors->has('title') ? ' has-error' : "" }}">
-                        {{ trans('lang.Title') }} : <input type="text" value="{{Request::old('title')}}"
-                                                           class="form-control" name="title[]" placeholder="{{ trans('lang.Message_Title') }}">
-                    </div>
+                        <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
+                            {{ trans('lang.Title') }} : <input type="text" value="{{Request::old('title['.$lang->code.']')}}"
+                                                               class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
+                        </div>
                     @endforeach
                     <div class="form-group{{ $errors->has('facebook') ? ' has-error' : "" }}">
                         {{ trans('lang.Face_Book') }} : <input type="text" value="{{Request::old('facebook')}}"

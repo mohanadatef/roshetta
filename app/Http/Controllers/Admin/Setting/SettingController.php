@@ -35,7 +35,7 @@ class SettingController extends Controller
 
     public function edit($id)
     {
-        $data = $this->settingRepository->Get_One_Data($id);
+        $data = $this->settingRepository->Get_One_Data_Translation($id);
         return view('admin.setting.setting.edit',compact('data'));
     }
 

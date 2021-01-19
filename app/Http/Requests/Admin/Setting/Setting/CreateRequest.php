@@ -25,7 +25,7 @@ class CreateRequest extends FormRequest
     {
 
         return [
-            'title.*'=>'required|unique:setting_details',
+            'title.*'=>'required|unique_translation:settings',
             'facebook'=> 'required',
             'youtube'=> 'required',
             'twitter'=> 'required',
@@ -40,7 +40,7 @@ class CreateRequest extends FormRequest
         if (\Illuminate\Support\Facades\App::getLocale() == 'ar') {
             return [
                 'title.required' => 'برجاء ادخال الاسم',
-                'title.unique' => 'لا يمكن ادخال الاسم متكرر',
+                'title.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'facebook.required' => 'برجاء ادخال فيس بوك',
                 'youtube.required' => 'برجاء ادخال اليوتيوب',
                 'twitter.required' => 'برجاء ادخال تويتر',

@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "codezero/laravel-unique-translation": "^3.4",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -18,6 +19,7 @@
         "laravelcollective/html": "^6.2",
         "maatwebsite/excel": "^3.1",
         "proengsoft/laravel-jsvalidation": "^4.4",
+        "spatie/laravel-translatable": "^4.6",
         "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
