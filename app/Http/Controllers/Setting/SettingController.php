@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Setting;
+namespace App\Http\Controllers\Setting;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\Setting\Setting\CreateRequest;
-use App\Http\Requests\Admin\Setting\Setting\EditRequest;
+use App\Http\Requests\Setting\Setting\CreateRequest;
+use App\Http\Requests\Setting\Setting\EditRequest;
 use App\Repositories\Setting\SettingRepository;
 
 class SettingController extends Controller

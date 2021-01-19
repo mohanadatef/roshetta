@@ -2,9 +2,9 @@
 
 namespace App\Interfaces\Core_Data;
 
-use App\Http\Requests\Admin\Core_Data\Language\CreateRequest;
-use App\Http\Requests\Admin\Core_Data\Language\EditRequest;
-use App\Http\Requests\Admin\Core_Data\Language\StatusEditRequest;
+use App\Http\Requests\Core_Data\Language\CreateRequest;
+use App\Http\Requests\Core_Data\Language\EditRequest;
+use App\Http\Requests\Core_Data\Language\StatusEditRequest;
 use Illuminate\Http\Request;
 
 

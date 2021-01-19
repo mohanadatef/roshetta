@@ -3,9 +3,9 @@
 namespace App\Repositories\Core_Data;
 
 
-use App\Http\Requests\Admin\Core_Data\Language\CreateRequest;
-use App\Http\Requests\Admin\Core_Data\Language\EditRequest;
-use App\Http\Requests\Admin\Core_Data\Language\StatusEditRequest;
+use App\Http\Requests\Core_Data\Language\CreateRequest;
+use App\Http\Requests\Core_Data\Language\EditRequest;
+use App\Http\Requests\Core_Data\Language\StatusEditRequest;
 use App\Interfaces\Core_Data\LanguageInterface;
 use App\Models\Core_Data\Language;
 use Illuminate\Http\Request;

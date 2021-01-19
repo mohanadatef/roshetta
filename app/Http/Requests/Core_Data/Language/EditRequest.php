@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Admin\Core_Data\Language;
+namespace App\Http\Requests\Core_Data\Language;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -33,7 +33,7 @@ class EditRequest extends FormRequest
     }
     public function messages()
     {
-        if (\Illuminate\Support\Facades\App::getLocale() == 'ar') {
+        if (Language_Locale() == 'ar') {
             return [
                 'title.required' => 'برجاء ادخال الاسم',
                 'title.string' => 'برجاء ادخال الاسم حروف',

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Core_Data;
+namespace App\Http\Controllers\Core_Data;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\Core_Data\Language\CreateRequest;
-use App\Http\Requests\Admin\Core_Data\Language\EditRequest;
-use App\Http\Requests\Admin\Core_Data\Language\StatusEditRequest;
+use App\Http\Requests\Core_Data\Language\CreateRequest;
+use App\Http\Requests\Core_Data\Language\EditRequest;
+use App\Http\Requests\Core_Data\Language\StatusEditRequest;
 use App\Repositories\Core_Data\LanguageRepository;
 use Illuminate\Http\Request;
 

@@ -2,8 +2,8 @@
 
 namespace App\Interfaces\Setting;
 
-use App\Http\Requests\Admin\Setting\Setting\CreateRequest;
-use App\Http\Requests\Admin\Setting\Setting\EditRequest;
+use App\Http\Requests\Setting\Setting\CreateRequest;
+use App\Http\Requests\Setting\Setting\EditRequest;
 
 interface SettingInterface{
 
