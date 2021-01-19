@@ -59,6 +59,7 @@ return[
     'Country'=>'البلد',
     'City'=>'مدينه',
     'Area'=>'منطقه',
+    'Specialty'=>'تخصص',
     'Login'=>'تسجيل دخول',
     'Message_Password'=>'برجاء ادخال كلمه السر',
     'Message_Support'=>'برجاء الاتصال بالدعم الفني',

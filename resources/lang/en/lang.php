@@ -60,6 +60,7 @@ return[
     'Country'=>'Country',
     'City'=>'City',
     'Area'=>'Area',
+    'Specialty'=>'Specialty',
     'Login'=>'Login',
     'Message_Password'=>'Plase Enter Your Password',
     'Message_Support'=>'Plase Call Support',
