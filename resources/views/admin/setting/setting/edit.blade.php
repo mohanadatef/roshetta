@@ -5,12 +5,12 @@
 @section('content')
     <section class="content-header">
         <h1>
-            {{ trans('lang.Language') }}
+            {{ trans('lang.Setting') }}
             <small>{{ trans('lang.Edit') }}</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
-            <li><a href="{{ url('/admin/setting/index') }}"><i class="fa fa-permsissions"></i> {{ trans('lang.Language') }}</a></li>
+            <li><a href="{{ url('/admin/setting/index') }}"><i class="fa fa-permsissions"></i> {{ trans('lang.Setting') }}</a></li>
             <li><a href="{{ url('/admin/setting/edit/'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{$data['title'][Language_Locale()]}} </a></li>
         </ol>
     </section>
@@ -78,5 +78,5 @@
     </section>
 @endsection
 @section('script_style')
-    {!! JsValidator::formRequest('App\Http\Requests\Admin\Setting\Setting\EditRequest','#edit') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\Setting\Setting\EditRequest','#edit') !!}
 @endsection

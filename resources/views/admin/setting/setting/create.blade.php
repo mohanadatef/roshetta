@@ -25,9 +25,8 @@
                 <form id='create' action="{{url('admin/setting/store')}}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                     @foreach($language as $lang)
-                        {{ trans('lang.Language') }} : {{$lang->title}}
                         <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
-                            {{ trans('lang.Title') }} : <input type="text" value="{{Request::old('title['.$lang->code.']')}}"
+                            {{ $lang->title . trans('lang.Title') }} : <input type="text" value="{{Request::old('title['.$lang->code.']')}}"
                                                                class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
                     @endforeach
@@ -76,5 +75,5 @@
     </section>
 @endsection
 @section('script_style')
-    {!! JsValidator::formRequest('App\Http\Requests\Admin\Setting\Setting\CreateRequest','#create') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\Setting\Setting\CreateRequest','#create') !!}
 @endsection

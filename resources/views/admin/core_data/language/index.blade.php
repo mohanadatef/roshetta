@@ -81,5 +81,5 @@
 @endsection
 @section('script_style')
     @include('includes.admin.scripts_datatable')
-    {!! JsValidator::formRequest('App\Http\Requests\Admin\Core_Data\Language\StatusEditRequest','#status') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\Core_Data\Language\StatusEditRequest','#status') !!}
 @endsection

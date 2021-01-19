@@ -44,4 +44,7 @@ return[
     'Message_App_Google'=>'Plase Enter Your App Google',
     'App_Ios'=>'App Ios',
     'Message_App_Ios'=>'Plase Enter Your App Ios',
+    'Detail'=>'Detail',
+    'Message_Detail'=>'Plase Enter Your Detail',
+    'Privacy'=>'Privacy',
 ];

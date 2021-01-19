@@ -57,5 +57,5 @@
     </section>
 @endsection
 @section('script_style')
-    {!! JsValidator::formRequest('App\Http\Requests\Admin\Core_Data\Language\CreateRequest','#create') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\Core_Data\Language\CreateRequest','#create') !!}
 @endsection

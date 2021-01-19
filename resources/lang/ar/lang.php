@@ -43,4 +43,7 @@ return[
     'Message_Instagram'=>'برجاء ادخال انستجرام',
     'Message_App_Google'=>'برجاء ادخال متجر جوجل',
     'Message_App_Ios'=>'برجاء ادخال متجر ابل',
+    'Detail'=>'الوصف',
+    'Message_Detail'=>'برجاء ادخال الوصف',
+    'Privacy'=>'الشروط و السياسه',
 ];

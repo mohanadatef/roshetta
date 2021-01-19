@@ -60,5 +60,5 @@
     </section>
 @endsection
 @section('script_style')
-    {!! JsValidator::formRequest('App\Http\Requests\Admin\Core_Data\Language\EditRequest','#edit') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\Core_Data\Language\EditRequest','#edit') !!}
 @endsection
