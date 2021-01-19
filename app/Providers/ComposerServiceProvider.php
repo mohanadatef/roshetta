@@ -5,7 +5,6 @@ namespace App\Providers;
 
 use App\Models\Core_Data\Language;
 use App\Models\Setting\Setting;
-use App\Models\Setting\Setting_Detail;
 use Illuminate\Support\ServiceProvider;
 
 class ComposerServiceProvider extends ServiceProvider

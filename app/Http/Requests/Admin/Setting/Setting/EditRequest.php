@@ -37,7 +37,7 @@ class EditRequest extends FormRequest
     }
     public function messages()
     {
-        if (\Illuminate\Support\Facades\App::getLocale() == 'ar') {
+        if (Language_Locale() == 'ar') {
             return [
                 'title.required' => 'برجاء ادخال الاسم',
                 'title.unique_translation' => 'لا يمكن ادخال الاسم متكرر',

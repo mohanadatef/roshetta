@@ -11,13 +11,13 @@
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
             <li><a href="{{ url('/admin/setting/index') }}"><i class="fa fa-permsissions"></i> {{ trans('lang.Language') }}</a></li>
-            <li><a href="{{ url('/admin/setting/edit/'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{$data['title'][\Illuminate\Support\Facades\App::getLocale()]}} </a></li>
+            <li><a href="{{ url('/admin/setting/edit/'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{$data['title'][Language_Locale()]}} </a></li>
         </ol>
     </section>
     <section class="content">
         <div class="box">
             <div class="box-header">
-                <h3>{{ trans('lang.Edit') }}: {{$data['title'][\Illuminate\Support\Facades\App::getLocale()]}} </h3>
+                <h3>{{ trans('lang.Edit') }}: {{$data['title'][Language_Locale()]}} </h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
