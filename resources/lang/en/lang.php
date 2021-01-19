@@ -59,4 +59,7 @@ return[
     'Message_Time_Work'=>'Plase Enter Your Time Work',
     'Country'=>'Country',
     'City'=>'City',
+    'Login'=>'Login',
+    'Message_Password'=>'Plase Enter Your Password',
+    'Message_Support'=>'Plase Call Support',
 ];
