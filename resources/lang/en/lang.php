@@ -48,4 +48,13 @@ return[
     'Message_Detail'=>'Plase Enter Your Detail',
     'Privacy'=>'Privacy',
     'About_Us'=>'About Us',
+    'Contact_Us'=>'Contact Us',
+    'Address'=>'Address',
+    'Message_Address'=>'Plase Enter Your Address',
+    'Email'=>'Email',
+    'Message_Email'=>'Plase Enter Your Email',
+    'Mobile'=>'Mobile',
+    'Message_Mobile'=>'Plase Enter Your Mobile',
+    'Time_Work'=>'Time Work',
+    'Message_Time_Work'=>'Plase Enter Your Time Work',
 ];

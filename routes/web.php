@@ -56,5 +56,12 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::get('/edit/{id}', [App\Http\Controllers\Setting\AboutUsController::class, 'edit']);
             Route::patch('/update/{id}', [App\Http\Controllers\Setting\AboutUsController::class, 'update']);
         });
+        Route::prefix('/contact_us')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Setting\ContactUsController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Setting\ContactUsController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Setting\ContactUsController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Setting\ContactUsController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Setting\ContactUsController::class, 'update']);
+        });
     });
 });

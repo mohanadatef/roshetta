@@ -17,7 +17,6 @@
         </ol>
     </section>
     <section class="content">
-        <form method="get" action="{{ url('/admin/privacy/change_many_status')}}">
             <div class="box">
                 <div class="box-header" align="right">
                     @if($datas->count() == 0)
@@ -59,7 +58,6 @@
                 </div>
                 <!-- /.box-body -->
             </div>
-        </form>
     </section>
 @endsection
 @section('script_style')

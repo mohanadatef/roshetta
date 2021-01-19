@@ -8,19 +8,19 @@
 @section('content')
     <section class="content-header">
         <h1>
-            {{ trans('lang.About_Us') }}
+            {{ trans('lang.Contact_Us') }}
             <small>{{ trans('lang.All') }}</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
-            <li><a href="{{ url('/admin/about_us/index') }}"><i class="fa fa-permissions"></i>  {{ trans('lang.About_Us') }}</a></li>
+            <li><a href="{{ url('/admin/contact_us/index') }}"><i class="fa fa-permissions"></i>  {{ trans('lang.Contact_Us') }}</a></li>
         </ol>
     </section>
     <section class="content">
             <div class="box">
                 <div class="box-header" align="right">
                     @if($datas->count() == 0)
-                        <a href="{{  url('/admin/about_us/create') }}" class="btn btn-primary">  {{ trans('lang.Create') }}</a>
+                        <a href="{{  url('/admin/contact_us/create') }}" class="btn btn-primary">  {{ trans('lang.Create') }}</a>
                     @endif
                 </div>
                 <!-- /.box-header -->
@@ -30,26 +30,32 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    <th class="center">  {{ trans('lang.Detail') }}</th>
-                                    <th class="center">{{ trans('lang.Image') }}</th>
+                                    <th class="center">  {{ trans('lang.Email') }}</th>
+                                    <th class="center">{{ trans('lang.Address') }}</th>
+                                    <th class="center">{{ trans('lang.Mobile') }}</th>
+                                    <th class="center">{{ trans('lang.Time_Work') }}</th>
                                     <th class="center">{{ trans('lang.Controller') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($datas as $data)
                                     <tr>
-                                        <td class="center">{!! $data->detail !!}</td>
-                                        <td class="center"><img src="{{ asset('public/images/about_us/' . $data->image ) }}" style="width:100px;height: 100px"></td>
+                                        <td class="center">{{$data->email}}</td>
+                                        <td class="center">{{$data->address}}</td>
+                                        <td class="center">{{$data->mobile}}</td>
+                                        <td class="center">{{$data->time_work}}</td>
                                         <td class="center">
-                                            <a href="{{ url('/admin/about_us/edit/'.$data->id)}}"><i class="btn btn-sm btn-primary ace-icon fa fa-edit bigger-120  edit" data-id=""> {{ trans('lang.Edit') }}</i></a>
+                                            <a href="{{ url('/admin/contact_us/edit/'.$data->id)}}"><i class="btn btn-sm btn-primary ace-icon fa fa-edit bigger-120  edit" data-id=""> {{ trans('lang.Edit') }}</i></a>
                                         </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th class="center">  {{ trans('lang.Detail') }}</th>
-                                    <th class="center">{{ trans('lang.Image') }}</th>
+                                    <th class="center">  {{ trans('lang.Email') }}</th>
+                                    <th class="center">{{ trans('lang.Address') }}</th>
+                                    <th class="center">{{ trans('lang.Mobile') }}</th>
+                                    <th class="center">{{ trans('lang.Time_Work') }}</th>
                                     <th class="center">{{ trans('lang.Controller') }}</th>
                                 </tr>
                                 </tfoot>

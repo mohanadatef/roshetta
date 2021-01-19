@@ -47,4 +47,13 @@ return[
     'Message_Detail'=>'برجاء ادخال الوصف',
     'Privacy'=>'الشروط و السياسه',
     'About_Us'=>'عن الشركه',
+    'Contact_Us'=>'التواصل بنا',
+    'Address'=>'العنوان',
+    'Message_Address'=>'برجاء ادخال العنوان',
+    'Email'=>'البريد الالكتروني',
+    'Message_Email'=>'برجاء ادخال البريد الالكتروني',
+    'Mobile'=>'الهاتف',
+    'Message_Mobile'=>'برجاء ادخال الهاتف',
+    'Time_Work'=>'وقت العمل',
+    'Message_Time_Work'=>'برجاء ادخال وقت العمل',
 ];
