@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div align="center">
-                        <input type="submit" class="btn btn-primary" value="{{ trans('lang.Create') }}">
+                        <input type="submit" class="btn btn-primary" value="{{ trans('lang.Edit') }}">
                     </div>
                 </form>
             </div>

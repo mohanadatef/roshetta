@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Setting\Privacy;
+namespace App\Http\Requests\Setting\About_Us;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateRequest extends FormRequest
+class EditRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,16 +23,18 @@ class CreateRequest extends FormRequest
      */
     public function rules()
     {
-
         return [
             'detail.*'=>'required',
+            'image'=> 'image|mimes:jpg,jpeg,png,gif|max:2048',
         ];
     }
     public function messages()
     {
         if (Language_Locale() == 'ar') {
             return [
-                'detail.required' => 'برجاء ادخال الاسم',
+                'detail.required' => 'برجاء ادخال الوصف',
+                'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
+                'image.max' => 'برجاء ادخال الصوره اقل من 2048',
             ];
         }
         else{

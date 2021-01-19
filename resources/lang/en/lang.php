@@ -47,4 +47,5 @@ return[
     'Detail'=>'Detail',
     'Message_Detail'=>'Plase Enter Your Detail',
     'Privacy'=>'Privacy',
+    'About_Us'=>'About Us',
 ];

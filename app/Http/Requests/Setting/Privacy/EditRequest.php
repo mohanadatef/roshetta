@@ -24,7 +24,7 @@ class EditRequest extends FormRequest
     public function rules()
     {
         return [
-            'detail'=>'required'
+            'detail.*'=>'required'
         ];
     }
     public function messages()
