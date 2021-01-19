@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Core_Data\City;
+namespace App\Http\Requests\Core_Data\Area;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class EditRequest extends FormRequest
+class CreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,12 +23,12 @@ class EditRequest extends FormRequest
      */
     public function rules()
     {
-            return [
-                'title.*'=>'required|unique_translation:cities,title,'.$this->id,
-                'order'=> 'required|unique:cities,order,'.$this->id.',id',
-            ];
-
+        return [
+            'title.*'=>'required|unique_translation:areas',
+            'order' => 'required|unique:areas',
+        ];
     }
+
     public function messages()
     {
         if (Language_Locale() == 'ar') {

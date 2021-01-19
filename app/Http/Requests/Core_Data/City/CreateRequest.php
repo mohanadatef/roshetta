@@ -25,7 +25,7 @@ class CreateRequest extends FormRequest
     {
         return [
             'title.*'=>'required|unique_translation:cities',
-            'order' => 'required|unique:countries',
+            'order' => 'required|unique:cities',
         ];
     }
 

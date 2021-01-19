@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Core_Data\City;
+namespace App\Http\Requests\Core_Data\Area;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,8 +24,8 @@ class EditRequest extends FormRequest
     public function rules()
     {
             return [
-                'title.*'=>'required|unique_translation:cities,title,'.$this->id,
-                'order'=> 'required|unique:cities,order,'.$this->id.',id',
+                'title.*'=>'required|unique_translation:areas,title,'.$this->id,
+                'order'=> 'required|unique:areas,order,'.$this->id.',id',
             ];
 
     }

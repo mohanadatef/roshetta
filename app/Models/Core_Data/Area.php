@@ -5,13 +5,13 @@ namespace App\Models\Core_Data;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 
-class City extends Model
+class Area extends Model
 {
     use HasTranslations;
     protected $fillable = [
         'status','title','order'
     ];
     public $translatable = ['title'];
-    protected $table = 'cities';
+    protected $table = 'areas';
     public $timestamps = true;
 }

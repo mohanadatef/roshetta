@@ -58,6 +58,7 @@ return[
     'Message_Time_Work'=>'برجاء ادخال وقت العمل',
     'Country'=>'البلد',
     'City'=>'مدينه',
+    'Area'=>'منطقه',
     'Login'=>'تسجيل دخول',
     'Message_Password'=>'برجاء ادخال كلمه السر',
     'Message_Support'=>'برجاء الاتصال بالدعم الفني',
