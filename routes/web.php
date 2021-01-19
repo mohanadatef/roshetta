@@ -63,5 +63,14 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::get('/edit/{id}', [App\Http\Controllers\Setting\ContactUsController::class, 'edit']);
             Route::patch('/update/{id}', [App\Http\Controllers\Setting\ContactUsController::class, 'update']);
         });
+        Route::prefix('/country')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Core_Data\CountryController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Core_Data\CountryController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Core_Data\CountryController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Core_Data\CountryController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\CountryController::class, 'update']);
+            Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\CountryController::class, 'change_status']);
+            Route::get('/change_many_status', [App\Http\Controllers\Core_Data\CountryController::class, 'change_many_status']);
+        });
     });
 });

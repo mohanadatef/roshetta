@@ -30,6 +30,7 @@ class LanguageRepository implements LanguageInterface
         $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
         Request()->image->move(public_path('images/language'), $imageName);
         $data['image'] = $imageName;
+        $data['status'] = 1;
         $this->language->create(array_merge($request->all(),$data));
     }
 
