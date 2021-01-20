@@ -66,15 +66,15 @@ class SubSpecialtyRepository implements SubSpecialtyInterface
     public function Update_Status_Datas(StatusEditRequest $request)
     {
 
-        $Sub_Specialtys = $this->Get_Many_Data($request);
-        foreach($Sub_Specialtys as $Sub_Specialty)
+        $sub_specialtys = $this->Get_Many_Data($request);
+        foreach($sub_specialtys as $sub_specialty)
         {
-            if ($Sub_Specialty->status == 1) {
-                $Sub_Specialty->status = '0';
-            } elseif ($Sub_Specialty->status == 0) {
-                $Sub_Specialty->status = '1';
+            if ($sub_specialty->status == 1) {
+                $sub_specialty->status = '0';
+            } elseif ($sub_specialty->status == 0) {
+                $sub_specialty->status = '1';
             }
-            $Sub_Specialty->update();
+            $sub_specialty->update();
         }
     }
 }

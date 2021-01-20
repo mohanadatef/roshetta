@@ -63,6 +63,7 @@ return[
     'Company_Insurance'=>'Company Insurance',
     'Scientific_Degree'=>'Scientific Degree',
     'Service_Category'=>'Service Category',
+    'Service'=>'Service',
     'Specialty'=>'Specialty',
     'Sub_Specialty'=>'Sub Specialty',
     'Login'=>'Login',
@@ -71,5 +72,6 @@ return[
     'Message_Country'=>'Plase Select Country',
     'Message_City'=>'Plase Select City',
     'Message_Specialty'=>'Plase Select Specialty',
+    'Message_Service_Category'=>'Plase Select Service Category',
     'Select'=>'Select',
 ];

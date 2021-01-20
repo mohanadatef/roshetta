@@ -136,5 +136,14 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\ServiceCategoryController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\ServiceCategoryController::class, 'change_many_status']);
         });
+        Route::prefix('/service')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Core_Data\ServiceController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Core_Data\ServiceController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Core_Data\ServiceController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Core_Data\ServiceController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\ServiceController::class, 'update']);
+            Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\ServiceController::class, 'change_status']);
+            Route::get('/change_many_status', [App\Http\Controllers\Core_Data\ServiceController::class, 'change_many_status']);
+        });
     });
 });
