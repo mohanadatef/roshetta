@@ -11,6 +11,10 @@ class Country extends Model
     protected $fillable = [
         'status','image','title','order'
     ];
+    public function city()
+    {
+        return $this->hasMany('App\Models\Core_Data\City');
+    }
     public $translatable = ['title'];
     protected $table = 'countries';
     public $timestamps = true;

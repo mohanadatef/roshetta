@@ -10,8 +10,10 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
-            <li><a href="{{ url('/admin/city/index') }}"><i class="fa fa-permsissions"></i>{{ trans('lang.Index') }}</a></li>
-            <li><a href="{{ url('/admin/city/create') }}"><i class="fa fa-permsission"></i>{{ trans('lang.Create') }}</a>
+            <li><a href="{{ url('/admin/city/index') }}"><i class="fa fa-permsissions"></i>{{ trans('lang.Index') }}</a>
+            </li>
+            <li><a href="{{ url('/admin/city/create') }}"><i class="fa fa-permsission"></i>{{ trans('lang.Create') }}
+                </a>
             </li>
         </ol>
     </section>
@@ -26,13 +28,26 @@
                     {{csrf_field()}}
                     @foreach($language as $lang)
                         <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
-                            {{ $lang->title .' '. trans('lang.Title') }} : <input type="text" value="{{Request::old('title['.$lang->code.']')}}"
-                                                                              class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
+                            {{ $lang->title .' '. trans('lang.Title') }} : <input type="text"
+                                                                                  value="{{Request::old('title['.$lang->code.']')}}"
+                                                                                  class="form-control"
+                                                                                  name="title[{{$lang->code}}]"
+                                                                                  placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
                     @endforeach
+                    <div class="form-group{{ $errors->has('country_id') ? ' has-error' : "" }}">
+                        {{trans('lang.Country')}} :
+                        <select id="country" class="form-control select2" data-placeholder="{{trans('lang.Message_Country')}}" name="country_id">
+                            <option value="0" selected>{{trans('lang.Select')}}</option>
+                            @foreach($country as  $mycountry)
+                                <option value="{{$mycountry->id}}"> {{$mycountry->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form-group{{ $errors->has('order') ? ' has-error' : "" }}">
                         {{ trans('lang.Order') }} : <input type="text" value="{{Request::old('order')}}"
-                                         class="form-control" name="order" placeholder="{{ trans('lang.Message_Order') }}">
+                                                           class="form-control" name="order"
+                                                           placeholder="{{ trans('lang.Message_Order') }}">
                     </div>
                     <div align="center">
                         <input type="submit" class="btn btn-primary" value="{{ trans('lang.Create') }}">

@@ -7,14 +7,17 @@ use App\Http\Requests\Core_Data\City\CreateRequest;
 use App\Http\Requests\Core_Data\City\EditRequest;
 use App\Http\Requests\Core_Data\City\StatusEditRequest;
 use App\Repositories\Core_Data\CityRepository;
+use App\Repositories\Core_Data\CountryRepository;
 
 class CityController extends Controller
 {
     private $cityRepository;
+    private $countryRepository;
 
-    public function __construct(CityRepository $CityRepository)
+    public function __construct(CityRepository $CityRepository,CountryRepository $CountryRepository)
     {
         $this->cityRepository = $CityRepository;
+        $this->countryRepository = $CountryRepository;
     }
 
     public function index()
@@ -25,7 +28,8 @@ class CityController extends Controller
 
     public function create()
     {
-        return view('admin.core_data.city.create');
+        $country = $this->countryRepository->Get_List_Data();
+        return view('admin.core_data.city.create',compact('country'));
     }
 
     public function store(CreateRequest $request)
@@ -37,8 +41,9 @@ class CityController extends Controller
 
     public function edit($id)
     {
+        $country = $this->countryRepository->Get_List_Data();
         $data = $this->cityRepository->Get_One_Data_Translation($id);
-        return view('admin.core_data.city.edit',compact('data'));
+        return view('admin.core_data.city.edit',compact('data','country'));
     }
 
     public function update(EditRequest $request, $id)

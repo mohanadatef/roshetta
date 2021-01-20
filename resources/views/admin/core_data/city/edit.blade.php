@@ -30,6 +30,14 @@
                                                                                class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
                     @endforeach
+                    <div class="form-group{{ $errors->has('country_id') ? ' has-error' : "" }}">
+                        {{ trans('lang.Country') }} :
+                        <select id="country" class="form-control" data-placeholder="{{trans('lang.Message_Country')}}" name="country_id">
+                            @foreach($country as  $mycountry)
+                                <option value="{{$mycountry->id}}" @if($mycountry->id == $data['country_id'])selected @endif > {{$mycountry->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form-group{{ $errors->has('order') ? ' has-error' : "" }}">
                         {{ trans('lang.Order') }} : <input type="text" value="{{$data['order']}}"
                                                           class="form-control" name="order" placeholder="{{ trans('lang.Message_Order') }}">

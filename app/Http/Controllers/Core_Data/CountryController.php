@@ -7,7 +7,6 @@ use App\Http\Requests\Core_Data\Country\CreateRequest;
 use App\Http\Requests\Core_Data\Country\EditRequest;
 use App\Http\Requests\Core_Data\Country\StatusEditRequest;
 use App\Repositories\Core_Data\CountryRepository;
-use Illuminate\Support\Facades\DB;
 
 class CountryController extends Controller
 {
@@ -58,13 +57,5 @@ class CountryController extends Controller
     {
         $this->countryRepository->Update_Status_Datas($request);
         return redirect()->back()->with('message', trans('lang.Message_Status'));
-    }
-
-    public function Get_List_Country_Json()
-    {
-        $country = DB::table("countries")
-            ->where("status", "=",1)
-            ->pluck("title", "id");
-        return response()->json($country);
     }
 }
