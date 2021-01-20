@@ -25,6 +25,8 @@ class EditRequest extends FormRequest
     {
             return [
                 'title.*'=>'required|unique_translation:areas,title,'.$this->id,
+                'country_id' => 'required|exists:countries,id',
+                'city_id' => 'required|exists:cities,id',
                 'order'=> 'required|unique:areas,order,'.$this->id.',id',
             ];
 
@@ -37,6 +39,10 @@ class EditRequest extends FormRequest
                 'title.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
+                'country_id.required' => 'برجاء ادخال البلد',
+                'country_id.exists' => 'برجاء الاختيار من القائمه',
+                'city_id.required' => 'برجاء ادخال المدينه',
+                'city_id.exists' => 'برجاء الاختيار من القائمه',
             ];
         }
         else{

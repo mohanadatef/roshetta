@@ -22,7 +22,7 @@ class SpecialtyRepository implements SpecialtyInterface
 
     public function Get_All_Data()
     {
-        return $this->Specialty->all();
+        return $this->Specialty->orderby('order','asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)

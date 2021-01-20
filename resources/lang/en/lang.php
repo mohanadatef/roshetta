@@ -66,5 +66,6 @@ return[
     'Message_Password'=>'Plase Enter Your Password',
     'Message_Support'=>'Plase Call Support',
     'Message_Country'=>'Plase Select Country',
+    'Message_City'=>'Plase Select City',
     'Select'=>'Select',
 ];

@@ -32,6 +32,8 @@
                                 <tr>
                                     <th align="center">#</th>
                                     <th align="center">{{ trans('lang.Title') }}</th>
+                                    <th align="center">{{ trans('lang.Country') }}</th>
+                                    <th align="center">{{ trans('lang.City') }}</th>
                                     <th align="center">{{ trans('lang.Status') }}</th>
                                     <th align="center">{{ trans('lang.Controller') }}</th>
                                 </tr>
@@ -43,6 +45,8 @@
                                                     <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
                                         </td>
                                         <td align="center">{{ $data->title }}</td>
+                                        <td align="center">{{ $data->country->title }}</td>
+                                        <td align="center">{{ $data->city->title }}</td>
                                         <td align="center">
                                                 @if($data->status ==1)
                                                     <a href="{{ url('/admin/area/change_status/'.$data->id)}}"><i
@@ -64,6 +68,8 @@
                                 <tr>
                                     <th align="center">#</th>
                                     <th align="center">{{ trans('lang.Title') }}</th>
+                                    <th align="center">{{ trans('lang.Country') }}</th>
+                                    <th align="center">{{ trans('lang.City') }}</th>
                                     <th align="center">{{ trans('lang.Status') }}</th>
                                     <th align="center">{{ trans('lang.Controller') }}</th>
                                 </tr>

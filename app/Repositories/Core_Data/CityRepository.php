@@ -22,7 +22,7 @@ class CityRepository implements CityInterface
 
     public function Get_All_Data()
     {
-        return $this->city->all();
+        return $this->city->orderby('order','asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)
@@ -76,5 +76,10 @@ class CityRepository implements CityInterface
             }
             $city->update();
         }
+    }
+
+    public function Get_List_Data($country)
+    {
+        return $this->country->select('title','id')->where('country_id',$country)->where('status',1)->orderby('order','asc')->get();
     }
 }

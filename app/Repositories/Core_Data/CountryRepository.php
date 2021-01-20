@@ -22,7 +22,7 @@ class CountryRepository implements CountryInterface
 
     public function Get_All_Data()
     {
-        return $this->country->all();
+        return $this->country->orderby('order','asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)

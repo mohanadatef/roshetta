@@ -7,14 +7,20 @@ use App\Http\Requests\Core_Data\Area\CreateRequest;
 use App\Http\Requests\Core_Data\Area\EditRequest;
 use App\Http\Requests\Core_Data\Area\StatusEditRequest;
 use App\Repositories\Core_Data\AreaRepository;
+use App\Repositories\Core_Data\CityRepository;
+use App\Repositories\Core_Data\CountryRepository;
 
 class AreaController extends Controller
 {
     private $areaRepository;
+    private $countryRepository;
+    private $cityRepository;
 
-    public function __construct(AreaRepository $AreaRepository)
+    public function __construct(AreaRepository $AreaRepository,CountryRepository $CountryRepository,CityRepository $CityRepository)
     {
         $this->areaRepository = $AreaRepository;
+        $this->countryRepository = $CountryRepository;
+        $this->cityRepository = $CityRepository;
     }
 
     public function index()
@@ -25,7 +31,8 @@ class AreaController extends Controller
 
     public function create()
     {
-        return view('admin.core_data.area.create');
+        $country = $this->countryRepository->Get_List_Data();
+        return view('admin.core_data.area.create',compact('country'));
     }
 
     public function store(CreateRequest $request)
@@ -38,7 +45,9 @@ class AreaController extends Controller
     public function edit($id)
     {
         $data = $this->areaRepository->Get_One_Data_Translation($id);
-        return view('admin.core_data.area.edit',compact('data'));
+        $country = $this->countryRepository->Get_List_Data();
+        $city = $this->cityRepository->Get_List_Data_For_Country($data['country_id']);
+        return view('admin.core_data.area.edit',compact('data','country','city'));
     }
 
     public function update(EditRequest $request, $id)

@@ -22,7 +22,7 @@ class SubSpecialtyRepository implements SubSpecialtyInterface
 
     public function Get_All_Data()
     {
-        return $this->sub_specialty->all();
+        return $this->sub_specialty->orderby('order','asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)

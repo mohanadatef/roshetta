@@ -15,6 +15,10 @@ class City extends Model
     {
         return $this->belongsTo('App\Models\Core_Data\Country','country_id');
     }
+    public function area()
+    {
+        return $this->hasMany('App\Models\Core_Data\Area');
+    }
     public $translatable = ['title'];
     protected $table = 'cities';
     public $timestamps = true;

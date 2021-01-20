@@ -8,6 +8,7 @@ use App\Http\Requests\Core_Data\City\EditRequest;
 use App\Http\Requests\Core_Data\City\StatusEditRequest;
 use App\Repositories\Core_Data\CityRepository;
 use App\Repositories\Core_Data\CountryRepository;
+use Illuminate\Support\Facades\DB;
 
 class CityController extends Controller
 {
@@ -62,5 +63,14 @@ class CityController extends Controller
     {
         $this->cityRepository->Update_Status_Datas($request);
         return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
+
+    public function Get_List_City_Json($country)
+    {
+        $city = DB::table("cities")
+            ->where("country_id", "=",$country)
+            ->where("status", "=",1)
+            ->pluck("title", "id");
+        return response()->json($city);
     }
 }

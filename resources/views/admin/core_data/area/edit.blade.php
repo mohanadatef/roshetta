@@ -30,6 +30,22 @@
                                                                                class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
                     @endforeach
+                    <div class="form-group{{ $errors->has('country_id') ? ' has-error' : "" }}">
+                        {{ trans('lang.Country') }} :
+                        <select id="country_id" class="form-control" data-placeholder="{{trans('lang.Message_Country')}}" name="country_id">
+                            @foreach($country as  $mycountry)
+                                <option value="{{$mycountry->id}}" @if($mycountry->id == $data['country_id'])selected @endif > {{$mycountry->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group{{ $errors->has('city_id') ? ' has-error' : "" }}">
+                        {{ trans('lang.City') }} :
+                        <select id="city_id" class="form-control" data-placeholder="{{trans('lang.Message_City')}}" name="city_id">
+                            @foreach($city as  $mycity)
+                                <option value="{{$mycity->id}}" @if($mycity->id == $data['city_id'])selected @endif > {{$mycity->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form-group{{ $errors->has('order') ? ' has-error' : "" }}">
                         {{ trans('lang.Order') }} : <input type="text" value="{{$data['order']}}"
                                                           class="form-control" name="order" placeholder="{{ trans('lang.Message_Order') }}">
@@ -43,5 +59,29 @@
     </section>
 @endsection
 @section('script_style')
+    <script type="text/javascript">
+        $('#country_id').change(function () {
+            var countryID = $(this).val();
+            if (countryID) {
+                $.ajax({
+                    type: "GET",
+                    url: "{{url('get_list_city_json')}}?country_id=" + countryID,
+                    success: function (res) {
+                        if (res) {
+                            $("#city_id").empty();
+                            $("#city_id").append('<option>{{trans('lang.Select')}}</option>');
+                            $.each(res, function (key, value) {
+                                $("#city_id").append('<option value="' + key + '">' + value + '</option>');
+                            });
+                        } else {
+                            $("#city_id").empty();
+                        }
+                    }
+                });
+            } else {
+                $("#city_id").empty();
+            }
+        });
+    </script>
     {!! JsValidator::formRequest('App\Http\Requests\Core_Data\Area\EditRequest','#edit') !!}
 @endsection

@@ -22,7 +22,7 @@ class AreaRepository implements AreaInterface
 
     public function Get_All_Data()
     {
-        return $this->area->all();
+        return $this->area->orderby('order','asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)

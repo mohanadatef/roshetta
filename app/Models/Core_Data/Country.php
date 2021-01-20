@@ -15,6 +15,10 @@ class Country extends Model
     {
         return $this->hasMany('App\Models\Core_Data\City');
     }
+    public function area()
+    {
+        return $this->hasMany('App\Models\Core_Data\Area');
+    }
     public $translatable = ['title'];
     protected $table = 'countries';
     public $timestamps = true;

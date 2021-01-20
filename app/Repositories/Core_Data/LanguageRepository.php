@@ -22,7 +22,7 @@ class LanguageRepository implements LanguageInterface
 
     public function Get_All_Data()
     {
-        return $this->language->all();
+        return $this->language->orderby('order','asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)
