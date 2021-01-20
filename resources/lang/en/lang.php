@@ -60,6 +60,7 @@ return[
     'Country'=>'Country',
     'City'=>'City',
     'Area'=>'Area',
+    'Company_Insurance'=>'Company_Insurance',
     'Specialty'=>'Specialty',
     'Sub_Specialty'=>'Sub Specialty',
     'Login'=>'Login',

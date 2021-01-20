@@ -13,11 +13,11 @@ use Illuminate\Http\Request;
 class SpecialtyRepository implements SpecialtyInterface
 {
 
-    protected $Specialty;
+    protected $specialty;
 
-    public function __construct(Specialty $Specialty)
+    public function __construct(Specialty $specialty)
     {
-        $this->specialty = $Specialty;
+        $this->specialty = $specialty;
     }
 
     public function Get_All_Data()

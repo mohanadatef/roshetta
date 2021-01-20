@@ -109,5 +109,14 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\SubSpecialtyController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\SubSpecialtyController::class, 'change_many_status']);
         });
+        Route::prefix('/company_insurance')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'update']);
+            Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'change_status']);
+            Route::get('/change_many_status', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'change_many_status']);
+        });
     });
 });

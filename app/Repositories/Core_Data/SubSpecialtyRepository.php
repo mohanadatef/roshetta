@@ -13,11 +13,11 @@ use Illuminate\Http\Request;
 class SubSpecialtyRepository implements SubSpecialtyInterface
 {
 
-    protected $Sub_Specialty;
+    protected $sub_specialty;
 
-    public function __construct(Sub_Specialty $Sub_Specialty)
+    public function __construct(Sub_Specialty $sub_specialty)
     {
-        $this->sub_specialty = $Sub_Specialty;
+        $this->sub_specialty = $sub_specialty;
     }
 
     public function Get_All_Data()
