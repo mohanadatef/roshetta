@@ -118,5 +118,14 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'change_many_status']);
         });
+        Route::prefix('/scientific_degree')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Core_Data\ScientificDegreeController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Core_Data\ScientificDegreeController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Core_Data\ScientificDegreeController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Core_Data\ScientificDegreeController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\ScientificDegreeController::class, 'update']);
+            Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\ScientificDegreeController::class, 'change_status']);
+            Route::get('/change_many_status', [App\Http\Controllers\Core_Data\ScientificDegreeController::class, 'change_many_status']);
+        });
     });
 });

@@ -61,6 +61,7 @@ return[
     'Area'=>'منطقه',
     'Specialty'=>'تخصص',
     'Company_Insurance'=>'شركه التامين',
+    'Scientific_Degree'=>'الدرجه العلميه',
     'Sub_Specialty'=>'تخصص مدرجه',
     'Login'=>'تسجيل دخول',
     'Message_Password'=>'برجاء ادخال كلمه السر',
