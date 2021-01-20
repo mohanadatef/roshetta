@@ -71,6 +71,7 @@ return[
     'Specialty'=>'Specialty',
     'Sub_Specialty'=>'Sub Specialty',
     'Login'=>'Login',
+    'Logout'=>'Logout',
     'Message_Password'=>'Plase Enter Your Password',
     'Message_Support'=>'Plase Call Support',
     'Message_Country'=>'Plase Select Country',

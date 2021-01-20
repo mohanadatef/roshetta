@@ -70,6 +70,7 @@ return[
     'Medicine'=>'ادويه',
     'Sub_Specialty'=>'تخصص مدرجه',
     'Login'=>'تسجيل دخول',
+    'Logout'=>'تسجيل خروج',
     'Message_Password'=>'برجاء ادخال كلمه السر',
     'Message_Support'=>'برجاء الاتصال بالدعم الفني',
     'Message_Country'=>'برجاء اختيار البلد',

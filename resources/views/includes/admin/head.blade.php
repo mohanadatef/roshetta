@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 @if($setting != null)
-<title>{{$setting->title}} | Dashboard</title>
+<title>{{$setting->title}} | {{ trans('lang.DashBoard') }}</title>
     @else
     <title> Dashboard</title>
 @endif
