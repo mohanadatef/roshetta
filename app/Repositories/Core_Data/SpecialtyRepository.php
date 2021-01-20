@@ -90,3 +90,4 @@ class SpecialtyRepository implements SpecialtyInterface
         }
     }
 }
+

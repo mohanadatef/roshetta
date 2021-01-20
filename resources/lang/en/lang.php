@@ -61,6 +61,7 @@ return[
     'City'=>'City',
     'Area'=>'Area',
     'Specialty'=>'Specialty',
+    'Sub_Specialty'=>'Sub Specialty',
     'Login'=>'Login',
     'Message_Password'=>'Plase Enter Your Password',
     'Message_Support'=>'Plase Call Support',

@@ -60,6 +60,7 @@ return[
     'City'=>'مدينه',
     'Area'=>'منطقه',
     'Specialty'=>'تخصص',
+    'Sub_Specialty'=>'تخصص مدرجه',
     'Login'=>'تسجيل دخول',
     'Message_Password'=>'برجاء ادخال كلمه السر',
     'Message_Support'=>'برجاء الاتصال بالدعم الفني',
