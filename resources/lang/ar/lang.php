@@ -63,6 +63,7 @@ return[
     'Company_Insurance'=>'شركه التامين',
     'Scientific_Degree'=>'الدرجه العلميه',
     'Service_Category'=>'تخصص الخدمات',
+    'Product_Category'=>'تخصص منتجات',
     'Service'=>'الخدمات',
     'Sub_Specialty'=>'تخصص مدرجه',
     'Login'=>'تسجيل دخول',

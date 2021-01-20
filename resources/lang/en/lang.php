@@ -63,6 +63,7 @@ return[
     'Company_Insurance'=>'Company Insurance',
     'Scientific_Degree'=>'Scientific Degree',
     'Service_Category'=>'Service Category',
+    'Product_Category'=>'Product Category',
     'Service'=>'Service',
     'Specialty'=>'Specialty',
     'Sub_Specialty'=>'Sub Specialty',
