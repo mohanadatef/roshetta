@@ -215,7 +215,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         @if (Route::has('login'))
                             @auth
-                                <span class="hidden-xs">{{ Auth::user()->username }}</span>
+                                <span class="hidden-xs">{{ Auth::user()->first_name }}</span>
                             @else
                             @endauth
                         @endif
