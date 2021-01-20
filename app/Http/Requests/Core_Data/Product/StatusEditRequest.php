@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Core_Data\Service;
+namespace App\Http\Requests\Core_Data\Product;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,7 +24,7 @@ class StatusEditRequest extends FormRequest
     public function rules()
     {
         return [
-            'change_status' => 'required|exists:services,id',
+            'change_status' => 'required|exists:products,id',
         ];
     }
 }

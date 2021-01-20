@@ -64,6 +64,7 @@ return[
     'Scientific_Degree'=>'الدرجه العلميه',
     'Service_Category'=>'تخصص الخدمات',
     'Product_Category'=>'تخصص منتجات',
+    'Product'=>'منتجات',
     'Service'=>'الخدمات',
     'Sub_Specialty'=>'تخصص مدرجه',
     'Login'=>'تسجيل دخول',
@@ -72,6 +73,7 @@ return[
     'Message_Country'=>'برجاء اختيار البلد',
     'Message_City'=>'برجاء اختيار المدينه',
     'Message_Service_Category'=>'برجاء اختيار تخصص الخدمات',
+    'Message_Product_Category'=>'برجاء اختيار تخصص منتجات',
     'Message_Specialty'=>'برجاء اختيار التخصص',
     'Select'=>'اختار',
 ];

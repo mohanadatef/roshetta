@@ -154,5 +154,14 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\ProductCategoryController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\ProductCategoryController::class, 'change_many_status']);
         });
+        Route::prefix('/product')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Core_Data\ProductController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Core_Data\ProductController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Core_Data\ProductController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Core_Data\ProductController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\ProductController::class, 'update']);
+            Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\ProductController::class, 'change_status']);
+            Route::get('/change_many_status', [App\Http\Controllers\Core_Data\ProductController::class, 'change_many_status']);
+        });
     });
 });

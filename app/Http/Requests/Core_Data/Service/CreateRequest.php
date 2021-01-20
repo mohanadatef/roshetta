@@ -38,7 +38,7 @@ class CreateRequest extends FormRequest
                 'title.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
-                'service_category_id.required' => 'برجاء ادخال البلد',
+                'service_category_id.required' => 'برجاء ادخال الخدمه',
                 'service_category_id.exists' => 'برجاء الاختيار من القائمه',
             ];
         }

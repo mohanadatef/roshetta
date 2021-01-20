@@ -64,6 +64,7 @@ return[
     'Scientific_Degree'=>'Scientific Degree',
     'Service_Category'=>'Service Category',
     'Product_Category'=>'Product Category',
+    'Product'=>'Product',
     'Service'=>'Service',
     'Specialty'=>'Specialty',
     'Sub_Specialty'=>'Sub Specialty',
@@ -74,5 +75,6 @@ return[
     'Message_City'=>'Plase Select City',
     'Message_Specialty'=>'Plase Select Specialty',
     'Message_Service_Category'=>'Plase Select Service Category',
+    'Message_Product_Category'=>'Plase Select Product Category',
     'Select'=>'Select',
 ];
