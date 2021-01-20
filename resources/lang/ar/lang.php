@@ -66,5 +66,6 @@ return[
     'Message_Support'=>'برجاء الاتصال بالدعم الفني',
     'Message_Country'=>'برجاء اختيار البلد',
     'Message_City'=>'برجاء اختيار المدينه',
+    'Message_Specialty'=>'برجاء اختيار التخصص',
     'Select'=>'اختار',
 ];

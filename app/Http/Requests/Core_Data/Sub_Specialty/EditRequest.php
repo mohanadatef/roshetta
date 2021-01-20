@@ -25,8 +25,8 @@ class EditRequest extends FormRequest
     {
             return [
                 'title.*'=>'required|unique_translation:sub_specialties,title,'.$this->id,
+                'specialty_id' => 'required|exists:specialties,id',
                 'order'=> 'required|unique:sub_specialties,order,'.$this->id.',id',
-                'image'=> 'image|mimes:jpg,jpeg,png,gif|max:2048',
             ];
 
     }
@@ -38,8 +38,8 @@ class EditRequest extends FormRequest
                 'title.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
-                'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
-                'image.max' => 'برجاء ادخال الصوره اقل من 2048',
+                'specialty_id.required' => 'برجاء ادخال البلد',
+                'specialty_id.exists' => 'برجاء الاختيار من القائمه',
             ];
         }
         else{

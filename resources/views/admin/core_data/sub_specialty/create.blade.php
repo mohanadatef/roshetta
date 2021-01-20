@@ -22,7 +22,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <form id='create' action="{{url('admin/sub_specialty/store')}}" method="POST" enctype="multipart/form-data">
+                <form id='create' action="{{url('admin/sub_specialty/store')}}" method="POST">
                     {{csrf_field()}}
                     @foreach($language as $lang)
                         <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
@@ -30,6 +30,15 @@
                                                                               class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
                     @endforeach
+                    <div class="form-group{{ $errors->has('specialty_id') ? ' has-error' : "" }}">
+                        {{trans('lang.Specialty')}} :
+                        <select id="specialty" class="form-control select2" data-placeholder="{{trans('lang.Message_Specialty')}}" name="specialty_id">
+                            <option value="0" selected>{{trans('lang.Select')}}</option>
+                            @foreach($specialty as  $myspecialty)
+                                <option value="{{$myspecialty->id}}"> {{$myspecialty->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form-group{{ $errors->has('order') ? ' has-error' : "" }}">
                         {{ trans('lang.Order') }} : <input type="text" value="{{Request::old('order')}}"
                                          class="form-control" name="order" placeholder="{{ trans('lang.Message_Order') }}">

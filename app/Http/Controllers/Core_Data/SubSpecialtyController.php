@@ -6,15 +6,18 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Core_Data\Sub_Specialty\CreateRequest;
 use App\Http\Requests\Core_Data\Sub_Specialty\EditRequest;
 use App\Http\Requests\Core_Data\Sub_Specialty\StatusEditRequest;
+use App\Repositories\Core_Data\SpecialtyRepository;
 use App\Repositories\Core_Data\SubSpecialtyRepository;
 
 class SubSpecialtyController extends Controller
 {
     private $sub_specialtyRepository;
+    private $specialtyRepository;
 
-    public function __construct(SubSpecialtyRepository $Sub_SpecialtyRepository)
+    public function __construct(SubSpecialtyRepository $Sub_SpecialtyRepository,SpecialtyRepository $SpecialtyRepository)
     {
         $this->sub_specialtyRepository = $Sub_SpecialtyRepository;
+        $this->specialtyRepository = $SpecialtyRepository;
     }
 
     public function index()
@@ -25,7 +28,8 @@ class SubSpecialtyController extends Controller
 
     public function create()
     {
-        return view('admin.core_data.sub_specialty.create');
+        $specialty = $this->specialtyRepository->Get_List_Data();
+        return view('admin.core_data.sub_specialty.create',compact('specialty'));
     }
 
     public function store(CreateRequest $request)
@@ -37,8 +41,9 @@ class SubSpecialtyController extends Controller
 
     public function edit($id)
     {
+        $specialty = $this->specialtyRepository->Get_List_Data();
         $data = $this->sub_specialtyRepository->Get_One_Data_Translation($id);
-        return view('admin.core_data.sub_specialty.edit',compact('data'));
+        return view('admin.core_data.sub_specialty.edit',compact('data','specialty'));
     }
 
     public function update(EditRequest $request, $id)

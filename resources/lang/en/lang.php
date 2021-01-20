@@ -67,5 +67,6 @@ return[
     'Message_Support'=>'Plase Call Support',
     'Message_Country'=>'Plase Select Country',
     'Message_City'=>'Plase Select City',
+    'Message_Specialty'=>'Plase Select Specialty',
     'Select'=>'Select',
 ];

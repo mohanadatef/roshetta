@@ -21,7 +21,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <form id="edit" action="{{url('admin/sub_specialty/update/'.$data['id'])}}" method="POST" enctype="multipart/form-data">
+                <form id="edit" action="{{url('admin/sub_specialty/update/'.$data['id'])}}" method="POST" >
                     {{csrf_field()}}
                     {{method_field('patch')}}
                     @foreach($language as $lang)
@@ -30,6 +30,14 @@
                                                                                class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
                     @endforeach
+                    <div class="form-group{{ $errors->has('specialty_id') ? ' has-error' : "" }}">
+                        {{ trans('lang.Specialty') }} :
+                        <select id="specialty" class="form-control" data-placeholder="{{trans('lang.Message_Specialty')}}" name="specialty_id">
+                            @foreach($specialty as  $myspecialty)
+                                <option value="{{$myspecialty->id}}" @if($myspecialty->id == $data['specialty_id'])selected @endif > {{$myspecialty->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form-group{{ $errors->has('order') ? ' has-error' : "" }}">
                         {{ trans('lang.Order') }} : <input type="text" value="{{$data['order']}}"
                                                           class="form-control" name="order" placeholder="{{ trans('lang.Message_Order') }}">

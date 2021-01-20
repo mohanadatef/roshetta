@@ -11,6 +11,10 @@ class Specialty extends Model
     protected $fillable = [
         'status','image','title','order'
     ];
+    public function sub_specialty()
+    {
+        return $this->hasMany('App\Models\Core_Data\Sub_Specialty');
+    }
     public $translatable = ['title'];
     protected $table = 'specialties';
     public $timestamps = true;
