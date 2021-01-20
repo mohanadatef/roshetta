@@ -78,8 +78,8 @@ class CityRepository implements CityInterface
         }
     }
 
-    public function Get_List_Data($country)
+    public function Get_List_Data_For_Country($country)
     {
-        return $this->country->select('title','id')->where('country_id',$country)->where('status',1)->orderby('order','asc')->get();
+        return $this->city->where('country_id',$country)->where('status',1)->orderby('order','asc')->get();
     }
 }

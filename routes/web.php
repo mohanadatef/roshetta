@@ -80,7 +80,7 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\CityController::class, 'update']);
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\CityController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\CityController::class, 'change_many_status']);
-            Route::get('/get_list_city_json', [App\Http\Controllers\Core_Data\CityController::class, 'Get_List_City_Json']);
+            Route::get('/get_list_city_json/{country}', [App\Http\Controllers\Core_Data\CityController::class, 'Get_List_City_Json']);
         });
         Route::prefix('/area')->group(function () {
             Route::get('/index', [App\Http\Controllers\Core_Data\AreaController::class, 'index']);

@@ -64,18 +64,21 @@
             if (countryID) {
                 $.ajax({
                     type: "GET",
-                    url: "{{url('get_list_city_json')}}?country_id=" + countryID,
+                    url: "{{url('admin/city/get_list_city_json').'/'}}" + countryID,
                     success: function (res) {
                         if (res) {
                             $("#city_id").empty();
                             $("#city_id").append('<option>{{trans('lang.Select')}}</option>');
                             $.each(res, function (key, value) {
-                                    $("#city_id").append('<option value="' + key + '">' + value + '</option>');
+                                    $("#city_id").append('<option value="' + value['id'] + '">' + value['title']['{{$language_Locale}}'] + '</option>');
                             });
                         } else {
                             $("#city_id").empty();
                         }
+                    },error:function(res){
+                        console.log(res);
                     }
+
                 });
             } else {
                 $("#city_id").empty();

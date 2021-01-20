@@ -29,8 +29,10 @@ class ComposerServiceProvider extends ServiceProvider
         view()->composer(['*'], function ($view) {
             $setting = Setting::first();
            $language = Language::all();
+           $language_Locale = Language_Locale();
             $view->with('setting', $setting);
             $view->with('language', $language);
+            $view->with('language_Locale', $language_Locale);
         });
     }
 
