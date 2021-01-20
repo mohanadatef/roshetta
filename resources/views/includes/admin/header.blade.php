@@ -205,7 +205,7 @@
                     {!! Form::open(['url'=>'admin/language/setLang','method'=>'post']) !!}
                     <div class="form-group">
                         <select name='lang' onchange="this.form.submit();">
-                            @foreach($language as $lang)
+                            @foreach(Language() as $lang)
                                 <option value='{{$lang->code}}'
                                 @if( \Illuminate\Support\Facades\App::getLocale() == $lang->code )selected @endif    >{{$lang->title}}</option>
                             @endforeach

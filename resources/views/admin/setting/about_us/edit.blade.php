@@ -24,7 +24,7 @@
                 <form id="edit" action="{{url('admin/about_us/update/'.$data['id'])}}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                     {{method_field('patch')}}
-                    @foreach($language as $lang)
+                    @foreach(language() as $lang)
                         <div class="form-group{{ $errors->has('detail['.$lang->code.']') ? ' has-error' : "" }}">
                             {{  $lang->title .' '. trans('lang.Detail') }} :  <textarea type="text" id="detail" class="form-control"
                                               name="detail[{{$lang->code}}]"

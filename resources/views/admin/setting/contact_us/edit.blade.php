@@ -32,13 +32,13 @@
                         {{ trans('lang.Mobile') }} : <input type="text" class="form-control" name="mobile" value="{{$data['mobile']}}"
                                                            placeholder="{{ trans('lang.Message_Mobile') }}">
                     </div>
-                    @foreach($language as $lang)
+                    @foreach(language() as $lang)
                         <div class="form-group{{ $errors->has('address['.$lang->code.']') ? ' has-error' : "" }}">
                             {{  $lang->title .' '. trans('lang.Address') }} : <input type="text" @if(isset($data['address'][$lang->code]))  value="{{$data['address'][$lang->code]}}" @endif
                                                                                class="form-control" name="address[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Address') }}">
                         </div>
                     @endforeach
-                    @foreach($language as $lang)
+                    @foreach(language() as $lang)
                         <div class="form-group{{ $errors->has('time_work['.$lang->code.']') ? ' has-error' : "" }}">
                             {{  $lang->title .' '. trans('lang.Time_Work') }} : <input type="text" @if(isset($data['time_work'][$lang->code]))  value="{{$data['time_work'][$lang->code]}}" @endif
                                                                                  class="form-control" name="time_work[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Time_Work') }}">

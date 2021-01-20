@@ -24,13 +24,13 @@
             <div class="box-body">
                 <form id='create' action="{{url('admin/medicine/store')}}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
-                    @foreach($language as $lang)
+                    @foreach(language() as $lang)
                         <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
                             {{ $lang->title .' '. trans('lang.Title') }} : <input type="text" value="{{Request::old('title['.$lang->code.']')}}"
                                                                               class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
                     @endforeach
-                    @foreach($language as $lang)
+                    @foreach(language() as $lang)
                         <div class="form-group{{ $errors->has('detail['.$lang->code.']') ? ' has-error' : "" }}">
                             {{$lang->title.' '. trans('lang.Detail') }} : <textarea type="text" class="form-control"
                                                                                     name="detail[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Detail') }}">{{Request::old('detail['.$lang->code.']')}}</textarea>

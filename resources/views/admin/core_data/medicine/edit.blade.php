@@ -24,13 +24,13 @@
                 <form id="edit" action="{{url('admin/medicine/update/'.$data['id'])}}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                     {{method_field('patch')}}
-                    @foreach($language as $lang)
+                    @foreach(language() as $lang)
                         <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
                             {{  $lang->title .' '. trans('lang.Title') }} : <input type="text" @if(isset($data['title'][$lang->code])) value="{{$data['title'][$lang->code]}}" @endif
                                                                                class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
                     @endforeach
-                    @foreach($language as $lang)
+                    @foreach(language() as $lang)
                         <div class="form-group{{ $errors->has('detail['.$lang->code.']') ? ' has-error' : "" }}">
                             {{  $lang->title .' '. trans('lang.Detail') }} :  <textarea type="text" id="detail" class="form-control"
                                                                                         name="detail[{{$lang->code}}]"

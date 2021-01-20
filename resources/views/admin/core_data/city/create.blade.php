@@ -26,7 +26,7 @@
             <div class="box-body">
                 <form id='create' action="{{url('admin/city/store')}}" method="POST">
                     {{csrf_field()}}
-                    @foreach($language as $lang)
+                    @foreach(language() as $lang)
                         <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
                             {{ $lang->title .' '. trans('lang.Title') }} : <input type="text"
                                                                                   value="{{Request::old('title['.$lang->code.']')}}"
