@@ -39,8 +39,8 @@ class EditRequest extends FormRequest
     {
         if (Language_Locale() == 'ar') {
             return [
-                'title.required' => 'برجاء ادخال الاسم',
-                'title.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
+                'title.*.required' => 'برجاء ادخال الاسم',
+                'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'facebook.required' => 'برجاء ادخال فيس بوك',
                 'youtube.required' => 'برجاء ادخال اليوتيوب',
                 'twitter.required' => 'برجاء ادخال تويتر',

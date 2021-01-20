@@ -24,6 +24,7 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
+            'detail.*'=>'required',
             'title.*'=>'required|unique_translation:services',
             'service_category_id' => 'required|exists:service_categories,id',
             'order' => 'required|unique:services',
@@ -34,8 +35,9 @@ class CreateRequest extends FormRequest
     {
         if (Language_Locale() == 'ar') {
             return [
-                'title.required' => 'برجاء ادخال الاسم',
-                'title.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
+                'detail.*.required' => 'برجاء ادخال الوصف',
+                'title.*.required' => 'برجاء ادخال الاسم',
+                'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
                 'service_category_id.required' => 'برجاء ادخال الخدمه',

@@ -32,6 +32,7 @@
                                 <tr>
                                     <th align="center">#</th>
                                     <th align="center">{{ trans('lang.Title') }}</th>
+                                    <th class="center">  {{ trans('lang.Detail') }}</th>
                                     <th align="center">{{ trans('lang.Medicine_Category') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
                                     <th align="center">{{ trans('lang.Status') }}</th>
@@ -45,6 +46,7 @@
                                                     <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
                                         </td>
                                         <td align="center">{{ $data->title }}</td>
+                                        <td class="center">{!! substr($data->detail,0,5)  !!}</td>
                                         <td align="center">{{ $data->medicine_category->title }}</td>
                                         <td class="center"><img src="{{ asset('public/images/medicine/'.$data->image ) }}" style="width:100px;height: 100px"></td>
                                         <td align="center">
@@ -68,6 +70,7 @@
                                 <tr>
                                     <th align="center">#</th>
                                     <th align="center">{{ trans('lang.Title') }}</th>
+                                    <th class="center">  {{ trans('lang.Detail') }}</th>
                                     <th align="center">{{ trans('lang.Medicine_Category') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
                                     <th align="center">{{ trans('lang.Status') }}</th>

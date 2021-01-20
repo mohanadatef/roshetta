@@ -31,7 +31,7 @@ class EditRequest extends FormRequest
     {
         if (Language_Locale() == 'ar') {
             return [
-                'detail.required' => 'برجاء ادخال الاسم',
+                'detail.*.required' => 'برجاء ادخال الاسم',
             ];
         }
         else{

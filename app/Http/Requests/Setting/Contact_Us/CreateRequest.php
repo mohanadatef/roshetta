@@ -35,8 +35,8 @@ class CreateRequest extends FormRequest
     {
         if (Language_Locale() == 'ar') {
             return [
-                'address.required' => 'برجاء ادخال العنوان',
-                'time_work.required' => 'برجاء ادخال وقت العمل',
+                'address.*.required' => 'برجاء ادخال العنوان',
+                'time_work.*.required' => 'برجاء ادخال وقت العمل',
                 'mobile.required' => 'برجاء ادخال الهاتف',
                 'email.required' => 'برجاء ادخال البريد الالكتروني',
                 'email.unique' => ' برجاء ادخال البريد الالكتروني غير متكرر',

@@ -33,7 +33,7 @@ class CreateRequest extends FormRequest
     {
         if (Language_Locale() == 'ar') {
             return [
-                'detail.required' => 'برجاء ادخال الوصف',
+                'detail.*.required' => 'برجاء ادخال الوصف',
                 'image.required' => 'برجاء ادخال الصوره',
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',

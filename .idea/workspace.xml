@@ -20,9 +20,46 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExampleController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ExampleMiddleware.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Area/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Area/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Area/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Area/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/City/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/City/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/City/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/City/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Company_Insurance/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Company_Insurance/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Company_Insurance/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Company_Insurance/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Country/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Country/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Country/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Country/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Scientific_Degree/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Scientific_Degree/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Scientific_Degree/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Scientific_Degree/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service_Category/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service_Category/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service_Category/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service_Category/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Specialty/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Specialty/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Specialty/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Specialty/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Sub_Specialty/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Sub_Specialty/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Sub_Specialty/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Sub_Specialty/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Setting/About_Us/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Setting/About_Us/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Setting/About_Us/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Setting/About_Us/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Setting/Contact_Us/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Setting/Contact_Us/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Setting/Contact_Us/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Setting/Contact_Us/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Setting/Privacy/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Setting/Privacy/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Setting/Privacy/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Setting/Privacy/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Setting/Setting/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Setting/Setting/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Setting/Setting/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Setting/Setting/EditRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Jobs/ExampleJob.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Jobs/Job.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Listeners/ExampleListener.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Core_Data/Medicine.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Core_Data/Medicine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Core_Data/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Core_Data/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Core_Data/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Core_Data/Service.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
@@ -36,10 +73,32 @@
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/lang.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/area/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/area/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/city/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/city/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/company_insurance/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/company_insurance/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/country/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/country/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/medicine/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/medicine/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/medicine/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/medicine/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/medicine/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/medicine/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/product/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/product_category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/product_category/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/scientific_degree/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/scientific_degree/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/service/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/service/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/service/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/service/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/service/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/service/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/service_category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/service_category/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/specialty/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/specialty/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/sub_specialty/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/sub_specialty/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/about_us/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/about_us/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/about_us/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/about_us/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/contact_us/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/contact_us/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/privacy/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/privacy/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/privacy/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/privacy/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/setting/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/setting/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/ExampleTest.php" beforeDir="false" />
@@ -57,87 +116,62 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Interfaces/Core_Data/MedicineInterface.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/Setting/CreateRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-              <folding>
-                <element signature="e#44#98#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="612">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Medicine.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/Setting/EditRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="714">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/setting/setting/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <folding>
-                <element signature="e#47#101#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-597" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/setting/privacy/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="71" column="41" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="71" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/ar/lang.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="78" column="57" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/lang/en/lang.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
+            <state relative-caret-position="811">
+              <caret line="104" column="41" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="794">
-              <caret line="175" column="73" selection-start-line="175" selection-start-column="73" selection-end-line="175" selection-end-column="73" />
-              <caret line="176" column="74" selection-start-line="176" selection-start-column="74" selection-end-line="176" selection-end-column="74" />
-              <caret line="177" column="74" selection-start-line="177" selection-start-column="74" selection-end-line="177" selection-end-column="74" />
-              <caret line="178" column="77" selection-start-line="178" selection-start-column="77" selection-end-line="178" selection-end-column="77" />
-              <caret line="179" column="81" selection-start-line="179" selection-start-column="81" selection-end-line="179" selection-end-column="81" />
-              <caret line="180" column="86" selection-start-line="180" selection-start-column="86" selection-end-line="180" selection-end-column="86" />
-              <caret line="181" column="86" selection-start-line="181" selection-start-column="86" selection-end-line="181" selection-end-column="86" />
+            <state relative-caret-position="1525">
+              <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="225" column="57" selection-start-line="225" selection-start-column="57" selection-end-line="225" selection-end-column="57" />
-              <caret line="228" column="57" selection-start-line="228" selection-start-column="57" selection-end-line="228" selection-end-column="57" />
+            <state relative-caret-position="811">
+              <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -146,38 +180,25 @@
         <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="811">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-              <caret line="12" column="112" selection-start-line="12" selection-start-column="112" selection-end-line="12" selection-end-column="112" />
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-              <caret line="34" column="117" selection-start-line="34" selection-start-column="117" selection-end-line="34" selection-end-column="117" />
-              <caret line="68" column="63" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+              <caret line="104" column="41" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine/index.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/service/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="59" column="80" selection-start-line="59" selection-start-column="80" selection-end-line="59" selection-end-column="80" />
-              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-              <caret line="15" column="85" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
-              <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-              <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-              <caret line="47" column="77" selection-start-line="47" selection-start-column="77" selection-end-line="47" selection-end-column="77" />
-              <caret line="48" column="101" selection-start-line="48" selection-start-column="101" selection-end-line="48" selection-end-column="101" />
-              <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
-              <caret line="54" column="84" selection-start-line="54" selection-start-column="84" selection-end-line="54" selection-end-column="84" />
-              <caret line="55" column="116" selection-start-line="55" selection-start-column="116" selection-end-line="55" selection-end-column="116" />
+            <state relative-caret-position="811">
+              <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine/create.blade.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/service/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="48" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="48" />
+            <state relative-caret-position="811">
+              <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -205,57 +226,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/service/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/service/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Core_Data/ServiceController.php" />
-        <option value="$PROJECT_DIR$/app/Models/Core_Data/Service.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Core_Data/ProductCategoryController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/CreateRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/EditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/StatusEditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Interfaces/Core_Data/ProductCategoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Models/Core_Data/Product_Category.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Core_Data/ProductCategoryRepository.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/product_category/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/area/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/city/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/company_insurance/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/country/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/core_data/product_category/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/product_category/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Core_Data/ProductController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/EditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/CreateRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/StatusEditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/StatusEditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Interfaces/Core_Data/ProductInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Core_Data/ProductRepository.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/product/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/product/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/scientific_degree/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/service_category/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/specialty/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/sub_specialty/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/setting/setting/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/area/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/setting/about_us/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/setting/privacy/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/setting/contact_us/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/service/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/medicine/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/core_data/product/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Core_Data/Product.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineCategoryController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/setting/about_us/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/setting/privacy/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Area/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Area/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/City/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/City/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Company_Insurance/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Company_Insurance/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Country/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Country/EditRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/CreateRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/EditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/StatusEditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Interfaces/Core_Data/MedicineCategoryInterface.php" />
-        <option value="$PROJECT_DIR$/app/Models/Core_Data/Medicine_Category.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Core_Data/MedicineCategoryRepository.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/StatusEditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Interfaces/Core_Data/MedicineInterface.php" />
-        <option value="$PROJECT_DIR$/app/Models/Core_Data/Medicine.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Scientific_Degree/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Scientific_Degree/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service_Category/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service_Category/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Specialty/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Specialty/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Sub_Specialty/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Sub_Specialty/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Setting/Contact_Us/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Setting/Contact_Us/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Setting/Setting/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Setting/Setting/EditRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/product/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/product/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/core_data/medicine/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/core_data/medicine/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/core_data/medicine/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/lang/ar/lang.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/lang.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/service/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/core_data/service/create.blade.php" />
       </list>
     </option>
   </component>
@@ -420,21 +441,6 @@
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Requests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -444,6 +450,51 @@
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Requests" type="462c0819:PsiDirectoryNode" />
               <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Area" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="City" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Company_Insurance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Country" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Language" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
@@ -458,65 +509,127 @@
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
               <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Medicine_Category" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
               <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
               <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Product_Category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Scientific_Degree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Service_Category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Specialty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Sub_Specialty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Setting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Setting" type="462c0819:PsiDirectoryNode" />
+              <item name="About_Us" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Setting" type="462c0819:PsiDirectoryNode" />
+              <item name="Contact_Us" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Setting" type="462c0819:PsiDirectoryNode" />
+              <item name="Privacy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Setting" type="462c0819:PsiDirectoryNode" />
+              <item name="Setting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-              <item name="ar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
@@ -538,6 +651,51 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="core_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="area" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="city" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="company_insurance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="country" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
@@ -553,20 +711,116 @@
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="medicine_category" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="product_category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="scientific_degree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="service_category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="specialty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="core_data" type="462c0819:PsiDirectoryNode" />
+              <item name="sub_specialty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="setting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="setting" type="462c0819:PsiDirectoryNode" />
+              <item name="about_us" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="setting" type="462c0819:PsiDirectoryNode" />
+              <item name="contact_us" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="setting" type="462c0819:PsiDirectoryNode" />
+              <item name="privacy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="setting" type="462c0819:PsiDirectoryNode" />
+              <item name="setting" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -626,12 +880,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610791804600</updated>
-      <workItem from="1610791806101" duration="104761000" />
+      <workItem from="1610791806101" duration="107757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104761000" />
+    <option name="totallyTimeSpent" value="107757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -684,471 +938,304 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/scientific_degree/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/service/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="48" column="70" lean-forward="true" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
+        <state relative-caret-position="391">
+          <caret line="47" column="95" lean-forward="true" selection-start-line="47" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/ServiceController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/service_category/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/sub_specialty/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/setting/about_us/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-          <folding>
-            <element signature="e#50#86#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="40" column="95" selection-start-line="40" selection-start-column="95" selection-end-line="40" selection-end-column="95" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Service_Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#40#79#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/ProductCategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#50#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Interfaces/Core_Data/ProductCategoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="e#44#107#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Product_Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/EditRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/EditRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="69" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/StatusEditRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/StatusEditRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/StatusEditRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product_category/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="172" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product_category/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/setting/privacy/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
-          <caret line="50" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="50" selection-end-column="26" />
+          <caret line="39" column="95" selection-start-line="39" selection-start-column="95" selection-end-line="39" selection-end-column="95" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/ProductCategoryRepository.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/setting/setting/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="58" column="9" selection-start-line="49" selection-start-column="8" selection-end-line="58" selection-end-column="9" />
-          <folding>
-            <element signature="e#47#110#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/City/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product_category/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/City/CreateRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="24" column="126" selection-start-line="24" selection-start-column="97" selection-end-line="24" selection-end-column="126" />
+        <state relative-caret-position="612">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Area/EditRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="24" column="117" selection-start-line="24" selection-start-column="117" selection-end-line="24" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/ProductRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="e#47#101#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="48" column="103" selection-start-line="48" selection-start-column="103" selection-end-line="48" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/CreateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/CreateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="64" selection-start-line="40" selection-start-column="15" selection-end-line="42" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#50#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Interfaces/Core_Data/ProductInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#44#98#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
+        <state relative-caret-position="646">
           <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineCategoryController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Area/CreateRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#50#86#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="646">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Company_Insurance/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Company_Insurance/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Country/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Country/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Language/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Language/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/CreateRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/EditRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine_Category/StatusEditRequest.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/CreateRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Interfaces/Core_Data/MedicineCategoryInterface.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/EditRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#44#107#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Scientific_Degree/CreateRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+        <state relative-caret-position="612">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Scientific_Degree/EditRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+        <state relative-caret-position="612">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/CreateRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="57" column="73" selection-start-line="57" selection-start-column="73" selection-end-line="57" selection-end-column="73" />
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <caret line="15" column="87" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
-          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <caret line="46" column="94" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
-          <caret line="49" column="77" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="77" />
-          <caret line="52" column="77" selection-start-line="52" selection-start-column="77" selection-end-line="52" selection-end-column="77" />
-          <caret line="53" column="109" selection-start-line="53" selection-start-column="109" selection-end-line="53" selection-end-column="109" />
+        <state relative-caret-position="663">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Medicine_Category.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/EditRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        <state relative-caret-position="646">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/MedicineCategoryRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Service_Category/CreateRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="69" column="37" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
-          <folding>
-            <element signature="e#47#110#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Service_Category/EditRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="e#50#86#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Specialty/CreateRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="76" selection-start-line="41" selection-start-column="76" selection-end-line="41" selection-end-column="76" />
+        <state relative-caret-position="612">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Specialty/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Sub_Specialty/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Sub_Specialty/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/About_Us/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/About_Us/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/Contact_Us/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/Contact_Us/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/Privacy/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/Privacy/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/Setting/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Setting/Setting/EditRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-          <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/StatusEditRequest.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/setting/setting/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+        <state relative-caret-position="-597" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/setting/privacy/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="71" column="41" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="71" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Interfaces/Core_Data/MedicineInterface.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#44#98#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="811">
+          <caret line="104" column="41" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Medicine.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <element signature="e#47#101#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="175" column="73" selection-start-line="175" selection-start-column="73" selection-end-line="175" selection-end-column="73" />
-          <caret line="176" column="74" selection-start-line="176" selection-start-column="74" selection-end-line="176" selection-end-column="74" />
-          <caret line="177" column="74" selection-start-line="177" selection-start-column="74" selection-end-line="177" selection-end-column="74" />
-          <caret line="178" column="77" selection-start-line="178" selection-start-column="77" selection-end-line="178" selection-end-column="77" />
-          <caret line="179" column="81" selection-start-line="179" selection-start-column="81" selection-end-line="179" selection-end-column="81" />
-          <caret line="180" column="86" selection-start-line="180" selection-start-column="86" selection-end-line="180" selection-end-column="86" />
-          <caret line="181" column="86" selection-start-line="181" selection-start-column="86" selection-end-line="181" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="225" column="57" selection-start-line="225" selection-start-column="57" selection-end-line="225" selection-end-column="57" />
-          <caret line="228" column="57" selection-start-line="228" selection-start-column="57" selection-end-line="228" selection-end-column="57" />
+        <state relative-caret-position="1525">
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="48" />
+        <state relative-caret-position="811">
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="811">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <caret line="12" column="112" selection-start-line="12" selection-start-column="112" selection-end-line="12" selection-end-column="112" />
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <caret line="34" column="117" selection-start-line="34" selection-start-column="117" selection-end-line="34" selection-end-column="117" />
-          <caret line="68" column="63" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+          <caret line="104" column="41" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/service/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="59" column="80" selection-start-line="59" selection-start-column="80" selection-end-line="59" selection-end-column="80" />
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <caret line="15" column="85" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
-          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <caret line="47" column="77" selection-start-line="47" selection-start-column="77" selection-end-line="47" selection-end-column="77" />
-          <caret line="48" column="101" selection-start-line="48" selection-start-column="101" selection-end-line="48" selection-end-column="101" />
-          <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
-          <caret line="54" column="84" selection-start-line="54" selection-start-column="84" selection-end-line="54" selection-end-column="84" />
-          <caret line="55" column="116" selection-start-line="55" selection-start-column="116" selection-end-line="55" selection-end-column="116" />
+        <state relative-caret-position="811">
+          <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/ar/lang.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/service/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="78" column="57" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
+        <state relative-caret-position="811">
+          <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
         </state>
       </provider>
     </entry>

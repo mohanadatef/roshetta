@@ -11,13 +11,13 @@
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
             <li><a href="{{ url('/admin/area/index') }}"><i class="fa fa-permsissions"></i> {{ trans('lang.Area') }}</a></li>
-            <li><a href="{{ url('/admin/area/edit/'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{$data['title'][Language_Locale()]}}  </a></li>
+            <li><a href="{{ url('/admin/area/edit/'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : @if(isset($data['title'][Language_Locale()])) {{$data['title'][Language_Locale()]}} @endif  </a></li>
         </ol>
     </section>
     <section class="content">
         <div class="box">
             <div class="box-header">
-                <h3>{{ trans('lang.Edit') }}: {{$data['title'][Language_Locale()]}}  </h3>
+                <h3>{{ trans('lang.Edit') }} : @if(isset($data['title'][Language_Locale()])) {{$data['title'][Language_Locale()]}} @endif  </h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -26,7 +26,7 @@
                     {{method_field('patch')}}
                     @foreach($language as $lang)
                         <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
-                            {{  $lang->title .' '. trans('lang.Title') }} : <input type="text" value="{{$data['title'][$lang->code]}}"
+                            {{  $lang->title .' '. trans('lang.Title') }} : <input type="text" @if(isset($data['title'][$lang->code])) value="{{$data['title'][$lang->code]}}" @endif
                                                                                class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
                     @endforeach

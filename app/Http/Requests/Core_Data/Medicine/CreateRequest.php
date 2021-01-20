@@ -24,6 +24,7 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
+            'detail.*'=>'required',
             'title.*'=>'required|unique_translation:medicines',
             'medicine_category_id' => 'required|exists:medicine_categories,id',
             'order' => 'required|unique:medicines',
@@ -35,6 +36,7 @@ class CreateRequest extends FormRequest
     {
         if (Language_Locale() == 'ar') {
             return [
+                'detail.*.required' => 'برجاء ادخال الوصف',
                 'title.*.required' => 'برجاء ادخال الاسم',
                 'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',

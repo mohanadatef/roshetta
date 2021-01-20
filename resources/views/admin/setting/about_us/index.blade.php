@@ -38,7 +38,7 @@
                                 <tbody>
                                 @foreach($datas as $data)
                                     <tr>
-                                        <td class="center">{!! $data->detail !!}</td>
+                                        <td class="center">{!! substr($data->detail,0,5)  !!}</td>
                                         <td class="center"><img src="{{ asset('public/images/about_us/' . $data->image ) }}" style="width:100px;height: 100px"></td>
                                         <td class="center">
                                             <a href="{{ url('/admin/about_us/edit/'.$data->id)}}"><i class="btn btn-sm btn-primary ace-icon fa fa-edit bigger-120  edit" data-id=""> {{ trans('lang.Edit') }}</i></a>
