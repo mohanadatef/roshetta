@@ -33,7 +33,7 @@
                     @foreach($language as $lang)
                         <div class="form-group{{ $errors->has('detail['.$lang->code.']') ? ' has-error' : "" }}">
                             {{  $lang->title .' '. trans('lang.Detail') }} :  <textarea type="text" id="detail" class="form-control"
-                                                                                        name="detail"
+                                                                                        name="detail[{{$lang->code}}]"
                                                                                         placeholder="{{ trans('lang.Message_Detail') }}">@if(isset($data['detail'][$lang->code])) {{$data['detail'][$lang->code]}} @endif </textarea>
                         </div>
                     @endforeach
