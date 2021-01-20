@@ -66,6 +66,7 @@ return[
     'Product_Category'=>'Product Category',
     'Product'=>'Product',
     'Service'=>'Service',
+    'Medicine_Category'=>'Medicine Category',
     'Specialty'=>'Specialty',
     'Sub_Specialty'=>'Sub Specialty',
     'Login'=>'Login',

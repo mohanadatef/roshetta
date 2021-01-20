@@ -66,6 +66,7 @@ return[
     'Product_Category'=>'تخصص منتجات',
     'Product'=>'منتجات',
     'Service'=>'الخدمات',
+    'Medicine_Category'=>'تخصص ادويه',
     'Sub_Specialty'=>'تخصص مدرجه',
     'Login'=>'تسجيل دخول',
     'Message_Password'=>'برجاء ادخال كلمه السر',

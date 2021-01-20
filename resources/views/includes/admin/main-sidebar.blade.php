@@ -199,6 +199,22 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Medicine_Category') }}</span>
+                            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ url('/admin/medicine_category/index') }}"><i
+                                            class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
+                            </li>
+                            <li><a href="{{ url('/admin/medicine_category/create') }}"><i
+                                            class="fa fa-group"></i><span>{{ trans('lang.Create') }}</span></a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li class="treeview">
