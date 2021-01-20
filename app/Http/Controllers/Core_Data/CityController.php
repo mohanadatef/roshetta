@@ -67,7 +67,6 @@ class CityController extends Controller
 
     public function Get_List_City_Json($country)
     {
-        $city = $this->cityRepository->Get_List_Data_For_Country($country);
-        return $city;
+        return $this->cityRepository->Get_List_Data_For_Country($country);
     }
 }
