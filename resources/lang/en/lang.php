@@ -62,6 +62,7 @@ return[
     'Area'=>'Area',
     'Company_Insurance'=>'Company Insurance',
     'Scientific_Degree'=>'Scientific Degree',
+    'Service_Category'=>'Service Category',
     'Specialty'=>'Specialty',
     'Sub_Specialty'=>'Sub Specialty',
     'Login'=>'Login',

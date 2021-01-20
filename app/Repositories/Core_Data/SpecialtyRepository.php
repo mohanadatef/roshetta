@@ -28,7 +28,7 @@ class SpecialtyRepository implements SpecialtyInterface
     public function Create_Data(CreateRequest $request)
     {
         $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
-        Request()->image->move(public_path('images/Specialty'), $imageName);
+        Request()->image->move(public_path('images/specialty'), $imageName);
         $data['image'] = $imageName;
         $data['status'] = 1;
         $this->specialty->create(array_merge($request->all(),$data));
@@ -49,7 +49,7 @@ class SpecialtyRepository implements SpecialtyInterface
         $specialty = $this->Get_One_Data($id);
         if ($request->image != null) {
             $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
-            Request()->image->move(public_path('images/Specialty'), $imageName);
+            Request()->image->move(public_path('images/specialty'), $imageName);
             $data['image'] = $imageName;
             $specialty->update(array_merge($request->all(),$data));
         }
@@ -79,14 +79,14 @@ class SpecialtyRepository implements SpecialtyInterface
     {
 
         $specialtys = $this->Get_Many_Data($request);
-        foreach($specialtys as $Specialty)
+        foreach($specialtys as $specialty)
         {
-            if ($Specialty->status == 1) {
-                $Specialty->status = '0';
-            } elseif ($Specialty->status == 0) {
-                $Specialty->status = '1';
+            if ($specialty->status == 1) {
+                $specialty->status = '0';
+            } elseif ($specialty->status == 0) {
+                $specialty->status = '1';
             }
-            $Specialty->update();
+            $specialty->update();
         }
     }
 
