@@ -67,6 +67,7 @@ return[
     'Product'=>'منتجات',
     'Service'=>'الخدمات',
     'Medicine_Category'=>'تخصص ادويه',
+    'Medicine'=>'ادويه',
     'Sub_Specialty'=>'تخصص مدرجه',
     'Login'=>'تسجيل دخول',
     'Message_Password'=>'برجاء ادخال كلمه السر',
@@ -75,6 +76,7 @@ return[
     'Message_City'=>'برجاء اختيار المدينه',
     'Message_Service_Category'=>'برجاء اختيار تخصص الخدمات',
     'Message_Product_Category'=>'برجاء اختيار تخصص منتجات',
+    'Message_Medicine_Category'=>'برجاء اختيار تخصص ادويه',
     'Message_Specialty'=>'برجاء اختيار التخصص',
     'Select'=>'اختار',
 ];

@@ -67,6 +67,7 @@ return[
     'Product'=>'Product',
     'Service'=>'Service',
     'Medicine_Category'=>'Medicine Category',
+    'Medicine'=>'Medicine',
     'Specialty'=>'Specialty',
     'Sub_Specialty'=>'Sub Specialty',
     'Login'=>'Login',
@@ -77,5 +78,6 @@ return[
     'Message_Specialty'=>'Plase Select Specialty',
     'Message_Service_Category'=>'Plase Select Service Category',
     'Message_Product_Category'=>'Plase Select Product Category',
+    'Message_Medicine_Category'=>'Plase Select Medicine Category',
     'Select'=>'Select',
 ];
