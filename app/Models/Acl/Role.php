@@ -11,7 +11,7 @@ class Role extends Model
     ];
     public function user()
     {
-        return $this->belongsToMany('App\Models\User', 'role_user', 'user_id','role_id')->paginate();
+        return $this->hasMany('App\Models\User');
     }
     public function permission()
     {
