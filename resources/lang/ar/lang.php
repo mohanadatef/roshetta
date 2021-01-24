@@ -75,6 +75,7 @@ return[
     'Sub_Specialty'=>'تخصص مدرجه',
     'Login'=>'تسجيل دخول',
     'Logout'=>'تسجيل خروج',
+    'Role'=>'صلحيات',
     'Message_Password'=>'برجاء ادخال كلمه السر',
     'Message_Support'=>'برجاء الاتصال بالدعم الفني',
     'Message_Country'=>'برجاء اختيار البلد',
@@ -83,5 +84,6 @@ return[
     'Message_Product_Category'=>'برجاء اختيار تخصص منتجات',
     'Message_Medicine_Category'=>'برجاء اختيار تخصص ادويه',
     'Message_Specialty'=>'برجاء اختيار التخصص',
+    'Message_Permission'=>'برجاء اختيار الاذن',
     'Select'=>'اختار',
 ];

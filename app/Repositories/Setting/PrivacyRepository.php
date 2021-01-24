@@ -39,7 +39,6 @@ class PrivacyRepository implements PrivacyInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $privacy = $this->Get_One_Data($id);
-        $privacy->update($request->all());
+      $this->Get_One_Data($id)->update($request->all());
     }
 }

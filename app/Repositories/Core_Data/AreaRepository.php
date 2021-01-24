@@ -43,8 +43,7 @@ class AreaRepository implements AreaInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $area = $this->Get_One_Data($id);
-            $area->update($request->all());
+        $this->Get_One_Data($id)->update($request->all());
     }
 
     public function Update_Status_One_Data($id)

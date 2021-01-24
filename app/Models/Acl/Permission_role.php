@@ -11,7 +11,7 @@ class Permission_role  extends Model
         'permission_id','role_id'
     ];
 
-    protected $table = 'permission_role';
+    protected $table = 'permission_roles';
     public $timestamps = true;
 
 }

@@ -38,7 +38,6 @@ class ContactUsRepository implements ContactUsInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $contact_us = $this->Get_One_Data($id);
-            $contact_us->update($request->all());
+        $this->Get_One_Data($id)->update($request->all());
     }
 }

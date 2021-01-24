@@ -13,7 +13,7 @@ class Permission  extends Model
     ];
     public function role()
     {
-        return $this->belongsToMany('App\Models\ACL\Role', 'permissions_role', 'role_id','permission_id')->paginate();
+        return $this->belongsToMany('App\Models\ACL\Role', 'permissions_roles', 'role_id','permission_id')->paginate();
     }
     public $translatable = ['display_title'];
     protected $table = 'permissions';

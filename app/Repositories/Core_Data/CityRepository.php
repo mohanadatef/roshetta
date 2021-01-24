@@ -43,8 +43,7 @@ class CityRepository implements CityInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $city = $this->Get_One_Data($id);
-            $city->update($request->all());
+       $this->Get_One_Data($id)->update($request->all());
     }
 
     public function Update_Status_One_Data($id)

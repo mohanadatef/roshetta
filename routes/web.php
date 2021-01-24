@@ -188,5 +188,12 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::get('/edit/{id}', [App\Http\Controllers\Acl\PermissionController::class, 'edit']);
             Route::patch('/update/{id}', [App\Http\Controllers\Acl\PermissionController::class, 'update']);
         });
+        Route::prefix('/role')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Acl\RoleController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Acl\RoleController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Acl\RoleController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Acl\RoleController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Acl\RoleController::class, 'update']);
+        });
     });
 });

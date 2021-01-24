@@ -43,8 +43,7 @@ class SubSpecialtyRepository implements SubSpecialtyInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $sub_specialty = $this->Get_One_Data($id);
-        $sub_specialty->update($request->all());
+       $this->Get_One_Data($id)->update($request->all());
     }
 
     public function Update_Status_One_Data($id)

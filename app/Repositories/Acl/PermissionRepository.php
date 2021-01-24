@@ -47,11 +47,12 @@ class PermissionRepository implements PermissionInterface
     }
 
     public function Update_Data(EditRequest $request, $id)
-    {$this->Get_One_Data($id)->update($request->all());
+    {
+        $this->Get_One_Data($id)->update($request->all());
     }
 
     public function Get_List_Data()
     {
-        return $this->permission->select('display_name', 'id')->get();
+        return $this->permission->select('display_title', 'id')->get();
     }
 }

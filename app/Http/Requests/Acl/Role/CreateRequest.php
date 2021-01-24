@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Acl\Permission;
+namespace App\Http\Requests\Acl\Role;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,8 +24,8 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=>'required|string|unique:permissions',
-            'display_title.*'=>'required|unique_translation:permissions',
+            'title.*'=>'required|unique_translation:roles',
+            'permission' => 'required|exists:permissions,id',
         ];
     }
 
@@ -33,11 +33,9 @@ class CreateRequest extends FormRequest
     {
         if (Language_Locale() == 'ar') {
             return [
-                'title.required' => 'برجاء ادخال الاسم',
-                'title.unique' => 'لا يمكن ادخال الاسم متكرر',
-                'title.string' => 'لا يمكن ادخال غير الحروف',
-                'display_title.*.required' => 'برجاء ادخال الاسم',
-                'display_title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
+                'permission.required' => 'برجاء اختيار الاذونات',
+                'title.*.required' => 'برجاء ادخال الاسم',
+                'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
             ];
         }
         else{

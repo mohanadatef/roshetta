@@ -84,5 +84,7 @@ return[
     'Message_Service_Category'=>'Plase Select Service Category',
     'Message_Product_Category'=>'Plase Select Product Category',
     'Message_Medicine_Category'=>'Plase Select Medicine Category',
+    'Message_Permission'=>'Plase Select Permission',
     'Select'=>'Select',
+    'Role'=>'Role',
 ];
