@@ -200,7 +200,6 @@
                   </ul>
               </li>--}}
             <!-- User Account: style can be found in dropdown.less -->
-
                 <li class="dropdown user user-menu">
                     {!! Form::open(['url'=>'admin/language/setLang','method'=>'post']) !!}
                     <div class="form-group">
@@ -212,10 +211,12 @@
                         </select>
                     </div>
                     {!! Form::close() !!}
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                </li>
+                <li class="dropdown user user-menu">
+                    <a href="{{ url('/admin/user/edit/'.Auth::user()->id)}}" >
                         @if (Route::has('login'))
                             @auth
-                                <span class="hidden-xs">{{ Auth::user()->first_name }}</span>
+                                <span class="hidden-xs">{{ Auth::user()->first_title }}</span>
                             @else
                             @endauth
                         @endif

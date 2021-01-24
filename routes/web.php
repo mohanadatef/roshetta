@@ -195,5 +195,16 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::get('/edit/{id}', [App\Http\Controllers\Acl\RoleController::class, 'edit']);
             Route::patch('/update/{id}', [App\Http\Controllers\Acl\RoleController::class, 'update']);
         });
+        Route::prefix('/user')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Acl\UserController::class, 'index']);
+            Route::get('/create', [App\Http\Controllers\Acl\UserController::class, 'create']);
+            Route::Post('/store', [App\Http\Controllers\Acl\UserController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Acl\UserController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Acl\UserController::class, 'update']);
+            Route::get('/change_status/{id}', [App\Http\Controllers\Acl\UserController::class, 'change_status']);
+            Route::get('/change_many_status', [App\Http\Controllers\Acl\UserController::class, 'change_many_status']);
+            Route::get('/password/{id}', [App\Http\Controllers\Acl\UserController::class,'password']);
+            Route::patch('/change_password/{id}', [App\Http\Controllers\Acl\UserController::class,'change_password']);
+        });
     });
 });
