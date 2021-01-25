@@ -9,7 +9,7 @@ class Medicine extends Model
 {
     use HasTranslations;
     protected $fillable = [
-        'status','title','order','medicine_category_id','image','detail'
+        'status','title','order','medicine_category_id','image','detail','price'
     ];
     public function medicine_category()
     {

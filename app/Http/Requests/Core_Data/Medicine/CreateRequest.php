@@ -28,6 +28,7 @@ class CreateRequest extends FormRequest
             'title.*'=>'required|unique_translation:medicines',
             'medicine_category_id' => 'required|exists:medicine_categories,id',
             'order' => 'required|unique:medicines',
+            'price' => 'required',
             'image' => 'required|mimes:jpg,jpeg,png,gif|max:2048',
         ];
     }
@@ -40,6 +41,7 @@ class CreateRequest extends FormRequest
                 'title.*.required' => 'برجاء ادخال الاسم',
                 'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',
+                'price.required' => 'برجاء ادخال السعر',
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
                 'medicine_category_id.required' => 'برجاء ادخال تخصص الادويه',
                 'medicine_category_id.exists' => 'برجاء الاختيار من القائمه',

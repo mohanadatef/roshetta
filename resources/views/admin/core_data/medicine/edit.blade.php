@@ -45,6 +45,10 @@
                             @endforeach
                         </select>
                     </div>
+                    <div class="form-group{{ $errors->has('price') ? ' has-error' : "" }}">
+                        {{ trans('lang.Price') }} : <input type="text" value="{{$data['price']}}"
+                                                           class="form-control" name="price" placeholder="{{ trans('lang.Message_Price') }}">
+                    </div>
                     <div class="form-group{{ $errors->has('order') ? ' has-error' : "" }}">
                         {{ trans('lang.Order') }} : <input type="text" value="{{$data['order']}}"
                                                           class="form-control" name="order" placeholder="{{ trans('lang.Message_Order') }}">

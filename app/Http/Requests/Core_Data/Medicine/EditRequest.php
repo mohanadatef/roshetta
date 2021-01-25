@@ -28,6 +28,7 @@ class EditRequest extends FormRequest
                 'title.*'=>'required|unique_translation:medicines,title,'.$this->id,
                 'medicine_category_id' => 'required|exists:medicine_categories,id',
                 'order'=> 'required|unique:medicines,order,'.$this->id.',id',
+                'price'=> 'required',
                 'image' => 'mimes:jpg,jpeg,png,gif|max:2048',
             ];
 
@@ -36,6 +37,7 @@ class EditRequest extends FormRequest
     {
         if (Language_Locale() == 'ar') {
             return [
+                'price.required' => 'برجاء ادخال السعر',
                 'detail.*.required' => 'برجاء ادخال الوصف',
                 'title.*.required' => 'برجاء ادخال الاسم',
                 'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',

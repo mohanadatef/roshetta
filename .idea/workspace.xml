@@ -6,48 +6,11 @@
       <change afterPath="$PROJECT_DIR$/../full-version/favicon.ico" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../full-version/index.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../full-version/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/AreaRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/AreaRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/CityRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/CityRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/CompanyInsuranceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/CompanyInsuranceRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/CountryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/CountryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/MedicineCategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/MedicineCategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/ProductCategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/ProductCategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/ScientificDegreeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/ScientificDegreeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/ServiceCategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/ServiceCategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/ServiceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/ServiceRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/SpecialtyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/SpecialtyRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/SubSpecialtyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/SubSpecialtyRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Setting/AboutUsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Setting/AboutUsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Setting/ContactUsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Setting/ContactUsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Setting/PrivacyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Setting/PrivacyRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Setting/SettingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Setting/SettingRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/permission/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/permission/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/role/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/role/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/area/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/area/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/city/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/city/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/company_insurance/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/company_insurance/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/country/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/country/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/language/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/language/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/medicine/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/medicine/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/product/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/product_category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/product_category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/scientific_degree/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/scientific_degree/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/service/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/service/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/service_category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/service_category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/specialty/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/specialty/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core_data/sub_specialty/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core_data/sub_specialty/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/about_us/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/about_us/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/contact_us/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/contact_us/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/privacy/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/privacy/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/setting/setting/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting/setting/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Core_Data/Medicine.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Core_Data/Medicine.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,95 +24,60 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/ServiceCategoryRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="46" column="9" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="46" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/ServiceRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="43" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/SpecialtyRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="46" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/SubSpecialtyRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="43" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Setting/AboutUsRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="41" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Setting/ContactUsRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="38" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Setting/PrivacyRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="39" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Setting/SettingRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeders/DatabaseSeeder.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineController.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/seeders/PermissionSeeder.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Medicine.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="395" column="96" selection-start-line="395" selection-start-column="96" selection-end-line="395" selection-end-column="96" />
-              <caret line="399" column="97" selection-start-line="399" selection-start-column="97" selection-end-line="399" selection-end-column="97" />
-              <caret line="403" column="98" selection-start-line="403" selection-start-column="98" selection-end-line="403" selection-end-column="98" />
-              <caret line="407" column="96" selection-start-line="407" selection-start-column="96" selection-end-line="407" selection-end-column="96" />
-              <caret line="411" column="98" selection-start-line="411" selection-start-column="98" selection-end-line="411" selection-end-column="98" />
-              <caret line="415" column="104" selection-start-line="415" selection-start-column="104" selection-end-line="415" selection-end-column="104" />
-              <folding>
-                <element signature="e#36#66#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="11" column="80" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -189,12 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/lang/ar/lang.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/lang.php" />
-        <option value="$PROJECT_DIR$/app/Interfaces/Acl/UserInterface.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Acl/UserRepository.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/acl/user/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/admin/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/user/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/user/password.blade.php" />
         <option value="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" />
@@ -240,6 +162,12 @@
         <option value="$PROJECT_DIR$/app/Repositories/Setting/PrivacyRepository.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Setting/SettingRepository.php" />
         <option value="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Models/Core_Data/Medicine.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php" />
+        <option value="$PROJECT_DIR$/app/Models/Core_Data/Product.php" />
       </list>
     </option>
   </component>
@@ -412,297 +340,58 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Acl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Providers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="Acl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
               <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="Setting" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeders" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Medicine" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="acl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="acl" type="462c0819:PsiDirectoryNode" />
-              <item name="permission" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="acl" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="acl" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="area" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="city" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="company_insurance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="country" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="language" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="medicine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="medicine_category" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="product_category" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="scientific_degree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="service_category" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="specialty" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="core_data" type="462c0819:PsiDirectoryNode" />
-              <item name="sub_specialty" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
-              <item name="about_us" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
-              <item name="contact_us" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
-              <item name="privacy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -764,12 +453,12 @@
       <updated>1610791804600</updated>
       <workItem from="1610791806101" duration="123596000" />
       <workItem from="1611402831167" duration="51000" />
-      <workItem from="1611408651063" duration="39960000" />
+      <workItem from="1611408651063" duration="40973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163607000" />
+    <option name="totallyTimeSpent" value="164620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -823,80 +512,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/permission/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/user/password.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/country/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/role/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="55" column="55" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/user/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-          <caret line="44" column="73" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="73" />
-          <caret line="47" column="71" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
-          <caret line="47" column="107" selection-start-line="47" selection-start-column="107" selection-end-line="47" selection-end-column="107" />
-          <caret line="55" column="78" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
-          <caret line="67" column="77" selection-start-line="67" selection-start-column="77" selection-end-line="67" selection-end-column="77" />
-          <caret line="78" column="75" selection-start-line="78" selection-start-column="75" selection-end-line="78" selection-end-column="75" />
-          <caret line="78" column="111" selection-start-line="78" selection-start-column="111" selection-end-line="78" selection-end-column="111" />
-          <caret line="80" column="75" selection-start-line="80" selection-start-column="75" selection-end-line="80" selection-end-column="75" />
-          <caret line="85" column="83" selection-start-line="85" selection-start-column="83" selection-end-line="85" selection-end-column="83" />
-          <caret line="96" column="74" selection-start-line="96" selection-start-column="74" selection-end-line="96" selection-end-column="74" />
-          <caret line="104" column="73" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
-          <caret line="107" column="71" selection-start-line="107" selection-start-column="71" selection-end-line="107" selection-end-column="71" />
-          <caret line="107" column="107" selection-start-line="107" selection-start-column="107" selection-end-line="107" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/area/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-          <caret line="42" column="73" selection-start-line="42" selection-start-column="73" selection-end-line="42" selection-end-column="73" />
-          <caret line="51" column="78" selection-start-line="51" selection-start-column="78" selection-end-line="51" selection-end-column="78" />
-          <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
-          <caret line="80" column="74" selection-start-line="80" selection-start-column="74" selection-end-line="80" selection-end-column="74" />
-          <caret line="86" column="73" selection-start-line="86" selection-start-column="73" selection-end-line="86" selection-end-column="73" />
-          <caret line="89" column="71" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="71" />
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/city/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="52" column="78" selection-start-line="52" selection-start-column="78" selection-end-line="52" selection-end-column="78" />
-          <caret line="59" column="77" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
-          <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
-          <caret line="82" column="74" selection-start-line="82" selection-start-column="74" selection-end-line="82" selection-end-column="74" />
-          <caret line="87" column="73" selection-start-line="87" selection-start-column="73" selection-end-line="87" selection-end-column="73" />
-          <caret line="90" column="71" selection-start-line="90" selection-start-column="71" selection-end-line="90" selection-end-column="71" />
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
-          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-          <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
-          <caret line="44" column="71" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/company_insurance/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -1236,16 +851,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeders/PermissionSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="395" column="96" selection-start-line="395" selection-start-column="96" selection-end-line="395" selection-end-column="96" />
-          <caret line="399" column="97" selection-start-line="399" selection-start-column="97" selection-end-line="399" selection-end-column="97" />
-          <caret line="403" column="98" selection-start-line="403" selection-start-column="98" selection-end-line="403" selection-end-column="98" />
-          <caret line="407" column="96" selection-start-line="407" selection-start-column="96" selection-end-line="407" selection-end-column="96" />
-          <caret line="411" column="98" selection-start-line="411" selection-start-column="98" selection-end-line="411" selection-end-column="98" />
-          <caret line="415" column="104" selection-start-line="415" selection-start-column="104" selection-end-line="415" selection-end-column="104" />
+        <state relative-caret-position="607">
+          <caret line="515" column="104" selection-start-line="515" selection-start-column="104" selection-end-line="515" selection-end-column="104" />
           <folding>
             <element signature="e#36#66#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Medicine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="80" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Medicine/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/CreateRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Core_Data/Product/EditRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
         </state>
       </provider>
     </entry>

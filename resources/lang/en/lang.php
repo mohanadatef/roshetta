@@ -63,6 +63,7 @@ return[
     'Message_Time_Work'=>'Plase Enter Your Time Work',
     'Country'=>'Country',
     'City'=>'City',
+    'Price'=>'Price',
     'Area'=>'Area',
     'Company_Insurance'=>'Company Insurance',
     'Scientific_Degree'=>'Scientific Degree',
@@ -98,5 +99,6 @@ return[
     'Date_Dirth'=>'Date Dirth',
     'Password_Confirmation'=>'Password Confirmation',
     'Message_Second_Title'=>'Plase Enter Your Second Title',
+    'Message_Price'=>'Plase Enter Your Price',
     'Message_First_Title'=>'Plase Enter Your First Title',
 ];

@@ -39,6 +39,7 @@
                                     @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
+                                    <th class="center">  {{ trans('lang.Price') }}</th>
                                     <th align="center">{{ trans('lang.Medicine_Category') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
                                         @if(permission_show('medicine-status'))
@@ -59,7 +60,8 @@
                                         @endif
                                         <td align="center">{{ $data->title }}</td>
                                         <td class="center">{!! substr($data->detail,0,5)  !!}</td>
-                                        <td align="center">{{ $data->medicine_category->title }}</td>
+                                            <td align="center">{{ $data->price }}</td>
+                                            <td align="center">{{ $data->medicine_category->title }}</td>
                                         <td class="center"><img src="{{ asset('public/images/medicine/'.$data->image ) }}" style="width:100px;height: 100px"></td>
                                             @if(permission_show('medicine-status'))
                                             <td align="center">
@@ -89,6 +91,7 @@
                                     @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
+                                    <th class="center">  {{ trans('lang.Price') }}</th>
                                     <th align="center">{{ trans('lang.Medicine_Category') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
                                     @if(permission_show('medicine-status'))
