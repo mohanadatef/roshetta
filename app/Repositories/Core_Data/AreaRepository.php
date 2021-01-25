@@ -33,7 +33,15 @@ class AreaRepository implements AreaInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->area->find($id)->toarray(),$this->area->find($id)->translations);
+        $area =  $this->area->find($id)->translations;
+        if($area)
+        {
+            return array_merge($this->area->find($id)->toarray(),$area);
+        }
+        else
+        {
+            return $this->area->find($id);
+        }
     }
 
     public function Get_One_Data($id)

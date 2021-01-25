@@ -18,11 +18,13 @@
     </section>
     <section class="content">
             <div class="box">
+                @if(permission_show('setting-create'))
                 <div class="box-header" align="right">
                     @if($datas->count() == 0)
                         <a href="{{  url('/admin/setting/create') }}" class="btn btn-primary">  {{ trans('lang.Create') }}</a>
                     @endif
                 </div>
+                @endif
                 <!-- /.box-header -->
                 <div class="box-body">
                     @if(count($datas) > 0)
@@ -38,7 +40,9 @@
                                     <th class="center">{{ trans('lang.App_Google') }}</th>
                                     <th class="center">{{ trans('lang.App_Ios') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
+                                    @if(permission_show('setting-edit'))
                                     <th class="center">{{ trans('lang.Controller') }}</th>
+                                        @endif
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -52,9 +56,11 @@
                                         <td class="center">{{ $data->app_google }}</td>
                                         <td class="center">{{ $data->app_ios }}</td>
                                         <td class="center"><img src="{{ asset('public/images/setting/' . $data->logo ) }}" style="width:100px;height: 100px"></td>
+                                        @if(permission_show('setting-edit'))
                                         <td class="center">
                                             <a href="{{ url('/admin/setting/edit/'.$data->id)}}"><i class="btn btn-sm btn-primary ace-icon fa fa-edit bigger-120  edit" data-id=""> {{ trans('lang.Edit') }}</i></a>
                                         </td>
+                                            @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -68,7 +74,9 @@
                                     <th class="center">{{ trans('lang.App_Google') }}</th>
                                     <th class="center">{{ trans('lang.App_Ios') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
-                                    <th class="center">{{ trans('lang.Controller') }}</th>
+                                    @if(permission_show('setting-edit'))
+                                        <th class="center">{{ trans('lang.Controller') }}</th>
+                                    @endif
                                 </tr>
                                 </tfoot>
                             </table>

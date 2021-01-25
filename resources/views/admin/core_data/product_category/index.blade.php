@@ -20,8 +20,12 @@
         <form method="get" id="status" action="{{ url('/admin/product_category/change_many_status')}}">
             <div class="box">
                 <div class="box-header" align="right">
+                    @if(permission_show('product-category-create'))
                     <a href="{{  url('/admin/product_category/create') }}" class="btn btn-primary">{{ trans('lang.Create') }}</a>
+                    @endif
+                        @if(permission_show('product-category-many-status'))
                     <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
+                            @endif
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -30,21 +34,30 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    <th align="center">#</th>
+                                    @if(permission_show('product-category-many-status'))
+                                        <th align="center">#</th>
+                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
-                                    <th align="center">{{ trans('lang.Status') }}</th>
-                                    <th align="center">{{ trans('lang.Controller') }}</th>
+                                    @if(permission_show('product-category-status'))
+                                        <th align="center">{{ trans('lang.Status') }}</th>
+                                    @endif
+                                    @if(permission_show('product-category-edit'))
+                                        <th align="center">{{ trans('lang.Controller') }}</th>
+                                    @endif
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($datas as $data)
                                     <tr>
+                                        @if(permission_show('product-category-many-status'))
                                         <td align="center">
                                                     <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
                                         </td>
+                                        @endif
                                         <td align="center">{{ $data->title }}</td>
                                         <td class="center"><img src="{{ asset('public/images/product_category/' . $data->image ) }}" style="width:100px;height: 100px"></td>
+                                            @if(permission_show('product-category-status'))
                                         <td align="center">
                                                 @if($data->status ==1)
                                                     <a href="{{ url('/admin/product_category/change_status/'.$data->id)}}"><i
@@ -54,21 +67,30 @@
                                                                 class="btn btn-primary ace-icon fa fa-check-product_category"> {{ trans('lang.Active') }}</i></a>
                                                 @endif
                                         </td>
+                                            @endif
+                                            @if(permission_show('product-category-edit'))
                                         <td align="center">
                                                 <a href="{{ url('/admin/product_category/edit/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-edit bigger-120  edit"
                                                             data-id=""> {{ trans('lang.Edit') }}</i></a>
                                         </td>
+                                                @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th align="center">#</th>
-                                    <th align="center">{{ trans('lang.Title') }}</th>
-                                    <th class="center">{{ trans('lang.Image') }}</th>
-                                    <th align="center">{{ trans('lang.Status') }}</th>
-                                    <th align="center">{{ trans('lang.Controller') }}</th>
+                                    @if(permission_show('product-category-many-status'))
+                                        <th align="center">#</th>
+                                    @endif
+                                        <th align="center">{{ trans('lang.Title') }}</th>
+                                        <th class="center">{{ trans('lang.Image') }}</th>
+                                        @if(permission_show('product-category-status'))
+                                            <th align="center">{{ trans('lang.Status') }}</th>
+                                        @endif
+                                        @if(permission_show('product-category-edit'))
+                                            <th align="center">{{ trans('lang.Controller') }}</th>
+                                        @endif
                                 </tr>
                                 </tfoot>
                             </table>

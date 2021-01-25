@@ -36,7 +36,15 @@ class CountryRepository implements CountryInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->country->find($id)->toarray(),$this->country->find($id)->translations);
+        $country =  $this->country->find($id)->translations;
+        if($country)
+        {
+            return array_merge($this->country->find($id)->toarray(),$country);
+        }
+        else
+        {
+            return $this->country->find($id);
+        }
     }
 
     public function Get_One_Data($id)

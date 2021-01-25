@@ -28,7 +28,15 @@ class ContactUsRepository implements ContactUsInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->contact_us->find($id)->toarray(),$this->contact_us->find($id)->translations);
+        $contact_us =  $this->contact_us->find($id)->translations;
+        if($contact_us)
+        {
+            return array_merge($this->contact_us->find($id)->toarray(),$contact_us);
+        }
+        else
+        {
+            return $this->contact_us->find($id);
+        }
     }
 
     public function Get_One_Data($id)

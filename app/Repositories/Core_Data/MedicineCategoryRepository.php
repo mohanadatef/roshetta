@@ -36,7 +36,15 @@ class MedicineCategoryRepository implements MedicineCategoryInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->medicine_category->find($id)->toarray(),$this->medicine_category->find($id)->translations);
+        $medicine_category =  $this->medicine_category->find($id)->translations;
+        if($medicine_category)
+        {
+            return array_merge($this->medicine_category->find($id)->toarray(),$medicine_category);
+        }
+        else
+        {
+            return $this->medicine_category->find($id);
+        }
     }
 
     public function Get_One_Data($id)

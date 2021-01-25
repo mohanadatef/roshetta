@@ -33,7 +33,15 @@ class CityRepository implements CityInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->city->find($id)->toarray(),$this->city->find($id)->translations);
+        $city =  $this->city->find($id)->translations;
+        if($city)
+        {
+            return array_merge($this->city->find($id)->toarray(),$city);
+        }
+        else
+        {
+            return $this->city->find($id);
+        }
     }
 
     public function Get_One_Data($id)

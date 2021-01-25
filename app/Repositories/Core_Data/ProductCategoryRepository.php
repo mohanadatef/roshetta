@@ -36,7 +36,15 @@ class ProductCategoryRepository implements ProductCategoryInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->product_category->find($id)->toarray(),$this->product_category->find($id)->translations);
+        $product_category =  $this->product_category->find($id)->translations;
+        if($product_category)
+        {
+            return array_merge($this->product_category->find($id)->toarray(),$product_category);
+        }
+        else
+        {
+            return $this->product_category->find($id);
+        }
     }
 
     public function Get_One_Data($id)

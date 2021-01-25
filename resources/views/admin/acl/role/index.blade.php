@@ -18,9 +18,11 @@
     </section>
     <section class="content">
             <div class="box">
+                @if(permission_show('role-create'))
                 <div class="box-header" align="right">
                     <a href="{{  url('/admin/role/create') }}" class="btn btn-primary">{{ trans('lang.Create') }}</a>
                 </div>
+                @endif
                 <!-- /.box-header -->
                 <div class="box-body">
                     @if(count($datas) > 0)
@@ -29,25 +31,31 @@
                                 <thead>
                                 <tr>
                                     <th align="center">{{ trans('lang.Title') }}</th>
+                                    @if(permission_show('role-edit'))
                                     <th align="center">{{ trans('lang.Controller') }}</th>
+                                        @endif
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($datas as $data)
                                     <tr>
                                         <td align="center">{{ $data->title }}</td>
+                                        @if(permission_show('role-edit'))
                                         <td align="center">
                                                 <a href="{{ url('/admin/role/edit/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-edit bigger-120  edit"
                                                             data-id=""> {{ trans('lang.Edit') }}</i></a>
                                         </td>
+                                            @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                 <tr>
                                     <th align="center">{{ trans('lang.Title') }}</th>
+                                    @if(permission_show('role-edit'))
                                     <th align="center">{{ trans('lang.Controller') }}</th>
+                                        @endif
                                 </tr>
                                 </tfoot>
                             </table>

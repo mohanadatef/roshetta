@@ -33,7 +33,15 @@ class ScientificDegreeRepository implements ScientificDegreeInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->scientific_degree->find($id)->toarray(),$this->scientific_degree->find($id)->translations);
+        $scientific_degree =  $this->scientific_degree->find($id)->translations;
+        if($scientific_degree)
+        {
+            return array_merge($this->scientific_degree->find($id)->toarray(),$scientific_degree);
+        }
+        else
+        {
+            return $this->scientific_degree->find($id);
+        }
     }
 
     public function Get_One_Data($id)

@@ -33,7 +33,15 @@ class ServiceRepository implements ServiceInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->service->find($id)->toarray(),$this->service->find($id)->translations);
+        $service =  $this->service->find($id)->translations;
+        if($service)
+        {
+            return array_merge($this->service->find($id)->toarray(),$service);
+        }
+        else
+        {
+            return $this->service->find($id);
+        }
     }
 
     public function Get_One_Data($id)

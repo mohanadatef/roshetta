@@ -20,8 +20,12 @@
         <form method="get" id="status" action="{{ url('/admin/scientific_degree/change_many_status')}}">
             <div class="box">
                 <div class="box-header" align="right">
+                    @if(permission_show('scientific-degree-create'))
                     <a href="{{  url('/admin/scientific_degree/create') }}" class="btn btn-primary">{{ trans('lang.Create') }}</a>
+                    @endif
+                        @if(permission_show('scientific-degree-many-status'))
                     <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
+                            @endif
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -30,19 +34,28 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
+                                    @if(permission_show('scientific-degree-many-status'))
                                     <th align="center">#</th>
+                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
+                                        @if(permission_show('scientific-degree-status'))
                                     <th align="center">{{ trans('lang.Status') }}</th>
+                                        @endif
+                                        @if(permission_show('scientific-degree-edit'))
                                     <th align="center">{{ trans('lang.Controller') }}</th>
+                                            @endif
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($datas as $data)
                                     <tr>
+                                        @if(permission_show('scientific-degree-many-status'))
                                         <td align="center">
                                                     <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
                                         </td>
+                                        @endif
                                         <td align="center">{{ $data->title }}</td>
+                                            @if(permission_show('scientific-degree-status'))
                                         <td align="center">
                                                 @if($data->status ==1)
                                                     <a href="{{ url('/admin/scientific_degree/change_status/'.$data->id)}}"><i
@@ -52,20 +65,29 @@
                                                                 class="btn btn-primary ace-icon fa fa-check-scientific_degree"> {{ trans('lang.Active') }}</i></a>
                                                 @endif
                                         </td>
+                                            @endif
+                                            @if(permission_show('scientific-degree-edit'))
                                         <td align="center">
                                                 <a href="{{ url('/admin/scientific_degree/edit/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-edit bigger-120  edit"
                                                             data-id=""> {{ trans('lang.Edit') }}</i></a>
                                         </td>
+                                                @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th align="center">#</th>
+                                    @if(permission_show('scientific-degree-many-status'))
+                                        <th align="center">#</th>
+                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
-                                    <th align="center">{{ trans('lang.Status') }}</th>
-                                    <th align="center">{{ trans('lang.Controller') }}</th>
+                                    @if(permission_show('scientific-degree-status'))
+                                        <th align="center">{{ trans('lang.Status') }}</th>
+                                    @endif
+                                    @if(permission_show('scientific-degree-edit'))
+                                        <th align="center">{{ trans('lang.Controller') }}</th>
+                                    @endif
                                 </tr>
                                 </tfoot>
                             </table>

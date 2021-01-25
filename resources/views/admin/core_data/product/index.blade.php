@@ -20,8 +20,12 @@
         <form method="get" id="status" action="{{ url('/admin/product/change_many_status')}}">
             <div class="box">
                 <div class="box-header" align="right">
+                    @if(permission_show('product-create'))
                     <a href="{{  url('/admin/product/create') }}" class="btn btn-primary">{{ trans('lang.Create') }}</a>
+                    @endif
+                        @if(permission_show('product-many-status'))
                     <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
+                            @endif
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -30,26 +34,35 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
+                                    @if(permission_show('product-many-status'))
                                     <th align="center">#</th>
+                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
                                     <th align="center">{{ trans('lang.Product_Category') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
-                                    <th align="center">{{ trans('lang.Status') }}</th>
+                                        @if(permission_show('product-status'))
+                                        <th align="center">{{ trans('lang.Status') }}</th>
+                                        @endif
+                                        @if(permission_show('product-edit'))
                                     <th align="center">{{ trans('lang.Controller') }}</th>
+                                            @endif
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($datas as $data)
                                     <tr>
+                                        @if(permission_show('product-many-status'))
                                         <td align="center">
                                                     <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
                                         </td>
+                                        @endif
                                         <td align="center">{{ $data->title }}</td>
                                         <td class="center">{!! substr($data->detail,0,5)  !!}</td>
                                         <td align="center">{{ $data->product_category->title }}</td>
                                         <td class="center"><img src="{{ asset('public/images/product/'.$data->image ) }}" style="width:100px;height: 100px"></td>
-                                        <td align="center">
+                                            @if(permission_show('product-status'))
+                                            <td align="center">
                                                 @if($data->status ==1)
                                                     <a href="{{ url('/admin/product/change_status/'.$data->id)}}"><i
                                                                 class="btn btn-danger ace-icon fa fa-close">{{ trans('lang.An_active') }}</i></a>
@@ -58,23 +71,32 @@
                                                                 class="btn btn-primary ace-icon fa fa-check-product"> {{ trans('lang.Active') }}</i></a>
                                                 @endif
                                         </td>
+                                            @endif
+                                            @if(permission_show('product-edit'))
                                         <td align="center">
                                                 <a href="{{ url('/admin/product/edit/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-edit bigger-120  edit"
                                                             data-id=""> {{ trans('lang.Edit') }}</i></a>
                                         </td>
+                                                @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th align="center">#</th>
+                                    @if(permission_show('product-many-status'))
+                                        <th align="center">#</th>
+                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
                                     <th align="center">{{ trans('lang.Product_Category') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
-                                    <th align="center">{{ trans('lang.Status') }}</th>
-                                    <th align="center">{{ trans('lang.Controller') }}</th>
+                                    @if(permission_show('product-status'))
+                                        <th align="center">{{ trans('lang.Status') }}</th>
+                                    @endif
+                                    @if(permission_show('product-edit'))
+                                        <th align="center">{{ trans('lang.Controller') }}</th>
+                                    @endif
                                 </tr>
                                 </tfoot>
                             </table>

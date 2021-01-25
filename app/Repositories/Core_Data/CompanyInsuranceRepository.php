@@ -36,7 +36,15 @@ class CompanyInsuranceRepository implements CompanyInsuranceInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->company_insurance->find($id)->toarray(),$this->company_insurance->find($id)->translations);
+        $company_insurance =  $this->company_insurance->find($id)->translations;
+        if($company_insurance)
+        {
+            return array_merge($this->company_insurance->find($id)->toarray(),$company_insurance);
+        }
+        else
+        {
+            return $this->company_insurance->find($id);
+        }
     }
 
     public function Get_One_Data($id)

@@ -18,11 +18,13 @@
     </section>
     <section class="content">
             <div class="box">
+                @if(permission_show('contact-us-create'))
                 <div class="box-header" align="right">
                     @if($datas->count() == 0)
                         <a href="{{  url('/admin/contact_us/create') }}" class="btn btn-primary">  {{ trans('lang.Create') }}</a>
                     @endif
                 </div>
+                @endif
                 <!-- /.box-header -->
                 <div class="box-body">
                     @if(count($datas) > 0)
@@ -34,7 +36,9 @@
                                     <th class="center">{{ trans('lang.Address') }}</th>
                                     <th class="center">{{ trans('lang.Mobile') }}</th>
                                     <th class="center">{{ trans('lang.Time_Work') }}</th>
+                                    @if(permission_show('contact-us-edit'))
                                     <th class="center">{{ trans('lang.Controller') }}</th>
+                                        @endif
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -44,9 +48,11 @@
                                         <td class="center">{{$data->address}}</td>
                                         <td class="center">{{$data->mobile}}</td>
                                         <td class="center">{{$data->time_work}}</td>
+                                        @if(permission_show('contact-us-edit'))
                                         <td class="center">
                                             <a href="{{ url('/admin/contact_us/edit/'.$data->id)}}"><i class="btn btn-sm btn-primary ace-icon fa fa-edit bigger-120  edit" data-id=""> {{ trans('lang.Edit') }}</i></a>
                                         </td>
+                                            @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -56,7 +62,9 @@
                                     <th class="center">{{ trans('lang.Address') }}</th>
                                     <th class="center">{{ trans('lang.Mobile') }}</th>
                                     <th class="center">{{ trans('lang.Time_Work') }}</th>
+                                    @if(permission_show('contact-us-edit'))
                                     <th class="center">{{ trans('lang.Controller') }}</th>
+                                        @endif
                                 </tr>
                                 </tfoot>
                             </table>

@@ -36,7 +36,15 @@ class ServiceCategoryRepository implements ServiceCategoryInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->service_category->find($id)->toarray(),$this->service_category->find($id)->translations);
+        $service_category =  $this->service_category->find($id)->translations;
+        if($service_category)
+        {
+            return array_merge($this->service_category->find($id)->toarray(),$service_category);
+        }
+        else
+        {
+            return $this->service_category->find($id);
+        }
     }
 
     public function Get_One_Data($id)

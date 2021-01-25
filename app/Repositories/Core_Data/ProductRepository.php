@@ -36,7 +36,15 @@ class ProductRepository implements ProductInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->product->find($id)->toarray(),$this->product->find($id)->translations);
+        $product =  $this->product->find($id)->translations;
+        if($product)
+        {
+            return array_merge($this->product->find($id)->toarray(),$product);
+        }
+        else
+        {
+            return $this->product->find($id);
+        }
     }
 
     public function Get_One_Data($id)

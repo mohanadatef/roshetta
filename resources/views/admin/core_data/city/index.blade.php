@@ -20,8 +20,12 @@
         <form method="get" id="status" action="{{ url('/admin/city/change_many_status')}}">
             <div class="box">
                 <div class="box-header" align="right">
+                    @if(permission_show('city-create'))
                     <a href="{{  url('/admin/city/create') }}" class="btn btn-primary">{{ trans('lang.Create') }}</a>
+                    @endif
+                    @if(permission_show('city-many-status'))
                     <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
+                        @endif
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -30,21 +34,30 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
+                                    @if(permission_show('city-many-status'))
                                     <th align="center">#</th>
+                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th align="center">{{ trans('lang.Country') }}</th>
+                                        @if(permission_show('city-status'))
                                     <th align="center">{{ trans('lang.Status') }}</th>
+                                        @endif
+                                        @if(permission_show('city-edit'))
                                     <th align="center">{{ trans('lang.Controller') }}</th>
+                                            @endif
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($datas as $data)
                                     <tr>
+                                        @if(permission_show('city-many-status'))
                                         <td align="center">
                                                     <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
                                         </td>
+                                        @endif
                                         <td align="center">{{ $data->title }}</td>
                                         <td align="center">{{ $data->country->title }}</td>
+                                            @if(permission_show('city-status'))
                                         <td align="center">
                                                 @if($data->status ==1)
                                                     <a href="{{ url('/admin/city/change_status/'.$data->id)}}"><i
@@ -54,21 +67,30 @@
                                                                 class="btn btn-primary ace-icon fa fa-check-city"> {{ trans('lang.Active') }}</i></a>
                                                 @endif
                                         </td>
+                                            @endif
+                                            @if(permission_show('city-edit'))
                                         <td align="center">
                                                 <a href="{{ url('/admin/city/edit/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-edit bigger-120  edit"
                                                             data-id=""> {{ trans('lang.Edit') }}</i></a>
                                         </td>
+                                                @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                 <tr>
+                                    @if(permission_show('city-many-status'))
                                     <th align="center">#</th>
+                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th align="center">{{ trans('lang.Country') }}</th>
-                                    <th align="center">{{ trans('lang.Status') }}</th>
-                                    <th align="center">{{ trans('lang.Controller') }}</th>
+                                        @if(permission_show('city-status'))
+                                            <th align="center">{{ trans('lang.Status') }}</th>
+                                        @endif
+                                        @if(permission_show('city-edit'))
+                                            <th align="center">{{ trans('lang.Controller') }}</th>
+                                        @endif
                                 </tr>
                                 </tfoot>
                             </table>

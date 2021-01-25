@@ -32,7 +32,15 @@ class SettingRepository implements SettingInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->setting->find($id)->toarray(),$this->setting->find($id)->translations);
+        $setting =  $this->setting->find($id)->translations;
+        if($setting)
+        {
+            return array_merge($this->setting->find($id)->toarray(),$setting);
+        }
+        else
+        {
+            return $this->setting->find($id);
+        }
     }
 
     public function Get_One_Data($id)

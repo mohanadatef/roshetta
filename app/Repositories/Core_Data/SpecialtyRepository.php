@@ -36,7 +36,15 @@ class SpecialtyRepository implements SpecialtyInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->specialty->find($id)->toarray(),$this->specialty->find($id)->translations);
+        $specialty =  $this->specialty->find($id)->translations;
+        if($specialty)
+        {
+            return array_merge($this->specialty->find($id)->toarray(),$specialty);
+        }
+        else
+        {
+            return $this->specialty->find($id);
+        }
     }
 
     public function Get_One_Data($id)

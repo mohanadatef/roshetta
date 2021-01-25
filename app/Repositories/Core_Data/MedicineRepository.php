@@ -36,7 +36,15 @@ class MedicineRepository implements MedicineInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->medicine->find($id)->toarray(),$this->medicine->find($id)->translations);
+        $medicine =  $this->medicine->find($id)->translations;
+        if($medicine)
+        {
+            return array_merge($this->medicine->find($id)->toarray(),$medicine);
+        }
+        else
+        {
+            return $this->medicine->find($id);
+        }
     }
 
     public function Get_One_Data($id)

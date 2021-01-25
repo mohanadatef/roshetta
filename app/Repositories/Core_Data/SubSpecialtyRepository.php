@@ -33,7 +33,15 @@ class SubSpecialtyRepository implements SubSpecialtyInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->sub_specialty->find($id)->toarray(),$this->sub_specialty->find($id)->translations);
+        $sub_specialty =  $this->sub_specialty->find($id)->translations;
+        if($sub_specialty)
+        {
+            return array_merge($this->sub_specialty->find($id)->toarray(),$sub_specialty);
+        }
+        else
+        {
+            return $this->sub_specialty->find($id);
+        }
     }
 
     public function Get_One_Data($id)

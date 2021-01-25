@@ -31,7 +31,15 @@ class AboutUsRepository implements AboutUsInterface
 
     public function Get_One_Data_Translation($id)
     {
-        return array_merge($this->about_us->find($id)->toarray(),$this->about_us->find($id)->translations);
+        $about_us =  $this->about_us->find($id)->translations;
+        if($about_us)
+        {
+            return array_merge($this->about_us->find($id)->toarray(),$about_us);
+        }
+        else
+        {
+            return $this->about_us->find($id);
+        }
     }
 
     public function Get_One_Data($id)
