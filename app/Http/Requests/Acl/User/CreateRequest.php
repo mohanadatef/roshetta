@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class CreateRequest extends FormRequest
 {
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -32,6 +33,7 @@ class CreateRequest extends FormRequest
             'date_birth' => 'required|date',
             'image'=> 'image|mimes:jpg,jpeg,png|max:2048',
             'password' => 'required|string|min:6|confirmed',
+            'role_id'=> 'required|exists:roles,id',
         ];
     }
     public function messages()

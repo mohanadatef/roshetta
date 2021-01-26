@@ -65,11 +65,11 @@ class UserRepository implements UserInterface
             $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
             Request()->image->move(public_path('images/user'), $imageName);
             $data['image'] = $imageName;
-            $user->update(array_merge($request->all(),$data));
+            return  $user->update(array_merge($request->all(),$data));
         }
         else
         {
-            $user->update($request->all());
+            return $user->update($request->all());
         }
     }
 

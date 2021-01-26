@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});*/
+Route::group(['middleware' => 'api'], function () {
+        Route::prefix('/user')->group(function () {
+            Route::Post('/store', [App\Http\Controllers\Acl\PatientController::class, 'store']);
+            Route::get('/edit/{id}', [App\Http\Controllers\Acl\PatientController::class, 'edit']);
+            Route::patch('/update/{id}', [App\Http\Controllers\Acl\PatientController::class, 'update']);
+        });
 });

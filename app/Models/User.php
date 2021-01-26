@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Translatable\HasTranslations;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable
 {
@@ -21,4 +22,14 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Models\Acl\Role','role_id');
     }
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
+    protected $table = 'users';
+    public $timestamps = true;
 }

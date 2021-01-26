@@ -31,6 +31,7 @@ class EditRequest extends FormRequest
             'email' => 'required|email|max:255|string|unique:users,email,'.$this->id.',id',
             'date_birth' => 'required|date',
             'image'=> 'image|mimes:jpg,jpeg,png|max:2048',
+            'role_id'=> 'required|exists:roles,id',
         ];
     }
     public function messages()
