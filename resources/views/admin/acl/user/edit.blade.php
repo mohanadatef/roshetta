@@ -81,7 +81,11 @@
                         </select>
                     </div>
                     <div align="center">
+                        @if($data['image'])
                         <img src="{{url('public/images/user/'.$data['image'])}}" style="width: 50px;height: 50px">
+                        @else
+                            <img src="{{ asset('public/images/user/profile_user.jpg' ) }}" style="width:100px;height: 100px">
+                        @endif
                         <div class="form-group{{ $errors->has('image') ? ' has-error' : "" }}">
                             <table class="table">
                                 <tr>

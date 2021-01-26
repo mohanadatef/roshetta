@@ -31,9 +31,12 @@ class UserRepository implements UserInterface
         $data['status']=1;
         $data['status_login']=0;
         $data['password']=Hash::make($request->password);
+        if($request->image)
+        {
         $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
         Request()->image->move(public_path('images/user'), $imageName);
         $data['image'] = $imageName;
+        }
         $this->user->create(array_merge($request->all(),$data));
     }
 

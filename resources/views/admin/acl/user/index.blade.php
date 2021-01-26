@@ -64,7 +64,12 @@
                                         <td align="center">{{ $data->second_title }}</td>
                                         <td align="center">{{ $data->email }}</td>
                                         <td align="center">{{ $data->mobile }}</td>
-                                        <td class="center"><img src="{{ asset('public/images/user/' . $data->image ) }}" style="width:100px;height: 100px"></td>
+                                        <td class="center">@if($data->image)
+                                                <img src="{{ asset('public/images/user/' . $data->image ) }}" style="width:100px;height: 100px">
+                                        @else
+                                                <img src="{{ asset('public/images/user/profile_user.jpg' ) }}" style="width:100px;height: 100px">
+                                                               @endif
+                                        </td>
                                             @if(permission_show('user-status'))
                                         <td align="center">
                                             @if($data->status ==1)

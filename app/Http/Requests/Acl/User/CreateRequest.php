@@ -24,13 +24,13 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_title.*' => 'required|unique_translation:users',
-            'second_title.*' => 'required|unique_translation:users',
+            'first_title.*' => 'required',
+            'second_title.*' => 'required',
             'gender' => 'required|string',
             'mobile' => 'required|string|max:255|unique:users',
             'email' => 'required|email|max:255|string|unique:users',
             'date_birth' => 'required|date',
-            'image'=> 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'image'=> 'image|mimes:jpg,jpeg,png|max:2048',
             'password' => 'required|string|min:6|confirmed',
         ];
     }
@@ -41,9 +41,7 @@ class CreateRequest extends FormRequest
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
                 'first_title.*.required' => 'برجاء ادخال الاسم',
-                'first_title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'second_title.*.required' => 'برجاء ادخال الاسم',
-                'second_title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'gender.required' => 'برجاء ادخال النوع',
                 'mobile.required' => 'برجاء ادخال الموبيل',
                 'mobile.unique' => 'لا يمكن ادخال الموبيل متكرر',
@@ -51,7 +49,6 @@ class CreateRequest extends FormRequest
                 'email.unique' => 'لا يمكن ادخال البريد الالكتروني متكرر',
                 'date_birth.required' => 'برجاء ادخال تاريخ الميلاد',
                 'date_birth.date' => 'برجاء ادخال تاريخ الميلاد تاريخ',
-                'image.required' => 'برجاء ادخال الصوره',
                 'password.required' => 'برجاء ادخال كلمه السر',
                 'password.string' => 'برجاء ادخال كلمه السر حروف',
                 'password.confirmed' => 'برجاء ادخال تاكيد كلمه السر',
