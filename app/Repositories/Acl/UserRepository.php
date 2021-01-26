@@ -37,7 +37,7 @@ class UserRepository implements UserInterface
         Request()->image->move(public_path('images/user'), $imageName);
         $data['image'] = $imageName;
         }
-        $this->user->create(array_merge($request->all(),$data));
+       return $this->user->create(array_merge($request->all(),$data));
     }
 
     public function Get_One_Data_Translation($id)
