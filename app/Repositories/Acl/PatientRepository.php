@@ -19,20 +19,19 @@ class PatientRepository implements PatientInterface
 
     public function Create_Data(CreateRequest $request)
     {
-        $data['status']=1;
-        $data['status_login']=1;
-        $data['role_id']=3;
-        $data['password']=Hash::make($request->password);
-        if($request->image)
-        {
-            $folderPath=public_path('images/user/');
+        $data['status'] = 1;
+        $data['status_login'] = 1;
+        $data['role_id'] = 1;
+        $data['password'] = Hash::make($request->password);
+        if ($request->image) {
+            $folderPath = public_path('images/user/');
             $image_type = 'png';
             $image_base64 = base64_decode($request->image);
-            $imageName=time() . uniqid() . '.' . $image_type;
+            $imageName = time() . uniqid() . '.' . $image_type;
             $file = $folderPath . $imageName;
             file_put_contents($file, $image_base64);
             $data['image'] = $imageName;
         }
-       return $this->user->create(array_merge($request->all(),$data));
+       return $this->user->create(array_merge($request->all(), $data));
     }
 }

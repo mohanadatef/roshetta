@@ -41,6 +41,7 @@
                                     <th align="center">{{ trans('lang.Second_Title') }}</th>
                                     <th align="center">{{ trans('lang.Email') }}</th>
                                     <th align="center">{{ trans('lang.Mobile') }}</th>
+                                    <th align="center">{{ trans('lang.Role') }}</th>
                                     <th align="center">{{ trans('lang.Image') }}</th>
                                         @if(permission_show('user-status'))
                                     <th align="center">{{ trans('lang.Status') }}</th>
@@ -55,15 +56,17 @@
                                     <tr>
                                         @if(permission_show('user-many-status'))
                                         <td align="center">
+                                            @if($data->role_id != 1)
                                             <input type="checkbox" name="change_status[]"
                                                    id="{{$data->id}}" value="{{$data->id}}">
-
+                                                @endif
                                         </td>
                                         @endif
                                         <td align="center">{{ $data->first_title }}</td>
                                         <td align="center">{{ $data->second_title }}</td>
                                         <td align="center">{{ $data->email }}</td>
                                         <td align="center">{{ $data->mobile }}</td>
+                                        <td align="center">{{ $data->role->title }}</td>
                                         <td class="center">@if($data->image)
                                                 <img src="{{ asset('public/images/user/' . $data->image ) }}" style="width:100px;height: 100px">
                                         @else
@@ -72,6 +75,7 @@
                                         </td>
                                             @if(permission_show('user-status'))
                                         <td align="center">
+                                            @if($data->role_id != 1)
                                             @if($data->status ==1)
                                                 <a href="{{ url('/admin/user/change_status/'.$data->id)}}"><i
                                                             class="btn btn-danger ace-icon fa fa-close">{{ trans('lang.An_active') }}</i></a>
@@ -79,10 +83,12 @@
                                                 <a href="{{ url('/admin/user/change_status/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-check-country"> {{ trans('lang.Active') }}</i></a>
                                             @endif
+                                            @endif
                                         </td>
                                             @endif
                                             @if(permission_show('user-edit') || permission_show('user-password'))
                                         <td align="center">
+                                            @if($data->role_id != 1)
                                             @if(permission_show('user-edit') )
                                                 <a href="{{ url('/admin/user/edit/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-edit bigger-120  edit"
@@ -91,6 +97,7 @@
                                                 @if(permission_show('user-password'))
                                             <a href="{{url('admin/user/password/'.$data->id)}}"
                                                class="btn btn-success">{{ trans('lang.Change_Password') }}</a>
+                                                    @endif
                                                     @endif
                                         </td>
                                                 @endif
@@ -106,6 +113,7 @@
                                     <th align="center">{{ trans('lang.Second_Title') }}</th>
                                     <th align="center">{{ trans('lang.Email') }}</th>
                                     <th align="center">{{ trans('lang.Mobile') }}</th>
+                                        <th align="center">{{ trans('lang.Role') }}</th>
                                     <th align="center">{{ trans('lang.Image') }}</th>
                                         @if(permission_show('user-status'))
                                             <th align="center">{{ trans('lang.Status') }}</th>

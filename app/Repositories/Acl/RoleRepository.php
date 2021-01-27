@@ -23,7 +23,7 @@ class RoleRepository implements RoleInterface
 
     public function Get_All_Data()
     {
-        return $this->role->all();
+        return $this->role->where('id','!=',1)->get();
     }
 
     public function Create_Data(CreateRequest $request)
@@ -58,7 +58,7 @@ class RoleRepository implements RoleInterface
 
     public function Get_List_Data()
     {
-        return $this->role->select('title', 'id')->get();
+        return $this->role->select('title', 'id')->where('id','!=',1)->get();
     }
 
     public function Get_Permission_For_Role($id)
