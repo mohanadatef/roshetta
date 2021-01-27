@@ -8,6 +8,7 @@ use App\Http\Requests\Acl\User\EditRequest;
 use App\Http\Requests\Acl\User\PasswordRequest;
 use App\Http\Requests\Acl\User\StatusEditRequest;
 use App\Interfaces\Acl\UserInterface;
+use App\Models\Core_Data\Language;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -29,13 +30,21 @@ class UserRepository implements UserInterface
     public function Create_Data(CreateRequest $request)
     {
         $data['status']=1;
-        $data['status_login']=0;
         $data['password']=Hash::make($request->password);
         if($request->image)
         {
         $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
         Request()->image->move(public_path('images/user'), $imageName);
         $data['image'] = $imageName;
+        }
+        if(!$request->language_id)
+        {
+            $data['status_login']=0;
+            $data['language_id'] = Language::where('code',Language_Locale())->first()->id;
+        }
+        else
+            {
+            $data['status_login']=1;
         }
        return $this->user->create(array_merge($request->all(),$data));
     }

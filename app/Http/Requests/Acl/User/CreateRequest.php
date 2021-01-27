@@ -2,7 +2,12 @@
 
 namespace App\Http\Requests\Acl\User;
 
+use App\Models\Core_Data\Language;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Support\Facades\App;
+use Illuminate\Validation\ValidationException;
 
 class CreateRequest extends FormRequest
 {
@@ -38,6 +43,11 @@ class CreateRequest extends FormRequest
     }
     public function messages()
     {
+        if($this->language_id)
+        {
+            $la = Language::find($this->language_id);
+            App::setLocale($la->code);
+        }
         if (Language_Locale() == 'ar') {
             return [
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
@@ -55,10 +65,19 @@ class CreateRequest extends FormRequest
                 'password.string' => 'برجاء ادخال كلمه السر حروف',
                 'password.confirmed' => 'برجاء ادخال تاكيد كلمه السر',
                 'password.min' => 'برجاء ادخال كلمه السر اكثر من 6',
+                'role_id.required' => 'برجاء ادخال صلحيات',
             ];
         }
         else{
             return [];
         }
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        $errors = (new ValidationException($validator))->errors();
+        throw new HttpResponseException(
+            response(['status' => 0, 'data' => ['errors'=>$errors]], 400)
+        );
     }
 }
