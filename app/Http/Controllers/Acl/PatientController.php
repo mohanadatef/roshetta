@@ -13,8 +13,7 @@ class PatientController extends Controller
 
     public function __construct(PatientRepository $PatientRepository)
     {
-        $this->middleware('auth');
-       /* $this->middleware('auth:api', ['except' => ['store']]);*/
+        $this->middleware('auth:api', ['except' => ['store','index']]);
         $this->patientRepository = $PatientRepository;
     }
 
