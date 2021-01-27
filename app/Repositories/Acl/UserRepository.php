@@ -8,7 +8,6 @@ use App\Http\Requests\Acl\User\EditRequest;
 use App\Http\Requests\Acl\User\PasswordRequest;
 use App\Http\Requests\Acl\User\StatusEditRequest;
 use App\Interfaces\Acl\UserInterface;
-use App\Models\Core_Data\Language;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -24,7 +23,7 @@ class UserRepository implements UserInterface
 
     public function Get_All_Data()
     {
-        return $this->user->all();
+        return $this->user->where('role_id','!=',[3])->get();
     }
 
     public function Create_Data(CreateRequest $request)

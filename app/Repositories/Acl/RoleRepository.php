@@ -8,6 +8,7 @@ use App\Http\Requests\Acl\Role\EditRequest;
 use App\Interfaces\Acl\RoleInterface;
 use App\Models\ACL\Permission_role;
 use App\Models\Acl\Role;
+use Illuminate\Support\Facades\Auth;
 
 class RoleRepository implements RoleInterface
 {
@@ -23,7 +24,15 @@ class RoleRepository implements RoleInterface
 
     public function Get_All_Data()
     {
-        return $this->role->where('id','!=',1)->get();
+        if(Auth::user()->role_id == 1)
+        {
+            return $this->role->all();
+        }
+        else
+        {
+            return $this->role->whereNotIn('id',[1,3])->get();
+        }
+
     }
 
     public function Create_Data(CreateRequest $request)
@@ -58,7 +67,15 @@ class RoleRepository implements RoleInterface
 
     public function Get_List_Data()
     {
-        return $this->role->select('title', 'id')->where('id','!=',1)->get();
+        if(Auth::user()->role_id == 1)
+        {
+            return $this->role->select('title', 'id')->get();
+        }
+        else
+        {
+            return $this->role->select('title', 'id')->whereNotIn('id',[1,3])->get();
+        }
+
     }
 
     public function Get_Permission_For_Role($id)

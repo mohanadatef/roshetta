@@ -32,6 +32,7 @@ return[
     'Message_Status'=>'Edit Status Done',
     'Core_Data'=>'Core Data',
     'Setting'=>'Setting',
+    'Patient'=>'Patient',
     'Face_Book'=>'FaceBook',
     'Message_Face_Book'=>'Plase Enter Your FaceBook',
     'Youtube'=>'Youtube',

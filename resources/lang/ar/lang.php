@@ -93,6 +93,7 @@ return[
     'Second_Title'=>'الاسم الثاني',
     'Change_Password'=>'تغير كلمه السر',
     'Password'=>'كلمه السر',
+    'Patient'=>'مريض',
     'Gender'=>'نوع',
     'Man'=>'رجل',
     'Woman'=>'امراه',

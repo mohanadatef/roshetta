@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Acl;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Acl\Patient\CreateRequest;
+use App\Http\Requests\Acl\Patient\StatusEditRequest;
 use App\Repositories\Acl\PatientRepository;
 
 class PatientController extends Controller
@@ -12,8 +13,15 @@ class PatientController extends Controller
 
     public function __construct(PatientRepository $PatientRepository)
     {
-        $this->middleware('auth:api', ['except' => ['store']]);
+        $this->middleware('auth');
+       /* $this->middleware('auth:api', ['except' => ['store']]);*/
         $this->patientRepository = $PatientRepository;
+    }
+
+    public function index()
+    {
+        $datas= $this->patientRepository->Get_All_Data();
+        return view('admin.acl.patient.index',compact('datas'));
     }
 
     public function store(CreateRequest $request)
@@ -22,4 +30,15 @@ class PatientController extends Controller
         return response(['status' => 1, 'data' => ['patient'=>$patient], 'message' => trans('lang.Message_Store')], 200);
     }
 
+    public function change_status($id)
+    {
+        $this->patientRepository->Update_Status_One_Data($id);
+        return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
+
+    public function change_many_status(StatusEditRequest $request)
+    {
+        $this->patientRepository->Update_Status_Data($request);
+        return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
 }

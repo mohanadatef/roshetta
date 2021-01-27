@@ -515,6 +515,23 @@ class PermissionSeeder extends Seeder
                 'title' => 'sub-specialty-many-status',
                 'display_title' =>['en' => 'status many sub-specialty', 'ar' => 'تغير حاله تخصص التخصصات'] ,
             ],
+            //patient
+            [
+                'title' => 'patient-list',
+                'display_title' => ['en' => 'patient list', 'ar' => 'قائمه اذنات المرضاء']
+            ],
+            [
+                'title' => 'patient-index',
+                'display_title' => ['en' => 'index patient', 'ar' => 'قائمه المرضاء'],
+            ],
+            [
+                'title' => 'patient-status',
+                'display_title' => ['en' => 'patient status', 'ar' => 'تغير حاله مرضي'],
+            ],
+            [
+                'title' => 'patient-many-status',
+                'display_title' => ['en' =>'patient many status', 'ar' => 'تغير حاله المرضاء'],
+            ],
         ];
         foreach ($permissions as $key => $value) {
             Permission::create($value);
