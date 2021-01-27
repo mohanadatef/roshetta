@@ -1,11 +1,16 @@
 <?php
 
-namespace App\Http\Requests\Acl\User;
+namespace App\Http\Requests\Acl\Patient;
 
+use App\Models\Core_Data\Language;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Validation\ValidationException;
 
-class EditRequest extends FormRequest
+class CreateRequest extends FormRequest
 {
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -27,16 +32,17 @@ class EditRequest extends FormRequest
             'first_title.*' => 'required',
             'second_title.*' => 'required',
             'gender' => 'required|string',
-            'mobile' => 'required|string|max:255|unique:users,mobile,'.$this->id.',id',
-            'email' => 'required|email|max:255|string|unique:users,email,'.$this->id.',id',
+            'mobile' => 'required|string|max:255|unique:users',
+            'email' => 'required|email|max:255|string|unique:users',
             'date_birth' => 'required|date',
             'image'=> 'image|mimes:jpg,jpeg,png|max:2048',
-            'role_id'=> 'required|exists:roles,id',
+            'password' => 'required|string|min:6',
+            'language_id'=> 'required|exists:languages,id',
         ];
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
+        if (Language::find($this->language_id)->code == 'ar') {
             return [
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
@@ -49,11 +55,21 @@ class EditRequest extends FormRequest
                 'email.unique' => 'لا يمكن ادخال البريد الالكتروني متكرر',
                 'date_birth.required' => 'برجاء ادخال تاريخ الميلاد',
                 'date_birth.date' => 'برجاء ادخال تاريخ الميلاد تاريخ',
-                'role_id.required' => 'برجاء ادخال صلحيات',
+                'password.required' => 'برجاء ادخال كلمه السر',
+                'password.string' => 'برجاء ادخال كلمه السر حروف',
+                'password.min' => 'برجاء ادخال كلمه السر اكثر من 6',
             ];
         }
         else{
             return [];
         }
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        $errors = (new ValidationException($validator))->errors();
+        throw new HttpResponseException(
+            response(['status' => 0, 'data' => ['errors'=>$errors]], 400)
+        );
     }
 }

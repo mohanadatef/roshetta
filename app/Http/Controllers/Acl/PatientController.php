@@ -3,22 +3,22 @@
 namespace App\Http\Controllers\Acl;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Acl\User\CreateRequest;
-use App\Repositories\Acl\UserRepository;
+use App\Http\Requests\Acl\Patient\CreateRequest;
+use App\Repositories\Acl\PatientRepository;
 
 class PatientController extends Controller
 {
-    private $userRepository;
+    private $patientRepository;
 
-    public function __construct(UserRepository $UserRepository)
+    public function __construct(PatientRepository $PatientRepository)
     {
         $this->middleware('auth:api', ['except' => ['store']]);
-        $this->userRepository = $UserRepository;
+        $this->patientRepository = $PatientRepository;
     }
 
     public function store(CreateRequest $request)
     {
-       $patient= $this->userRepository->Create_Data($request);
+       $patient= $this->patientRepository->Create_Data($request);
         return response(['status' => 1, 'data' => ['patient'=>$patient], 'message' => trans('lang.Message_Store')], 200);
     }
 

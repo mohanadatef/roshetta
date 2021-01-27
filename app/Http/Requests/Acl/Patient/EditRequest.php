@@ -1,8 +1,12 @@
 <?php
 
-namespace App\Http\Requests\Acl\User;
+namespace App\Http\Requests\Acl\Patient;
 
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class EditRequest extends FormRequest
 {
@@ -31,12 +35,11 @@ class EditRequest extends FormRequest
             'email' => 'required|email|max:255|string|unique:users,email,'.$this->id.',id',
             'date_birth' => 'required|date',
             'image'=> 'image|mimes:jpg,jpeg,png|max:2048',
-            'role_id'=> 'required|exists:roles,id',
         ];
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
+        if (User::find($this->id)->language->code == 'ar') {
             return [
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
@@ -49,11 +52,18 @@ class EditRequest extends FormRequest
                 'email.unique' => 'لا يمكن ادخال البريد الالكتروني متكرر',
                 'date_birth.required' => 'برجاء ادخال تاريخ الميلاد',
                 'date_birth.date' => 'برجاء ادخال تاريخ الميلاد تاريخ',
-                'role_id.required' => 'برجاء ادخال صلحيات',
             ];
         }
         else{
             return [];
         }
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        $errors = (new ValidationException($validator))->errors();
+        throw new HttpResponseException(
+            response(['status' => 0, 'data' => ['errors'=>$errors]], 400)
+        );
     }
 }
