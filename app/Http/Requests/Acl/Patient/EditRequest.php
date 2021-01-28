@@ -27,7 +27,6 @@ class EditRequest extends FormRequest
      */
     public function rules()
     {
-        dd($this->id);
         return [
             'first_title' => 'required',
             'second_title' => 'required',

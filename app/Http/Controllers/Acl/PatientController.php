@@ -52,7 +52,7 @@ class PatientController extends Controller
 
     public function logout(Request $request)
     {
-        $this->patientRepository->Logout($request->id);
+        $this->patientRepository->Logout($request->patient_id);
         change_locale_language($request->language_id);
         return response()->json(['status' => 1, 'data' => array(), 'message' => trans('lang.Message_Logout')]);
     }
