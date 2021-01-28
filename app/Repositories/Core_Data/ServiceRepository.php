@@ -34,14 +34,7 @@ class ServiceRepository implements ServiceInterface
     public function Get_One_Data_Translation($id)
     {
         $service =  $this->service->find($id)->translations;
-        if($service)
-        {
-            return array_merge($this->service->find($id)->toarray(),$service);
-        }
-        else
-        {
-            return $this->service->find($id);
-        }
+       return $service ? array_merge($this->service->find($id)->toarray(),$service) : $this->service->find($id);
     }
 
     public function Get_One_Data($id)
@@ -57,11 +50,7 @@ class ServiceRepository implements ServiceInterface
     public function Update_Status_One_Data($id)
     {
         $service = $this->Get_One_Data($id);
-        if ($service->status == 1) {
-            $service->status = '0';
-        } elseif ($service->status == 0) {
-            $service->status = '1';
-        }
+        $service->status == 1 ? $service->status = '0' : $service->status = '1';
         $service->update();
     }
 
@@ -72,15 +61,9 @@ class ServiceRepository implements ServiceInterface
 
     public function Update_Status_Datas(StatusEditRequest $request)
     {
-
-        $services = $this->Get_Many_Data($request);
-        foreach($services as $service)
+        foreach($this->Get_Many_Data($request) as $service)
         {
-            if ($service->status == 1) {
-                $service->status = '0';
-            } elseif ($service->status == 0) {
-                $service->status = '1';
-            }
+            $service->status == 1 ? $service->status = '0' : $service->status = '1';
             $service->update();
         }
     }

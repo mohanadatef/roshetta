@@ -22,16 +22,16 @@ class LanguageRepository implements LanguageInterface
 
     public function Get_All_Data()
     {
-        return $this->language->orderby('order','asc')->get();
+        return $this->language->orderby('order', 'asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)
     {
-        $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
+        $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
         Request()->image->move(public_path('images/language'), $imageName);
         $data['image'] = $imageName;
         $data['status'] = 1;
-        $this->language->create(array_merge($request->all(),$data));
+        $this->language->create(array_merge($request->all(), $data));
     }
 
     public function Get_One_Data($id)
@@ -41,46 +41,30 @@ class LanguageRepository implements LanguageInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $language = $this->Get_One_Data($id);
         if ($request->image != null) {
-            $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
+            $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
             Request()->image->move(public_path('images/language'), $imageName);
             $data['image'] = $imageName;
-            $language->update(array_merge($request->all(),$data));
-        }
-        else
-        {
-            $language->update($request->all());
-        }
+            $this->Get_One_Data($id)->update(array_merge($request->all(), $data));
+        } else $this->Get_One_Data($id)->update($request->all());
     }
 
     public function Update_Status_One_Data($id)
     {
         $language = $this->Get_One_Data($id);
-        if ($language->status == 1) {
-            $language->status = '0';
-        } elseif ($language->status == 0) {
-            $language->status = '1';
-        }
+        $language->status == 1 ? $language->status = '0' : $language->status = '1';
         $language->update();
     }
 
     public function Get_Many_Data(Request $request)
     {
-        return  $this->language->wherein('id',$request->change_status)->get();
+        return $this->language->wherein('id', $request->change_status)->get();
     }
 
     public function Update_Status_Datas(StatusEditRequest $request)
     {
-
-        $languages = $this->Get_Many_Data($request);
-        foreach($languages as $language)
-        {
-            if ($language->status == 1) {
-                $language->status = '0';
-            } elseif ($language->status == 0) {
-                $language->status = '1';
-            }
+        foreach ($this->Get_Many_Data($request) as $language) {
+            $language->status == 1 ? $language->status = '0' : $language->status = '1';
             $language->update();
         }
     }

@@ -1,10 +1,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-@if($setting != null)
-<title>{{$setting->title}} | {{ trans('lang.DashBoard') }}</title>
-    @else
-    <title> Dashboard</title>
-@endif
+<title>{{$setting->title ? $setting->title : ""}} | {{ trans('lang.DashBoard') }}</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 @if($setting != null)

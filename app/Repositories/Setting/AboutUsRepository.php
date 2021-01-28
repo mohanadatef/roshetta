@@ -32,14 +32,7 @@ class AboutUsRepository implements AboutUsInterface
     public function Get_One_Data_Translation($id)
     {
         $about_us =  $this->about_us->find($id)->translations;
-        if($about_us)
-        {
-            return array_merge($this->about_us->find($id)->toarray(),$about_us);
-        }
-        else
-        {
-            return $this->about_us->find($id);
-        }
+        return $about_us ? array_merge($this->about_us->find($id)->toarray(),$about_us) : $this->about_us->find($id);
     }
 
     public function Get_One_Data($id)
@@ -49,16 +42,11 @@ class AboutUsRepository implements AboutUsInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $about_us = $this->Get_One_Data($id);
         if ($request->image != null) {
             $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
             Request()->image->move(public_path('images/about_us'), $imageName);
             $data['image'] = $imageName;
-            $about_us->update(array_merge($request->all(),$data));
-        }
-        else
-        {
-            $about_us->update($request->all());
-        }
+            $this->Get_One_Data($id)->update(array_merge($request->all(),$data));
+        } else $this->Get_One_Data($id)->update($request->all());
     }
 }

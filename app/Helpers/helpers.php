@@ -22,33 +22,20 @@ if (!function_exists('permission_show')) {
             ->where('permission_roles.role_id', \Illuminate\Support\Facades\Auth::user()->role_id)
             ->where('permissions.title', $permission_title)
             ->count();
-        if ($permission)
-            return true;
-        else
-            return false;
+        return $permission ? true : false;
     }
 }
 
 if (!function_exists('change_locale_language')) {
     function change_locale_language($id)
     {
-        if($id != null)
-        {
-        \Illuminate\Support\Facades\App::setLocale(\App\Models\Core_Data\Language::find($id)->code);
-        }
+        $id != null ? \Illuminate\Support\Facades\App::setLocale(\App\Models\Core_Data\Language::find($id)->code) : false ;
     }
 }
 
 if (!function_exists('check_locale_language')) {
     function check_locale_language($id)
     {
-        if($id != null)
-        {
-            return \App\Models\Core_Data\Language::find($id)->code;
-        }
-        else
-        {
-            return  Language_Locale();
-        }
+        return $id != null ? \App\Models\Core_Data\Language::find($id)->code : Language_Locale();
     }
 }

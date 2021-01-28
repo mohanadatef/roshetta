@@ -16,7 +16,7 @@ class RoleRepository implements RoleInterface
     protected $role;
     protected $permission_role;
 
-    public function __construct(Role $role,Permission_role $permission_role)
+    public function __construct(Role $role, Permission_role $permission_role)
     {
         $this->role = $role;
         $this->permission_role = $permission_role;
@@ -24,15 +24,7 @@ class RoleRepository implements RoleInterface
 
     public function Get_All_Data()
     {
-        if(Auth::user()->role_id == 1)
-        {
-            return $this->role->all();
-        }
-        else
-        {
-            return $this->role->whereNotIn('id',[1,3])->get();
-        }
-
+        return Auth::user()->role_id == 1 ? $this->role->all() : $this->role->whereNotIn('id', [1, 3])->get();
     }
 
     public function Create_Data(CreateRequest $request)
@@ -42,15 +34,8 @@ class RoleRepository implements RoleInterface
 
     public function Get_One_Data_Translation($id)
     {
-       $role =  $this->role->find($id)->translations;
-       if($role)
-       {
-        return array_merge($this->role->find($id)->toarray(),$role);
-       }
-       else
-       {
-           return $this->role->find($id);
-       }
+        $role = $this->role->find($id)->translations;
+        return $role ? array_merge($this->role->find($id)->toarray(), $role) : $this->role->find($id);
     }
 
     public function Get_One_Data($id)
@@ -67,19 +52,11 @@ class RoleRepository implements RoleInterface
 
     public function Get_List_Data()
     {
-        if(Auth::user()->role_id == 1)
-        {
-            return $this->role->select('title', 'id')->get();
-        }
-        else
-        {
-            return $this->role->select('title', 'id')->whereNotIn('id',[1,3])->get();
-        }
-
+        return Auth::user()->role_id == 1 ? $this->role->select('title', 'id')->get() : $this->role->select('title', 'id')->whereNotIn('id', [1, 3])->get();
     }
 
     public function Get_Permission_For_Role($id)
     {
-        return $this->permission_role->where('role_id',$id)->get();
+        return $this->permission_role->where('role_id', $id)->get();
     }
 }

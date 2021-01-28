@@ -92,6 +92,7 @@ return[
     'Select'=>'Select',
     'Role'=>'Role',
     'User'=>'User',
+    'Profile'=>'Profile',
     'First_Title'=>'First Title',
     'Second_Title'=>'Second Title',
     'Change_Password'=>'Change Password',

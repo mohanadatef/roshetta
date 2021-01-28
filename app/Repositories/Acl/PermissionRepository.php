@@ -30,15 +30,8 @@ class PermissionRepository implements PermissionInterface
 
     public function Get_One_Data_Translation($id)
     {
-       $permission =  $this->permission->find($id)->translations;
-       if($permission)
-       {
-        return array_merge($this->permission->find($id)->toarray(),$permission);
-       }
-       else
-       {
-           return $this->permission->find($id);
-       }
+        $permission = $this->permission->find($id)->translations;
+        return $permission ? array_merge($this->permission->find($id)->toarray(), $permission) : $this->permission->find($id);
     }
 
     public function Get_One_Data($id)

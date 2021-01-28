@@ -46,7 +46,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {{$i=1}}
+                                <?php $i=1 ?>
                                 @foreach($datas as $data)
                                     <tr>
                                         <td align="center">
@@ -60,11 +60,8 @@
                                         <td align="center">{{ $data->second_title }}</td>
                                         <td align="center">{{ $data->email }}</td>
                                         <td align="center">{{ $data->mobile }}</td>
-                                        <td class="center">@if($data->image)
-                                                <img src="{{ asset('public/images/user/' . $data->image ) }}" style="width:100px;height: 100px">
-                                        @else
-                                                <img src="{{ asset('public/images/user/profile_user.jpg' ) }}" style="width:100px;height: 100px">
-                                                               @endif
+                                        <td class="center">
+                                                <img src="{{ asset('public/images/user/').($data->image ? '/'.$data->image : '/profile_user.jpg') }}" style="width:100px;height: 100px">
                                         </td>
                                             @if(permission_show('user-status'))
                                         <td align="center">

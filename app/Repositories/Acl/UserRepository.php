@@ -23,34 +23,26 @@ class UserRepository implements UserInterface
 
     public function Get_All_Data()
     {
-        return $this->user->whereNotIn('role_id',[3])->get();
+        return $this->user->whereNotIn('role_id', [3])->get();
     }
 
     public function Create_Data(CreateRequest $request)
     {
-        $data['status']=1;
-        $data['status_login']=0;
-        $data['password']=Hash::make($request->password);
-        if($request->image)
-        {
-        $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
-        Request()->image->move(public_path('images/user'), $imageName);
-        $data['image'] = $imageName;
+        $data['status'] = 1;
+        $data['status_login'] = 0;
+        $data['password'] = Hash::make($request->password);
+        if ($request->image) {
+            $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
+            Request()->image->move(public_path('images/user'), $imageName);
+            $data['image'] = $imageName;
         }
-       return $this->user->create(array_merge($request->all(),$data));
+        return $this->user->create(array_merge($request->all(), $data));
     }
 
     public function Get_One_Data_Translation($id)
     {
-       $user =  $this->user->find($id)->translations;
-       if($user)
-       {
-        return array_merge($this->user->find($id)->toarray(),$user);
-       }
-       else
-       {
-           return $this->user->find($id);
-       }
+        $user = $this->user->find($id)->translations;
+        return $user ? array_merge($this->user->find($id)->toarray(), $user) : $this->user->find($id);
     }
 
     public function Get_One_Data($id)
@@ -60,17 +52,12 @@ class UserRepository implements UserInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $user = $this->Get_One_Data($id);
         if ($request->image != null) {
-            $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
+            $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
             Request()->image->move(public_path('images/user'), $imageName);
             $data['image'] = $imageName;
-            return  $user->update(array_merge($request->all(),$data));
-        }
-        else
-        {
-            return $user->update($request->all());
-        }
+            return $this->Get_One_Data($id)->update(array_merge($request->all(), $data));
+        } else return $this->Get_One_Data($id)->update($request->all());
     }
 
     public function Resat_Password($id)
@@ -92,11 +79,7 @@ class UserRepository implements UserInterface
     public function Update_Status_One_Data($id)
     {
         $user = $this->Get_One_Data($id);
-        if ($user->status == 1) {
-            $user->status = '0';
-        } elseif ($user->status == 0) {
-            $user->status = '1';
-        }
+        $user->status == 1 ? $user->status = '0' : $user->status = '1';
         $user->update();
     }
 
@@ -107,13 +90,8 @@ class UserRepository implements UserInterface
 
     public function Update_Status_Data(StatusEditRequest $request)
     {
-        $users = $this->Get_Many_Data($request);
-        foreach ($users as $user) {
-            if ($user->status == 1) {
-                $user->status = '0';
-            } elseif ($user->status == 0) {
-                $user->status = '1';
-            }
+        foreach ($this->Get_Many_Data($request) as $user) {
+            $user->status == 1 ? $user->status = '0' : $user->status = '1';
             $user->update();
         }
     }

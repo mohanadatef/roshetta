@@ -30,14 +30,7 @@ class PrivacyRepository implements PrivacyInterface
     public function Get_One_Data_Translation($id)
     {
         $privacy =  $this->privacy->find($id)->translations;
-        if($privacy)
-        {
-            return array_merge($this->privacy->find($id)->toarray(),$privacy);
-        }
-        else
-        {
-            return $this->privacy->find($id);
-        }
+        return $privacy ? array_merge($this->privacy->find($id)->toarray(),$privacy) : $this->privacy->find($id);
     }
 
     public function Get_One_Data($id)

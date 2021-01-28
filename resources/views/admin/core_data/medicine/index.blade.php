@@ -49,7 +49,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {{$i=1}}
+                                <?php $i=1 ?>
                                 @foreach($datas as $data)
                                     <tr>
                                         <td align="center">

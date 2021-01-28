@@ -22,26 +22,19 @@ class AreaRepository implements AreaInterface
 
     public function Get_All_Data()
     {
-        return $this->area->orderby('order','asc')->get();
+        return $this->area->orderby('order', 'asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)
     {
         $data['status'] = 1;
-        $this->area->create(array_merge($request->all(),$data));
+        $this->area->create(array_merge($request->all(), $data));
     }
 
     public function Get_One_Data_Translation($id)
     {
-        $area =  $this->area->find($id)->translations;
-        if($area)
-        {
-            return array_merge($this->area->find($id)->toarray(),$area);
-        }
-        else
-        {
-            return $this->area->find($id);
-        }
+        $area = $this->area->find($id)->translations;
+        return $area ? array_merge($this->area->find($id)->toarray(), $area) : $this->area->find($id);
     }
 
     public function Get_One_Data($id)
@@ -57,30 +50,19 @@ class AreaRepository implements AreaInterface
     public function Update_Status_One_Data($id)
     {
         $area = $this->Get_One_Data($id);
-        if ($area->status == 1) {
-            $area->status = '0';
-        } elseif ($area->status == 0) {
-            $area->status = '1';
-        }
+        $area->status == 1 ? $area->status = '0' : $area->status = '1';
         $area->update();
     }
 
     public function Get_Many_Data(Request $request)
     {
-        return  $this->area->wherein('id',$request->change_status)->get();
+        return $this->area->wherein('id', $request->change_status)->get();
     }
 
     public function Update_Status_Datas(StatusEditRequest $request)
     {
-
-        $areas = $this->Get_Many_Data($request);
-        foreach($areas as $area)
-        {
-            if ($area->status == 1) {
-                $area->status = '0';
-            } elseif ($area->status == 0) {
-                $area->status = '1';
-            }
+        foreach ($this->Get_Many_Data($request) as $area) {
+            $area->status == 1 ? $area->status = '0' : $area->status = '1';
             $area->update();
         }
     }

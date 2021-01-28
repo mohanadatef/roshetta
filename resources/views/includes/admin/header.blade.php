@@ -2,17 +2,9 @@
     <!-- Logo -->
     <a href="{{url('/admin')}}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        @if($setting != null)
-            <span class="logo-mini"><b>{{$setting->title}}</b></span>
-        @else
-            <span class="logo-mini"><b>CMS</b></span>
-        @endif
+            <span class="logo-mini"><b>{{ $setting->title ? $setting->title : "CMS"}}</b></span>
     <!-- logo for regular state and mobile devices -->
-        @if($setting != null)
-            <span class="logo-lg"><b>{{$setting->title}}</b></span>
-        @else
-            <span class="logo-lg"><b>CMS</b></span>
-        @endif
+            <span class="logo-lg"><b>{{$setting->title ? $setting->title : "CMS"}}</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -217,7 +209,6 @@
                         @if (Route::has('login'))
                             @auth
                                 <span class="hidden-xs">{{ Auth::user()->first_title }}</span>
-                            @else
                             @endauth
                         @endif
                     </a>

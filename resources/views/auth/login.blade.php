@@ -38,12 +38,8 @@
 <body class="hold-transition login-page" style="height: 0% !important;">
 <div class="login-box">
     <div class="login-logo">
-        @if($setting != null)
             <img src="{{asset('public/images/setting/'.$setting->logo)}}" style="width:100px;height: 100px"/>
-            <b>{{$setting->title}}</b>
-        @else
-            <b>CMS</b>
-        @endif
+            <b>{{$setting->title ? $setting->title :"CMS"}}</b>
     </div>
 
     <!-- /.login-logo -->

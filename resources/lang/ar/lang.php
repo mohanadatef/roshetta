@@ -98,6 +98,7 @@ return[
     'Patient'=>'مريض',
     'Gender'=>'نوع',
     'Man'=>'رجل',
+    'Profile'=>'ملف الشخصي',
     'Woman'=>'امراه',
     'Date_Dirth'=>'تاريخ الميلاد',
     'Password_Confirmation'=>'تاكيد كلمه السر',

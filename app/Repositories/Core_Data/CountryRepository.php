@@ -22,29 +22,22 @@ class CountryRepository implements CountryInterface
 
     public function Get_All_Data()
     {
-        return $this->country->orderby('order','asc')->get();
+        return $this->country->orderby('order', 'asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)
     {
-        $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
+        $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
         Request()->image->move(public_path('images/country'), $imageName);
         $data['image'] = $imageName;
         $data['status'] = 1;
-        $this->country->create(array_merge($request->all(),$data));
+        $this->country->create(array_merge($request->all(), $data));
     }
 
     public function Get_One_Data_Translation($id)
     {
-        $country =  $this->country->find($id)->translations;
-        if($country)
-        {
-            return array_merge($this->country->find($id)->toarray(),$country);
-        }
-        else
-        {
-            return $this->country->find($id);
-        }
+        $country = $this->country->find($id)->translations;
+        return $country ? array_merge($this->country->find($id)->toarray(), $country) : $this->country->find($id);
     }
 
     public function Get_One_Data($id)
@@ -54,52 +47,36 @@ class CountryRepository implements CountryInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $country = $this->Get_One_Data($id);
         if ($request->image != null) {
-            $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
+            $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
             Request()->image->move(public_path('images/country'), $imageName);
             $data['image'] = $imageName;
-            $country->update(array_merge($request->all(),$data));
-        }
-        else
-        {
-            $country->update($request->all());
-        }
+            $this->Get_One_Data($id)->update(array_merge($request->all(), $data));
+        } else $this->Get_One_Data($id)->update($request->all());
     }
 
     public function Update_Status_One_Data($id)
     {
         $country = $this->Get_One_Data($id);
-        if ($country->status == 1) {
-            $country->status = '0';
-        } elseif ($country->status == 0) {
-            $country->status = '1';
-        }
+        $country->status == 1 ? $country->status = '0' : $country->status = '1';
         $country->update();
     }
 
     public function Get_Many_Data(Request $request)
     {
-        return  $this->country->wherein('id',$request->change_status)->get();
+        return $this->country->wherein('id', $request->change_status)->get();
     }
 
     public function Update_Status_Datas(StatusEditRequest $request)
     {
-
-        $countrys = $this->Get_Many_Data($request);
-        foreach($countrys as $country)
-        {
-            if ($country->status == 1) {
-                $country->status = '0';
-            } elseif ($country->status == 0) {
-                $country->status = '1';
-            }
+        foreach ($this->Get_Many_Data($request) as $country) {
+            $country->status == 1 ? $country->status = '0' : $country->status = '1';
             $country->update();
         }
     }
 
     public function Get_List_Data()
     {
-        return $this->country->select('title','id')->where('status',1)->orderby('order','asc')->get();
+        return $this->country->select('title', 'id')->where('status', 1)->orderby('order', 'asc')->get();
     }
 }

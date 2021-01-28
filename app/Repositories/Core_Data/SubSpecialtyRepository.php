@@ -34,14 +34,7 @@ class SubSpecialtyRepository implements SubSpecialtyInterface
     public function Get_One_Data_Translation($id)
     {
         $sub_specialty =  $this->sub_specialty->find($id)->translations;
-        if($sub_specialty)
-        {
-            return array_merge($this->sub_specialty->find($id)->toarray(),$sub_specialty);
-        }
-        else
-        {
-            return $this->sub_specialty->find($id);
-        }
+        return $sub_specialty ? array_merge($this->sub_specialty->find($id)->toarray(),$sub_specialty) : $this->sub_specialty->find($id);
     }
 
     public function Get_One_Data($id)
@@ -57,11 +50,7 @@ class SubSpecialtyRepository implements SubSpecialtyInterface
     public function Update_Status_One_Data($id)
     {
         $sub_specialty = $this->Get_One_Data($id);
-        if ($sub_specialty->status == 1) {
-            $sub_specialty->status = '0';
-        } elseif ($sub_specialty->status == 0) {
-            $sub_specialty->status = '1';
-        }
+        $sub_specialty->status == 1 ? $sub_specialty->status = '0' : $sub_specialty->status = '1';
         $sub_specialty->update();
     }
 
@@ -72,15 +61,9 @@ class SubSpecialtyRepository implements SubSpecialtyInterface
 
     public function Update_Status_Datas(StatusEditRequest $request)
     {
-
-        $sub_specialtys = $this->Get_Many_Data($request);
-        foreach($sub_specialtys as $sub_specialty)
+        foreach($this->Get_Many_Data($request) as $sub_specialty)
         {
-            if ($sub_specialty->status == 1) {
-                $sub_specialty->status = '0';
-            } elseif ($sub_specialty->status == 0) {
-                $sub_specialty->status = '1';
-            }
+            $sub_specialty->status == 1 ? $sub_specialty->status = '0' : $sub_specialty->status = '1';
             $sub_specialty->update();
         }
     }

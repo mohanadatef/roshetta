@@ -22,29 +22,22 @@ class ProductCategoryRepository implements ProductCategoryInterface
 
     public function Get_All_Data()
     {
-        return $this->product_category->orderby('order','asc')->get();
+        return $this->product_category->orderby('order', 'asc')->get();
     }
 
     public function Create_Data(CreateRequest $request)
     {
-        $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
+        $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
         Request()->image->move(public_path('images/product_category'), $imageName);
         $data['image'] = $imageName;
         $data['status'] = 1;
-        $this->product_category->create(array_merge($request->all(),$data));
+        $this->product_category->create(array_merge($request->all(), $data));
     }
 
     public function Get_One_Data_Translation($id)
     {
-        $product_category =  $this->product_category->find($id)->translations;
-        if($product_category)
-        {
-            return array_merge($this->product_category->find($id)->toarray(),$product_category);
-        }
-        else
-        {
-            return $this->product_category->find($id);
-        }
+        $product_category = $this->product_category->find($id)->translations;
+        return $product_category ? array_merge($this->product_category->find($id)->toarray(), $product_category) : $this->product_category->find($id);
     }
 
     public function Get_One_Data($id)
@@ -54,53 +47,37 @@ class ProductCategoryRepository implements ProductCategoryInterface
 
     public function Update_Data(EditRequest $request, $id)
     {
-        $product_category = $this->Get_One_Data($id);
         if ($request->image != null) {
-            $imageName = $request->image->getClientOriginalname().'-'.time().'-image.'.Request()->image->getClientOriginalExtension();
+            $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
             Request()->image->move(public_path('images/product_category'), $imageName);
             $data['image'] = $imageName;
-            $product_category->update(array_merge($request->all(),$data));
-        }
-        else
-        {
-            $product_category->update($request->all());
-        }
+            $this->Get_One_Data($id)->update(array_merge($request->all(), $data));
+        } else $this->Get_One_Data($id)->update($request->all());
     }
 
     public function Update_Status_One_Data($id)
     {
         $product_category = $this->Get_One_Data($id);
-        if ($product_category->status == 1) {
-            $product_category->status = '0';
-        } elseif ($product_category->status == 0) {
-            $product_category->status = '1';
-        }
+        $product_category->status == 1 ? $product_category->status = '0' : $product_category->status = '1';
         $product_category->update();
     }
 
     public function Get_Many_Data(Request $request)
     {
-        return  $this->product_category->wherein('id',$request->change_status)->get();
+        return $this->product_category->wherein('id', $request->change_status)->get();
     }
 
     public function Update_Status_Datas(StatusEditRequest $request)
     {
-
-        $product_categorys = $this->Get_Many_Data($request);
-        foreach($product_categorys as $product_category)
-        {
-            if ($product_category->status == 1) {
-                $product_category->status = '0';
-            } elseif ($product_category->status == 0) {
-                $product_category->status = '1';
-            }
+        foreach ($this->Get_Many_Data($request) as $product_category) {
+            $product_category->status == 1 ? $product_category->status = '0' : $product_category->status = '1';
             $product_category->update();
         }
     }
 
     public function Get_List_Data()
     {
-        return $this->product_category->select('title','id')->where('status',1)->orderby('order','asc')->get();
+        return $this->product_category->select('title', 'id')->where('status', 1)->orderby('order', 'asc')->get();
     }
 }
 

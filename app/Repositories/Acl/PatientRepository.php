@@ -6,10 +6,8 @@ namespace App\Repositories\Acl;
 use App\Http\Requests\Acl\Patient\CreateRequest;
 use App\Http\Requests\Acl\Patient\StatusEditRequest;
 use App\Interfaces\Acl\PatientInterface;
-use App\Models\Core_Data\Language;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
 use JWTAuth;
 
@@ -24,7 +22,7 @@ class PatientRepository implements PatientInterface
 
     public function Get_All_Data()
     {
-        return $this->patient->where('role_id',3)->get();
+        return $this->patient->where('role_id', 3)->get();
     }
 
     public function Create_Data(CreateRequest $request)
@@ -42,17 +40,13 @@ class PatientRepository implements PatientInterface
             file_put_contents($file, $image_base64);
             $data['image'] = $imageName;
         }
-       return $this->patient->create(array_merge($request->all(), $data));
+        return $this->patient->create(array_merge($request->all(), $data));
     }
 
     public function Update_Status_One_Data($id)
     {
         $patient = $this->Get_One_Data($id);
-        if ($patient->status == 1) {
-            $patient->status = '0';
-        } elseif ($patient->status == 0) {
-            $patient->status = '1';
-        }
+        $patient->status == 1 ? $patient->status = '0' : $patient->status = '1';
         $patient->update();
     }
 
@@ -68,13 +62,8 @@ class PatientRepository implements PatientInterface
 
     public function Update_Status_Data(StatusEditRequest $request)
     {
-        $patients = $this->Get_Many_Data($request);
-        foreach ($patients as $patient) {
-            if ($patient->status == 1) {
-                $patient->status = '0';
-            } elseif ($patient->status == 0) {
-                $patient->status = '1';
-            }
+        foreach ($this->Get_Many_Data($request) as $patient) {
+            $patient->status == 1 ? $patient->status = '0' : $patient->status = '1';
             $patient->update();
         }
     }
@@ -82,37 +71,37 @@ class PatientRepository implements PatientInterface
     public function Login(Request $request)
     {
         change_locale_language($request->language_id);
-        $patient = $this->patient->where('email', $request->email)->where('role_id',3)->first();
+        $patient = $this->patient->where('email', $request->email)->where('role_id', 3)->first();
         if (!$patient) {
-            $data['status_data']=0;
-            $data['status']=400;
-            $data['message']=trans('passwords.user');
-            $data['patient']=array();
+            $data['status_data'] = 0;
+            $data['status'] = 400;
+            $data['message'] = trans('passwords.user');
+            $data['patient'] = array();
             return $data;
         }
         if (!Hash::check($request->password, $patient->password)) {
-            $data['status_data']=0;
-            $data['status']=400;
-            $data['message']=trans('auth.password');
-            $data['patient']=array();
+            $data['status_data'] = 0;
+            $data['status'] = 400;
+            $data['message'] = trans('auth.password');
+            $data['patient'] = array();
             return $data;
         }
         if ($patient->status == 0) {
-            $data['status_data']=0;
-            $data['status']=400;
-            $data['message']=trans('lang.Message_Support');
-            $data['patient']=array();
+            $data['status_data'] = 0;
+            $data['status'] = 400;
+            $data['message'] = trans('lang.Message_Support');
+            $data['patient'] = array();
             return $data;
         }
-            $credentials = ['email' => $request->email, 'password' => $request->password];
-            $token = JWTAuth::attempt($credentials);
-            $patient->token = $token;
-            $patient->update();
-            $data['status_data']=1;
-            $data['status']=200;
-            $data['message']=trans('lang.Message_Login');
-            $data['patient']=$patient;
-            return $data;
+        $credentials = ['email' => $request->email, 'password' => $request->password];
+        $token = JWTAuth::attempt($credentials);
+        $patient->token = $token;
+        $patient->update();
+        $data['status_data'] = 1;
+        $data['status'] = 200;
+        $data['message'] = trans('lang.Message_Login');
+        $data['patient'] = $patient;
+        return $data;
     }
 
     public function Logout($id)
