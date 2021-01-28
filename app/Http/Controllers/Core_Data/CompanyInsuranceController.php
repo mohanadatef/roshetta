@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Core_Data\Company_Insurance\CreateRequest;
 use App\Http\Requests\Core_Data\Company_Insurance\EditRequest;
 use App\Http\Requests\Core_Data\Company_Insurance\StatusEditRequest;
+use App\Http\Resources\Core_Data\CompanyInsuranceResource;
 use App\Repositories\Core_Data\CompanyInsuranceRepository;
+use Illuminate\Http\Request;
 
 class CompanyInsuranceController extends Controller
 {
@@ -56,5 +58,11 @@ class CompanyInsuranceController extends Controller
     {
         $this->company_insuranceRepository->Update_Status_Datas($request);
         return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
+
+    public function list_data(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['company_insurance'=> CompanyInsuranceResource::collection($this->company_insuranceRepository->Get_List_Data())], 'message' => trans('lang.Index')], 206);
     }
 }

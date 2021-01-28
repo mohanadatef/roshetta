@@ -10,7 +10,7 @@ if (!function_exists('Language_Locale')) {
 if (!function_exists('Language')) {
     function Language()
     {
-        return \App\Models\Core_Data\Language::where('status',1)->orderby('order','asc')->get();
+        return \App\Models\Core_Data\Language::orderby('order','asc')->get();
     }
 }
 
@@ -29,13 +29,13 @@ if (!function_exists('permission_show')) {
 if (!function_exists('change_locale_language')) {
     function change_locale_language($id)
     {
-        $id != null ? \Illuminate\Support\Facades\App::setLocale(\App\Models\Core_Data\Language::find($id)->code) : false ;
+        $id ? \Illuminate\Support\Facades\App::setLocale(check_locale_language($id) ) : false ;
     }
 }
 
 if (!function_exists('check_locale_language')) {
     function check_locale_language($id)
     {
-        return $id != null ? \App\Models\Core_Data\Language::find($id)->code : Language_Locale();
+        return $id ? \App\Models\Core_Data\Language::find($id) ? \App\Models\Core_Data\Language::find($id)->code : Language_Locale() : Language_Locale() ;
     }
 }

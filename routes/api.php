@@ -28,5 +28,8 @@ Route::group(['middleware' => 'api'], function () {
     });
 });
 Route::prefix('/language')->group(function () {
-    Route::get('/index', [App\Http\Controllers\Core_Data\LanguageController::class, 'index_api']);
+    Route::get('/list', [App\Http\Controllers\Core_Data\LanguageController::class, 'list_data']);
+});
+Route::prefix('/company_insurance')->group(function () {
+    Route::get('/list', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'list_data']);
 });

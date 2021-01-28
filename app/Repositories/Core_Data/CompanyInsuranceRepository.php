@@ -74,4 +74,9 @@ class CompanyInsuranceRepository implements CompanyInsuranceInterface
             $company_insurance->update();
         }
     }
+
+    public function Get_List_Data()
+    {
+        return $this->company_insurance->where('status', 1)->orderby('order', 'asc')->get();
+    }
 }

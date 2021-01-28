@@ -67,7 +67,7 @@ class LanguageController extends Controller
         return redirect()->back()->withCookie('language',$request->lang,45000);
     }
 
-    public function index_api(Request $request)
+    public function list_data(Request $request)
     {
         change_locale_language($request->language_id);
         return response(['status' => 1, 'data' => ['language'=> LanguageResource::collection(Language())], 'message' => trans('lang.Index')], 206);
