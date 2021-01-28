@@ -32,18 +32,13 @@ class EditRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'address.*.required' => 'برجاء ادخال العنوان',
                 'mobile.numeric' => 'برجاء ادخال ارقام',
                 'time_work.*.required' => 'برجاء ادخال وقت العمل',
                 'mobile.required' => 'برجاء ادخال الهاتف',
                 'email.required' => 'برجاء ادخال البريد الالكتروني',
                 'email.unique' => ' برجاء ادخال البريد الالكتروني غير متكرر',
-            ];
-        }
-        else{
-            return [];
-        }
+            ] : [];
     }
 }

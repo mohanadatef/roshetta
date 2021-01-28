@@ -33,8 +33,7 @@ class EditRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'title.required' => 'برجاء ادخال الاسم',
                 'title.string' => 'برجاء ادخال الاسم حروف',
                 'title.unique' => 'لا يمكن ادخال الاسم متكرر',
@@ -46,10 +45,6 @@ class EditRequest extends FormRequest
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
                 'order.numeric' => 'برجاء ادخال ارقام',
-            ];
-        }
-        else{
-            return [];
-        }
+            ] : [];
     }
 }

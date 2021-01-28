@@ -35,8 +35,7 @@ class CreateRequest extends FormRequest
 
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'order.numeric' => 'برجاء ادخال ارقام',
                 'price.numeric' => 'برجاء ادخال ارقام',
                 'detail.*.required' => 'برجاء ادخال الوصف',
@@ -50,10 +49,6 @@ class CreateRequest extends FormRequest
                 'image.required' => 'برجاء ادخال الصوره',
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
-            ];
-        }
-        else{
-            return [];
-        }
+            ] : [];
     }
 }

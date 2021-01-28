@@ -32,8 +32,7 @@ class EditRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'title.*.required' => 'برجاء ادخال الاسم',
                 'title.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',
@@ -41,10 +40,6 @@ class EditRequest extends FormRequest
                 'country_id.required' => 'برجاء ادخال البلد',
                 'country_id.exists' => 'برجاء الاختيار من القائمه',
                 'order.numeric' => 'برجاء ادخال ارقام',
-            ];
-        }
-        else{
-            return [];
-        }
+            ] : [];
     }
 }

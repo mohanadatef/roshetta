@@ -33,8 +33,7 @@ class CreateRequest extends FormRequest
 
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'title.*.required' => 'برجاء ادخال الاسم',
                 'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',
@@ -44,10 +43,6 @@ class CreateRequest extends FormRequest
                 'city_id.required' => 'برجاء ادخال المدينه',
                 'city_id.exists' => 'برجاء الاختيار من القائمه',
                 'order.numeric' => 'برجاء ادخال ارقام',
-            ];
-        }
-        else{
-            return [];
-        }
+            ] : [];
     }
 }

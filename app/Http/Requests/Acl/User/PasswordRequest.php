@@ -29,16 +29,11 @@ class PasswordRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'password.required' => 'برجاء ادخال كلمه السر',
                 'password.string' => 'برجاء ادخال كلمه السر حروف',
                 'password.confirmed' => 'برجاء ادخال تاكيد كلمه السر',
                 'password.min' => 'برجاء ادخال كلمه السر اكثر من 6',
-            ];
-        }
-        else{
-            return [];
-        }
+            ] : [];
     }
 }

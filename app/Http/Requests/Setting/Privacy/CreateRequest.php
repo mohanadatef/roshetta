@@ -30,13 +30,6 @@ class CreateRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
-                'detail.*.required' => 'برجاء ادخال الاسم',
-            ];
-        }
-        else{
-            return [];
-        }
+        return Language_Locale() == 'ar' ? ['detail.*.required' => 'برجاء ادخال الاسم',]: [];
     }
 }

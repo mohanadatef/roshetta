@@ -38,8 +38,7 @@ class CreateRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
                 'first_title.*.required' => 'برجاء ادخال الاسم',
@@ -57,10 +56,6 @@ class CreateRequest extends FormRequest
                 'password.min' => 'برجاء ادخال كلمه السر اكثر من 6',
                 'role_id.required' => 'برجاء ادخال صلحيات',
                 'mobile.numeric' => 'برجاء ادخال ارقام',
-            ];
-        }
-        else{
-            return [];
-        }
+            ]: [];
     }
 }

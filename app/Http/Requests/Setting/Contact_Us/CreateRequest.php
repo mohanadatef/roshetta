@@ -33,18 +33,13 @@ class CreateRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'address.*.required' => 'برجاء ادخال العنوان',
                 'time_work.*.required' => 'برجاء ادخال وقت العمل',
                 'mobile.required' => 'برجاء ادخال الهاتف',
                 'mobile.numeric' => 'برجاء ادخال ارقام',
                 'email.required' => 'برجاء ادخال البريد الالكتروني',
                 'email.unique' => ' برجاء ادخال البريد الالكتروني غير متكرر',
-            ];
-        }
-        else{
-            return [];
-        }
+            ] : [];
     }
 }

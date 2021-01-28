@@ -71,6 +71,7 @@
                             </div>
                         </div>
                     </div>
+                    @if(permission_show('role-edit'))
                     <div class="form-group{{ $errors->has('role_id') ? ' has-error' : "" }}">
                         {{trans('lang.Role')}} :
                         <select id="role" class="form-control select2" data-placeholder="{{trans('lang.Message_Role')}}" name="role_id">
@@ -80,6 +81,7 @@
                             @endforeach
                         </select>
                     </div>
+                    @endif
                     <div align="center">
                         @if($data['image'])
                         <img src="{{url('public/images/user/'.$data['image'])}}" style="width: 50px;height: 50px">

@@ -35,8 +35,7 @@ class EditRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'price.required' => 'برجاء ادخال السعر',
                 'detail.*.required' => 'برجاء ادخال الوصف',
                 'title.*.required' => 'برجاء ادخال الاسم',
@@ -49,10 +48,6 @@ class EditRequest extends FormRequest
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
                 'order.numeric' => 'برجاء ادخال ارقام',
                 'price.numeric' => 'برجاء ادخال ارقام',
-            ];
-        }
-        else{
-            return [];
-        }
+            ] : [];
     }
 }

@@ -37,8 +37,7 @@ class EditRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language_Locale() == 'ar') {
-            return [
+        return Language_Locale() == 'ar' ? [
                 'title.*.required' => 'برجاء ادخال الاسم',
                 'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'facebook.required' => 'برجاء ادخال فيس بوك',
@@ -49,10 +48,6 @@ class EditRequest extends FormRequest
                 'instagram.required' => 'برجاء ادخال انستجرام',
                 'logo.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'logo.max' => 'برجاء ادخال الصوره اقل من 2048',
-            ];
-        }
-        else{
-            return [];
-        }
+        ] : [];
     }
 }
