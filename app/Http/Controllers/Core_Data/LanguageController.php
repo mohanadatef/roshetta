@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Core_Data\Language\CreateRequest;
 use App\Http\Requests\Core_Data\Language\EditRequest;
 use App\Http\Requests\Core_Data\Language\StatusEditRequest;
+use App\Http\Resources\Core_Data\LanguageResource;
 use App\Repositories\Core_Data\LanguageRepository;
 use Illuminate\Http\Request;
 
@@ -64,5 +65,11 @@ class LanguageController extends Controller
     {
         //save for 1 month
         return redirect()->back()->withCookie('language',$request->lang,45000);
+    }
+
+    public function data_list(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['language'=> LanguageResource::collection(Language())], 'message' => trans('lang.Index')], 206);
     }
 }

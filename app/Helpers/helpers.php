@@ -10,7 +10,7 @@ if (!function_exists('Language_Locale')) {
 if (!function_exists('Language')) {
     function Language()
     {
-        return \App\Models\Core_Data\Language::orderby('order','asc')->get();
+        return \App\Models\Core_Data\Language::where('status',1)->orderby('order','asc')->get();
     }
 }
 

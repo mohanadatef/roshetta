@@ -27,3 +27,6 @@ Route::group(['middleware' => 'api'], function () {
         Route::post('logout', [App\Http\Controllers\Acl\PatientController::class, 'logout']);
     });
 });
+Route::prefix('/language')->group(function () {
+    Route::get('/list', [App\Http\Controllers\Core_Data\LanguageController::class, 'data_list']);
+});
