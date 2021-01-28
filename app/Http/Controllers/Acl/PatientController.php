@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Acl;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Acl\Patient\CreateRequest;
+use App\Http\Requests\Acl\Patient\EditRequest;
 use App\Http\Requests\Acl\Patient\StatusEditRequest;
 use App\Http\Resources\Acl\PatientResource;
 use App\Repositories\Acl\PatientRepository;
@@ -15,7 +16,7 @@ class PatientController extends Controller
 
     public function __construct(PatientRepository $PatientRepository)
     {
-        $this->middleware('auth:api', ['except' => ['store','index','login','change_status','change_many_status']]);
+        //$this->middleware('auth:api', ['except' => ['store','index','login','change_status','change_many_status']]);
         $this->patientRepository = $PatientRepository;
     }
 
@@ -61,5 +62,11 @@ class PatientController extends Controller
         $patient= $this->patientRepository->Get_One_Data($id);
         change_locale_language($patient->language_id);
         return response(['status' => 1, 'data' => ['patient'=> new PatientResource($patient)], 'message' => trans('lang.Profile')], 200);
+    }
+
+    public function update(EditRequest $request)
+    {
+        $patient= $this->patientRepository->Update_Data($request);
+        return response(['status' => 1, 'data' => ['patient'=>new PatientResource($patient)], 'message' => trans('lang.Message_Edit')], 206);
     }
 }

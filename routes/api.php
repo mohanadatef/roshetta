@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +20,7 @@ Route::group(['middleware' => 'api'], function () {
         Route::prefix('/patient')->group(function () {
             Route::Post('/store', [App\Http\Controllers\Acl\PatientController::class, 'store']);
             Route::get('/show_profile/{id}', [App\Http\Controllers\Acl\PatientController::class, 'show_profile']);
+            Route::post('/update', [App\Http\Controllers\Acl\PatientController::class, 'update']);
         });
     Route::prefix('/auth')->group(function () {
         Route::post('login', [App\Http\Controllers\Acl\PatientController::class, 'login']);

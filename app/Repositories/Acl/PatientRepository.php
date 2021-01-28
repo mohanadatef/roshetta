@@ -4,6 +4,7 @@ namespace App\Repositories\Acl;
 
 
 use App\Http\Requests\Acl\Patient\CreateRequest;
+use App\Http\Requests\Acl\Patient\EditRequest;
 use App\Http\Requests\Acl\Patient\StatusEditRequest;
 use App\Interfaces\Acl\PatientInterface;
 use App\Models\User;
@@ -112,5 +113,19 @@ class PatientRepository implements PatientInterface
         $patient = $this->Get_One_Data($id);
         $patient->token = null;
         $patient->update();
+    }
+
+    public function Update_Data(EditRequest $request)
+    {
+        if ($request->image != null) {
+            $folderPath = public_path('images/user/');
+            $image_type = 'png';
+            $image_base64 = base64_decode($request->image);
+            $imageName = time() . uniqid() . '.' . $image_type;
+            $file = $folderPath . $imageName;
+            file_put_contents($file, $image_base64);
+            $data['image'] = $imageName;
+            return $this->Get_One_Data($request->id)->update(array_merge($request->all(), $data));
+        } else return $this->Get_One_Data($request->id)->update($request->all());
     }
 }
