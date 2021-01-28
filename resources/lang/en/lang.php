@@ -8,6 +8,8 @@
 
 return[
     'Title'=>'Title',
+    'Copy'=>'Copy',
+    'Copy_Read'=>'Copy Read Save @ 2021',
     'Message_Title'=>'Plase Enter Your Title',
     'Index'=>'Index',
     'Language'=>'Language',

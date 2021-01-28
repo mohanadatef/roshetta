@@ -1,7 +1,7 @@
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>نسخه</b> 1.0.0
+        <b>{{trans('lang.Copy')}}</b> 1.0.0
     </div>
-    <strong>حقوق النشر &copy; 2020 <a href="#"> </a>.</strong> كلها محفوظه .
+    <strong>{{trans('lang.Copy_Read')}}</strong> <a href="#"> </a>.
 </footer>
 @yield('footer')
