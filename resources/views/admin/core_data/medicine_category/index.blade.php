@@ -23,8 +23,10 @@
                     @if(permission_show('medicine-category-create'))
                     <a href="{{  url('/admin/medicine_category/create') }}" class="btn btn-primary">{{ trans('lang.Create') }}</a>
                     @endif
+                        @if(count($datas) > 0)
                         @if(permission_show('medicine-category-many-status'))
                     <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
+                            @endif
                             @endif
                 </div>
                 <!-- /.box-header -->
@@ -51,7 +53,9 @@
                                     <tr>
                                         <td align="center">
                                             @if(permission_show('medicine-many-status'))
+                                                <div class="form-group{{ $errors->has('change_status') ? ' has-error' : "" }}">
                                             <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
+                                                </div>
                                             @endif
                                             {{$i++}}
                                         </td>

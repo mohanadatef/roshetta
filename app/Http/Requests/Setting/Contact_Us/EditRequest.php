@@ -27,7 +27,7 @@ class EditRequest extends FormRequest
             'address.*'=>'required',
             'time_work.*'=>'required',
             'email' => 'required|email|max:255|string|unique:contact_us,email,'.$this->id.',id',
-            'mobile'=>'required|numeric',
+            'mobile'=>'required|numeric|digits:11',
         ];
     }
     public function messages()
@@ -39,6 +39,7 @@ class EditRequest extends FormRequest
                 'mobile.required' => 'برجاء ادخال الهاتف',
                 'email.required' => 'برجاء ادخال البريد الالكتروني',
                 'email.unique' => ' برجاء ادخال البريد الالكتروني غير متكرر',
+            'mobile.digits' => 'برجاء ادخال ارقام 11',
             ] : [];
     }
 }

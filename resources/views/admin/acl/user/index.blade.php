@@ -23,8 +23,10 @@
                     @if(permission_show('user-create'))
                     <a href="{{  url('/admin/user/create') }}" class="btn btn-primary">{{ trans('lang.Create') }}</a>
                     @endif
+                        @if(count($datas) > 0)
                         @if(permission_show('user-many-status'))
                     <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
+                            @endif
                             @endif
                 </div>
                 <!-- /.box-header -->
@@ -56,8 +58,10 @@
                                         <td align="center">
                                             @if(permission_show('user-many-status'))
                                             @if(auth::user()->role_id == 1 || $data->role_id != 1)
+                                                    <div class="form-group{{ $errors->has('change_status') ? ' has-error' : "" }}">
                                             <input type="checkbox" name="change_status[]"
                                                    id="{{$data->id}}" value="{{$data->id}}">
+                                                </div>
                                                 @endif
                                                 @endif
                                             {{$i++}}

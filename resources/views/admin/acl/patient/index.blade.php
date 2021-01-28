@@ -20,8 +20,10 @@
         <form id="status" method="get" action="{{ url('/admin/patient/change_many_status')}}">
             <div class="box">
                 <div class="box-header" align="right">
+                    @if(count($datas) > 0)
                         @if(permission_show('patient-many-status'))
                     <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
+                            @endif
                             @endif
                 </div>
                 <!-- /.box-header -->
@@ -51,8 +53,10 @@
                                     <tr>
                                         <td align="center">
                                             @if(permission_show('patient-many-status'))
+                                                <div class="form-group{{ $errors->has('change_status') ? ' has-error' : "" }}">
                                             <input type="checkbox" name="change_status[]"
                                                    id="{{$data->id}}" value="{{$data->id}}">
+                                                </div>
                                             @endif
                                             {{$i++}}
                                         </td>

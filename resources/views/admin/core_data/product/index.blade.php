@@ -23,8 +23,10 @@
                     @if(permission_show('product-create'))
                     <a href="{{  url('/admin/product/create') }}" class="btn btn-primary">{{ trans('lang.Create') }}</a>
                     @endif
+                        @if(count($datas) > 0)
                         @if(permission_show('product-many-status'))
                     <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
+                            @endif
                             @endif
                 </div>
                 <!-- /.box-header -->
@@ -53,7 +55,9 @@
                                     <tr>
                                         <td align="center">
                                             @if(permission_show('product-many-status'))
+                                                <div class="form-group{{ $errors->has('change_status') ? ' has-error' : "" }}">
                                             <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
+                                                </div>
                                             @endif
                                             {{$i++}}
                                         </td>
