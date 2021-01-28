@@ -17,7 +17,7 @@ class AdminMiddelware
     public function handle($request, Closure $next)
     {
 
-        if(Auth::User() == true && Auth::User()->status ==1 )
+        if(Auth::User() == true && Auth::User()->status ==1 && Auth::user()->role_id != 3)
         {
                return $next($request);
         }

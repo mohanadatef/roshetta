@@ -93,10 +93,13 @@ class PatientRepository implements PatientInterface
             $data['patient'] = array();
             return $data;
         }
+        if(!$patient->token)
+        {
         $credentials = ['email' => $request->email, 'password' => $request->password];
         $token = JWTAuth::attempt($credentials);
         $patient->token = $token;
         $patient->update();
+        }
         $data['status_data'] = 1;
         $data['status'] = 200;
         $data['message'] = trans('lang.Message_Login');

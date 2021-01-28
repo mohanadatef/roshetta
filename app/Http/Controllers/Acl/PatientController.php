@@ -46,7 +46,7 @@ class PatientController extends Controller
     public function login(Request $request)
     {
         $patient = $this->patientRepository->Login($request);
-        return response(['status' => $patient['status_data'], 'data' => ['patient' => $patient['patient']], 'message' => $patient['message']], $patient['status']);
+        return response(['status' => $patient['status_data'], 'data' => ['patient' => new PatientResource($patient['patient'])], 'message' => $patient['message']], $patient['status']);
     }
 
     public function logout(Request $request)
