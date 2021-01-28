@@ -42,7 +42,7 @@ class CreateRequest extends FormRequest
     }
     public function messages()
     {
-        if (Language::find($this->language_id)->code == 'ar') {
+        if (check_locale_language($this->language_id) == 'ar') {
             return [
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',

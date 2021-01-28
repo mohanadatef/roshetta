@@ -35,7 +35,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="height: 0% !important;">
 <div class="login-box">
     <div class="login-logo">
         @if($setting != null)
@@ -113,8 +113,9 @@
                 <div class="form-group">
                     <select name='lang' onchange="this.form.submit();">
                         @foreach(Language() as $lang)
-                            <option value='{{$lang->code}}'
-                                    @if( \Illuminate\Support\Facades\App::getLocale() == $lang->code )selected @endif >{{$lang->title}}</option>
+                            <option value='{{$lang->code}}' @if( \Illuminate\Support\Facades\App::getLocale() == $lang->code )selected @endif >
+                                {{$lang->title}}
+                               </option>
                         @endforeach
                     </select>
                 </div>

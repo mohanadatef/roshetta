@@ -39,7 +39,7 @@ class EditRequest extends FormRequest
     }
     public function messages()
     {
-        if (User::find($this->id)->language->code == 'ar') {
+        if (check_locale_language($this->language_id) == 'ar') {
             return [
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',

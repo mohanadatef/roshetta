@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Acl\Patient\CreateRequest;
 use App\Http\Requests\Acl\Patient\StatusEditRequest;
 use App\Repositories\Acl\PatientRepository;
+use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
@@ -13,7 +14,7 @@ class PatientController extends Controller
 
     public function __construct(PatientRepository $PatientRepository)
     {
-        $this->middleware('auth:api', ['except' => ['store','index']]);
+        $this->middleware('auth:api', ['except' => ['store','index','login']]);
         $this->patientRepository = $PatientRepository;
     }
 
@@ -39,5 +40,18 @@ class PatientController extends Controller
     {
         $this->patientRepository->Update_Status_Data($request);
         return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
+
+    public function login(Request $request)
+    {
+        $patient = $this->patientRepository->Login($request);
+        return response(['status' => $patient['status_data'], 'data' => ['patient' => $patient['patient']], 'message' => $patient['message']], $patient['status']);
+    }
+
+    public function logout(Request $request)
+    {
+        $this->patientRepository->Logout($request->id);
+        change_locale_language($request->language_id);
+        return response()->json(['status' => 1, 'data' => array(), 'message' => trans('lang.Message_Logout')]);
     }
 }

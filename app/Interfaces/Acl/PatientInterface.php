@@ -13,5 +13,7 @@ interface PatientInterface{
     public function Create_Data(CreateRequest $request);
     public function Update_Status_One_Data($id);
     public function Get_Many_Data(Request $request);
+    public function Login(Request $request);
+    public function Logout($id);
     public function Update_Status_Data(StatusEditRequest $request);
 }

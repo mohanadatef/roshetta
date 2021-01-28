@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Translatable\HasTranslations;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use HasFactory, Notifiable,HasTranslations;
     protected $fillable = [

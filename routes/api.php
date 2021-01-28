@@ -21,4 +21,8 @@ Route::group(['middleware' => 'api'], function () {
         Route::prefix('/patient')->group(function () {
             Route::Post('/store', [App\Http\Controllers\Acl\PatientController::class, 'store']);
         });
+    Route::prefix('/auth')->group(function () {
+        Route::post('login', [App\Http\Controllers\Acl\PatientController::class, 'login']);
+        Route::post('logout', [App\Http\Controllers\Acl\PatientController::class, 'logout']);
+    });
 });

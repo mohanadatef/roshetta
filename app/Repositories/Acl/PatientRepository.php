@@ -6,9 +6,12 @@ namespace App\Repositories\Acl;
 use App\Http\Requests\Acl\Patient\CreateRequest;
 use App\Http\Requests\Acl\Patient\StatusEditRequest;
 use App\Interfaces\Acl\PatientInterface;
+use App\Models\Core_Data\Language;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
+use JWTAuth;
 
 class PatientRepository implements PatientInterface
 {
@@ -74,5 +77,48 @@ class PatientRepository implements PatientInterface
             }
             $patient->update();
         }
+    }
+
+    public function Login(Request $request)
+    {
+        change_locale_language($request->language_id);
+        $patient = $this->patient->where('email', $request->email)->where('role_id',3)->first();
+        if (!$patient) {
+            $data['status_data']=0;
+            $data['status']=400;
+            $data['message']=trans('auth.failed');
+            $data['patient']=array();
+            return $data;
+        }
+        if (!Hash::check($request->password, $patient->password)) {
+            $data['status_data']=0;
+            $data['status']=400;
+            $data['message']=trans('auth.password');
+            $data['patient']=array();
+            return $data;
+        }
+        if ($patient->status == 0) {
+            $data['status_data']=0;
+            $data['status']=400;
+            $data['message']=trans('lang.Message_Support');
+            $data['patient']=array();
+            return $data;
+        }
+            $credentials = ['email' => $request->email, 'password' => $request->password];
+            $token = JWTAuth::attempt($credentials);
+            $patient->token = $token;
+            $patient->update();
+            $data['status_data']=1;
+            $data['status']=200;
+            $data['message']=trans('lang.Message_Login');
+            $data['patient']=$patient;
+            return $data;
+    }
+
+    public function Logout($id)
+    {
+        $patient = $this->Get_One_Data($id);
+        $patient->token = null;
+        $patient->update();
     }
 }
