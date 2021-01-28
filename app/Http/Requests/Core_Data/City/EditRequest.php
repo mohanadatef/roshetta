@@ -26,7 +26,7 @@ class EditRequest extends FormRequest
             return [
                 'title.*'=>'required|unique_translation:cities,title,'.$this->id,
                 'country_id' => 'required|exists:countries,id',
-                'order'=> 'required|unique:cities,order,'.$this->id.',id',
+                'order'=> 'required|numeric|unique:cities,order,'.$this->id.',id',
             ];
 
     }
@@ -40,6 +40,7 @@ class EditRequest extends FormRequest
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
                 'country_id.required' => 'برجاء ادخال البلد',
                 'country_id.exists' => 'برجاء الاختيار من القائمه',
+                'order.numeric' => 'برجاء ادخال ارقام',
             ];
         }
         else{

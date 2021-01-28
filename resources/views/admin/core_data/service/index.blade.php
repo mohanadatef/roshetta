@@ -34,9 +34,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    @if(permission_show('service-many-status'))
                                     <th align="center">#</th>
-                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
                                     <th align="center">{{ trans('lang.Service_Category') }}</th>
@@ -49,13 +47,15 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
-                                        @if(permission_show('service-many-status'))
                                         <td align="center">
-                                                    <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
+                                            @if(permission_show('service-many-status'))
+                                            <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
+                                            @endif
+                                            {{$i++}}
                                         </td>
-                                        @endif
                                         <td align="center">{{ $data->title }}</td>
                                         <td class="center">{!! substr($data->detail,0,5)  !!}</td>
                                         <td align="center">{{ $data->service_category->title }}</td>
@@ -82,9 +82,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    @if(permission_show('service-many-status'))
                                         <th align="center">#</th>
-                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
                                     <th align="center">{{ trans('lang.Service_Category') }}</th>

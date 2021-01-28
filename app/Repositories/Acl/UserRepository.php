@@ -23,7 +23,7 @@ class UserRepository implements UserInterface
 
     public function Get_All_Data()
     {
-        return $this->user->where('role_id','!=',[3])->get();
+        return $this->user->whereNotIn('role_id',[3])->get();
     }
 
     public function Create_Data(CreateRequest $request)
@@ -73,10 +73,19 @@ class UserRepository implements UserInterface
         }
     }
 
+    public function Resat_Password($id)
+    {
+        $user = $this->Get_One_Data($id);
+        $user->password = Hash::make('123456');
+        $user->status_login = 0;
+        $user->update();
+    }
+
     public function Update_Password_Data(PasswordRequest $request, $id)
     {
         $user = $this->Get_One_Data($id);
         $user->password = Hash::make($request->password);
+        $user->status_login = 1;
         $user->update();
     }
 

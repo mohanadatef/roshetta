@@ -31,7 +31,7 @@ class EditRequest extends FormRequest
             'first_title' => 'required',
             'second_title' => 'required',
             'gender' => 'required|string',
-            'mobile' => 'required|string|max:255|unique:users,mobile,'.$this->id.',id',
+            'mobile' => 'required|max:255|numeric|unique:users,mobile,'.$this->id.',id',
             'email' => 'required|email|max:255|string|unique:users,email,'.$this->id.',id',
             'date_birth' => 'required|date',
             'image'=> 'string',
@@ -52,6 +52,7 @@ class EditRequest extends FormRequest
                 'email.unique' => 'لا يمكن ادخال البريد الالكتروني متكرر',
                 'date_birth.required' => 'برجاء ادخال تاريخ الميلاد',
                 'date_birth.date' => 'برجاء ادخال تاريخ الميلاد تاريخ',
+                'mobile.numeric' => 'برجاء ادخال ارقام',
             ];
         }
         else{

@@ -12,7 +12,7 @@
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
             <li><a href="{{ url('/admin/user/index') }}"><i class="fa fa-permsissions"></i> {{ trans('lang.User') }}</a>
             </li>
-            <li><a href="{{ url('/admin/user/password/'.$data->id) }}"><i
+            <li><a href="{{ url('/admin/user/password/'.Auth::user()->id) }}"><i
                             class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{Auth::user()->first_title}}  </a>
             </li>
         </ol>
@@ -24,7 +24,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <form id="password" action="{{url('admin/user/change_password/'.$data->id)}}" method="POST">
+                <form id="password" action="{{url('admin/user/change_password/'.Auth::user()->id)}}" method="POST">
                     {{csrf_field()}}
                     {{method_field('patch')}}
                     <div class="form-group{{ $errors->has('password') ? ' has-error' : "" }}">

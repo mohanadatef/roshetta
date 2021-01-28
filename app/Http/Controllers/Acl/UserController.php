@@ -52,16 +52,21 @@ class UserController extends Controller
         return redirect('/admin/user/index')->with('message', trans('lang.Message_Edit'));
     }
 
-    public function password($id)
+    public function resat_password($id)
     {
-        $data = $this->userRepository->Get_One_Data($id);
-        return view('admin.acl.user.password',compact('data'));
+        $this->userRepository->Resat_Password($id);
+        return redirect()->back()->with('message', trans('lang.Message_Edit'));
+    }
+
+    public function password()
+    {
+        return view('admin.acl.user.password');
     }
 
     public function change_password(PasswordRequest $request, $id)
     {
         $this->userRepository->Update_Password_Data($request, $id);
-        return redirect('/admin/user/index')->with('message',trans('lang.Message_Edit'));
+        return redirect('/admin')->with('message',trans('lang.Message_Edit'));
     }
 
     public function change_status($id)

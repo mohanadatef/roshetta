@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
-
 Route::get('/clear-cache', function () {
     Artisan::call('cache:clear');
     Artisan::call('route:clear');
@@ -22,7 +21,7 @@ Route::get('/clear-cache', function () {
     Artisan::call('view:clear');
     return redirect('/admin');
 });
-Route::group(['middleware' => 'admin', 'auth','language'], function () {
+Route::group(['middleware' => 'admin', 'auth', 'language'], function () {
     Route::prefix('/admin')->group(function () {
         Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
         Route::prefix('/language')->group(function () {
@@ -33,7 +32,6 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\LanguageController::class, 'update']);
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\LanguageController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\LanguageController::class, 'change_many_status']);
-            Route::post('/setLang', [App\Http\Controllers\Core_Data\LanguageController::class, 'language']);
         });
         Route::prefix('/setting')->group(function () {
             Route::get('/index', [App\Http\Controllers\Setting\SettingController::class, 'index']);
@@ -203,13 +201,21 @@ Route::group(['middleware' => 'admin', 'auth','language'], function () {
             Route::patch('/update/{id}', [App\Http\Controllers\Acl\UserController::class, 'update']);
             Route::get('/change_status/{id}', [App\Http\Controllers\Acl\UserController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Acl\UserController::class, 'change_many_status']);
-            Route::get('/password/{id}', [App\Http\Controllers\Acl\UserController::class,'password']);
-            Route::patch('/change_password/{id}', [App\Http\Controllers\Acl\UserController::class,'change_password']);
+            Route::get('/resat_password/{id}', [App\Http\Controllers\Acl\UserController::class, 'resat_password']);
+            Route::get('/password', [App\Http\Controllers\Acl\UserController::class, 'password']);
+            Route::patch('/change_password/{id}', [App\Http\Controllers\Acl\UserController::class, 'change_password']);
         });
         Route::prefix('/patient')->group(function () {
             Route::get('/index', [App\Http\Controllers\Acl\PatientController::class, 'index']);
             Route::get('/change_status/{id}', [App\Http\Controllers\Acl\PatientController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Acl\PatientController::class, 'change_many_status']);
+        });
+    });
+});
+Route::group(['middleware' => 'language'], function () {
+    Route::prefix('/admin')->group(function () {
+        Route::prefix('/language')->group(function () {
+            Route::post('/setLang', [App\Http\Controllers\Core_Data\LanguageController::class, 'language']);
         });
     });
 });

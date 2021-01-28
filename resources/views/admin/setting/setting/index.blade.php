@@ -32,6 +32,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
+                                    <th class="center">  #</th>
                                     <th class="center">  {{ trans('lang.Title') }}</th>
                                     <th class="center">{{ trans('lang.Face_Book') }} </th>
                                     <th class="center">{{ trans('lang.Youtube') }}</th>
@@ -46,8 +47,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
+                                        <td class="center">{{ $i++}}</td>
                                         <td class="center">{{ $data->title}}</td>
                                         <td class="center">{{ $data->facebook }}</td>
                                         <td class="center">{{ $data->youtube }}</td>
@@ -66,6 +69,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
+                                    <th class="center">  #</th>
                                     <th class="center">  {{ trans('lang.Title') }}</th>
                                     <th class="center">{{ trans('lang.Face_Book') }} </th>
                                     <th class="center">{{ trans('lang.Youtube') }}</th>

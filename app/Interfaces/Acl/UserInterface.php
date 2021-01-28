@@ -14,6 +14,7 @@ interface UserInterface{
     public function Create_Data(CreateRequest $request);
     public function Get_One_Data($id);
     public function Get_One_Data_Translation($id);
+    public function Resat_Password($id);
     public function Update_Data(EditRequest $request, $id);
     public function Update_Password_Data(PasswordRequest $request, $id);
     public function Update_Status_One_Data($id);

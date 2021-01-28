@@ -27,7 +27,7 @@ class EditRequest extends FormRequest
                 'detail.*'=>'required',
                 'title.*'=>'required|unique_translation:products,title,'.$this->id,
                 'product_category_id' => 'required|exists:product_categories,id',
-                'order'=> 'required|unique:products,order,'.$this->id.',id',
+                'order'=> 'required|numeric|unique:products,order,'.$this->id.',id',
                 'image' => 'mimes:jpg,jpeg,png,gif|max:2048',
             ];
 
@@ -45,6 +45,7 @@ class EditRequest extends FormRequest
                 'product_category_id.exists' => 'برجاء الاختيار من القائمه',
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
+                'order.numeric' => 'برجاء ادخال ارقام',
             ];
         }
         else{

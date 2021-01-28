@@ -13,9 +13,29 @@
         </ol>
     </section>
     <!-- Main content -->
-    {{-- <section class="content">
+     <section class="content">
          <!-- Small boxes (Stat box) -->
          <div class="row">
+             <!-- ./col -->
+             @if(permission_show('patient-index'))
+             <div class="col-lg-3 col-xs-6">
+                 <!-- small box -->
+                 <div class="small-box bg-yellow">
+                     <div class="inner">
+                         <h3>{{$count_patient}}</h3>
+
+                         <p>{{trans('lang.Patient')}}</p>
+                     </div>
+                     <div class="icon">
+                         <i class="ion ion-person"></i>
+                     </div>
+                     <a href="{{ url('/admin/patient/index') }}" class="small-box-footer">{{trans('lang.Index')}} <i class="fa fa-arrow-circle-right"></i></a>
+                 </div>
+             </div>
+             @endif
+             <!-- ./col -->
+         </div>
+         {{--<div class="row">
              <div class="col-lg-3 col-xs-6">
                  <!-- small box -->
                  <div class="small-box bg-aqua">
@@ -76,10 +96,10 @@
                  </div>
              </div>
              <!-- ./col -->
-         </div>
+         </div>--}}
          <!-- /.row -->
          <!-- Main row -->
-         <div class="row">
+        {{-- <div class="row">
              <!-- Left col -->
              <section class="col-lg-7 connectedSortable">
                  <!-- Custom tabs (Charts with tabs)-->
@@ -526,8 +546,8 @@
 
              </section>
              <!-- right col -->
-         </div>
+         </div>--}}
          <!-- /.row (main row) -->
 
-     </section>--}}
+     </section>
 @endsection

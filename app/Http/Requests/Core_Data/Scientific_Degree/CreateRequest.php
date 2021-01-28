@@ -25,7 +25,7 @@ class CreateRequest extends FormRequest
     {
         return [
             'title.*'=>'required|unique_translation:scientific_degrees',
-            'order' => 'required|unique:sub_specialties',
+            'order' => 'required|numeric|unique:sub_specialties',
         ];
     }
 
@@ -37,6 +37,7 @@ class CreateRequest extends FormRequest
                 'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',
                 'order.required' => 'برجاء ادخال الترتيب',
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
+                'order.numeric' => 'برجاء ادخال ارقام',
             ];
         }
         else{

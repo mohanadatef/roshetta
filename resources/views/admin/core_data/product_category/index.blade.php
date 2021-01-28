@@ -34,9 +34,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    @if(permission_show('product-category-many-status'))
-                                        <th align="center">#</th>
-                                    @endif
+                                    <th align="center">#</th>
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
                                     @if(permission_show('product-category-status'))
@@ -48,13 +46,15 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
-                                        @if(permission_show('product-category-many-status'))
                                         <td align="center">
-                                                    <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
+                                            @if(permission_show('product-category-many-status'))
+                                            <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
+                                            @endif
+                                            {{$i++}}
                                         </td>
-                                        @endif
                                         <td align="center">{{ $data->title }}</td>
                                         <td class="center"><img src="{{ asset('public/images/product_category/' . $data->image ) }}" style="width:100px;height: 100px"></td>
                                             @if(permission_show('product-category-status'))
@@ -80,9 +80,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    @if(permission_show('product-category-many-status'))
                                         <th align="center">#</th>
-                                    @endif
                                         <th align="center">{{ trans('lang.Title') }}</th>
                                         <th class="center">{{ trans('lang.Image') }}</th>
                                         @if(permission_show('product-category-status'))

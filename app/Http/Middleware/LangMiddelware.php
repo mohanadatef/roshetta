@@ -16,7 +16,6 @@ class LangMiddelware
      */
     public function handle($request, Closure $next)
     {
-
         if( $request->cookie('language') )
         {
             App::setlocale($request->cookie('language'));

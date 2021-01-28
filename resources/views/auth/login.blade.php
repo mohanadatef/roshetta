@@ -32,13 +32,14 @@
     <![endif]-->
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
         @if($setting != null)
-            <img  src="{{asset('public/images/setting/'.$setting->logo)}}" style="width:100px;height: 100px"/>
+            <img src="{{asset('public/images/setting/'.$setting->logo)}}" style="width:100px;height: 100px"/>
             <b>{{$setting->title}}</b>
         @else
             <b>CMS</b>
@@ -87,7 +88,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit"  class="btn btn-primary btn-block btn-flat">{{ trans('lang.Login') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('lang.Login') }}</button>
                 </div>
                 <div class="col-xs-4">
                 </div>
@@ -95,17 +96,32 @@
             </div>
         </form>
 
-        {{-- <div class="social-auth-links text-center">
-             <p>- OR -</p>
-             <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+        <div class="social-auth-links text-center">
+            <p>- OR -</p>
+            {{-- <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
                  Facebook</a>
              <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
-                 Google+</a>
-         </div>
-         <!-- /.social-auth-links -->
-
-         <a href="#">I forgot my password</a><br>
-         <a href="register.html" class="text-center">Register a new membership</a>--}}
+                 Google+</a>--}}
+        </div>
+        <!-- /.social-auth-links -->
+        <div class="row">
+            <div class="col-md-8">
+                <a href="#">I forgot my password</a><br>
+            </div>
+            <div class="col-md-2">
+                {!! Form::open(['url'=>'admin/language/setLang','method'=>'post']) !!}
+                <div class="form-group">
+                    <select name='lang' onchange="this.form.submit();">
+                        @foreach(Language() as $lang)
+                            <option value='{{$lang->code}}'
+                                    @if( \Illuminate\Support\Facades\App::getLocale() == $lang->code )selected @endif >{{$lang->title}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                {!! Form::close() !!}
+            </div>
+        </div>
+        {{--<a href="register.html" class="text-center">Register a new membership</a>--}}
 
     </div>
     <!-- /.login-box-body -->

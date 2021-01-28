@@ -32,6 +32,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
+                                    <th class="center">  #</th>
                                     <th class="center">  {{ trans('lang.Email') }}</th>
                                     <th class="center">{{ trans('lang.Address') }}</th>
                                     <th class="center">{{ trans('lang.Mobile') }}</th>
@@ -42,8 +43,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
+                                        <td class="center">{{$i++}}</td>
                                         <td class="center">{{$data->email}}</td>
                                         <td class="center">{{$data->address}}</td>
                                         <td class="center">{{$data->mobile}}</td>
@@ -58,6 +61,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
+                                    <th class="center">  #</th>
                                     <th class="center">  {{ trans('lang.Email') }}</th>
                                     <th class="center">{{ trans('lang.Address') }}</th>
                                     <th class="center">{{ trans('lang.Mobile') }}</th>

@@ -30,6 +30,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
+                                    <th align="center">#</th>
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">{{ trans('lang.Display_Title') }}</th>
                                     @if(permission_show('permission-edit'))
@@ -38,8 +39,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
+                                        <td align="center">{{$i++}}</td>
                                         <td align="center">{{ $data->title }}</td>
                                         <td align="center">{{ $data->display_title }}</td>
                                         @if(permission_show('permission-edit'))
@@ -54,6 +57,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
+                                    <th align="center">#</th>
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     <th class="center">{{ trans('lang.Display_Title') }}</th>
                                     @if(permission_show('permission-edit'))

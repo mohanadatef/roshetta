@@ -31,9 +31,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    @if(permission_show('patient-many-status'))
                                     <th align="center">#</th>
-                                    @endif
                                     <th align="center">{{ trans('lang.First_Title') }}</th>
                                     <th align="center">{{ trans('lang.Second_Title') }}</th>
                                     <th align="center">{{ trans('lang.Email') }}</th>
@@ -48,14 +46,16 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
-                                        @if(permission_show('patient-many-status'))
                                         <td align="center">
+                                            @if(permission_show('patient-many-status'))
                                             <input type="checkbox" name="change_status[]"
                                                    id="{{$data->id}}" value="{{$data->id}}">
+                                            @endif
+                                            {{$i++}}
                                         </td>
-                                        @endif
                                         <td align="center">{{ $data->first_title }}</td>
                                         <td align="center">{{ $data->second_title }}</td>
                                         <td align="center">{{ $data->email }}</td>
@@ -91,9 +91,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    @if(permission_show('patient-many-status'))
                                         <th align="center">#</th>
-                                    @endif
                                     <th align="center">{{ trans('lang.First_Title') }}</th>
                                     <th align="center">{{ trans('lang.Second_Title') }}</th>
                                     <th align="center">{{ trans('lang.Email') }}</th>

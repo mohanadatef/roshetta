@@ -34,9 +34,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    @if(permission_show('user-many-status'))
                                     <th align="center">#</th>
-                                    @endif
                                     <th align="center">{{ trans('lang.First_Title') }}</th>
                                     <th align="center">{{ trans('lang.Second_Title') }}</th>
                                     <th align="center">{{ trans('lang.Email') }}</th>
@@ -52,16 +50,19 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
-                                        @if(permission_show('user-many-status'))
                                         <td align="center">
+                                            @if(permission_show('user-many-status'))
                                             @if(auth::user()->role_id == 1 || $data->role_id != 1)
                                             <input type="checkbox" name="change_status[]"
                                                    id="{{$data->id}}" value="{{$data->id}}">
                                                 @endif
+                                                @endif
+                                            {{$i++}}
                                         </td>
-                                        @endif
+
                                         <td align="center">{{ $data->first_title }}</td>
                                         <td align="center">{{ $data->second_title }}</td>
                                         <td align="center">{{ $data->email }}</td>
@@ -95,7 +96,7 @@
                                                             data-id=""> {{ trans('lang.Edit') }}</i></a>
                                             @endif
                                                 @if(permission_show('user-password'))
-                                            <a href="{{url('admin/user/password/'.$data->id)}}"
+                                            <a href="{{url('admin/user/resat_password/'.$data->id)}}"
                                                class="btn btn-success">{{ trans('lang.Change_Password') }}</a>
                                                     @endif
                                                     @endif
@@ -106,9 +107,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    @if(permission_show('user-many-status'))
                                         <th align="center">#</th>
-                                    @endif
                                     <th align="center">{{ trans('lang.First_Title') }}</th>
                                     <th align="center">{{ trans('lang.Second_Title') }}</th>
                                     <th align="center">{{ trans('lang.Email') }}</th>

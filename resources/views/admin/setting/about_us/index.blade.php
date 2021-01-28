@@ -32,6 +32,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
+                                    <th class="center">  #</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
                                     @if(permission_show('about-us-edit'))
@@ -40,8 +41,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
+                                        <td class="center">{{$i++}}</td>
                                         <td class="center">{!! substr($data->detail,0,5)  !!}</td>
                                         <td class="center"><img src="{{ asset('public/images/about_us/' . $data->image ) }}" style="width:100px;height: 100px"></td>
                                         <td class="center">
@@ -52,6 +55,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
+                                    <th class="center">  #</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
                                     <th class="center">{{ trans('lang.Image') }}</th>
                                     @if(permission_show('about-us-edit'))

@@ -27,7 +27,7 @@ class EditRequest extends FormRequest
                 'detail.*'=>'required',
                 'title.*'=>'required|unique_translation:services,title,'.$this->id,
                 'service_category_id' => 'required|exists:service_categories,id',
-                'order'=> 'required|unique:services,order,'.$this->id.',id',
+                'order'=> 'required|numeric|unique:services,order,'.$this->id.',id',
             ];
 
     }
@@ -42,6 +42,7 @@ class EditRequest extends FormRequest
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
                 'service_category_id.required' => 'برجاء ادخال الخدمه',
                 'service_category_id.exists' => 'برجاء الاختيار من القائمه',
+                'order.numeric' => 'برجاء ادخال ارقام',
             ];
         }
         else{

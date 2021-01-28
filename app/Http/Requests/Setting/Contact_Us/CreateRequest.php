@@ -27,8 +27,8 @@ class CreateRequest extends FormRequest
         return [
             'address.*'=>'required',
             'time_work.*'=>'required',
-            'email' => 'email|max:255|string|unique:contact_us',
-            'mobile'=>'required',
+            'email' => 'required|email|max:255|string|unique:contact_us',
+            'mobile'=>'required|numeric',
         ];
     }
     public function messages()
@@ -38,6 +38,7 @@ class CreateRequest extends FormRequest
                 'address.*.required' => 'برجاء ادخال العنوان',
                 'time_work.*.required' => 'برجاء ادخال وقت العمل',
                 'mobile.required' => 'برجاء ادخال الهاتف',
+                'mobile.numeric' => 'برجاء ادخال ارقام',
                 'email.required' => 'برجاء ادخال البريد الالكتروني',
                 'email.unique' => ' برجاء ادخال البريد الالكتروني غير متكرر',
             ];

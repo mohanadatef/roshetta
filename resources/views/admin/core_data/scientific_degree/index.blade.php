@@ -34,9 +34,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    @if(permission_show('scientific-degree-many-status'))
                                     <th align="center">#</th>
-                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                         @if(permission_show('scientific-degree-status'))
                                     <th align="center">{{ trans('lang.Status') }}</th>
@@ -47,13 +45,15 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
-                                        @if(permission_show('scientific-degree-many-status'))
                                         <td align="center">
-                                                    <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
+                                            @if(permission_show('scientific-degree-many-status'))
+                                            <input type="checkbox" name="change_status[]" id="{{$data->id}}" value="{{$data->id}}">
+                                            @endif
+                                            {{$i++}}
                                         </td>
-                                        @endif
                                         <td align="center">{{ $data->title }}</td>
                                             @if(permission_show('scientific-degree-status'))
                                         <td align="center">
@@ -78,9 +78,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    @if(permission_show('scientific-degree-many-status'))
                                         <th align="center">#</th>
-                                    @endif
                                     <th align="center">{{ trans('lang.Title') }}</th>
                                     @if(permission_show('scientific-degree-status'))
                                         <th align="center">{{ trans('lang.Status') }}</th>

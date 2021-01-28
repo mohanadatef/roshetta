@@ -26,8 +26,8 @@ class EditRequest extends FormRequest
         return [
             'address.*'=>'required',
             'time_work.*'=>'required',
-            'email' => 'email|max:255|string|unique:contact_us,email,'.$this->id.',id',
-            'mobile'=>'required',
+            'email' => 'required|email|max:255|string|unique:contact_us,email,'.$this->id.',id',
+            'mobile'=>'required|numeric',
         ];
     }
     public function messages()
@@ -35,6 +35,7 @@ class EditRequest extends FormRequest
         if (Language_Locale() == 'ar') {
             return [
                 'address.*.required' => 'برجاء ادخال العنوان',
+                'mobile.numeric' => 'برجاء ادخال ارقام',
                 'time_work.*.required' => 'برجاء ادخال وقت العمل',
                 'mobile.required' => 'برجاء ادخال الهاتف',
                 'email.required' => 'برجاء ادخال البريد الالكتروني',

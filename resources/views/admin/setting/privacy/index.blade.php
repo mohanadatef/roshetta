@@ -32,6 +32,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
+                                    <th class="center">  #</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
                                     @if(permission_show('privacy-edit'))
                                     <th class="center">{{ trans('lang.Controller') }}</th>
@@ -39,8 +40,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$i=1}}
                                 @foreach($datas as $data)
                                     <tr>
+                                        <td class="center">{{$i++}}</td>
                                         <td class="center">{!! substr($data->detail,0,5)  !!}</td>
                                         @if(permission_show('privacy-edit'))
                                         <td class="center">
@@ -52,6 +55,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
+                                    <th class="center">  #</th>
                                     <th class="center">  {{ trans('lang.Detail') }}</th>
                                     @if(permission_show('privacy-edit'))
                                     <th class="center">{{ trans('lang.Controller') }}</th>

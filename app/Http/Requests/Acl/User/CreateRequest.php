@@ -28,7 +28,7 @@ class CreateRequest extends FormRequest
             'first_title.*' => 'required',
             'second_title.*' => 'required',
             'gender' => 'required|string',
-            'mobile' => 'required|string|max:255|unique:users',
+            'mobile' => 'required|numeric|max:255|unique:users',
             'email' => 'required|email|max:255|string|unique:users',
             'date_birth' => 'required|date',
             'image'=> 'image|mimes:jpg,jpeg,png|max:2048',
@@ -56,6 +56,7 @@ class CreateRequest extends FormRequest
                 'password.confirmed' => 'برجاء ادخال تاكيد كلمه السر',
                 'password.min' => 'برجاء ادخال كلمه السر اكثر من 6',
                 'role_id.required' => 'برجاء ادخال صلحيات',
+                'mobile.numeric' => 'برجاء ادخال ارقام',
             ];
         }
         else{

@@ -26,7 +26,7 @@ class EditRequest extends FormRequest
             return [
                 'code'=> 'required|string|unique:languages,code,'.$this->id.',id',
                 'title'=> 'required|string|unique:languages,title,'.$this->id.',id',
-                'order'=> 'required|unique:languages,order,'.$this->id.',id',
+                'order'=> 'required|numeric|unique:languages,order,'.$this->id.',id',
                 'image'=> 'image|mimes:jpg,jpeg,png,gif|max:2048',
             ];
 
@@ -45,6 +45,7 @@ class EditRequest extends FormRequest
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
+                'order.numeric' => 'برجاء ادخال ارقام',
             ];
         }
         else{

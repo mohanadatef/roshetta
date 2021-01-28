@@ -25,7 +25,7 @@ class EditRequest extends FormRequest
     {
             return [
                 'title.*'=>'required|unique_translation:specialties,title,'.$this->id,
-                'order'=> 'required|unique:specialties,order,'.$this->id.',id',
+                'order'=> 'required|numeric|unique:specialties,order,'.$this->id.',id',
                 'image'=> 'image|mimes:jpg,jpeg,png,gif|max:2048',
             ];
 
@@ -39,6 +39,7 @@ class EditRequest extends FormRequest
                 'order.required' => 'برجاء ادخال الترتيب',
                 'order.unique' => 'لا يمكن ادخال الترتيب متكرر',
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
+                'order.numeric' => 'برجاء ادخال ارقام',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
             ];
         }

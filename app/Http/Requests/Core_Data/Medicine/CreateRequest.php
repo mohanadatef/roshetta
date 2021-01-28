@@ -27,8 +27,8 @@ class CreateRequest extends FormRequest
             'detail.*'=>'required',
             'title.*'=>'required|unique_translation:medicines',
             'medicine_category_id' => 'required|exists:medicine_categories,id',
-            'order' => 'required|unique:medicines',
-            'price' => 'required',
+            'order' => 'required|numeric|unique:medicines',
+            'price' => 'required|numeric',
             'image' => 'required|mimes:jpg,jpeg,png,gif|max:2048',
         ];
     }
@@ -37,6 +37,8 @@ class CreateRequest extends FormRequest
     {
         if (Language_Locale() == 'ar') {
             return [
+                'order.numeric' => 'برجاء ادخال ارقام',
+                'price.numeric' => 'برجاء ادخال ارقام',
                 'detail.*.required' => 'برجاء ادخال الوصف',
                 'title.*.required' => 'برجاء ادخال الاسم',
                 'title.*.unique_translation' => 'لا يمكن ادخال الاسم متكرر',

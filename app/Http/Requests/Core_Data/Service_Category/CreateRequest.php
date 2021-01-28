@@ -25,7 +25,7 @@ class CreateRequest extends FormRequest
     {
         return [
             'title.*'=>'required|unique_translation:service_categories',
-            'order' => 'required|unique:service_categories',
+            'order' => 'required|numeric|unique:service_categories',
             'image' => 'required|mimes:jpg,jpeg,png,gif|max:2048',
         ];
     }
@@ -41,6 +41,7 @@ class CreateRequest extends FormRequest
                 'image.required' => 'برجاء ادخال الصوره',
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
+                'order.numeric' => 'برجاء ادخال ارقام',
             ];
         }
         else{

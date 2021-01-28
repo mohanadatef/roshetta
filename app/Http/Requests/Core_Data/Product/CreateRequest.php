@@ -27,7 +27,7 @@ class CreateRequest extends FormRequest
             'detail.*'=>'required',
             'title.*'=>'required|unique_translation:products',
             'product_category_id' => 'required|exists:product_categories,id',
-            'order' => 'required|unique:products',
+            'order' => 'required|numeric|unique:products',
             'image' => 'required|mimes:jpg,jpeg,png,gif|max:2048',
         ];
     }
@@ -46,6 +46,7 @@ class CreateRequest extends FormRequest
                 'image.required' => 'برجاء ادخال الصوره',
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
+                'order.numeric' => 'برجاء ادخال ارقام',
             ];
         }
         else{
