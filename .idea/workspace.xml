@@ -6,7 +6,8 @@
       <change afterPath="$PROJECT_DIR$/../full-version/favicon.ico" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../full-version/index.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../full-version/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Acl/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Acl/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Acl/PatientRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Acl/PatientRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,10 +21,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
+        <entry file="file://$PROJECT_DIR$/resources/lang/en/passwords.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            <state relative-caret-position="255">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/ar/passwords.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -31,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/PatientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="596">
+              <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
               <folding>
                 <element signature="e#44#80#0#PHP" expanded="true" />
               </folding>
@@ -40,38 +50,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/en/auth.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/PatientRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="88" column="44" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
+              <folding>
+                <element signature="e#41#89#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+              <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -111,9 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Area/CreateRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Acl/User/EditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Acl/User/CreateRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/permission/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/role/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/patient/index.blade.php" />
@@ -140,7 +141,6 @@
         <option value="$PROJECT_DIR$/app/Interfaces/Acl/UserInterface.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/user/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/user/password.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Acl/UserController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/LangMiddelware.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/AdminMiddelware.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
@@ -156,12 +156,16 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
         <option value="$PROJECT_DIR$/app/Interfaces/Acl/PatientInterface.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Acl/PatientRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Acl/PatientController.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Patient/EditRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Patient/CreateRequest.php" />
         <option value="$PROJECT_DIR$/app/Helpers/helpers.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/auth.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ar/auth.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php" />
+        <option value="$PROJECT_DIR$/resources/lang/ar/passwords.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Acl/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Acl/PatientRepository.php" />
       </list>
     </option>
   </component>
@@ -471,11 +475,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\roshetta\resources\lang\ar" />
       <recent name="C:\xampp\htdocs\roshetta\app\Http\Requests\Acl\Patient" />
       <recent name="C:\xampp\htdocs\roshetta\resources\views\admin\acl" />
       <recent name="C:\xampp\htdocs\roshetta\app\Repositories\Acl" />
       <recent name="C:\xampp\htdocs\roshetta\app\Interfaces\Acl" />
-      <recent name="C:\xampp\htdocs\roshetta\app\Http\Requests\Acl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\roshetta\app\Http\Requests" />
@@ -515,18 +519,18 @@
       <updated>1610791804600</updated>
       <workItem from="1610791806101" duration="123596000" />
       <workItem from="1611402831167" duration="51000" />
-      <workItem from="1611408651063" duration="90558000" />
+      <workItem from="1611408651063" duration="90862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214205000" />
+    <option name="totallyTimeSpent" value="214509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17603911" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17603911" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -548,7 +552,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25611246" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17603911" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -559,10 +563,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32922733" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="10" weight="0.32922733" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49938875" weight="0.32922733" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49938875" weight="0.92161256" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50061125" side_tool="true" weight="0.32922733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -574,20 +578,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/medicine_category/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="82" column="65" selection-start-line="82" selection-start-column="65" selection-end-line="82" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="86" column="61" selection-start-line="86" selection-start-column="61" selection-end-line="86" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/product_category/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -757,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/core_data/language/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -827,9 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/ar/auth.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ar/lang.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -878,40 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/PatientRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="112" column="57" lean-forward="true" selection-start-line="112" selection-start-column="57" selection-end-line="112" selection-end-column="57" />
-          <folding>
-            <element signature="e#41#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/PatientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#44#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -926,10 +872,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ar/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="90" column="49" lean-forward="true" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/passwords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+          <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/PatientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+          <folding>
+            <element signature="e#44#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ar/passwords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/PatientRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="88" column="44" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
+          <folding>
+            <element signature="e#41#89#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

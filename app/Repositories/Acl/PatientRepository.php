@@ -86,7 +86,7 @@ class PatientRepository implements PatientInterface
         if (!$patient) {
             $data['status_data']=0;
             $data['status']=400;
-            $data['message']=trans('auth.failed');
+            $data['message']=trans('passwords.user');
             $data['patient']=array();
             return $data;
         }

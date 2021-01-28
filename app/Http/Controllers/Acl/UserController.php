@@ -66,7 +66,7 @@ class UserController extends Controller
     public function change_password(PasswordRequest $request, $id)
     {
         $this->userRepository->Update_Password_Data($request, $id);
-        return redirect('/admin')->with('message',trans('lang.Message_Edit'));
+        return redirect('/admin')->with('message',trans('passwords.reset'));
     }
 
     public function change_status($id)
