@@ -27,4 +27,8 @@ class StatusEditRequest extends FormRequest
             'change_status' => 'required|exists:company_insurances,id',
         ];
     }
+    public function messages()
+    {
+        return Language_Locale() == 'ar' ? ['change_status.required' => 'برجاء الاختيار',]: [];
+    }
 }

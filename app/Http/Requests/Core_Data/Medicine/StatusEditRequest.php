@@ -27,4 +27,8 @@ class StatusEditRequest extends FormRequest
             'change_status' => 'required|exists:medicines,id',
         ];
     }
+    public function messages()
+    {
+        return Language_Locale() == 'ar' ? ['change_status.required' => 'برجاء الاختيار',]: [];
+    }
 }
