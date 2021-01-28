@@ -15,6 +15,7 @@ return [
 
     'failed' => 'المدخلات غير صحيحه',
     'password' => 'خطا فى كلمه السر',
+    'Unauthenticated' => 'برجاء تسجيل الدخول.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];
