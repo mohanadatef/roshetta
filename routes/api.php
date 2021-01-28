@@ -28,5 +28,5 @@ Route::group(['middleware' => 'api'], function () {
     });
 });
 Route::prefix('/language')->group(function () {
-    Route::get('/list', [App\Http\Controllers\Core_Data\LanguageController::class, 'data_list']);
+    Route::get('/list', [App\Http\Controllers\Core_Data\LanguageController::class, 'index_api']);
 });
