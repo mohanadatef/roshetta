@@ -48,3 +48,6 @@ Route::prefix('/service_category')->group(function () {
 Route::prefix('/service')->group(function () {
     Route::get('/list', [App\Http\Controllers\Core_Data\ServiceController::class, 'list_data']);
 });
+Route::prefix('/specialty')->group(function () {
+    Route::get('/list', [App\Http\Controllers\Core_Data\SpecialtyController::class, 'list_data']);
+});

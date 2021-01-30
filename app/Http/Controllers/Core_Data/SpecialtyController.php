@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Core_Data\Specialty\CreateRequest;
 use App\Http\Requests\Core_Data\Specialty\EditRequest;
 use App\Http\Requests\Core_Data\Specialty\StatusEditRequest;
+use App\Http\Resources\Core_Data\SpecialtyResource;
 use App\Repositories\Core_Data\SpecialtyRepository;
+use Illuminate\Http\Request;
 
 class SpecialtyController extends Controller
 {
@@ -59,4 +61,9 @@ class SpecialtyController extends Controller
         return redirect()->back()->with('message', trans('lang.Message_Status'));
     }
 
+    public function list_data(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['specialty'=> SpecialtyResource::collection($this->specialtyRepository->Get_List_Data())], 'message' => trans('lang.Index')], 206);
+    }
 }

@@ -77,7 +77,7 @@ class SpecialtyRepository implements SpecialtyInterface
 
     public function Get_List_Data()
     {
-        return $this->specialty->select('title', 'id')->where('status', 1)->orderby('order', 'asc')->get();
+        return $this->specialty->where('status', 1)->orderby('order', 'asc')->get();
     }
 }
 
