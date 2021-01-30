@@ -50,6 +50,6 @@ class ContactUsController extends Controller
     public function index_api(Request $request)
     {
         change_locale_language($request->language_id);
-        return response(['status' => 1, 'data' => ['about_us'=> new ContactUsResource($this->Contact_usRepository->Get_All_Data()->first())], 'message' => trans('lang.Index')], 206);
+        return response(['status' => 1, 'data' => ['contact_us'=> new ContactUsResource($this->Contact_usRepository->Get_All_Data()->first())], 'message' => trans('lang.Index')], 206);
     }
 }
