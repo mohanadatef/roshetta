@@ -56,4 +56,7 @@ Route::group(['middleware' => 'api'], function () {
     Route::prefix('/specialty')->group(function () {
         Route::get('/list', [App\Http\Controllers\Core_Data\SpecialtyController::class, 'list_data']);
     });
+    Route::prefix('/medicine')->group(function () {
+        Route::get('/search', [App\Http\Controllers\Core_Data\MedicineController::class, 'search']);
+    });
 });

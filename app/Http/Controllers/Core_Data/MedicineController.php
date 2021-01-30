@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Core_Data\Medicine\CreateRequest;
 use App\Http\Requests\Core_Data\Medicine\EditRequest;
 use App\Http\Requests\Core_Data\Medicine\StatusEditRequest;
+use App\Http\Resources\Core_Data\MedicineResource;
 use App\Repositories\Core_Data\MedicineCategoryRepository;
 use App\Repositories\Core_Data\MedicineRepository;
+use Illuminate\Http\Request;
 
 class MedicineController extends Controller
 {
@@ -62,6 +64,12 @@ class MedicineController extends Controller
     {
         $this->medicineRepository->Update_Status_Datas($request);
         return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
+
+    public function search(Request $request)
+    {
+        change_locale_language($request->language_id);
+            return response(['status' => 1, 'data' => ['medicine'=> MedicineResource::collection($this->medicineRepository->Get_List_Data_By_Name($request->title))], 'message' => trans('lang.Index')], 206);
     }
 
 }

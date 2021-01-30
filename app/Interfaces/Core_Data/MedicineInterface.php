@@ -18,4 +18,5 @@ interface MedicineInterface{
     public function Update_Status_One_Data($id);
     public function Get_Many_Data(Request $request);
     public function Update_Status_Datas(StatusEditRequest $request);
+    public function Get_List_Data_By_Name($title);
 }

@@ -9,6 +9,7 @@ use App\Http\Requests\Core_Data\Medicine\StatusEditRequest;
 use App\Interfaces\Core_Data\MedicineInterface;
 use App\Models\Core_Data\Medicine;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MedicineRepository implements MedicineInterface
 {
@@ -73,5 +74,15 @@ class MedicineRepository implements MedicineInterface
             $medicine->status == 1 ? $medicine->status = '0' : $medicine->status = '1';
             $medicine->update();
         }
+    }
+
+    public function Get_List_Data_By_Name($title)
+    {
+        $x=null;
+        foreach (Language() as $lang)
+        {
+            $x.= "select id from `medicines` where json_unquote(json_extract(`title`, '$.".$lang->code."')) like '%".$title."%' and `status` = 1 order by `order` asc;";
+        }
+        dd( DB::select($x));
     }
 }
