@@ -77,7 +77,7 @@ class ServiceCategoryRepository implements ServiceCategoryInterface
 
     public function Get_List_Data()
     {
-        return $this->service_category->select('title', 'id')->where('status', 1)->orderby('order', 'asc')->get();
+        return $this->service_category->where('status', 1)->orderby('order', 'asc')->get();
     }
 }
 
