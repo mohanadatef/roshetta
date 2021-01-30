@@ -6,11 +6,7 @@
       <change afterPath="$PROJECT_DIR$/../full-version/favicon.ico" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../full-version/index.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../full-version/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Interfaces/Core_Data/MedicineInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Interfaces/Core_Data/MedicineInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Setting/AboutUsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Setting/AboutUsController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,64 +20,31 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/CountryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="71" column="76" selection-start-line="71" selection-start-column="76" selection-end-line="71" selection-end-column="76" />
+            <state relative-caret-position="664">
+              <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
+              <folding>
+                <element signature="e#50#86#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Setting/AboutUsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Resources/Core_Data/MedicineResource.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Interfaces/Core_Data/MedicineInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="50" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="50" />
+            <state relative-caret-position="760">
+              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Resources/Setting/AboutUsResource.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="81" column="84" lean-forward="true" selection-start-line="81" selection-start-column="84" selection-end-line="81" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../php_native/controller/About_us.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Helpers/helpers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -123,8 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Product_Category/StatusEditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Scientific_Degree/StatusEditRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service/StatusEditRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Service_Category/StatusEditRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Core_Data/Specialty/StatusEditRequest.php" />
@@ -174,6 +135,8 @@
         <option value="$PROJECT_DIR$/app/Http/Resources/Core_Data/MedicineResource.php" />
         <option value="$PROJECT_DIR$/app/Helpers/helpers.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Setting/AboutUsController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/Setting/AboutUsResource.php" />
       </list>
     </option>
   </component>
@@ -331,12 +294,6 @@
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -359,7 +316,8 @@
               <item name="roshetta" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Setting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
@@ -367,7 +325,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Core_Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
@@ -423,11 +380,11 @@
       <recent name="C:\xampp\htdocs\roshetta\app\Models\Setting" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\roshetta\app\Http\Resources\Setting" />
       <recent name="C:\xampp\htdocs\roshetta\app\Http\Resources\Core_Data" />
       <recent name="C:\xampp\htdocs\roshetta\app\Http\Middleware" />
       <recent name="C:\xampp\htdocs\roshetta\app\Http\Resources\Acl" />
       <recent name="C:\xampp\htdocs\roshetta\resources\lang\ar" />
-      <recent name="C:\xampp\htdocs\roshetta\app\Http\Requests\Acl\Patient" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -461,12 +418,12 @@
       <workItem from="1610791806101" duration="123596000" />
       <workItem from="1611402831167" duration="51000" />
       <workItem from="1611408651063" duration="106035000" />
-      <workItem from="1611996373084" duration="15531000" />
+      <workItem from="1611996373084" duration="16197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245213000" />
+    <option name="totallyTimeSpent" value="245879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -520,20 +477,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Core_Data/LanguageResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Interfaces/Core_Data/CompanyInsuranceInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -652,16 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="709">
           <caret line="73" column="5" selection-start-line="69" selection-start-column="4" selection-end-line="73" selection-end-column="5" />
-          <folding>
-            <element signature="e#50#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/CountryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
           <folding>
             <element signature="e#50#86#0#PHP" expanded="true" />
           </folding>
@@ -868,8 +801,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/Core_Data/MedicineRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="81" column="84" lean-forward="true" selection-start-line="81" selection-start-column="84" selection-end-line="81" selection-end-column="84" />
+        <state relative-caret-position="675">
+          <caret line="83" column="166" selection-start-line="83" selection-start-column="166" selection-end-line="83" selection-end-column="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/CountryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
+          <folding>
+            <element signature="e#50#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Setting/AboutUsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Setting/AboutUsResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
