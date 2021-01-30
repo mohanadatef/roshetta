@@ -17,37 +17,43 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 });*/
 Route::group(['middleware' => 'api'], function () {
+    Route::group(['middleware' => 'auth:api'], function () {
         Route::prefix('/patient')->group(function () {
-            Route::Post('/store', [App\Http\Controllers\Acl\PatientController::class, 'store']);
             Route::get('/show_profile', [App\Http\Controllers\Acl\PatientController::class, 'show_profile']);
             Route::post('/update', [App\Http\Controllers\Acl\PatientController::class, 'update']);
         });
+        Route::prefix('/auth')->group(function () {
+            Route::post('logout', [App\Http\Controllers\Acl\PatientController::class, 'logout']);
+        });
+    });
+    Route::prefix('/patient')->group(function () {
+        Route::Post('/store', [App\Http\Controllers\Acl\PatientController::class, 'store']);
+    });
     Route::prefix('/auth')->group(function () {
         Route::post('login', [App\Http\Controllers\Acl\PatientController::class, 'login']);
-        Route::post('logout', [App\Http\Controllers\Acl\PatientController::class, 'logout']);
     });
-});
-Route::prefix('/language')->group(function () {
-    Route::get('/list', [App\Http\Controllers\Core_Data\LanguageController::class, 'list_data']);
-});
-Route::prefix('/company_insurance')->group(function () {
-    Route::get('/list', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'list_data']);
-});
-Route::prefix('/country')->group(function () {
-    Route::get('/list', [App\Http\Controllers\Core_Data\CountryController::class, 'list_data']);
-});
-Route::prefix('/city')->group(function () {
-    Route::get('/list', [App\Http\Controllers\Core_Data\CityController::class, 'list_data']);
-});
-Route::prefix('/area')->group(function () {
-    Route::get('/list', [App\Http\Controllers\Core_Data\AreaController::class, 'list_data']);
-});
-Route::prefix('/service_category')->group(function () {
-    Route::get('/list', [App\Http\Controllers\Core_Data\ServiceCategoryController::class, 'list_data']);
-});
-Route::prefix('/service')->group(function () {
-    Route::get('/list', [App\Http\Controllers\Core_Data\ServiceController::class, 'list_data']);
-});
-Route::prefix('/specialty')->group(function () {
-    Route::get('/list', [App\Http\Controllers\Core_Data\SpecialtyController::class, 'list_data']);
+    Route::prefix('/language')->group(function () {
+        Route::get('/list', [App\Http\Controllers\Core_Data\LanguageController::class, 'list_data']);
+    });
+    Route::prefix('/company_insurance')->group(function () {
+        Route::get('/list', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'list_data']);
+    });
+    Route::prefix('/country')->group(function () {
+        Route::get('/list', [App\Http\Controllers\Core_Data\CountryController::class, 'list_data']);
+    });
+    Route::prefix('/city')->group(function () {
+        Route::get('/list', [App\Http\Controllers\Core_Data\CityController::class, 'list_data']);
+    });
+    Route::prefix('/area')->group(function () {
+        Route::get('/list', [App\Http\Controllers\Core_Data\AreaController::class, 'list_data']);
+    });
+    Route::prefix('/service_category')->group(function () {
+        Route::get('/list', [App\Http\Controllers\Core_Data\ServiceCategoryController::class, 'list_data']);
+    });
+    Route::prefix('/service')->group(function () {
+        Route::get('/list', [App\Http\Controllers\Core_Data\ServiceController::class, 'list_data']);
+    });
+    Route::prefix('/specialty')->group(function () {
+        Route::get('/list', [App\Http\Controllers\Core_Data\SpecialtyController::class, 'list_data']);
+    });
 });
