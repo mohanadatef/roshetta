@@ -60,6 +60,8 @@ class CreateRequest extends FormRequest
                 'password.min' => 'برجاء ادخال كلمه السر اكثر من 6',
                 'mobile.numeric' => 'برجاء ادخال ارقام',
                 'mobile.digits' => 'برجاء ادخال ارقام 11',
+                'language_id.required' => 'برجاء ادخال اللغه',
+                'language_id.exists' => 'برجاء ادخال اللغه من القائمه',
             ];
         }
         else{

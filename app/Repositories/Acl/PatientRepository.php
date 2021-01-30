@@ -53,7 +53,7 @@ class PatientRepository implements PatientInterface
 
     public function Get_One_Data($id)
     {
-        return $this->patient->find($id);
+        return $this->patient->where('id',$id)->where('role_id',3)->first();
     }
 
     public function Get_Many_Data(Request $request)
@@ -117,7 +117,7 @@ class PatientRepository implements PatientInterface
 
     public function Update_Data(EditRequest $request)
     {
-        if ($request->image != null) {
+        if ($request->image) {
             $folderPath = public_path('images/user/');
             $image_type = 'png';
             $image_base64 = base64_decode($request->image);

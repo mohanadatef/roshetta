@@ -22,7 +22,7 @@ class PatientResource extends JsonResource
             'mobile' => $this->mobile ? $this->mobile : "",
             'status' => $this->status ? $this->status : "",
             'status_login' => $this->status_login ? $this->status_login : "",
-            'gender' => $this->gender == 1 ? "man" : $this->gender == 0 ? "woman" : "",
+            'gender' => $this->gender == 1 ? trans('lang.Man') : ($this->gender == 0 ? trans('lang.Woman') : ""),
             'date_birth' => $this->date_birth ? $this->date_birth : "",
             'token' => $this->token ? $this->token : "",
             'language_id' => $this->language_id ? $this->language_id : "",

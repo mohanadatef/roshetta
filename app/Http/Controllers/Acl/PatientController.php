@@ -57,16 +57,19 @@ class PatientController extends Controller
         return response()->json(['status' => 1, 'data' => array(), 'message' => trans('lang.Message_Logout')]);
     }
 
-    public function show_profile($id)
+    public function show_profile(Request $request)
     {
-        $patient= $this->patientRepository->Get_One_Data($id);
-        change_locale_language($patient->language_id);
+        $patient= $this->patientRepository->Get_One_Data($request->patient_id);
+        change_locale_language($request->language_id);
+        if($patient)
         return response(['status' => 1, 'data' => ['patient'=> new PatientResource($patient)], 'message' => trans('lang.Profile')], 200);
+        else
+            return response(['status' => 0, 'data' => array(), 'message' => trans('lang.Null')], 200);
     }
 
     public function update(EditRequest $request)
     {
         $patient= $this->patientRepository->Update_Data($request);
-        return response(['status' => 1, 'data' => ['patient'=>new PatientResource($patient)], 'message' => trans('lang.Message_Edit')], 206);
+        return response(['status' => 1, 'data' => ['patient'=> new PatientResource($patient)], 'message' => trans('lang.Message_Edit')], 206);
     }
 }

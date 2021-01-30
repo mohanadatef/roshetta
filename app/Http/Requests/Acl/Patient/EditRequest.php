@@ -35,14 +35,14 @@ class EditRequest extends FormRequest
             'email' => 'required|email|max:255|string|unique:users,email,'.$this->id.',id',
             'date_birth' => 'required|date',
             'image'=> 'string',
+            'language_id'=> 'required|exists:languages,id',
         ];
     }
     public function messages()
     {
         if (check_locale_language($this->language_id) == 'ar') {
             return [
-                'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
-                'image.max' => 'برجاء ادخال الصوره اقل من 2048',
+                'image.string' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'first_title.required' => 'برجاء ادخال الاسم',
                 'second_title.required' => 'برجاء ادخال الاسم',
                 'gender.required' => 'برجاء ادخال النوع',
@@ -54,6 +54,8 @@ class EditRequest extends FormRequest
                 'date_birth.date' => 'برجاء ادخال تاريخ الميلاد تاريخ',
                 'mobile.numeric' => 'برجاء ادخال ارقام',
                 'mobile.digits' => 'برجاء ادخال ارقام 11',
+                'language_id.required' => 'برجاء ادخال اللغه',
+                'language_id.exists' => 'برجاء ادخال اللغه من القائمه',
             ];
         }
         else{
