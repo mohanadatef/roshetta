@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Core_Data\Service\CreateRequest;
 use App\Http\Requests\Core_Data\Service\EditRequest;
 use App\Http\Requests\Core_Data\Service\StatusEditRequest;
+use App\Http\Resources\Core_Data\ServiceResource;
 use App\Repositories\Core_Data\ServiceCategoryRepository;
 use App\Repositories\Core_Data\ServiceRepository;
+use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
@@ -64,4 +66,9 @@ class ServiceController extends Controller
         return redirect()->back()->with('message', trans('lang.Message_Status'));
     }
 
+    public function list_data(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['service'=> ServiceResource::collection($this->serviceRepository->Get_List_Data_For_Service_Category($request->service_category_id))], 'message' => trans('lang.Index')], 206);
+    }
 }

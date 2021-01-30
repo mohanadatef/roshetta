@@ -45,3 +45,6 @@ Route::prefix('/area')->group(function () {
 Route::prefix('/service_category')->group(function () {
     Route::get('/list', [App\Http\Controllers\Core_Data\ServiceCategoryController::class, 'list_data']);
 });
+Route::prefix('/service')->group(function () {
+    Route::get('/list', [App\Http\Controllers\Core_Data\ServiceController::class, 'list_data']);
+});

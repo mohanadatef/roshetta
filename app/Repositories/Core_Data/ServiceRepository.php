@@ -67,4 +67,9 @@ class ServiceRepository implements ServiceInterface
             $service->update();
         }
     }
+
+    public function Get_List_Data_For_Service_Category($service_category)
+    {
+        return  $this->service->where('service_category_id',$service_category)->where('status',1)->orderby('order', 'asc')->get();
+    }
 }
