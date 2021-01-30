@@ -16,7 +16,7 @@ class AboutUsResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'title' => $this->title ? $this->title : "",
+            'detail' => $this->detail ? strip_tags($this->detail) : "",
             'image' => $this->image ? asset('public/images/about_us/' . $this->image) : asset('public/images/user/profile_user.jpg'),
         ];
     }
