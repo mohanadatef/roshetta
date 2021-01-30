@@ -25,7 +25,7 @@ class PatientResource extends JsonResource
             'gender' => $this->gender == 1 ? trans('lang.Man') : ($this->gender == 0 ? trans('lang.Woman') : ""),
             'date_birth' => $this->date_birth ? $this->date_birth : "",
             'token' => $this->token ? $this->token : "",
-            'language_id' => $this->language_id ? $this->language_id : "",
+            'language' => $this->language_id ? $this->language->code : "",
             'role' => $this->role_id ? $this->role->title : "",
             'profile_image' => $this->image ? asset('public/images/user/' . $this->image) : asset('public/images/user/profile_user.jpg'),
         ];
