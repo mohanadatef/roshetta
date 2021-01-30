@@ -39,3 +39,6 @@ Route::prefix('/country')->group(function () {
 Route::prefix('/city')->group(function () {
     Route::get('/list', [App\Http\Controllers\Core_Data\CityController::class, 'list_data']);
 });
+Route::prefix('/area')->group(function () {
+    Route::get('/list', [App\Http\Controllers\Core_Data\AreaController::class, 'list_data']);
+});

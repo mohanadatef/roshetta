@@ -6,9 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Core_Data\Area\CreateRequest;
 use App\Http\Requests\Core_Data\Area\EditRequest;
 use App\Http\Requests\Core_Data\Area\StatusEditRequest;
+use App\Http\Resources\Core_Data\AreaResource;
 use App\Repositories\Core_Data\AreaRepository;
 use App\Repositories\Core_Data\CityRepository;
 use App\Repositories\Core_Data\CountryRepository;
+use Illuminate\Http\Request;
 
 class AreaController extends Controller
 {
@@ -66,5 +68,11 @@ class AreaController extends Controller
     {
         $this->areaRepository->Update_Status_Datas($request);
         return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
+
+    public function list_data(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['area'=> AreaResource::collection($this->areaRepository->Get_List_Data_For_City($request->country_id,$request->city_id))], 'message' => trans('lang.Index')], 206);
     }
 }

@@ -66,4 +66,9 @@ class AreaRepository implements AreaInterface
             $area->update();
         }
     }
+
+    public function Get_List_Data_For_City($country,$city)
+    {
+        return $this->area->where('country_id', $country)->where('city_id', $city)->where('status', 1)->orderby('order', 'asc')->get();
+    }
 }
