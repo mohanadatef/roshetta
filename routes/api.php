@@ -68,4 +68,7 @@ Route::group(['middleware' => 'api'], function () {
     Route::prefix('/privacy')->group(function () {
         Route::get('/index', [App\Http\Controllers\Setting\PrivacyController::class, 'index_api']);
     });
+    Route::prefix('/setting')->group(function () {
+        Route::get('/index', [App\Http\Controllers\Setting\SettingController::class, 'index_api']);
+    });
 });

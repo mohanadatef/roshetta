@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Setting;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Setting\Setting\CreateRequest;
 use App\Http\Requests\Setting\Setting\EditRequest;
+use App\Http\Resources\Setting\SettingResource;
 use App\Repositories\Setting\SettingRepository;
+use Illuminate\Http\Request;
 
 class SettingController extends Controller
 {
@@ -45,4 +47,9 @@ class SettingController extends Controller
         return redirect('/admin/setting/index')->with('message', trans('lang.Message_Edit'));
     }
 
+    public function index_api(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['setting'=> new SettingResource($this->settingRepository->Get_All_Data()->first())], 'message' => trans('lang.Index')], 206);
+    }
 }
