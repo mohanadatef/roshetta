@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Core_Data\City\CreateRequest;
 use App\Http\Requests\Core_Data\City\EditRequest;
 use App\Http\Requests\Core_Data\City\StatusEditRequest;
+use App\Http\Resources\Core_Data\CityResource;
 use App\Repositories\Core_Data\CityRepository;
 use App\Repositories\Core_Data\CountryRepository;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class CityController extends Controller
@@ -68,5 +70,11 @@ class CityController extends Controller
     public function Get_List_City_Json($country)
     {
         return $this->cityRepository->Get_List_Data_For_Country($country);
+    }
+
+    public function list_data(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['city'=> CityResource::collection($this->cityRepository->Get_List_Data_For_Country($request->country_id))], 'message' => trans('lang.Index')], 206);
     }
 }

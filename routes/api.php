@@ -36,3 +36,6 @@ Route::prefix('/company_insurance')->group(function () {
 Route::prefix('/country')->group(function () {
     Route::get('/list', [App\Http\Controllers\Core_Data\CountryController::class, 'list_data']);
 });
+Route::prefix('/city')->group(function () {
+    Route::get('/list', [App\Http\Controllers\Core_Data\CityController::class, 'list_data']);
+});
