@@ -62,4 +62,7 @@ Route::group(['middleware' => 'api'], function () {
     Route::prefix('/about_us')->group(function () {
         Route::get('/index', [App\Http\Controllers\Setting\AboutUsController::class, 'index_api']);
     });
+    Route::prefix('/contact_us')->group(function () {
+        Route::get('/index', [App\Http\Controllers\Setting\ContactUsController::class, 'index_api']);
+    });
 });

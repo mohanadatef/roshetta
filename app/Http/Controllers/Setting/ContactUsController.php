@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Setting;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Setting\Contact_Us\CreateRequest;
 use App\Http\Requests\Setting\Contact_Us\EditRequest;
+use App\Http\Resources\Setting\ContactUsResource;
 use App\Repositories\Setting\ContactUsRepository;
+use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
 {
@@ -45,4 +47,9 @@ class ContactUsController extends Controller
         return redirect('/admin/contact_us/index')->with('message', trans('lang.Message_Edit'));
     }
 
+    public function index_api(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['about_us'=> new ContactUsResource($this->Contact_usRepository->Get_All_Data()->first())], 'message' => trans('lang.Index')], 206);
+    }
 }
