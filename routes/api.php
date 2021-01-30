@@ -65,4 +65,7 @@ Route::group(['middleware' => 'api'], function () {
     Route::prefix('/contact_us')->group(function () {
         Route::get('/index', [App\Http\Controllers\Setting\ContactUsController::class, 'index_api']);
     });
+    Route::prefix('/privacy')->group(function () {
+        Route::get('/index', [App\Http\Controllers\Setting\PrivacyController::class, 'index_api']);
+    });
 });

@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Setting;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Setting\Privacy\CreateRequest;
 use App\Http\Requests\Setting\Privacy\EditRequest;
+use App\Http\Resources\Setting\PrivacyResource;
 use App\Repositories\Setting\PrivacyRepository;
+use Illuminate\Http\Request;
 
 class PrivacyController extends Controller
 {
@@ -43,6 +45,12 @@ class PrivacyController extends Controller
     {
         $this->privacyRepository->Update_Data($request, $id);
         return redirect('/admin/privacy/index')->with('message', trans('lang.Message_Edit'));
+    }
+
+    public function index_api(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['privacy'=> new PrivacyResource($this->privacyRepository->Get_All_Data()->first())], 'message' => trans('lang.Index')], 206);
     }
 
 }
