@@ -77,6 +77,6 @@ class CountryRepository implements CountryInterface
 
     public function Get_List_Data()
     {
-        return $this->country->select('title', 'id')->where('status', 1)->orderby('order', 'asc')->get();
+        return $this->country->where('status', 1)->orderby('order', 'asc')->get();
     }
 }

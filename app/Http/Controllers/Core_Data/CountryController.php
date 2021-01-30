@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Core_Data\Country\CreateRequest;
 use App\Http\Requests\Core_Data\Country\EditRequest;
 use App\Http\Requests\Core_Data\Country\StatusEditRequest;
+use App\Http\Resources\Core_Data\CountryResource;
 use App\Repositories\Core_Data\CountryRepository;
+use Illuminate\Http\Request;
 
 class CountryController extends Controller
 {
@@ -57,5 +59,11 @@ class CountryController extends Controller
     {
         $this->countryRepository->Update_Status_Datas($request);
         return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
+
+    public function list_data(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['country'=> CountryResource::collection($this->countryRepository->Get_List_Data())], 'message' => trans('lang.Index')], 206);
     }
 }
