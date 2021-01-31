@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Acl;
 
-use App\Http\Requests\Acl\Patient\PasswordRequest;
+use App\Http\Requests\Acl\User\PasswordRequest;
 use App\Repositories\Acl\ForgotPasswordRepository;
 use App\Repositories\Acl\PatientRepository;
 use App\Repositories\Acl\UserRepository;
@@ -22,46 +22,51 @@ class ForgotPasswordController extends Controller
         $this->forgotpasswordRepository = $ForgotPasswordRepository;
     }
 
+    public function index()
+    {
+        return view('auth.forgot_password.check');
+    }
+
     public function check(Request $request)
     {
-        change_locale_language($request->language_id);
-        $patient = $this->patientRepository->Check_Patient($request);
-        if($patient['status_data'] == 0)
+        $request->language_id ? change_locale_language($request->language_id) : true;
+        $user = $this->userRepository->Check_User($request->email);
+        if($user['status_data'] == 0)
         {
-            return response(['status' => $patient['status_data'], 'data' => $patient['patient'], 'message' => $patient['message']], $patient['status']);
+            return $request->language_id ? response(['status' => $user['status_data'], 'data' => $user['user'], 'message' => $user['message']], $user['status']) : redirect()->back()->with('message_fales',$user['message']);
         }
-        $forgot_password = $this->forgotpasswordRepository->Check_User($patient['patient']['id']);
+        $forgot_password = $this->forgotpasswordRepository->Check_User($user['user']['id']);
         if (!$forgot_password) {
-            $forgot_password = $this->forgotpasswordRepository->Store($patient['patient']['id']);
+            $this->forgotpasswordRepository->Store($user['user']['id']);
         }
-        return response(['status' => $patient['status_data'], 'data' => ['code' => $forgot_password->code], 'message' => trans('lang.Send_Mail')], $patient['status']);
+        return $request->language_id ? response(['status' => $user['status_data'], 'data' => array(), 'message' => trans('lang.Send_Mail')], $user['status']) : view('auth.forgot_password.validate_code');
     }
 
     public function validate_code(Request $request)
     {
-        change_locale_language($request->language_id);
-        $patient = $this->patientRepository->Check_Patient($request);
-        if($patient['status_data'] == 0)
+        $request->language_id ? change_locale_language($request->language_id) : true;
+        $user = $this->userRepository->Check_User($request->email);
+        if($user['status_data'] == 0)
         {
-            return response(['status' => $patient['status_data'], 'data' => $patient['patient'], 'message' => $patient['message']], $patient['status']);
+            return $request->language_id ?  response(['status' => $user['status_data'], 'data' => $user['user'], 'message' => $user['message']], $user['status']) : redirect()->back()->with('message_fales',$user['message']);
         }
-        $forgot_password = $this->forgotpasswordRepository->Check_Code($patient['patient']['id'],$request->code);
+        $forgot_password = $this->forgotpasswordRepository->Check_Code($user['user']['id'],$request->code);
         if ($forgot_password) {
             $this->forgotpasswordRepository->Update($forgot_password->id);
-            return response(['status' => $patient['status_data'], 'data' => array(), 'message' => trans('lang.Message_Edit')], $patient['status']);
+            return $request->language_id ? response(['status' => $user['status_data'], 'data' => array(), 'message' => trans('lang.Message_Edit')], $user['status']) : view('auth.forgot_password.change_password');
         }
-        return response(['status' => 0, 'data' => array(), 'message' => trans('lang.Message_Code_Wong')], $patient['status']);
+        return $request->language_id ? response(['status' => 0, 'data' => array(), 'message' => trans('lang.Message_Code_Wong')], $user['status']) : redirect()->back()->with('message_fales',trans('lang.Message_Code_Wong'));
     }
 
     public function change_password(PasswordRequest $request)
     {
-        change_locale_language($request->language_id);
-        $patient = $this->patientRepository->Check_Patient($request->email);
-        if($patient['status_data'] == 0)
+        $request->language_id ? change_locale_language($request->language_id) : true;
+        $user = $this->userRepository->Check_User($request->email);
+        if($user['status_data'] == 0)
         {
-            return response(['status' => $patient['status_data'], 'data' => $patient['patient'], 'message' => $patient['message']], $patient['status']);
+            return $request->language_id ?  response(['status' => $user['status_data'], 'data' => $user['user'], 'message' => $user['message']], $user['status']) : view('auth.forgot_password.change_password')->with('message_fales',$user['message']);
         }
-        $this->userRepository->Resat_Password($patient['patient']['id']);
-        return response(['status' => $patient['status_data'], 'data' => array(), 'message' => trans('lang.Message_Edit')], $patient['status']);
+        $this->userRepository->Update_Password_Data($request,$user['user']['id']);
+        return $request->language_id ? response(['status' => $user['status_data'], 'data' => array(), 'message' => trans('lang.Message_Edit')], $user['status']) : view('auth.login')->with('message',trans('lang.Message_Edit'));
     }
 }

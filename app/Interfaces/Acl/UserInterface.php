@@ -20,4 +20,5 @@ interface UserInterface{
     public function Update_Status_One_Data($id);
     public function Get_Many_Data(Request $request);
     public function Update_Status_Data(StatusEditRequest $request);
+    public function Check_User($email);
 }

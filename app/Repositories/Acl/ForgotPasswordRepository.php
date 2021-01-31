@@ -20,7 +20,7 @@ class ForgotPasswordRepository implements ForgotPasswordInterface
         $data['status'] = 0;
         $data['user_id'] = $id;
         $data['code'] = Str::random(4);
-       return $this->forgot_password->create($data);
+        $this->forgot_password->create($data);
     }
 
     public function Check_User($id)

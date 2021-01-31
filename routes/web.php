@@ -225,4 +225,10 @@ Route::group(['middleware' => 'language'], function () {
             Route::post('/setLang', [App\Http\Controllers\Core_Data\LanguageController::class, 'language']);
         });
     });
+    Route::prefix('/forgot_password')->group(function () {
+        Route::get('/', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'index']);
+        Route::get('/check', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'check']);
+        Route::get('/validate_code', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'validate_code']);
+        Route::get('/change_password', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'change_password']);
+    });
 });

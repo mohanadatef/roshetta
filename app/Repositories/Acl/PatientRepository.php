@@ -127,27 +127,4 @@ class PatientRepository implements PatientInterface
             return $this->Get_One_Data($request->id)->update(array_merge($request->all(), $data));
         } else return $this->Get_One_Data($request->id)->update($request->all());
     }
-
-    public function Check_Patient($email)
-    {
-        $patient = User::where('email', $email)->first();
-        if (!$patient) {
-            $data['status_data'] = 0;
-            $data['status'] = 400;
-            $data['message'] = trans('passwords.user');
-            $data['patient'] = array();
-            return $data;
-        }
-        if ($patient->status == 0) {
-            $data['status_data'] = 0;
-            $data['status'] = 400;
-            $data['message'] = trans('lang.Message_Support');
-            $data['patient'] = array();
-            return $data;
-        }
-        $data['status_data'] = 1;
-        $data['status'] = 200;
-        $data['patient'] = $patient;
-        return $data;
-    }
 }

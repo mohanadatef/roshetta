@@ -3,6 +3,9 @@
 namespace App\Http\Requests\Acl\User;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Validation\ValidationException;
 
 class PasswordRequest extends FormRequest
 {
@@ -29,11 +32,23 @@ class PasswordRequest extends FormRequest
     }
     public function messages()
     {
-        return Language_Locale() == 'ar' ? [
+        return ( $this->language_id ? check_locale_language($this->language_id) : Language_Locale() ) == 'ar' ? [
                 'password.required' => 'برجاء ادخال كلمه السر',
                 'password.string' => 'برجاء ادخال كلمه السر حروف',
                 'password.confirmed' => 'برجاء ادخال تاكيد كلمه السر',
                 'password.min' => 'برجاء ادخال كلمه السر اكثر من 6',
             ] : [];
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        if($this->language_id)
+        {
+        $errors = (new ValidationException($validator))->errors();
+        throw new HttpResponseException(
+            response(['status' => 0, 'data' => ['errors'=>$errors]], 400)
+        );
+        }
+        return redirect()->back()->with('message','error');
     }
 }

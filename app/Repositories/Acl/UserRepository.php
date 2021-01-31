@@ -95,4 +95,27 @@ class UserRepository implements UserInterface
             $user->update();
         }
     }
+
+    public function Check_User($email)
+    {
+        $user = User::where('email', $email)->first();
+        if (!$user) {
+            $data['status_data'] = 0;
+            $data['status'] = 400;
+            $data['message'] = trans('passwords.user');
+            $data['user'] = array();
+            return $data;
+        }
+        if ($user->status == 0) {
+            $data['status_data'] = 0;
+            $data['status'] = 400;
+            $data['message'] = trans('lang.Message_Support');
+            $data['user'] = array();
+            return $data;
+        }
+        $data['status_data'] = 1;
+        $data['status'] = 200;
+        $data['user'] = $user;
+        return $data;
+    }
 }

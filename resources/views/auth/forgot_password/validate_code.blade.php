@@ -46,9 +46,8 @@
     <div class="login-box-body">
         <p class="login-box-msg">{{ trans('lang.Login') }}</p>
         @include('includes.admin.error')
-        <form method="POST" action="{{ route('login') }}">
+        <form method="get" action="{{ url('forgot_password/validate_code') }}">
             @csrf
-
             <div class="form-group has-feedback">
                 <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                        placeholder="{{ trans('lang.Message_Email') }}"
@@ -61,16 +60,17 @@
 
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
-
             <div class="form-group has-feedback">
-                <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                       placeholder="{{ trans('lang.Message_Password') }}" name="password" required>
-                @if ($errors->has('password'))
+                <input type="text" class="form-control{{ $errors->has('code') ? ' is-invalid' : '' }}"
+                       placeholder="{{ trans('lang.Message_Code') }}"
+                       id="code" name="code" value="{{ old('code') }}" required autofocus>
+                @if ($errors->has('code'))
                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{{ $errors->first('code') }}</strong>
                                     </span>
                 @endif
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="row">
                 {{-- <div class="col-xs-8">
@@ -84,7 +84,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('lang.Login') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('lang.Search') }}</button>
                 </div>
                 <div class="col-xs-4">
                 </div>
@@ -102,7 +102,7 @@
         <!-- /.social-auth-links -->
         <div class="row">
             <div class="col-md-8">
-                <a href="{{url('forgot_password')}}">I forgot my password</a><br>
+                <a href="{{url('login')}}">{{ trans('lang.Login') }}</a><br>
             </div>
             <div class="col-md-2">
                 {!! Form::open(['url'=>'admin/language/setLang','method'=>'post']) !!}
