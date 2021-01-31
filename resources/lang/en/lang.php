@@ -24,6 +24,8 @@ return[
     'Message_Index'=>'No Data To Show',
     'Change_Status'=>'Change Status',
     'Code'=>'Code',
+    'Message_Code_Wong'=>'wong Code',
+    'Send_Mail'=> 'Send Mail Done',
     'Message_Code'=>'Plase Enter Your Code',
     'Order'=>'Order',
     'Message_Order'=>'Plase Enter Your Order',

@@ -26,6 +26,10 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->belongsTo('App\Models\Core_Data\Language','language_id');
     }
+    public function forgot_password()
+    {
+        return $this->hasMany('App\Models\Acl\Forgot_Password');
+    }
     public function getJWTIdentifier()
     {
         return $this->getKey();

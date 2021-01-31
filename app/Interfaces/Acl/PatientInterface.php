@@ -18,4 +18,5 @@ interface PatientInterface{
     public function Login(Request $request);
     public function Logout($id);
     public function Update_Status_Data(StatusEditRequest $request);
+    public function Check_Patient($email);
 }
