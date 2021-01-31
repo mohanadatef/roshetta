@@ -130,7 +130,7 @@ class PatientRepository implements PatientInterface
 
     public function Check_Patient($email)
     {
-        $patient = User::where('role_id',3)->where('email', $email)->first();
+        $patient = User::where('email', $email)->first();
         if (!$patient) {
             $data['status_data'] = 0;
             $data['status'] = 400;
