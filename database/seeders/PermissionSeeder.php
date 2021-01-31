@@ -160,6 +160,31 @@ class PermissionSeeder extends Seeder
                 'title' => 'privacy-edit',
                 'display_title' =>['en' => 'edit privacy', 'ar' => 'تعديل السياسه و الشروط'] ,
             ],
+            //call us
+            [
+                'title' => 'call-us-list',
+                'display_title' =>['en' => 'call us list', 'ar' => 'قائمه اذنات رسائل التواصل'] ,
+            ],
+            [
+                'title' => 'call-us-read',
+                'display_title' =>['en' => 'call us read', 'ar' => 'قائمه المقروةء رسائل التواصل'] ,
+            ],
+            [
+                'title' => 'call-us-unread',
+                'display_title' =>['en' => 'call us unread', 'ar' => 'قائمه الغير المقروةء رسائل التواصل'] ,
+            ],
+            [
+                'title' => 'call-us-status',
+                'display_title' =>['en' => 'call us status', 'ar' => 'تغير حاله رساله التواصل'] ,
+            ],
+            [
+                'title' => 'call-us-delete',
+                'display_title' =>['en' => 'call us delete', 'ar' => 'مسح رساله التواصل'] ,
+            ],
+            [
+                'title' => 'call-us-many-status',
+                'display_title' =>['en' => 'call us status many', 'ar' => 'تغير حاله رسائل التواصل'] ,
+            ],
             //core data
             [
                 'title' => 'core-data-list',

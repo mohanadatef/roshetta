@@ -362,6 +362,29 @@
                                             @endif
                                             </li>
                                         @endif
+                                        @if(permission_show('call-us-list'))
+                                            <li class="treeview">
+                                                <a href="#">
+                                                    <i class="fa fa-circle-o"></i>
+                                                    <span> {{ trans('lang.Call_Us') }}</span>
+                                                    <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                                                </a>
+                                                <ul class="treeview-menu">
+                                                    @if(permission_show('call-us-read'))
+                                                        <li><a href="{{ url('/admin/call_us/read') }}"><i
+                                                                        class="fa fa-group"></i><span>{{ trans('lang.Read') }}</span></a>
+                                                        </li>
+                                                    @endif
+                                                    @if(permission_show('call-us-unread'))
+                                                        <li><a href="{{ url('/admin/call_us/unread') }}"><i
+                                                                        class="fa fa-group"></i><span>{{ trans('lang.Unread') }}</span></a>
+                                                        </li>
+                                                    @endif
+                                                </ul>
+                                            </li>
+                                        @endif
                     </ul>
                 </li>
             @endif
@@ -437,23 +460,23 @@
                                 </ul>
                             </li>
                         @endif
-                            @if(permission_show('patient-list'))
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Patient') }}</span>
-                                        <span class="pull-right-container">
+                        @if(permission_show('patient-list'))
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Patient') }}</span>
+                                    <span class="pull-right-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        @if(permission_show('patient-index'))
-                                            <li><a href="{{ url('/admin/patient/index') }}"><i
-                                                            class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
-                                            </li>
-                                        @endif
-                                    </ul>
-                                </li>
-                            @endif
+                                </a>
+                                <ul class="treeview-menu">
+                                    @if(permission_show('patient-index'))
+                                        <li><a href="{{ url('/admin/patient/index') }}"><i
+                                                        class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
+                                        </li>
+                                    @endif
+                                </ul>
+                            </li>
+                        @endif
                     </ul>
                 </li>
             @endif

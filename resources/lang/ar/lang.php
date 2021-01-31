@@ -109,4 +109,9 @@ return[
     'Password_Confirmation'=>'تاكيد كلمه السر',
     'Message_Second_Title'=>'برجاء ادخال الاسم الثاني',
     'Message_First_Title'=>'برجاء ادخال الاسم الاول',
+    'Call_Us'=>'رسائل التواصل',
+    'Read'=>'مقروةء',
+    'Unread'=>'غير مقروةء',
+    'Message_Delete'=>'تم المسح بنحاح',
+    'Delete'=>'مسح'
 ];
