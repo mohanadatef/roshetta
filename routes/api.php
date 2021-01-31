@@ -76,4 +76,7 @@ Route::group(['middleware' => 'api'], function () {
         Route::post('validate_code', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'validate_code']);
         Route::post('change_password', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'change_password']);
     });
+    Route::prefix('/call_us')->group(function () {
+        Route::post('/store', [App\Http\Controllers\Setting\CallUsController::class, 'store']);
+    });
 });

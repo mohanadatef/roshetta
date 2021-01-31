@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests\Acl\Patient;
 
-use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Contracts\Validation\Validator;
@@ -40,8 +39,7 @@ class EditRequest extends FormRequest
     }
     public function messages()
     {
-        if (check_locale_language($this->language_id) == 'ar') {
-            return [
+        return check_locale_language($this->language_id) == 'ar' ? [
                 'image.string' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'first_title.required' => 'برجاء ادخال الاسم',
                 'second_title.required' => 'برجاء ادخال الاسم',
@@ -56,11 +54,7 @@ class EditRequest extends FormRequest
                 'mobile.digits' => 'برجاء ادخال ارقام 11',
                 'language_id.required' => 'برجاء ادخال اللغه',
                 'language_id.exists' => 'برجاء ادخال اللغه من القائمه',
-            ];
-        }
-        else{
-            return [];
-        }
+            ] : [];
     }
 
     protected function failedValidation(Validator $validator)
