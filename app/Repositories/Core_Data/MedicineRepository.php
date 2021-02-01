@@ -78,11 +78,11 @@ class MedicineRepository implements MedicineInterface
 
     public function Get_List_Data_By_Name($title)
     {
-        $x=null;
-        foreach (Language() as $lang)
-        {
-            $x.= "select id from `medicines` where json_unquote(json_extract(`title`, '$.".$lang->code."')) like '%".$title."%' and `status` = 1 order by `order` asc;";
+        $medicine=[];
+        foreach (Language() as $lang) {
+
+            $medicine = array_merge($medicine, $this->medicine->where('title->'.$lang->code,'like','%'.$title.'%')->select('id')->get()->toarray());
         }
-        dd( DB::select($x));
+        return $this->medicine->wherein('id',$medicine)->get();
     }
 }
