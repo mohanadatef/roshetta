@@ -5,9 +5,12 @@
 @section('content')
     <section class="content-header">
         <h1>
+            @if(Auth::User()->status_login == 1)
             {{ trans('lang.User') }}
             <small>{{ trans('lang.Password') }}</small>
+                @endif
         </h1>
+        @if(Auth::User()->status_login == 1)
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
             <li><a href="{{ url('/admin/user/index') }}"><i class="fa fa-permsissions"></i> {{ trans('lang.User') }}</a>
@@ -16,12 +19,15 @@
                             class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{Auth::user()->first_title}}  </a>
             </li>
         </ol>
+            @endif
     </section>
     <section class="content">
         <div class="box">
+            @if(Auth::User()->status_login == 1)
             <div class="box-header">
                 <h3>{{ trans('lang.Edit') }}: {{Auth::user()->first_title}}  </h3>
             </div>
+            @endif
             <!-- /.box-header -->
             <div class="box-body">
                 <form id="password" action="{{url('admin/user/change_password/'.Auth::user()->id)}}" method="POST">

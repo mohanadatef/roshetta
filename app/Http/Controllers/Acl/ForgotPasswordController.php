@@ -8,6 +8,10 @@ use App\Repositories\Acl\PatientRepository;
 use App\Repositories\Acl\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 class ForgotPasswordController extends Controller
 {
@@ -15,7 +19,7 @@ class ForgotPasswordController extends Controller
     private $userRepository;
     private $forgotpasswordRepository;
 
-    public function __construct(PatientRepository $PatientRepository,UserRepository $UserRepository,ForgotPasswordRepository $ForgotPasswordRepository)
+    public function __construct(PatientRepository $PatientRepository, UserRepository $UserRepository, ForgotPasswordRepository $ForgotPasswordRepository)
     {
         $this->patientRepository = $PatientRepository;
         $this->userRepository = $UserRepository;
@@ -31,9 +35,8 @@ class ForgotPasswordController extends Controller
     {
         $request->language_id ? change_locale_language($request->language_id) : true;
         $user = $this->userRepository->Check_User($request->email);
-        if($user['status_data'] == 0)
-        {
-            return $request->language_id ? response(['status' => $user['status_data'], 'data' => $user['user'], 'message' => $user['message']], $user['status']) : redirect()->back()->with('message_fales',$user['message']);
+        if ($user['status_data'] == 0) {
+            return $request->language_id ? response(['status' => $user['status_data'], 'data' => $user['user'], 'message' => $user['message']], $user['status']) : redirect()->back()->with('message_fales', $user['message']);
         }
         $forgot_password = $this->forgotpasswordRepository->Check_User($user['user']['id']);
         if (!$forgot_password) {
@@ -46,27 +49,32 @@ class ForgotPasswordController extends Controller
     {
         $request->language_id ? change_locale_language($request->language_id) : true;
         $user = $this->userRepository->Check_User($request->email);
-        if($user['status_data'] == 0)
-        {
-            return $request->language_id ?  response(['status' => $user['status_data'], 'data' => $user['user'], 'message' => $user['message']], $user['status']) : redirect()->back()->with('message_fales',$user['message']);
+        if ($user['status_data'] == 0) {
+            return $request->language_id ? response(['status' => $user['status_data'], 'data' => $user['user'], 'message' => $user['message']], $user['status']) : redirect()->back()->with('message_fales', $user['message']);
         }
-        $forgot_password = $this->forgotpasswordRepository->Check_Code($user['user']['id'],$request->code);
+        $forgot_password = $this->forgotpasswordRepository->Check_Code($user['user']['id'], $request->code);
         if ($forgot_password) {
             $this->forgotpasswordRepository->Update($forgot_password->id);
-            return $request->language_id ? response(['status' => $user['status_data'], 'data' => array(), 'message' => trans('lang.Message_Edit')], $user['status']) : view('auth.forgot_password.change_password');
+            !$request->language_id ? $this->userRepository->Resat_Password($user['user']['id']) : true;
+            if ($request->language_id) {
+                return response(['status' => $user['status_data'], 'data' => array(), 'message' => trans('lang.Message_Edit')], $user['status']);
+            } else {
+                Auth::login($user['user']);
+                return redirect('admin');
+            }
         }
-        return $request->language_id ? response(['status' => 0, 'data' => array(), 'message' => trans('lang.Message_Code_Wong')], $user['status']) : redirect()->back()->with('message_fales',trans('lang.Message_Code_Wong'));
+        return $request->language_id ? response(['status' => 0, 'data' => array(), 'message' => trans('lang.Message_Code_Wong')], $user['status']) : redirect()->back()->with('message_fales', trans('lang.Message_Code_Wong'));
     }
+
 
     public function change_password(PasswordRequest $request)
     {
-        $request->language_id ? change_locale_language($request->language_id) : true;
+        change_locale_language($request->language_id);
         $user = $this->userRepository->Check_User($request->email);
-        if($user['status_data'] == 0)
-        {
-            return $request->language_id ?  response(['status' => $user['status_data'], 'data' => $user['user'], 'message' => $user['message']], $user['status']) : view('auth.forgot_password.change_password')->with('message_fales',$user['message']);
+        if ($user['status_data'] == 0) {
+            return response(['status' => $user['status_data'], 'data' => $user['user'], 'message' => $user['message']], $user['status']);
         }
-        $this->userRepository->Update_Password_Data($request,$user['user']['id']);
-        return $request->language_id ? response(['status' => $user['status_data'], 'data' => array(), 'message' => trans('lang.Message_Edit')], $user['status']) : view('auth.login')->with('message',trans('lang.Message_Edit'));
+        $this->userRepository->Update_Password_Data($request, $user['user']['id']);
+        return response(['status' => $user['status_data'], 'data' => array(), 'message' => trans('lang.Message_Edit')], $user['status']);
     }
 }

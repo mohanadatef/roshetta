@@ -102,7 +102,7 @@
         <!-- /.social-auth-links -->
         <div class="row">
             <div class="col-md-8">
-                <a href="{{url('forgot_password')}}">I forgot my password</a><br>
+                <a href="{{url('forgot_password')}}">{{trans('lang.Forgot')}}</a><br>
             </div>
             <div class="col-md-2">
                 {!! Form::open(['url'=>'admin/language/setLang','method'=>'post']) !!}

@@ -113,5 +113,8 @@ return[
     'Read'=>'مقروةء',
     'Unread'=>'غير مقروةء',
     'Message_Delete'=>'تم المسح بنحاح',
-    'Delete'=>'مسح'
+    'Delete'=>'مسح',
+    'Search'=>'بحث',
+    'Check'=>'تاكيد',
+    'Forgot'=>'نسيت كلمه السر',
 ];

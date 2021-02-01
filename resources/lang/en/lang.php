@@ -109,10 +109,13 @@ return[
     'Unread'=>'Unread',
     'Message_Delete'=>'Delete Done',
     'Delete'=>'Delete',
+    'Search'=>'Search',
+    'Check'=>'Check',
     'Woman'=>'Woman',
     'Date_Dirth'=>'Date Dirth',
     'Password_Confirmation'=>'Password Confirmation',
     'Message_Second_Title'=>'Plase Enter Your Second Title',
     'Message_Price'=>'Plase Enter Your Price',
     'Message_First_Title'=>'Plase Enter Your First Title',
+    'Forgot'=>'I forgot my password',
 ];

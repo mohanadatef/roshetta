@@ -46,29 +46,13 @@
     <div class="login-box-body">
         <p class="login-box-msg">{{ trans('lang.Login') }}</p>
         @include('includes.admin.error')
-        <form method="get" action="{{ url('forgot_password/check') }}">
-            @csrf
-
-            <div class="form-group has-feedback">
-                <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                       placeholder="{{ trans('lang.Message_Email') }}"
-                       id="email" name="email" value="{{ old('email') }}" required autofocus>
-                @if ($errors->has('email'))
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                @endif
-
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <form method="get"  action="{{ url('forgot_password/check') }}">
+            {{csrf_field()}}
+            <div class="form-group{{ $errors->has('email') ? ' has-error' : "" }}">
+                {{ trans('lang.Email') }} : <input type="email" class="form-control" name="email" value="{{Request::old('email')}}"
+                                                   placeholder="{{ trans('lang.Message_Email') }}">
             </div>
             <div class="row">
-                {{-- <div class="col-xs-8">
-                     <div class="checkbox icheck">
-                       --}}{{--  <label>
-                             <input type="checkbox"> Remember Me
-                         </label>--}}{{--
-                     </div>
-                 </div>--}}
                 <div class="col-xs-4">
                 </div>
                 <!-- /.col -->

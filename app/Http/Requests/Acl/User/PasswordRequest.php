@@ -42,13 +42,9 @@ class PasswordRequest extends FormRequest
 
     protected function failedValidation(Validator $validator)
     {
-        if($this->language_id)
-        {
         $errors = (new ValidationException($validator))->errors();
         throw new HttpResponseException(
             response(['status' => 0, 'data' => ['errors'=>$errors]], 400)
         );
-        }
-        return redirect()->back()->with('message','error');
     }
 }
