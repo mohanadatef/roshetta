@@ -81,7 +81,7 @@ class MedicineRepository implements MedicineInterface
         $medicine=[];
         foreach (Language() as $lang) {
 
-            $medicine = array_merge($medicine, $this->medicine->where('title->'.$lang->code,'like','%'.$title.'%')->select('id')->get()->toarray());
+            $medicine = array_merge($medicine, $this->medicine->where('title->'.$lang->code,'like',$title.'%')->orwhere('title->'.$lang->code,'like','%'.$title.'%')->orwhere('title->'.$lang->code,'like','%'.$title)->select('id')->get()->toarray());
         }
         return $this->medicine->wherein('id',$medicine)->get();
     }
