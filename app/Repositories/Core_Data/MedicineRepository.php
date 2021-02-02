@@ -78,11 +78,15 @@ class MedicineRepository implements MedicineInterface
 
     public function Get_List_Data_By_Name($title)
     {
-        $medicine=[];
+        $medicine = [];
         foreach (Language() as $lang) {
-
-            $medicine = array_merge($medicine, $this->medicine->where('title->'.$lang->code,'like',$title.'%')->orwhere('title->'.$lang->code,'like','%'.$title.'%')->orwhere('title->'.$lang->code,'like','%'.$title)->select('id')->get()->toarray());
+            $medicine = array_merge($medicine, $this->medicine
+                ->where('status', 1)->where('title->' . $lang->code, 'like', $title . '%')
+                ->orwhere('status', 1)->where('title->' . $lang->code, 'like', '%' . $title . '%')
+                ->orwhere('status', 1)->where('title->' . $lang->code, 'like', '%' . $title)
+                ->select('id')->get()->toarray());
         }
-        return $this->medicine->wherein('id',$medicine)->get();
+
+        return $this->medicine->wherein('id', $medicine)->paginate(25);
     }
 }

@@ -58,6 +58,7 @@ Route::group(['middleware' => 'api'], function () {
     });
     Route::prefix('/medicine')->group(function () {
         Route::get('/search', [App\Http\Controllers\Core_Data\MedicineController::class, 'search']);
+        Route::get('/show', [App\Http\Controllers\Core_Data\MedicineController::class, 'show']);
     });
     Route::prefix('/about_us')->group(function () {
         Route::get('/index', [App\Http\Controllers\Setting\AboutUsController::class, 'index_api']);

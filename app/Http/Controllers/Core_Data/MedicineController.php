@@ -69,7 +69,18 @@ class MedicineController extends Controller
     public function search(Request $request)
     {
         change_locale_language($request->language_id);
-            return response(['status' => 1, 'data' => ['medicine'=> MedicineResource::collection($this->medicineRepository->Get_List_Data_By_Name($request->title))], 'message' => trans('lang.Index')], 206);
+        $medicine=$this->medicineRepository->Get_List_Data_By_Name($request->title);
+            return response(['status' => 1, 'data' => ['medicine'=> MedicineResource::collection($medicine),
+                'paginator' => [
+                'total_count' => $medicine->Total(),
+                'total_pages' => ceil($medicine->Total() / $medicine->PerPage()),
+                'current_page' => $medicine->CurrentPage(),
+                'limit' => $medicine->PerPage()]], 'message' => trans('lang.Index')], 206);
     }
 
+    public function show(Request $request)
+    {
+        change_locale_language($request->language_id);
+        return response(['status' => 1, 'data' => ['medicine'=> new MedicineResource($this->medicineRepository->Get_One_Data($request->medicine_id))], 'message' => trans('lang.Index')], 200);
+    }
 }
