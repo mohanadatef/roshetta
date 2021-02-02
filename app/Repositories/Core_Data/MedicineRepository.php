@@ -23,7 +23,7 @@ class MedicineRepository implements MedicineInterface
 
     public function Get_All_Data()
     {
-        return $this->medicine->orderby('order', 'asc')->get();
+        return $this->medicine->orderby('order', 'asc')->paginate(25);
     }
 
     public function Create_Data(CreateRequest $request)

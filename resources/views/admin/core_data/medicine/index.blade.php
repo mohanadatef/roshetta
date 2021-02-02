@@ -103,8 +103,9 @@
                                         <th align="center">{{ trans('lang.Controller') }}</th>
                                     @endif
                                 </tr>
-                                </tfoot>
                             </table>
+                            </tfoot>
+                       {{ $datas->links() }}
                         </div>
                     @else
                         <div align="center">{{ trans('lang.Message_Index') }}</div>
