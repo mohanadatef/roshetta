@@ -44,7 +44,7 @@
 
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">{{ trans('lang.Login') }}</p>
+        <p class="login-box-msg">{{trans('lang.Forgot')}}</p>
         @include('includes.admin.error')
         <form method="get" action="{{ url('forgot_password/validate_code') }}">
             {{csrf_field()}}
