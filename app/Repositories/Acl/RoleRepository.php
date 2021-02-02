@@ -59,4 +59,9 @@ class RoleRepository implements RoleInterface
     {
         return $this->permission_role->where('role_id', $id)->get();
     }
+
+    public function Get_List_Register()
+    {
+        return  $this->role->select('title', 'id')->whereNotIn('id', [1,2, 3])->get();
+    }
 }

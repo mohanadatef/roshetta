@@ -196,7 +196,6 @@ Route::group(['middleware' => 'admin', 'auth', 'language'], function () {
         Route::prefix('/user')->group(function () {
             Route::get('/index', [App\Http\Controllers\Acl\UserController::class, 'index']);
             Route::get('/create', [App\Http\Controllers\Acl\UserController::class, 'create']);
-            Route::Post('/store', [App\Http\Controllers\Acl\UserController::class, 'store']);
             Route::get('/edit/{id}', [App\Http\Controllers\Acl\UserController::class, 'edit']);
             Route::patch('/update/{id}', [App\Http\Controllers\Acl\UserController::class, 'update']);
             Route::get('/change_status/{id}', [App\Http\Controllers\Acl\UserController::class, 'change_status']);
@@ -224,11 +223,17 @@ Route::group(['middleware' => 'language'], function () {
         Route::prefix('/language')->group(function () {
             Route::post('/setLang', [App\Http\Controllers\Core_Data\LanguageController::class, 'language']);
         });
+        Route::prefix('/user')->group(function () {
+            Route::Post('/store', [App\Http\Controllers\Acl\UserController::class, 'store']);
+        });
     });
     Route::prefix('/forgot_password')->group(function () {
         Route::get('/', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'index']);
         Route::get('/check', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'check']);
         Route::get('/validate_code', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'validate_code']);
+    });
+    Route::prefix('/register')->group(function () {
+        Route::get('/', [App\Http\Controllers\Acl\UserController::class, 'register']);
     });
     Route::prefix('/about_us')->group(function () {
         Route::get('/', [App\Http\Controllers\Setting\AboutUsController::class, 'show']);

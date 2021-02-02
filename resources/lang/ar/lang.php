@@ -28,6 +28,7 @@ return[
     'Send_Mail'=> 'تم ارسال الايميل',
     'Message_Order'=>'برجاء ادخال الترتيب',
     'Image'=>'الصوره',
+    'Register'=>'تسجيل مستخدم جديد',
     'Price'=>'السعر',
     'Message_Code_Wong'=>'الكود خطا',
     'Message_Image'=>'برجاء ادخال الصوره',

@@ -10,6 +10,7 @@ use App\Http\Requests\Acl\User\StatusEditRequest;
 use App\Interfaces\Acl\UserInterface;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserRepository implements UserInterface
@@ -29,8 +30,9 @@ class UserRepository implements UserInterface
     public function Create_Data(CreateRequest $request)
     {
         $data['status'] = 1;
-        $data['status_login'] = 0;
+        Auth::user() ? $data['status_login'] = 0 : $data['status_login'] = 1;
         $data['password'] = Hash::make($request->password);
+        $data['language_id'] = 1;
         if ($request->image) {
             $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
             Request()->image->move(public_path('images/user'), $imageName);

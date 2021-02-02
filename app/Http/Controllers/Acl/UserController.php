@@ -9,6 +9,7 @@ use App\Http\Requests\Acl\User\StatusEditRequest;
 use App\Http\Requests\Acl\User\PasswordRequest;
 use App\Repositories\Acl\RoleRepository;
 use App\Repositories\Acl\UserRepository;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -36,7 +37,7 @@ class UserController extends Controller
     public function store(CreateRequest $request)
     {
         $this->userRepository->Create_Data($request);
-        return redirect('/admin/user/index')->with('message', trans('lang.Message_Store'));
+        return Auth::user() ? redirect('/admin/user/index')->with('message', trans('lang.Message_Store')) : redirect('login')->with('message', trans('lang.Message_Store'));
     }
 
     public function edit($id)
@@ -79,5 +80,11 @@ class UserController extends Controller
     {
         $this->userRepository->Update_Status_Data($request);
        return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
+
+    public function register()
+    {
+        $role = $this->roleRepository->Get_List_Register();
+        return view('auth.register',compact('role'));
     }
 }

@@ -35,6 +35,7 @@ return[
     'Message_Edit'=>'Edit Data Done',
     'Message_Status'=>'Edit Status Done',
     'Core_Data'=>'Core Data',
+    'Register'=>'Register',
     'Setting'=>'Setting',
     'Null'=>'No Data Place check your input',
     'Patient'=>'Patient',

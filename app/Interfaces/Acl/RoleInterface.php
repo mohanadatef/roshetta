@@ -15,4 +15,5 @@ interface RoleInterface{
     public function Update_Data(EditRequest $request, $id);
     public function Get_List_Data();
     public function Get_Permission_For_Role($id);
+    public function Get_List_Register();
 }

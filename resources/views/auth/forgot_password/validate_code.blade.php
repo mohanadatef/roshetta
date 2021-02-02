@@ -76,6 +76,7 @@
         <div class="row">
             <div class="col-md-8">
                 <a href="{{url('login')}}">{{ trans('lang.Login') }}</a><br>
+                <a href="{{url('register')}}">{{trans('lang.Register')}}</a><br>
             </div>
             <div class="col-md-2">
                 {!! Form::open(['url'=>'admin/language/setLang','method'=>'post']) !!}
