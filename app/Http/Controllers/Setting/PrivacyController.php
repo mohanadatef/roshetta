@@ -47,10 +47,16 @@ class PrivacyController extends Controller
         return redirect('/admin/privacy/index')->with('message', trans('lang.Message_Edit'));
     }
 
-    public function index_api(Request $request)
+    public function show_api(Request $request)
     {
         change_locale_language($request->language_id);
         return response(['status' => 1, 'data' => ['privacy'=> new PrivacyResource($this->privacyRepository->Get_All_Data()->first())], 'message' => trans('lang.Index')], 206);
+    }
+
+    public function show()
+    {
+        $data = $this->privacyRepository->Get_All_Data()->first();
+        return view('frontend.privacy',compact('data'));
     }
 
 }

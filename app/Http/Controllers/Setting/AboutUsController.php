@@ -47,9 +47,15 @@ class AboutUsController extends Controller
         return redirect('/admin/about_us/index')->with('message', trans('lang.Message_Edit'));
     }
 
-    public function index_api(Request $request)
+    public function show_api(Request $request)
     {
         change_locale_language($request->language_id);
         return response(['status' => 1, 'data' => ['about_us'=> new AboutUsResource($this->about_usRepository->Get_All_Data()->first())], 'message' => trans('lang.Index')], 206);
+    }
+
+    public function show()
+    {
+        $data = $this->about_usRepository->Get_All_Data()->first();
+        return view('frontend.about_us',compact('data'));
     }
 }

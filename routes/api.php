@@ -61,16 +61,16 @@ Route::group(['middleware' => 'api'], function () {
         Route::get('/show', [App\Http\Controllers\Core_Data\MedicineController::class, 'show']);
     });
     Route::prefix('/about_us')->group(function () {
-        Route::get('/index', [App\Http\Controllers\Setting\AboutUsController::class, 'index_api']);
+        Route::get('/show', [App\Http\Controllers\Setting\AboutUsController::class, 'show_api']);
     });
     Route::prefix('/contact_us')->group(function () {
-        Route::get('/index', [App\Http\Controllers\Setting\ContactUsController::class, 'index_api']);
+        Route::get('/show', [App\Http\Controllers\Setting\ContactUsController::class, 'show_api']);
     });
     Route::prefix('/privacy')->group(function () {
-        Route::get('/index', [App\Http\Controllers\Setting\PrivacyController::class, 'index_api']);
+        Route::get('/show', [App\Http\Controllers\Setting\PrivacyController::class, 'show_api']);
     });
     Route::prefix('/setting')->group(function () {
-        Route::get('/index', [App\Http\Controllers\Setting\SettingController::class, 'index_api']);
+        Route::get('/show', [App\Http\Controllers\Setting\SettingController::class, 'show_api']);
     });
     Route::prefix('/forgot_password')->group(function () {
         Route::post('check', [App\Http\Controllers\Acl\ForgotPasswordController::class, 'check']);
