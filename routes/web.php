@@ -211,8 +211,10 @@ Route::group(['middleware' => 'admin', 'auth', 'language'], function () {
         });
         Route::prefix('/doctor')->group(function () {
             Route::get('/index', [App\Http\Controllers\Acl\DoctorController::class, 'index']);
+            Route::get('/index_show', [App\Http\Controllers\Acl\DoctorController::class, 'index_show']);
             Route::get('/change_status/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'change_status']);
             Route::get('/change_many_status', [App\Http\Controllers\Acl\DoctorController::class, 'change_many_status']);
+            Route::get('/change_status_show/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'change_status_show']);
         });
         Route::prefix('/call_us')->group(function () {
             Route::get('/read', [App\Http\Controllers\Setting\CallUsController::class, 'read']);

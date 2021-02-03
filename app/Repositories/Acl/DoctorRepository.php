@@ -4,45 +4,70 @@ namespace App\Repositories\Acl;
 
 use App\Http\Requests\Acl\Doctor\StatusEditRequest;
 use App\Interfaces\Acl\DoctorInterface;
+use App\Models\Acl\Doctor;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class DoctorRepository implements DoctorInterface
 {
+    protected $user;
     protected $doctor;
 
-    public function __construct(User $doctor)
+    public function __construct(User $user,Doctor $doctor)
     {
+        $this->user = $user;
         $this->doctor = $doctor;
     }
 
     public function Get_All_Data()
     {
-        return $this->doctor->where('role_id', 4)->get();
+        return $this->user->where('role_id', 4)->whereHas('doctor', function (Builder $query) {
+            $query->where('status_show',1);
+        })->get();
+    }
+
+    public function Get_All_Data_Show()
+    {
+        return $this->user->where('role_id', 4)->whereHas('doctor', function (Builder $query) {
+            $query->where('status_show',0);
+        })->get();
     }
 
     public function Get_One_Data($id)
     {
-        return $this->doctor->where('id', $id)->where('role_id', 4)->first();
+        return $this->user->where('id', $id)->where('role_id', 4)->first();
+    }
+
+    public function Get_One_Doctor($id)
+    {
+        return $this->doctor->find($id);
     }
 
     public function Update_Status_One_Data($id)
     {
-        $doctor = $this->Get_One_Data($id);
-        $doctor->status == 1 ? $doctor->status = '0' : $doctor->status = '1';
+        $user = $this->Get_One_Data($id);
+        $user->status == 1 ? $user->status = '0' : $user->status = '1';
+        $user->update();
+    }
+
+    public function Update_Status_One_Doctor_Show($id)
+    {
+        $doctor = $this->Get_One_Doctor($id);
+        $doctor->status_show == 1 ? $doctor->status_show = '0' : $doctor->status_show = '1';
         $doctor->update();
     }
 
     public function Get_Many_Data(Request $request)
     {
-        return $this->doctor->wherein('id', $request->change_status)->get();
+        return $this->user->wherein('id', $request->change_status)->get();
     }
 
     public function Update_Status_Data(StatusEditRequest $request)
     {
-        foreach ($this->Get_Many_Data($request) as $doctor) {
-            $doctor->status == 1 ? $doctor->status = '0' : $doctor->status = '1';
-            $doctor->update();
+        foreach ($this->Get_Many_Data($request) as $user) {
+            $user->status == 1 ? $user->status = '0' : $user->status = '1';
+            $user->update();
         }
     }
 
@@ -50,12 +75,17 @@ class DoctorRepository implements DoctorInterface
     {
         $doctor = [];
         foreach (Language() as $lang) {
-            $doctor = array_merge($doctor, $this->doctor->join('doctors', 'doctors.user_id', '=', 'users.id')
-                ->where('doctors.status_show',1)->where('users.role_id', 4)->where('users.status', 1)->where('users.title->' . $lang->code, 'like', $title . '%')
-                ->orwhere('doctors.status_show',1)->where('users.role_id', 4)->where('users.status', 1)->where('users.title->' . $lang->code, 'like', '%' . $title . '%')
-                ->orwhere('doctors.status_show',1)->where('users.role_id', 4)->where('users.status', 1)->where('users.title->' . $lang->code, 'like', '%' . $title)
-                ->select('users.id')->get()->toarray());
+            $doctor = array_merge($doctor, $this->user->whereHas('doctor', function (Builder $query) {
+                $query->where('status_show',1);
+            })->where('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', $title . '%')
+                ->orwhereHas('doctor', function (Builder $query) {
+                    $query->where('status_show',1);
+                })->where('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', '%' . $title . '%')
+                ->orwhereHas('doctor', function (Builder $query) {
+                    $query->where('status_show',1);
+                })->where('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', '%' . $title)
+                ->select('id')->get()->toarray());
         }
-        return $this->doctor->with('doctor','doctor.sub_specialty')->wherein('id', $doctor)->paginate(25);
+        return $this->user->wherein('id', $doctor)->paginate(25);
     }
 }

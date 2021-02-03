@@ -491,6 +491,11 @@
                                                             class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
                                             </li>
                                         @endif
+                                            @if(permission_show('doctor-index-show'))
+                                                <li><a href="{{ url('/admin/doctor/index_show') }}"><i
+                                                                class="fa fa-group"></i><span>{{ trans('lang.Index_Show') }}</span></a>
+                                                </li>
+                                            @endif
                                     </ul>
                                 </li>
                             @endif

@@ -23,6 +23,12 @@ class DoctorController extends Controller
         return view('admin.acl.doctor.index',compact('datas'));
     }
 
+    public function index_show()
+    {
+        $datas= $this->doctorRepository->Get_All_Data_Show();
+        return view('admin.acl.doctor.index_show',compact('datas'));
+    }
+
     public function change_status($id)
     {
         $this->doctorRepository->Update_Status_One_Data($id);
@@ -32,6 +38,12 @@ class DoctorController extends Controller
     public function change_many_status(StatusEditRequest $request)
     {
         $this->doctorRepository->Update_Status_Data($request);
+        return redirect()->back()->with('message', trans('lang.Message_Status'));
+    }
+
+    public function change_status_show($id)
+    {
+        $this->doctorRepository->Update_Status_One_Doctor_Show($id);
         return redirect()->back()->with('message', trans('lang.Message_Status'));
     }
 
