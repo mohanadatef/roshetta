@@ -22,6 +22,10 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->belongsTo('App\Models\Acl\Role','role_id');
     }
+    public function doctor()
+    {
+        return $this->hasOne('App\Models\Acl\Doctor');
+    }
     public function forgot_password()
     {
         return $this->hasMany('App\Models\Acl\Forgot_Password');

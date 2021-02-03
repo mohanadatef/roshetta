@@ -50,12 +50,12 @@ class DoctorRepository implements DoctorInterface
     {
         $doctor = [];
         foreach (Language() as $lang) {
-            $doctor = array_merge($doctor, $this->doctor
-                ->where('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', $title . '%')
-                ->orwhere('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', '%' . $title . '%')
-                ->orwhere('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', '%' . $title)
-                ->select('id')->get()->toarray());
+            $doctor = array_merge($doctor, $this->doctor->join('doctors', 'doctors.user_id', '=', 'users.id')
+                ->where('doctors.status_show',1)->where('users.role_id', 4)->where('users.status', 1)->where('users.title->' . $lang->code, 'like', $title . '%')
+                ->orwhere('doctors.status_show',1)->where('users.role_id', 4)->where('users.status', 1)->where('users.title->' . $lang->code, 'like', '%' . $title . '%')
+                ->orwhere('doctors.status_show',1)->where('users.role_id', 4)->where('users.status', 1)->where('users.title->' . $lang->code, 'like', '%' . $title)
+                ->select('users.id')->get()->toarray());
         }
-        return $this->doctor->wherein('id', $doctor)->paginate(25);
+        return $this->doctor->with('doctor','doctor.sub_specialty')->wherein('id', $doctor)->paginate(25);
     }
 }
