@@ -6,28 +6,8 @@
       <change afterPath="$PROJECT_DIR$/../full-version/favicon.ico" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../full-version/index.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../full-version/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Acl/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Acl/DoctorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Acl/Patient/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Acl/Patient/CreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Acl/Patient/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Acl/Patient/EditRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Acl/User/CreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Acl/User/CreateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Acl/User/EditRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Acl/User/EditRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Acl/PatientResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Acl/PatientResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Core_Data/Language.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Core_Data/Language.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Acl/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Acl/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/patient/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/patient/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/user/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/user/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/user/password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/user/password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,11 +20,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/DoctorRepository.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="335">
               <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/master_admin.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/admin.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="590">
+              <caret line="37" column="39" lean-forward="true" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -63,24 +66,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/PatientController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="84" column="5" selection-start-line="68" selection-start-column="3" selection-end-line="84" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -120,15 +105,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="766">
               <caret line="86" column="3" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="211" column="36" selection-start-line="211" selection-start-column="36" selection-end-line="211" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -181,8 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Core_Data/MedicineController.php" />
         <option value="$PROJECT_DIR$/public/js/admin/dataTables.bootstrap.js" />
         <option value="$PROJECT_DIR$/resources/views/includes/admin/scripts_datatable.blade.php" />
@@ -232,6 +206,8 @@
         <option value="$PROJECT_DIR$/app/Http/Resources/Acl/DoctorResource.php" />
         <option value="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Acl/DoctorRepository.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/admin.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
       </list>
     </option>
   </component>
@@ -698,18 +674,18 @@
       <workItem from="1611408651063" duration="106035000" />
       <workItem from="1611996373084" duration="26927000" />
       <workItem from="1612096325898" duration="54276000" />
-      <workItem from="1612341304831" duration="4341000" />
+      <workItem from="1612341304831" duration="4640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315226000" />
+    <option name="totallyTimeSpent" value="315525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17603911" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17603911" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -757,27 +733,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Setting/ContactUsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="59" column="5" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Setting/PrivacyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="55" column="3" lean-forward="true" selection-start-line="55" selection-start-column="3" selection-end-line="59" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Setting/SettingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="46" column="74" lean-forward="true" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/about_us.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1106,6 +1061,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/master_admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="37" column="39" lean-forward="true" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>

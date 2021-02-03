@@ -15,7 +15,8 @@ class HomeController extends Controller
         }
         else {
             $count_patient = User::where('role_id', 3)->count();
-            return view('admin.admin', compact('count_patient'));
+            $count_doctor = User::where('role_id', 4)->count();
+            return view('admin.admin', compact('count_patient','count_doctor'));
         }
     }
 
