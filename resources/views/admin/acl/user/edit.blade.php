@@ -26,18 +26,10 @@
                     {{method_field('patch')}}
                     @foreach(language() as $lang)
                         <div class="row">
-                            <div class="col-md-6">
-                        <div class="form-group{{ $errors->has('first_title['.$lang->code.']') ? ' has-error' : "" }}">
-                            {{  $lang->first_title .' '. trans('lang.First_Title') }} : <input type="text" @if(isset($data['first_title'][$lang->code])) value="{{$data['first_title'][$lang->code]}}" @endif
-                                                                               class="form-control" name="first_title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_First_Title') }}">
+                        <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
+                            {{  $lang->title .' '. trans('lang.Title') }} : <input type="text" @if(isset($data['title'][$lang->code])) value="{{$data['title'][$lang->code]}}" @endif
+                                                                               class="form-control" name="title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Title') }}">
                         </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group{{ $errors->has('second_title['.$lang->code.']') ? ' has-error' : "" }}">
-                                    {{  $lang->second_title .' '. trans('lang.Second_Title') }} : <input type="text" @if(isset($data['second_title'][$lang->code])) value="{{$data['second_title'][$lang->code]}}" @endif
-                                    class="form-control" name="second_title[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Second_Title') }}">
-                                </div>
-                            </div>
                         </div>
                     @endforeach
                     <div class="row">

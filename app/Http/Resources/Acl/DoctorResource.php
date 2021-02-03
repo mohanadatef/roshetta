@@ -4,7 +4,7 @@ namespace App\Http\Resources\Acl;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PatientResource extends JsonResource
+class DoctorResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

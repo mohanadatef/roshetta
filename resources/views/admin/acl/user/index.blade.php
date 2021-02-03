@@ -37,8 +37,7 @@
                                 <thead>
                                 <tr>
                                     <th align="center">#</th>
-                                    <th align="center">{{ trans('lang.First_Title') }}</th>
-                                    <th align="center">{{ trans('lang.Second_Title') }}</th>
+                                    <th align="center">{{ trans('lang.Title') }}</th>
                                     <th align="center">{{ trans('lang.Email') }}</th>
                                     <th align="center">{{ trans('lang.Mobile') }}</th>
                                     <th align="center">{{ trans('lang.Role') }}</th>
@@ -67,8 +66,7 @@
                                             {{$i++}}
                                         </td>
 
-                                        <td align="center">{{ $data->first_title }}</td>
-                                        <td align="center">{{ $data->second_title }}</td>
+                                        <td align="center">{{ $data->title }}</td>
                                         <td align="center">{{ $data->email }}</td>
                                         <td align="center">{{ $data->mobile }}</td>
                                         <td align="center">{{ $data->role->title }}</td>
@@ -109,8 +107,7 @@
                                 <tfoot>
                                 <tr>
                                         <th align="center">#</th>
-                                    <th align="center">{{ trans('lang.First_Title') }}</th>
-                                    <th align="center">{{ trans('lang.Second_Title') }}</th>
+                                    <th align="center">{{ trans('lang.Title') }}</th>
                                     <th align="center">{{ trans('lang.Email') }}</th>
                                     <th align="center">{{ trans('lang.Mobile') }}</th>
                                         <th align="center">{{ trans('lang.Role') }}</th>

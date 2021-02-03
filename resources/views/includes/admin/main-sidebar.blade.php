@@ -477,6 +477,23 @@
                                 </ul>
                             </li>
                         @endif
+                            @if(permission_show('doctor-list'))
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Doctor') }}</span>
+                                        <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        @if(permission_show('doctor-index'))
+                                            <li><a href="{{ url('/admin/doctor/index') }}"><i
+                                                            class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
+                                            </li>
+                                        @endif
+                                    </ul>
+                                </li>
+                            @endif
                     </ul>
                 </li>
             @endif

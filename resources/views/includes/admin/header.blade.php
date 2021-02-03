@@ -208,7 +208,7 @@
                     <a href="{{ url('/admin/user/edit/'.Auth::user()->id)}}" >
                         @if (Route::has('login'))
                             @auth
-                                <span class="hidden-xs">{{ Auth::user()->first_title }}</span>
+                                <span class="hidden-xs">{{ Auth::user()->title }}</span>
                             @endauth
                         @endif
                     </a>

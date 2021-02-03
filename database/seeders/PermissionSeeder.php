@@ -557,6 +557,23 @@ class PermissionSeeder extends Seeder
                 'title' => 'patient-many-status',
                 'display_title' => ['en' =>'patient many status', 'ar' => 'تغير حاله المرضاء'],
             ],
+            //doctor
+            [
+                'title' => 'doctor-list',
+                'display_title' => ['en' => 'doctor list', 'ar' => 'قائمه اذنات دكتور']
+            ],
+            [
+                'title' => 'doctor-index',
+                'display_title' => ['en' => 'index doctor', 'ar' => 'قائمه دكتور'],
+            ],
+            [
+                'title' => 'doctor-status',
+                'display_title' => ['en' => 'doctor status', 'ar' => 'تغير حاله دكتور'],
+            ],
+            [
+                'title' => 'doctor-many-status',
+                'display_title' => ['en' =>'doctor many status', 'ar' => 'تغير حاله دكتور'],
+            ],
         ];
         foreach ($permissions as $key => $value) {
             Permission::create($value);

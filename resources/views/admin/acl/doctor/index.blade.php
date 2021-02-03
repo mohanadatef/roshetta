@@ -8,20 +8,20 @@
 @section('content')
     <section class="content-header">
         <h1>
-            {{ trans('lang.Patient') }}
+            {{ trans('lang.Doctor') }}
             <small>{{ trans('lang.All') }}</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
-            <li><a href="{{ url('/admin/patient/index') }}"><i class="fa fa-Users"></i>{{ trans('lang.Index') }}</a></li>
+            <li><a href="{{ url('/admin/doctor/index') }}"><i class="fa fa-Users"></i>{{ trans('lang.Index') }}</a></li>
         </ol>
     </section>
     <section class="content">
-        <form id="status" method="get" action="{{ url('/admin/patient/change_many_status')}}">
+        <form id="status" method="get" action="{{ url('/admin/doctor/change_many_status')}}">
             <div class="box">
                 <div class="box-header" align="right">
                     @if(count($datas) > 0)
-                        @if(permission_show('patient-many-status'))
+                        @if(permission_show('doctor-many-status'))
                     <input type="submit" value="{{ trans('lang.Change_Status') }}" class="btn btn-primary">
                             @endif
                             @endif
@@ -38,10 +38,10 @@
                                     <th align="center">{{ trans('lang.Email') }}</th>
                                     <th align="center">{{ trans('lang.Mobile') }}</th>
                                     <th align="center">{{ trans('lang.Image') }}</th>
-                                        @if(permission_show('patient-status'))
+                                        @if(permission_show('doctor-status'))
                                     <th align="center">{{ trans('lang.Status') }}</th>
                                         @endif
-                                        @if(permission_show('patient-edit') )
+                                        @if(permission_show('doctor-edit') )
                                     <th align="center">{{ trans('lang.Controller') }}</th>
                                             @endif
                                 </tr>
@@ -51,7 +51,7 @@
                                 @foreach($datas as $data)
                                     <tr>
                                         <td align="center">
-                                            @if(permission_show('patient-many-status'))
+                                            @if(permission_show('doctor-many-status'))
                                                 <div class="form-group{{ $errors->has('change_status') ? ' has-error' : "" }}">
                                             <input type="checkbox" name="change_status[]"
                                                    id="{{$data->id}}" value="{{$data->id}}">
@@ -68,18 +68,18 @@
                                             @if(permission_show('user-status'))
                                         <td align="center">
                                             @if($data->status ==1)
-                                                <a href="{{ url('/admin/patient/change_status/'.$data->id)}}"><i
+                                                <a href="{{ url('/admin/doctor/change_status/'.$data->id)}}"><i
                                                             class="btn btn-danger ace-icon fa fa-close">{{ trans('lang.An_active') }}</i></a>
                                             @elseif($data->status ==0)
-                                                <a href="{{ url('/admin/patient/change_status/'.$data->id)}}"><i
+                                                <a href="{{ url('/admin/doctor/change_status/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-check-country"> {{ trans('lang.Active') }}</i></a>
                                             @endif
                                         </td>
                                             @endif
-                                            @if(permission_show('patient-edit'))
+                                            @if(permission_show('doctor-edit'))
                                         <td align="center">
-                                            @if(permission_show('patient-edit') )
-                                                <a href="{{ url('/admin/patient/edit/'.$data->id)}}"><i
+                                            @if(permission_show('doctor-edit') )
+                                                <a href="{{ url('/admin/doctor/edit/'.$data->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-edit bigger-120  edit"
                                                             data-id=""> {{ trans('lang.Edit') }}</i></a>
                                             @endif
@@ -98,7 +98,7 @@
                                         @if(permission_show('user-status'))
                                             <th align="center">{{ trans('lang.Status') }}</th>
                                         @endif
-                                        @if(permission_show('patient-edit') )
+                                        @if(permission_show('doctor-edit') )
                                             <th align="center">{{ trans('lang.Controller') }}</th>
                                         @endif
                                 </tr>
@@ -116,5 +116,5 @@
 @endsection
 @section('script_style')
     @include('includes.admin.scripts_datatable')
-    {!! JsValidator::formRequest('App\Http\Requests\Acl\Patient\StatusEditRequest','#status') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\Acl\Doctor\StatusEditRequest','#status') !!}
 @endsection

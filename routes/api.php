@@ -80,4 +80,8 @@ Route::group(['middleware' => 'api'], function () {
     Route::prefix('/call_us')->group(function () {
         Route::post('/store', [App\Http\Controllers\Setting\CallUsController::class, 'store']);
     });
+    Route::prefix('/doctor')->group(function () {
+        Route::get('/search_name', [App\Http\Controllers\Acl\DoctorController::class, 'search_name']);
+        Route::get('/show', [App\Http\Controllers\Acl\DoctorController::class, 'show']);
+    });
 });

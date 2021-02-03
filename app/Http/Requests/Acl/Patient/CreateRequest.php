@@ -28,15 +28,13 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_title' => 'required',
-            'second_title' => 'required',
+            'title' => 'required',
             'gender' => 'required|string',
             'mobile' => 'required|numeric|digits:11|unique:users',
             'email' => 'required|email|max:255|string|unique:users',
             'date_birth' => 'required|date',
             'image'=> 'string',
             'password' => 'required|string|min:6',
-            'language_id'=> 'required|exists:languages,id',
         ];
     }
     public function messages()
@@ -44,8 +42,7 @@ class CreateRequest extends FormRequest
         return check_locale_language($this->language_id) == 'ar' ? [
                 'image.mimes' => 'برجاء ادخال الصوره jpg,jpeg,png,gif',
                 'image.max' => 'برجاء ادخال الصوره اقل من 2048',
-                'first_title.required' => 'برجاء ادخال الاسم',
-                'second_title.required' => 'برجاء ادخال الاسم',
+                'title.required' => 'برجاء ادخال الاسم',
                 'gender.required' => 'برجاء ادخال النوع',
                 'mobile.required' => 'برجاء ادخال الموبيل',
                 'mobile.unique' => 'لا يمكن ادخال الموبيل متكرر',

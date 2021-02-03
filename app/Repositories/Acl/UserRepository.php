@@ -32,7 +32,6 @@ class UserRepository implements UserInterface
         $data['status'] = 1;
         Auth::user() ? $data['status_login'] = 0 : $data['status_login'] = 1;
         $data['password'] = Hash::make($request->password);
-        $data['language_id'] = 1;
         if ($request->image) {
             $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
             Request()->image->move(public_path('images/user'), $imageName);

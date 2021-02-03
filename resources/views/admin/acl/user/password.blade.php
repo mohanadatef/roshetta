@@ -16,7 +16,7 @@
             <li><a href="{{ url('/admin/user/index') }}"><i class="fa fa-permsissions"></i> {{ trans('lang.User') }}</a>
             </li>
             <li><a href="{{ url('/admin/user/password/'.Auth::user()->id) }}"><i
-                            class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{Auth::user()->first_title}}  </a>
+                            class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{Auth::user()->title}}  </a>
             </li>
         </ol>
             @endif
@@ -25,7 +25,7 @@
         <div class="box">
             @if(Auth::User()->status_login == 1)
             <div class="box-header">
-                <h3>{{ trans('lang.Edit') }}: {{Auth::user()->first_title}}  </h3>
+                <h3>{{ trans('lang.Edit') }}: {{Auth::user()->title}}  </h3>
             </div>
             @endif
             <!-- /.box-header -->

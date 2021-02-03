@@ -28,24 +28,13 @@
                     {{csrf_field()}}
                     @foreach(language() as $lang)
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group{{ $errors->has('first_title['.$lang->code.']') ? ' has-error' : "" }}">
-                                    {{ $lang->title .' '. trans('lang.First_Title') }} : <input type="text"
-                                                                                                value="{{Request::old('first_title['.$lang->code.']')}}"
+                                <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
+                                    {{ $lang->title .' '. trans('lang.Title') }} : <input type="text"
+                                                                                                value="{{Request::old('title['.$lang->code.']')}}"
                                                                                                 class="form-control"
-                                                                                                name="first_title[{{$lang->code}}]"
-                                                                                                placeholder="{{ trans('lang.Message_First_Title') }}">
+                                                                                                name="title[{{$lang->code}}]"
+                                                                                                placeholder="{{ trans('lang.Message_Title') }}">
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group{{ $errors->has('second_title['.$lang->code.']') ? ' has-error' : "" }}">
-                                    {{ $lang->title .' '. trans('lang.Second_Title') }} : <input type="text"
-                                                                                                 value="{{Request::old('second_title['.$lang->code.']')}}"
-                                                                                                 class="form-control"
-                                                                                                 name="second_title[{{$lang->code}}]"
-                                                                                                 placeholder="{{ trans('lang.Message_Second_Title') }}">
-                                </div>
-                            </div>
                         </div>
                     @endforeach
                     <div class="row">
