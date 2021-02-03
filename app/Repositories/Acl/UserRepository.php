@@ -24,7 +24,7 @@ class UserRepository implements UserInterface
 
     public function Get_All_Data()
     {
-        return $this->user->whereNotIn('role_id', [3])->get();
+        return Auth::user()->role_id == 1 ? $this->user->whereNotIn('role_id', [3,4])->get() : $this->user->whereNotIn('role_id', [1,3,4])->get();
     }
 
     public function Create_Data(CreateRequest $request)
