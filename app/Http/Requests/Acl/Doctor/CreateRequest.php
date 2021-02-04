@@ -45,6 +45,8 @@ class CreateRequest extends FormRequest
     {
         return Language_Locale() == 'ar' ? [
             'title_doctor.*.required' => 'برجاء ادخال الاسم',
+            'image_license.required' => 'برجاء ادخال صوره الترخيص',
+            'image_university.required' => 'برجاء ادخال صوره شهاده الجامعه',
             'detail.*.required' => 'برجاء ادخال الوصف',
             'university.*.required' => 'برجاء ادخال جامعه',
             'status_mobile.required' => 'برجاء ادخال امكانيه الكشف موبيل',

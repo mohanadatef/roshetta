@@ -1,6 +1,6 @@
 @extends('includes.admin.master_admin')
 @section('title')
-    {{ trans('lang.Create_Information') }}
+    {{ trans('lang.Edit_Information') }}
 @endsection
 @section('head_style')
     <link href="{{url('public/css/admin/bootstrap.min.css')}}">
@@ -21,32 +21,31 @@
     <section class="content-header">
         <h1>
             {{ trans('lang.Doctor') }}
-            <small>{{ trans('lang.Create_Information') }}</small>
+            <small>{{ trans('lang.Edit_Information') }}</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
             </li>
-            <li><a href="{{ url('/admin/doctor/create') }}"><i
-                            class="fa fa-permsission"></i>{{ trans('lang.Create_Information') }}
-                </a>
-            </li>
+            <li><a href="{{ url('/admin/doctor/edit/'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{Auth::user()->title}} </a></li>
+
         </ol>
     </section>
     <section class="content">
         <div class="box">
             <div class="box-header">
-                <h3>{{ trans('lang.Create_Information') }}</h3>
+                <h3>{{ trans('lang.Edit_Information') }}</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <form id='create' action="{{url('admin/doctor/store')}}" method="POST" enctype="multipart/form-data">
+                <form id="edit" action="{{url('admin/doctor/update/'.$data['id'])}}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
+                    {{method_field('patch')}}
                     <div class="row">
                         @foreach(language() as $lang)
                             <div class="col-md-6">
                                 <div class="form-group{{ $errors->has('title_doctor['.$lang->code.']') ? ' has-error' : "" }}">
                                     {{ $lang->title .' '. trans('lang.Title_Doctor') }} : <input type="text"
-                                                                                                 value="{{Request::old('title_doctor['.$lang->code.']')}}"
+                                                                                                 @if(isset($data['title_doctor'][$lang->code])) value="{{$data['title_doctor'][$lang->code]}}" @endif
                                                                                                  class="form-control"
                                                                                                  name="title_doctor[{{$lang->code}}]"
                                                                                                  placeholder="{{ trans('lang.Message_Title_Doctor') }}">
@@ -59,7 +58,7 @@
                             <div class="col-md-6">
                                 <div class="form-group{{ $errors->has('university['.$lang->code.']') ? ' has-error' : "" }}">
                                     {{ $lang->title .' '. trans('lang.University') }} : <input type="text"
-                                                                                               value="{{Request::old('university['.$lang->code.']')}}"
+                                                                                               @if(isset($data['university'][$lang->code])) value="{{$data['university'][$lang->code]}}" @endif
                                                                                                class="form-control"
                                                                                                name="university[{{$lang->code}}]"
                                                                                                placeholder="{{ trans('lang.Message_University') }}">
@@ -73,9 +72,8 @@
                                 {{trans('lang.Status_Home')}} :
                                 <select id="status_home" class="form-control select2"
                                         data-placeholder="{{trans('lang.Message_Gender')}}" name="status_home">
-                                    <option selected>{{trans('lang.Select')}}</option>
-                                    <option value="1"> {{trans('lang.Active')}}</option>
-                                    <option value="0"> {{trans('lang.An_active')}}</option>
+                                    <option value="1" @if($data['status_home'] == 1 ) selected @endif> {{trans('lang.Active')}}</option>
+                                    <option value="0" @if($data['status_home'] == 1 ) selected @endif> {{trans('lang.An_active')}}</option>
                                 </select>
                             </div>
                         </div>
@@ -84,16 +82,15 @@
                                 {{trans('lang.Status_Mobile')}} :
                                 <select id="status_mobile" class="form-control select2"
                                         data-placeholder="{{trans('lang.Message_Gender')}}" name="status_mobile">
-                                    <option selected>{{trans('lang.Select')}}</option>
-                                    <option value="1"> {{trans('lang.Active')}}</option>
-                                    <option value="0"> {{trans('lang.An_active')}}</option>
+                                    <option value="1" @if($data['status_mobile'] == 1 ) selected @endif> {{trans('lang.Active')}}</option>
+                                    <option value="0" @if($data['status_mobile'] == 1 ) selected @endif> {{trans('lang.An_active')}}</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('license') ? ' has-error' : "" }}">
                                 {{ trans('lang.License') }} : <input type="text" class="form-control" name="license"
-                                                                     value="{{Request::old('license')}}"
+                                                                     value="{{$data['license']}}"
                                                                      placeholder="{{ trans('lang.Message_License') }}">
                             </div>
                         </div>
@@ -101,7 +98,7 @@
                             <div class="form-group{{ $errors->has('date_license_end') ? ' has-error' : "" }}">
                                 {{ trans('lang.Date_License_End') }} : <input type="date" class="form-control"
                                                                               name="date_license_end"
-                                                                              value="{{Request::old('date_license_end')}}"
+                                                                              value="{{$data['date_license_end']}}"
                                                                               placeholder="{{ trans('lang.Message_Date_License_End') }}">
                             </div>
                         </div>
@@ -111,7 +108,7 @@
                                 <select id="specialty_id" class="form-control select2" data-placeholder="{{trans('lang.Message_Specialty')}}" name="specialty_id">
                                     <option value="0" selected>{{trans('lang.Select')}}</option>
                                     @foreach($specialty as  $myspecialty)
-                                        <option value="{{$myspecialty->id}}"> {{$myspecialty->title}}</option>
+                                        <option value="{{$myspecialty->id}}" @if($data['specialty_id'] == $myspecialty->id ) selected @endif> {{$myspecialty->title}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -122,7 +119,7 @@
                                 <select id="scientific_degree" class="form-control select2" data-placeholder="{{trans('lang.Message_Scientific_Degree')}}" name="scientific_degree_id">
                                     <option value="0" selected>{{trans('lang.Select')}}</option>
                                     @foreach($scientific_degree as  $myscientific_degree)
-                                        <option value="{{$myscientific_degree->id}}"> {{$myscientific_degree->title}}</option>
+                                        <option value="{{$myscientific_degree->id}}" @if($data['scientific_degree_id'] == $myscientific_degree->id ) selected @endif> {{$myscientific_degree->title}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -130,7 +127,7 @@
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('sub_specialty') ? ' has-error' : "" }}">
                                 {{ trans('lang.Sub_Specialty') }} :
-                                <select id="sub_specialty_id" multiple='multiple' class="form-control"  data-placeholder="{{trans('lang.Message_Sub_Specialty')}}" name="sub_specialty[]">
+                                <select id="sub_specialty_id" multiple='multiple' class="form-control" data-placeholder="{{trans('lang.Message_Sub_Specialty')}}"  name="sub_specialty[]">
                                 </select>
                             </div>
                         </div>
@@ -138,18 +135,19 @@
                             <div class="form-group{{ $errors->has('year_experience') ? ' has-error' : "" }}">
                                 {{ trans('lang.Year_Experience') }} : <input type="text" class="form-control"
                                                                              name="year_experience"
-                                                                             value="{{Request::old('year_experience')}}"
+                                                                             value="{{$data['year_experience']}}"
                                                                              placeholder="{{ trans('lang.Message_Year_Experience') }}">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
+                            <img src="{{url('public/images/user/doctor/'.$data['image_license'])}}" style="width: 50px;height: 50px">
                             <div class="form-group{{ $errors->has('image_license') ? ' has-error' : "" }}">
                                 <table class="table">
                                     <tr>
                                         <td width="40%" align="right"><label>{{ trans('lang.Image_License') }}</label></td>
-                                        <td width="30"><input type="file" value="{{Request::old('image_License')}}" name="image_license"/></td>
+                                        <td width="30"><input type="file" value="{{Request::old('image_license')}}" name="image_license"/></td>
                                     </tr>
                                     <tr>
                                         <td width="40%" align="right"></td>
@@ -159,6 +157,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <img src="{{url('public/images/user/doctor/'.$data['image_university'])}}" style="width: 50px;height: 50px">
                             <div class="form-group{{ $errors->has('image_university') ? ' has-error' : "" }}">
                                 <table class="table">
                                     <tr>
@@ -178,12 +177,12 @@
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('detail['.$lang->code.']') ? ' has-error' : "" }}">
                                 {{$lang->title.' '. trans('lang.Detail') }} : <textarea type="text" class="form-control"
-                                                                                        name="detail[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Detail') }}">{{Request::old('detail['.$lang->code.']')}}</textarea>
+                                                                                        name="detail[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Detail') }}">@if(isset($data['detail'][$lang->code])) {{$data['detail'][$lang->code]}} @endif</textarea>
                             </div>
                         </div>
                         @endforeach
                         <div align="center">
-                        <input type="submit" class="btn btn-primary" value="{{ trans('lang.Create') }}">
+                        <input type="submit" class="btn btn-primary" value="{{ trans('lang.Edit') }}">
                     </div>
                 </form>
             </div>
@@ -250,5 +249,5 @@
         $('#sub_specialty_id').multiSelect();
     </script>
     @yield('script_description_language')
-    {!! JsValidator::formRequest('App\Http\Requests\Acl\Doctor\CreateRequest','#create') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\Acl\Doctor\EditRequest','#edit') !!}
 @endsection
