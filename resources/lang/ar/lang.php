@@ -16,6 +16,8 @@ return[
     'DashBoard'=>'لوحة التحكم',
     'Create'=>'اضافة',
     'Status'=>'حاله',
+    'Status_Request'=>'حاله الطلب',
+    'Index_Request'=>'قائمه الطلبات',
     'Controller'=>'تحكم',
     'An_active'=>'غير مفعل',
     'Active'=>'مفعل',

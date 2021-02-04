@@ -491,9 +491,9 @@
                                                             class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
                                             </li>
                                         @endif
-                                            @if(permission_show('doctor-index-show'))
-                                                <li><a href="{{ url('/admin/doctor/index_show') }}"><i
-                                                                class="fa fa-group"></i><span>{{ trans('lang.Index_Show') }}</span></a>
+                                            @if(permission_show('doctor-index-request'))
+                                                <li><a href="{{ url('/admin/doctor/index_request') }}"><i
+                                                                class="fa fa-group"></i><span>{{ trans('lang.Index_Request') }}</span></a>
                                                 </li>
                                             @endif
                                     </ul>

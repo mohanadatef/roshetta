@@ -23,14 +23,14 @@ class DoctorRepository implements DoctorInterface
     public function Get_All_Data()
     {
         return $this->user->where('role_id', 4)->whereHas('doctor', function (Builder $query) {
-            $query->where('status_show',1);
+            $query->where('status_request',1);
         })->get();
     }
 
-    public function Get_All_Data_Show()
+    public function Get_All_Data_Request()
     {
         return $this->user->where('role_id', 4)->whereHas('doctor', function (Builder $query) {
-            $query->where('status_show',0);
+            $query->where('status_request',0);
         })->get();
     }
 
@@ -51,10 +51,10 @@ class DoctorRepository implements DoctorInterface
         $user->update();
     }
 
-    public function Update_Status_One_Doctor_Show($id)
+    public function Update_Status_One_Doctor_Request($id)
     {
         $doctor = $this->Get_One_Doctor($id);
-        $doctor->status_show == 1 ? $doctor->status_show = '0' : $doctor->status_show = '1';
+        $doctor->status_request == 1 ? $doctor->status_request = '0' : $doctor->status_request = '1';
         $doctor->update();
     }
 
@@ -76,16 +76,23 @@ class DoctorRepository implements DoctorInterface
         $doctor = [];
         foreach (Language() as $lang) {
             $doctor = array_merge($doctor, $this->user->whereHas('doctor', function (Builder $query) {
-                $query->where('status_show',1);
+                $query->where('status_request',1);
             })->where('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', $title . '%')
                 ->orwhereHas('doctor', function (Builder $query) {
-                    $query->where('status_show',1);
+                    $query->where('status_request',1);
                 })->where('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', '%' . $title . '%')
                 ->orwhereHas('doctor', function (Builder $query) {
-                    $query->where('status_show',1);
+                    $query->where('status_request',1);
                 })->where('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', '%' . $title)
                 ->select('id')->get()->toarray());
         }
         return $this->user->wherein('id', $doctor)->paginate(25);
+    }
+
+    public function Update_View($id)
+    {
+       $doctor= $this->Get_One_Doctor($id);
+        $doctor->count_view=$doctor->count_view+1;
+        $doctor->update();
     }
 }

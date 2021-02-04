@@ -116,4 +116,6 @@ return[
     'Password_Confirmation'=>'Password Confirmation',
     'Message_Price'=>'Plase Enter Your Price',
     'Forgot'=>'I forgot my password',
+    'Status_Request'=>'Status Request',
+    'Index_Request'=>'Index Request',
 ];

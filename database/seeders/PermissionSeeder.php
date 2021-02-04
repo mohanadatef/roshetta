@@ -567,8 +567,8 @@ class PermissionSeeder extends Seeder
                 'display_title' => ['en' => 'index doctor', 'ar' => 'قائمه دكتور'],
             ],
             [
-                'title' => 'doctor-index-show',
-                'display_title' => ['en' => 'index doctor show', 'ar' => 'قائمه دكتور فى انتظار'],
+                'title' => 'doctor-index-request',
+                'display_title' => ['en' => 'index doctor request', 'ar' => 'قائمه دكتور فى طلب'],
             ],
             [
                 'title' => 'doctor-status',
@@ -579,8 +579,8 @@ class PermissionSeeder extends Seeder
                 'display_title' => ['en' =>'doctor many status', 'ar' => 'تغير حاله دكتور'],
             ],
             [
-                'title' => 'doctor-status-show',
-                'display_title' => ['en' => 'doctor status show', 'ar' => 'تغير حاله دكتور فى انتظار'],
+                'title' => 'doctor-status-request',
+                'display_title' => ['en' => 'doctor status request', 'ar' => 'تغير حاله دكتور فى الطلب'],
             ],
         ];
         foreach ($permissions as $key => $value) {

@@ -41,8 +41,8 @@
                                     @if(permission_show('doctor-status'))
                                         <th align="center">{{ trans('lang.Status') }}</th>
                                     @endif
-                                    @if(permission_show('doctor-status-show'))
-                                        <th align="center">{{ trans('lang.Status_Show') }}</th>
+                                    @if(permission_show('doctor-status-request'))
+                                        <th align="center">{{ trans('lang.Status_Request') }}</th>
                                     @endif
                                 </tr>
                                 </thead>
@@ -76,13 +76,13 @@
                                                 @endif
                                             </td>
                                         @endif
-                                        @if(permission_show('doctor-status-show'))
+                                        @if(permission_show('doctor-status-request'))
                                             <td align="center">
-                                                @if($data->doctor->status_show ==1)
-                                                    <a href="{{ url('/admin/doctor/change_status_show/'.$data->doctor->id)}}"><i
+                                                @if($data->doctor->status_request ==1)
+                                                    <a href="{{ url('/admin/doctor/change_status_request/'.$data->doctor->id)}}"><i
                                                                 class="btn btn-danger ace-icon fa fa-close">{{ trans('lang.An_active') }}</i></a>
-                                                @elseif($data->doctor->status_show ==0)
-                                                    <a href="{{ url('/admin/doctor/change_status_show/'.$data->doctor->id)}}"><i
+                                                @elseif($data->doctor->status_request ==0)
+                                                    <a href="{{ url('/admin/doctor/change_status_request/'.$data->doctor->id)}}"><i
                                                                 class="btn btn-primary ace-icon fa fa-check-country"> {{ trans('lang.Active') }}</i></a>
                                                 @endif
                                             </td>
@@ -100,8 +100,8 @@
                                     @if(permission_show('doctor-status'))
                                         <th align="center">{{ trans('lang.Status') }}</th>
                                     @endif
-                                    @if(permission_show('doctor-status-show'))
-                                        <th align="center">{{ trans('lang.Status_Show') }}</th>
+                                    @if(permission_show('doctor-status-request'))
+                                        <th align="center">{{ trans('lang.Status_Request') }}</th>
                                     @endif
                                 </tr>
                                 </tfoot>

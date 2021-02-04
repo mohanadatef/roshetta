@@ -9,7 +9,7 @@ class Doctor extends Model
 {
     use HasTranslations;
     protected $fillable = [
-        'university','detail','user_id','specialty_id','scientific_degree_id','university', 'status_show', 'status_mobile','status_home','status_clinic','license',
+        'university','detail','user_id','specialty_id','scientific_degree_id','university', 'status_request', 'status_mobile','status_home','status_clinic','license',
         'image_license','image_university','count_view','year_experience','valuation'
     ];
     public function user()

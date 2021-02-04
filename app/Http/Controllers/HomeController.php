@@ -19,5 +19,4 @@ class HomeController extends Controller
             return view('admin.admin', compact('count_patient','count_doctor'));
         }
     }
-
 }
