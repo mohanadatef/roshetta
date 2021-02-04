@@ -19,4 +19,10 @@ class HomeController extends Controller
             return view('admin.admin', compact('count_patient','count_doctor'));
         }
     }
+
+    public function error_403()
+    {
+        return view('errors.403');
+    }
+
 }
