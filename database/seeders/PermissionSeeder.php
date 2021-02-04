@@ -518,27 +518,27 @@ class PermissionSeeder extends Seeder
             //sub-specialty
             [
                 'title' => 'sub-specialty-list',
-                'display_title' =>['en' => 'sub-specialty list', 'ar' => 'قائمه اذنات تخصص التخصص'] ,
+                'display_title' =>['en' => 'sub specialty list', 'ar' => 'قائمه اذنات تخصص التخصص'] ,
             ],
             [
                 'title' => 'sub-specialty-index',
-                'display_title' =>['en' => 'index sub-specialty', 'ar' => 'قائمه تخصص التخصص'] ,
+                'display_title' =>['en' => 'index sub specialty', 'ar' => 'قائمه تخصص التخصص'] ,
             ],
             [
                 'title' => 'sub-specialty-create',
-                'display_title' =>['en' => 'create sub-specialty', 'ar' => 'اضافه تخصص التخصص'] ,
+                'display_title' =>['en' => 'create sub specialty', 'ar' => 'اضافه تخصص التخصص'] ,
             ],
             [
                 'title' => 'sub-specialty-edit',
-                'display_title' =>['en' => 'edit sub-specialty', 'ar' => 'تعديل تخصص التخصص'] ,
+                'display_title' =>['en' => 'edit sub specialty', 'ar' => 'تعديل تخصص التخصص'] ,
             ],
             [
                 'title' => 'sub-specialty-status',
-                'display_title' =>['en' => 'status sub-specialty', 'ar' => 'تغير حاله تخصص التخصص'] ,
+                'display_title' =>['en' => 'status sub specialty', 'ar' => 'تغير حاله تخصص التخصص'] ,
             ],
             [
                 'title' => 'sub-specialty-many-status',
-                'display_title' =>['en' => 'status many sub-specialty', 'ar' => 'تغير حاله تخصص التخصصات'] ,
+                'display_title' =>['en' => 'status many sub specialty', 'ar' => 'تغير حاله تخصص التخصصات'] ,
             ],
             //patient
             [
@@ -581,6 +581,18 @@ class PermissionSeeder extends Seeder
             [
                 'title' => 'doctor-status-request',
                 'display_title' => ['en' => 'doctor status request', 'ar' => 'تغير حاله دكتور فى الطلب'],
+            ],
+            [
+                'title' => 'doctor-list-information',
+                'display_title' => ['en' => 'doctor list information', 'ar' => 'قائمه بيانات دكتور']
+            ],
+            [
+                'title' => 'doctor-create',
+                'display_title' =>['en' => 'create doctor', 'ar' => 'اضافه دكتور'] ,
+            ],
+            [
+                'title' => 'doctor-edit',
+                'display_title' =>['en' => 'edit doctor', 'ar' => 'تعديل دكتور'] ,
             ],
         ];
         foreach ($permissions as $key => $value) {

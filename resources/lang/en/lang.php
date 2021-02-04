@@ -14,6 +14,8 @@ return[
     'Index'=>'Index',
     'Language'=>'Language',
     'All'=>'All',
+    'Create_Information'=>'Create Information',
+    'Edit_Information'=>'Edit Information',
     'DashBoard'=>'DashBoard',
     'Create'=>'Create',
     'Status'=>'Status',

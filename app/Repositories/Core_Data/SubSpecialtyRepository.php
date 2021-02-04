@@ -67,4 +67,9 @@ class SubSpecialtyRepository implements SubSpecialtyInterface
             $sub_specialty->update();
         }
     }
+
+    public function Get_List_Data_For_Specialty($specialty)
+    {
+        return $this->sub_specialty->where('specialty_id', $specialty)->where('status', 1)->orderby('order', 'asc')->get();
+    }
 }

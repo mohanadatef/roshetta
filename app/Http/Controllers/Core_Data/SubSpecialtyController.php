@@ -64,4 +64,8 @@ class SubSpecialtyController extends Controller
         return redirect()->back()->with('message', trans('lang.Message_Status'));
     }
 
+    public function Get_List_Sub_Specialty_Json($specialty)
+    {
+        return $this->sub_specialtyRepository->Get_List_Data_For_Specialty($specialty);
+    }
 }

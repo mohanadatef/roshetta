@@ -13,11 +13,13 @@ class HomeController extends Controller
         {
             return view('admin.acl.user.password');
         }
-        else {
-            $count_patient = User::where('role_id', 3)->count();
-            $count_doctor = User::where('role_id', 4)->count();
-            return view('admin.admin', compact('count_patient','count_doctor'));
+        if(Auth::User()->role_id == 4 && !Auth::User()->doctor)
+        {
+            return redirect('admin/doctor/create')->with('message',trans('Message_Doctor_Create'));
         }
+        $count_patient = User::where('role_id', 3)->count();
+        $count_doctor = User::where('role_id', 4)->count();
+        return view('admin.admin', compact('count_patient','count_doctor'));
     }
 
     public function error_403()

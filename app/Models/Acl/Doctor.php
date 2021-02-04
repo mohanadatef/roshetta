@@ -9,8 +9,8 @@ class Doctor extends Model
 {
     use HasTranslations;
     protected $fillable = [
-        'university','detail','user_id','specialty_id','scientific_degree_id','university', 'status_request', 'status_mobile','status_home','status_clinic','license',
-        'image_license','image_university','count_view','year_experience','valuation'
+        'university','detail','user_id','specialty_id','scientific_degree_id','university', 'status_request', 'status_mobile','status_home','license',
+        'image_license','image_university','count_view','year_experience','valuation','title_doctor','date_license_end'
     ];
     public function user()
     {
@@ -28,7 +28,7 @@ class Doctor extends Model
     {
         return $this->belongsToMany('App\Models\Core_Data\Sub_Specialty', 'doctor_sub_specialties', 'doctor_id','sub_specialty_id')->withTimestamps('created_at','updated_at');
     }
-    public $translatable = ['detail','university'];
+    public $translatable = ['detail','university','title_doctor'];
     protected $table = 'doctors';
     public $timestamps = true;
 }

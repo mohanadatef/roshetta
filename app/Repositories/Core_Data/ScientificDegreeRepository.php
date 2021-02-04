@@ -66,4 +66,9 @@ class ScientificDegreeRepository implements ScientificDegreeInterface
             $scientific_degree->update();
         }
     }
+
+    public function Get_List_Data()
+    {
+        return $this->scientific_degree->where('status', 1)->orderby('order', 'asc')->get();
+    }
 }

@@ -477,28 +477,50 @@
                                 </ul>
                             </li>
                         @endif
-                            @if(permission_show('doctor-list'))
-                                <li class="treeview">
-                                    <a href="#">
-                                        <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Doctor') }}</span>
-                                        <span class="pull-right-container">
+                        @if(permission_show('doctor-list'))
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Doctor') }}</span>
+                                    <span class="pull-right-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        @if(permission_show('doctor-index'))
-                                            <li><a href="{{ url('/admin/doctor/index') }}"><i
-                                                            class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
-                                            </li>
-                                        @endif
-                                            @if(permission_show('doctor-index-request'))
-                                                <li><a href="{{ url('/admin/doctor/index_request') }}"><i
-                                                                class="fa fa-group"></i><span>{{ trans('lang.Index_Request') }}</span></a>
-                                                </li>
-                                            @endif
-                                    </ul>
-                                </li>
-                            @endif
+                                </a>
+                                <ul class="treeview-menu">
+                                    @if(permission_show('doctor-index'))
+                                        <li><a href="{{ url('/admin/doctor/index') }}"><i
+                                                        class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
+                                        </li>
+                                    @endif
+                                    @if(permission_show('doctor-index-request'))
+                                        <li><a href="{{ url('/admin/doctor/index_request') }}"><i
+                                                        class="fa fa-group"></i><span>{{ trans('lang.Index_Request') }}</span></a>
+                                        </li>
+                                    @endif
+                                </ul>
+                            </li>
+                        @endif
+                    </ul>
+                </li>
+            @endif
+            @if(permission_show('doctor-list-information'))
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-group"></i> <span> {{ trans('lang.Core_Data') }}</span><span
+                                class="pull-right-container"><i
+                                    class="fa fa-angle-right pull-left"></i></span></a>
+                    <ul class="treeview-menu">
+                        @if(!Auth::user()->doctor)
+                        @if(permission_show('doctor-create'))
+                            <li><a href="{{ url('/admin/doctor/create') }}"><i
+                                            class="fa fa-group"></i><span>{{ trans('lang.Create_Information') }}</span></a>
+                            </li>
+                        @endif
+                        @else
+                        @if(permission_show('doctor-edit'))
+                            <li><a href="{{ url('/admin/doctor/edit/'. Auth::user()->doctor->id) }}"><i
+                                            class="fa fa-group"></i><span>{{ trans('lang.Edit_Information') }}</span></a>
+                            </li>
+                        @endif
+                        @endif
                     </ul>
                 </li>
             @endif

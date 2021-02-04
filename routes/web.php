@@ -21,7 +21,7 @@ Route::get('/clear-cache', function () {
     Artisan::call('view:clear');
     return redirect('/admin');
 });
-Route::group(['middleware' => 'admin', 'auth', 'language','permission:dashboard-show'], function () {
+Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard-show'], function () {
     Route::prefix('/admin')->group(function () {
         Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->middleware('permission:dashboard-show');
         Route::get('/error/403', [App\Http\Controllers\HomeController::class, 'error_403']);
@@ -99,7 +99,8 @@ Route::group(['middleware' => 'admin', 'auth', 'language','permission:dashboard-
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\SpecialtyController::class, 'change_status'])->middleware('permission:specialty-status');
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\SpecialtyController::class, 'change_many_status'])->middleware('permission:specialty-many-status');
         });
-        Route::prefix('/sub_specialty')->middleware('permission:sub-specialty-list')->group(function () {
+        Route::prefix('/sub_specialty')->group(function () {
+        Route::middleware('permission:sub-specialty-list')->group(function () {
             Route::get('/index', [App\Http\Controllers\Core_Data\SubSpecialtyController::class, 'index'])->middleware('permission:sub-specialty-index');
             Route::get('/create', [App\Http\Controllers\Core_Data\SubSpecialtyController::class, 'create'])->middleware('permission:sub-specialty-create');
             Route::Post('/store', [App\Http\Controllers\Core_Data\SubSpecialtyController::class, 'store'])->middleware('permission:sub-specialty-create');
@@ -107,6 +108,8 @@ Route::group(['middleware' => 'admin', 'auth', 'language','permission:dashboard-
             Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\SubSpecialtyController::class, 'update'])->middleware('permission:sub-specialty-edit');
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\SubSpecialtyController::class, 'change_status'])->middleware('permission:sub-specialty-status');
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\SubSpecialtyController::class, 'change_many_status'])->middleware('permission:sub-specialty-many-status');
+        });
+            Route::get('/get_list_sub_specialty_json/{specialty}', [App\Http\Controllers\Core_Data\SubSpecialtyController::class, 'Get_List_Sub_Specialty_Json']);
         });
         Route::prefix('/company_insurance')->middleware('permission:company-insurance-list')->group(function () {
             Route::get('/index', [App\Http\Controllers\Core_Data\CompanyInsuranceController::class, 'index'])->middleware('permission:company-insurance-index');
@@ -210,12 +213,18 @@ Route::group(['middleware' => 'admin', 'auth', 'language','permission:dashboard-
             Route::get('/change_status/{id}', [App\Http\Controllers\Acl\PatientController::class, 'change_status'])->middleware('permission:patient-status');
             Route::get('/change_many_status', [App\Http\Controllers\Acl\PatientController::class, 'change_many_status'])->middleware('permission:patient-many-status');
         });
-        Route::prefix('/doctor')->middleware('permission:doctor-index')->group(function () {
+        Route::prefix('/doctor')->middleware('permission:doctor-list')->group(function () {
             Route::get('/index', [App\Http\Controllers\Acl\DoctorController::class, 'index'])->middleware('permission:doctor-index');
             Route::get('/index_request', [App\Http\Controllers\Acl\DoctorController::class, 'index_request'])->middleware('permission:doctor-index-request');
             Route::get('/change_status/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'change_status'])->middleware('permission:doctor-status');
             Route::get('/change_many_status', [App\Http\Controllers\Acl\DoctorController::class, 'change_many_status'])->middleware('permission:doctor-many-stauts');
             Route::get('/change_status_request/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'change_status_request'])->middleware('permission:doctor-status-request');
+            Route::middleware('permission:doctor-list-information')->group(function () {
+                Route::get('/create', [App\Http\Controllers\Acl\DoctorController::class, 'create'])->middleware('permission:doctor-create');
+                Route::Post('/store', [App\Http\Controllers\Acl\DoctorController::class, 'store'])->middleware('permission:doctor-create');
+                Route::get('/edit/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'edit'])->middleware('permission:doctor-edit');
+                Route::patch('/update/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'update'])->middleware('permission:doctor-edit');
+            });
         });
         Route::prefix('/call_us')->middleware('permission:call-us-index')->group(function () {
             Route::get('/read', [App\Http\Controllers\Setting\CallUsController::class, 'read'])->middleware('permission:call-us-read');
