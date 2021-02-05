@@ -68,10 +68,13 @@ class DoctorRepository implements DoctorInterface
                 })->where('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', '%' . $title . '%')
                 ->orwhereHas('doctor', function (Builder $query) {
                     $query->where('status_request',1);
-                })->where('role_id', 4)->where('status', 1)->where('title->' . $lang->code, 'like', '%' . $title)
+                })->where(['role_id', 4],['status', 1],['title->' . $lang->code, 'like', '%' . $title])
                 ->select('id')->get()->toarray());
         }
         return $this->doctor->wherein('id', $doctor)->paginate(25);
+        // $users = DB::table('users')
+        //         ->whereJsonContains('options->languages', ['en', 'de'])
+        //         ->get();
     }
 
 

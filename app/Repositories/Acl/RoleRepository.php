@@ -46,7 +46,7 @@ class RoleRepository implements RoleInterface
     public function Update_Data(EditRequest $request, $id)
     {
         $role = $this->Get_One_Data($id);
-        $role->permission()->sync((array)$request->input('permission'));
+        $role->permission()->sync((array)$request->permission);
         $role->update($request->all());
     }
 
