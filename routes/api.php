@@ -92,4 +92,7 @@ Route::group(['middleware' => 'api'], function () {
         Route::get('/search_name', [App\Http\Controllers\Acl\HospatilController::class, 'search_name']);
         Route::get('/show', [App\Http\Controllers\Acl\HospatilController::class, 'show']);
     });
+    Route::prefix('/vendor')->group(function () {
+        Route::get('/show', [App\Http\Controllers\Acl\VendorController::class, 'show']);
+    });
 });
