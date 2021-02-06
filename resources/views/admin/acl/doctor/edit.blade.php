@@ -3,19 +3,7 @@
     {{ trans('lang.Edit_Information') }}
 @endsection
 @section('head_style')
-    <link href="{{url('public/css/admin/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('public/css/admin/multi-select.css')}}">
-    <style>
-        .ms-container {
-            width: 75%;
-        }
-        li.ms-elem-selectable, .ms-selected {
-            padding: 5px !important;
-        }
-        .ms-list {
-            height: 150px !important;
-        }
-    </style>
+    <link rel="stylesheet" href="{{url('public/AdminLTE/bower_components/select2/dist/css/select2.min.css')}}">
 @endsection
 @section('content')
     <section class="content-header">
@@ -105,7 +93,7 @@
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('specialty_id') ? ' has-error' : "" }}">
                                 {{trans('lang.Specialty')}} :
-                                <select id="specialty_id" class="form-control select2" data-placeholder="{{trans('lang.Message_Specialty')}}" name="specialty_id">
+                                <select id="specialty_id" class="form-control" data-placeholder="{{trans('lang.Message_Specialty')}}" name="specialty_id">
                                     <option value="0" selected>{{trans('lang.Select')}}</option>
                                     @foreach($specialty as  $myspecialty)
                                         <option value="{{$myspecialty->id}}" @if($data['specialty_id'] == $myspecialty->id ) selected @endif> {{$myspecialty->title}}</option>
@@ -116,7 +104,7 @@
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('scientific_degree_id') ? ' has-error' : "" }}">
                                 {{trans('lang.Scientific_Degree')}} :
-                                <select id="scientific_degree" class="form-control select2" data-placeholder="{{trans('lang.Message_Scientific_Degree')}}" name="scientific_degree_id">
+                                <select id="scientific_degree" class="form-control" data-placeholder="{{trans('lang.Message_Scientific_Degree')}}" name="scientific_degree_id">
                                     <option value="0" selected>{{trans('lang.Select')}}</option>
                                     @foreach($scientific_degree as  $myscientific_degree)
                                         <option value="{{$myscientific_degree->id}}" @if($data['scientific_degree_id'] == $myscientific_degree->id ) selected @endif> {{$myscientific_degree->title}}</option>
@@ -127,7 +115,10 @@
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('sub_specialty') ? ' has-error' : "" }}">
                                 {{ trans('lang.Sub_Specialty') }} :
-                                <select id="sub_specialty_id" multiple='multiple' class="form-control" data-placeholder="{{trans('lang.Message_Sub_Specialty')}}"  name="sub_specialty[]">
+                                <select id="sub_specialty_id" multiple='multiple' class="form-control select2" data-placeholder="{{trans('lang.Select')}}"  name="sub_specialty[]">
+                                    @foreach($sub_specialty as  $mysub_specialty)
+                                        <option value="{{$mysub_specialty->id}}" @foreach($data['sub_specialty'] as  $mysub) @if($mysub_specialty->id == $mysub['id']) selected   @endif @endforeach  > {{$mysub_specialty->title}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -216,6 +207,7 @@
             ]
         });
     </script>
+    @yield('script_description_language')
     <script type="text/javascript">
         $('#specialty_id').change(function () {
             var SpecialtyID = $(this).val();
@@ -225,10 +217,9 @@
                     url: "{{url('admin/sub_specialty/get_list_sub_specialty_json').'/'}}" + SpecialtyID,
                     success: function (res) {
                         if (res) {
-                            console.log(res);
                             $("#sub_specialty_id").empty();
                             $.each(res, function (key, value) {
-                                $("#ms-sub_specialty_id").append('<option value="' + value['id'] + '">' + value['title']['{{language_Locale()}}'] + '</option>');
+                                $("#sub_specialty_id").append('<option value="' + value['id'] + '">' + value['title']['{{language_Locale()}}'] + '</option>');
 
                             });
                         } else {
@@ -244,10 +235,12 @@
             }
         });
     </script>
-    <script src="{{url('public/js/admin/jquery.multi-select.js')}}"></script>
-    <script type="text/javascript">
-        $('#sub_specialty_id').multiSelect();
+    <script src="{{url('public/AdminLTE/bower_components/select2/dist/js/select2.full.min.js')}}"></script>
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('#sub_specialty_id').select2()
+        })
     </script>
-    @yield('script_description_language')
     {!! JsValidator::formRequest('App\Http\Requests\Acl\Doctor\EditRequest','#edit') !!}
 @endsection

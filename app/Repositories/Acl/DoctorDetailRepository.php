@@ -39,7 +39,7 @@ class DoctorDetailRepository implements DoctorDetailInterface
     public function Get_One_Data_Translation($id)
     {
         $doctor = $this->doctor->find($id)->translations;
-        return $doctor ? array_merge($this->doctor->find($id)->toarray(), $doctor) : $this->doctor->find($id);
+        return $doctor ? array_merge($this->doctor->with('sub_specialty')->find($id)->toarray(), $doctor) : $this->doctor->with('sub_specialty')->find($id);
     }
 
     public function Create_Data(CreateRequest $request)
@@ -54,7 +54,7 @@ class DoctorDetailRepository implements DoctorDetailInterface
         $image_universityName = $request->image_university->getClientOriginalname() . '-' . time() . '-image_university.' . Request()->image_university->getClientOriginalExtension();
         Request()->image_university->move(public_path('images/user/doctor'), $image_universityName);
         $data['image_university'] = $image_universityName;
-        return $this->doctor->create(array_merge($request->all(), $data));
+        return $this->doctor->create(array_merge($request->all(), $data))->sub_specialty()->sync((array)$request->sub_specialty);
     }
 
     public function Update_Data(EditRequest $request, $id)

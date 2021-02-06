@@ -37,7 +37,7 @@ class EditRequest extends FormRequest
             'specialty_id' => 'required|exists:specialties,id',
             'scientific_degree_id' => 'required|exists:scientific_degrees,id',
             'date_license_end' => 'required|date',
-            'sub_specialty' => 'required|exists:sub_specialties,id',
+            'sub_specialty.*' => 'required|exists:sub_specialties,id',
         ];
     }
 
