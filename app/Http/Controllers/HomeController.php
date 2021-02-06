@@ -19,6 +19,10 @@ class HomeController extends Controller
         {
             return redirect('admin/hospatil/create')->with('message',trans('Message_Doctor_Hospatil'));
         }
+        elseif(Auth::User()->role_id == 6 && !Auth::User()->clinic)
+        {
+            return redirect('admin/clinic/create')->with('message',trans('Message_Doctor_Clinic'));
+        }
         $count_patient = User::where('role_id', 3)->count();
         $count_doctor = User::where('role_id', 4)->count();
         $count_clinic = Clinic::where('status', 1)->count();
