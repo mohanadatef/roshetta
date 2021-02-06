@@ -66,6 +66,38 @@
                     </div>
                 </div>
         @endif
+         @if(permission_show('vendor-index'))
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-blue">
+                        <div class="inner">
+                            <h3>{{$count_vendor}}</h3>
+
+                            <p>{{trans('lang.Vendor')}}</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-person"></i>
+                        </div>
+                        <a href="{{ url('/admin/vendor/index') }}" class="small-box-footer">{{trans('lang.Index')}} <i
+                                    class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            @endif
+            @if(permission_show('vendor-list-information'))
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-blue">
+                        <div class="inner">
+                            <h3>{{auth::user()->vendor->count_view}}</h3>
+
+                            <p>{{trans('lang.View')}}</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-person"></i>
+                        </div>
+                    </div>
+                </div>
+        @endif
         <!-- ./col -->
         </div>
     {{--<div class="row">
