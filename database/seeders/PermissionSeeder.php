@@ -639,6 +639,47 @@ class PermissionSeeder extends Seeder
                 'title' => 'clinic-show-request',
                 'display_title' =>['en' => 'clinic show request', 'ar' => 'مشاهده طلب عياده'] ,
             ],
+            //hospatil
+            [
+                'title' => 'hospatil-list',
+                'display_title' => ['en' => 'hospatil list', 'ar' => 'قائمه اذنات مستشفى']
+            ],
+            [
+                'title' => 'hospatil-index',
+                'display_title' => ['en' => 'index hospatil', 'ar' => 'قائمه مستشفى'],
+            ],
+            [
+                'title' => 'hospatil-index-request',
+                'display_title' => ['en' => 'index hospatil request', 'ar' => 'قائمه مستشفى فى طلب'],
+            ],
+            [
+                'title' => 'hospatil-status',
+                'display_title' => ['en' => 'hospatil status', 'ar' => 'تغير حاله مستشفى'],
+            ],
+            [
+                'title' => 'hospatil-many-status',
+                'display_title' => ['en' =>'hospatil many status', 'ar' => 'تغير حاله مستشفى'],
+            ],
+            [
+                'title' => 'hospatil-status-request',
+                'display_title' => ['en' => 'hospatil status request', 'ar' => 'تغير حاله مستشفى فى الطلب'],
+            ],
+            [
+                'title' => 'hospatil-list-information',
+                'display_title' => ['en' => 'hospatil list information', 'ar' => 'قائمه بيانات مستشفى']
+            ],
+            [
+                'title' => 'hospatil-create',
+                'display_title' =>['en' => 'create hospatil', 'ar' => 'اضافه مستشفى'] ,
+            ],
+            [
+                'title' => 'hospatil-edit',
+                'display_title' =>['en' => 'edit hospatil', 'ar' => 'تعديل مستشفى'] ,
+            ],
+            [
+                'title' => 'hospatil-show-request',
+                'display_title' =>['en' => 'hospatil show request', 'ar' => 'مشاهده طلب مستشفى'] ,
+            ],
         ];
         foreach ($permissions as $key => $value) {
             Permission::create($value);
