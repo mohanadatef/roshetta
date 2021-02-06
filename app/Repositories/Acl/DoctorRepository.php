@@ -72,10 +72,5 @@ class DoctorRepository implements DoctorInterface
                 ->select('id')->get()->toarray());
         }
         return $this->doctor->wherein('id', $doctor)->paginate(25);
-        // $users = DB::table('users')
-        //         ->whereJsonContains('options->languages', ['en', 'de'])
-        //         ->get();
     }
-
-
 }

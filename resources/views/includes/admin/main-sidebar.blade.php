@@ -1,6 +1,21 @@
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="{{ asset('public/images/user').(auth::user()->image ? '/'.auth::user()->image : '/profile_user.jpg') }}" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>{{auth::user()->title}}</p>
+                @if(auth::user()->doctor)
+                    @if(auth::user()->doctor->status_request == 1)
+                            <i class="fa fa-circle text-success"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</i>
+                    @elseif(auth::user()->doctor->status_request == 0)
+                            <i class="fa fa-circle text-danger"> {{trans('lang.Profile') ." : ". trans('lang.An_active')}}</i>
+                    @endif
+                @endif
+            </div>
+        </div>
         <!-- Left side column. contains the logo and sidebar -->
         <ul class="sidebar-menu" data-widget="tree">
             @if(permission_show('core-data-list'))
@@ -457,6 +472,11 @@
                                                         class="fa fa-group"></i><span>{{ trans('lang.Create') }}</span></a>
                                         </li>
                                     @endif
+                                        @if(permission_show('user-edit'))
+                                            <li><a href="{{ url('/admin/user/edit/'. auth::user()->id) }}"><i
+                                                            class="fa fa-group"></i><span>{{ trans('lang.Profile') }}</span></a>
+                                            </li>
+                                        @endif
                                 </ul>
                             </li>
                         @endif

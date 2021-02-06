@@ -79,7 +79,9 @@ class UserRepository implements UserInterface
 
     public function Update_Status_One_Data($id)
     {
-      $this->Get_One_Data($id)->update(['status'] == 1 ? ['status'] = '0' : ['status'] = '1');
+        $user =$this->Get_One_Data($id);
+        $user->status == 1 ? $user->status = '0' : $user->status = '1';
+        $user->update();
     }
 
     public function Get_Many_Data(Request $request)
@@ -90,7 +92,8 @@ class UserRepository implements UserInterface
     public function Update_Status_Data(StatusEditRequest $request)
     {
         foreach ($this->Get_Many_Data($request) as $user) {
-            $user->update(['status'] == 1 ? ['status'] = '0' : ['status'] = '1');
+            $user->status == 1 ? $user->status = '0' : $user->status = '1';
+            $user->update();
         }
     }
 

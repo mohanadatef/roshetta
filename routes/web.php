@@ -26,12 +26,11 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
         Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->middleware('permission:dashboard-show');
         Route::get('/error/403', [App\Http\Controllers\HomeController::class, 'error_403']);
         Route::prefix('/language')->middleware('permission:language-list')->group(function () {
-            Route::resources(['' => App\Http\Controllers\Core_Data\LanguageController::class]);
-            // Route::get('/index', [App\Http\Controllers\Core_Data\LanguageController::class, 'index'])->middleware('permission:language-index');
-            // Route::get('/create', [App\Http\Controllers\Core_Data\LanguageController::class, 'create'])->middleware('permission:language-create');
-            // Route::Post('/store', [App\Http\Controllers\Core_Data\LanguageController::class, 'store'])->middleware('permission:language-create');
-            // Route::get('/edit/{id}', [App\Http\Controllers\Core_Data\LanguageController::class, 'edit'])->middleware('permission:language-edit');
-            // Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\LanguageController::class, 'update'])->middleware('permission:language-edit');
+             Route::get('/index', [App\Http\Controllers\Core_Data\LanguageController::class, 'index'])->middleware('permission:language-index');
+             Route::get('/create', [App\Http\Controllers\Core_Data\LanguageController::class, 'create'])->middleware('permission:language-create');
+             Route::Post('/store', [App\Http\Controllers\Core_Data\LanguageController::class, 'store'])->middleware('permission:language-create');
+             Route::get('/edit/{id}', [App\Http\Controllers\Core_Data\LanguageController::class, 'edit'])->middleware('permission:language-edit');
+            Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\LanguageController::class, 'update'])->middleware('permission:language-edit');
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\LanguageController::class, 'change_status'])->middleware('permission:language-status');
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\LanguageController::class, 'change_many_status'])->middleware('permission:language-many-status');
         });
@@ -214,12 +213,15 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
             Route::get('/change_status/{id}', [App\Http\Controllers\Acl\PatientController::class, 'change_status'])->middleware('permission:patient-status');
             Route::get('/change_many_status', [App\Http\Controllers\Acl\PatientController::class, 'change_many_status'])->middleware('permission:patient-many-status');
         });
-        Route::prefix('/doctor')->middleware('permission:doctor-list')->group(function () {
+        Route::prefix('/doctor')->group(function () {
+            Route::middleware('permission:doctor-list')->group(function () {
             Route::get('/index', [App\Http\Controllers\Acl\DoctorController::class, 'index'])->middleware('permission:doctor-index');
             Route::get('/index_request', [App\Http\Controllers\Acl\DoctorController::class, 'index_request'])->middleware('permission:doctor-index-request');
+            Route::get('/show_request/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'show_request'])->middleware('permission:doctor-show-request');
             Route::get('/change_status/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'change_status'])->middleware('permission:doctor-status');
             Route::get('/change_many_status', [App\Http\Controllers\Acl\DoctorController::class, 'change_many_status'])->middleware('permission:doctor-many-stauts');
             Route::get('/change_status_request/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'change_status_request'])->middleware('permission:doctor-status-request');
+            });
             Route::middleware('permission:doctor-list-information')->group(function () {
                 Route::get('/create', [App\Http\Controllers\Acl\DoctorController::class, 'create'])->middleware('permission:doctor-create');
                 Route::Post('/store', [App\Http\Controllers\Acl\DoctorController::class, 'store'])->middleware('permission:doctor-create');

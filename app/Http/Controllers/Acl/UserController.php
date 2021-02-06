@@ -50,6 +50,10 @@ class UserController extends Controller
     public function update(EditRequest $request, $id)
     {
         $this->userRepository->Update_Data($request, $id);
+        if(auth::user()->role_id == 4)
+        {
+            return redirect('admin')->with('message', trans('lang.Message_Edit'));
+        }
         return redirect('/admin/user/index')->with('message', trans('lang.Message_Edit'));
     }
 

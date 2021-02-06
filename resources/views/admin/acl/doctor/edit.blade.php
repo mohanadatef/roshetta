@@ -58,7 +58,7 @@
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('status_home') ? ' has-error' : "" }}">
                                 {{trans('lang.Status_Home')}} :
-                                <select id="status_home" class="form-control select2"
+                                <select id="status_home" class="form-control"
                                         data-placeholder="{{trans('lang.Message_Gender')}}" name="status_home">
                                     <option value="1" @if($data['status_home'] == 1 ) selected @endif> {{trans('lang.Active')}}</option>
                                     <option value="0" @if($data['status_home'] == 1 ) selected @endif> {{trans('lang.An_active')}}</option>
@@ -68,7 +68,7 @@
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('status_mobile') ? ' has-error' : "" }}">
                                 {{trans('lang.Status_Mobile')}} :
-                                <select id="status_mobile" class="form-control select2"
+                                <select id="status_mobile" class="form-control"
                                         data-placeholder="{{trans('lang.Message_Gender')}}" name="status_mobile">
                                     <option value="1" @if($data['status_mobile'] == 1 ) selected @endif> {{trans('lang.Active')}}</option>
                                     <option value="0" @if($data['status_mobile'] == 1 ) selected @endif> {{trans('lang.An_active')}}</option>

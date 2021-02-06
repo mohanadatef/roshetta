@@ -39,7 +39,7 @@ class DoctorDetailRepository implements DoctorDetailInterface
     public function Get_One_Data_Translation($id)
     {
         $doctor = $this->doctor->find($id)->translations;
-        return $doctor ? array_merge($this->doctor->with('sub_specialty')->find($id)->toarray(), $doctor) : $this->doctor->with('sub_specialty')->find($id);
+        return $doctor ? array_merge($this->doctor->with('sub_specialty','specialty','scientific_degree')->find($id)->toarray(), $doctor) : $this->doctor->with('sub_specialty','specialty','scientific_degree')->find($id);
     }
 
     public function Create_Data(CreateRequest $request)

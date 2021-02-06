@@ -594,6 +594,10 @@ class PermissionSeeder extends Seeder
                 'title' => 'doctor-edit',
                 'display_title' =>['en' => 'edit doctor', 'ar' => 'تعديل دكتور'] ,
             ],
+            [
+                'title' => 'doctor-show-request',
+                'display_title' =>['en' => 'doctor show request', 'ar' => 'مشاهده طلب دكتور'] ,
+            ],
         ];
         foreach ($permissions as $key => $value) {
             Permission::create($value);

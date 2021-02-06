@@ -136,4 +136,7 @@ return[
     'Message_Year_Experience'=>'Plase Enter Your Year Experience',
     'Image_License'=>'Plase Enter Your Image License',
     'Image_University'=>'Plase Enter Your Image University',
+    'Back'=>'Back',
+    'View'=>'Count View',
+    'Show'=>'Show',
 ];

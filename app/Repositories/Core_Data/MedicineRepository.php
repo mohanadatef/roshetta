@@ -9,7 +9,6 @@ use App\Http\Requests\Core_Data\Medicine\StatusEditRequest;
 use App\Interfaces\Core_Data\MedicineInterface;
 use App\Models\Core_Data\Medicine;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class MedicineRepository implements MedicineInterface
 {
@@ -86,7 +85,6 @@ class MedicineRepository implements MedicineInterface
                 ->orwhere('status', 1)->where('title->' . $lang->code, 'like', '%' . $title)
                 ->select('id')->get()->toarray());
         }
-
         return $this->medicine->wherein('id', $medicine)->paginate(25);
     }
 }

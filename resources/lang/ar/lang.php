@@ -135,4 +135,7 @@ return[
     'License'=>'الترخيص',
     'Date_License_End'=>'تاريخ انتهاء الترخيص',
     'Year_Experience'=>' سنين الخبره',
+    'Back'=>'عوده',
+    'Show'=>'عرض',
+    'View'=>'عدد مرات مشاهده',
 ];

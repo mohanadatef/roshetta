@@ -115,4 +115,10 @@ class DoctorController extends Controller
         $this->doctor_detailRepository->Update_Data($request, $id);
         return redirect('/admin')->with('message', trans('lang.Message_Edit'));
     }
+
+    public function show_request($id)
+    {
+        $data = $this->doctor_detailRepository->Get_One_Data_Translation($id);
+        return view('admin.acl.doctor.show',compact('data'));
+    }
 }

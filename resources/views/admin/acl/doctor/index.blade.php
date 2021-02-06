@@ -44,6 +44,9 @@
                                     @if(permission_show('doctor-status-request'))
                                         <th align="center">{{ trans('lang.Status_Request') }}</th>
                                     @endif
+                                    @if(permission_show('doctor-show-request'))
+                                        <th align="center">{{ trans('lang.Show') }}</th>
+                                    @endif
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -87,6 +90,12 @@
                                                 @endif
                                             </td>
                                         @endif
+                                        @if(permission_show('doctor-show-request'))
+                                            <td align="center">
+                                                <a href="{{ url('/admin/doctor/show_request/'.$data->doctor->id)}}"><i
+                                                            class="btn btn-primary ace-icon fa fa-check-country"> {{ trans('lang.Show') }}</i></a>
+                                            </td>
+                                        @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -102,6 +111,9 @@
                                     @endif
                                     @if(permission_show('doctor-status-request'))
                                         <th align="center">{{ trans('lang.Status_Request') }}</th>
+                                    @endif
+                                    @if(permission_show('doctor-show-request'))
+                                        <th align="center">{{ trans('lang.Show') }}</th>
                                     @endif
                                 </tr>
                                 </tfoot>

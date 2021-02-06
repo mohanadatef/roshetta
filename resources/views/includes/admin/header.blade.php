@@ -12,11 +12,10 @@
       {{--  <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span>
         </a>--}}
-
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <!-- Messages: style can be found in dropdown.less-->
-            {{--   <li class="dropdown messages-menu">
+             {{--  <li class="dropdown messages-menu">
                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                        <i class="fa fa-envelope-o"></i>
                        <span class="label label-success">4</span>
@@ -192,17 +191,14 @@
                   </ul>
               </li>--}}
             <!-- User Account: style can be found in dropdown.less -->
-                <li class="dropdown user user-menu">
-                    {!! Form::open(['url'=>'admin/language/setLang','method'=>'post']) !!}
-                    <div class="form-group">
-                        <select name='lang' onchange="this.form.submit();">
-                            @foreach(Language() as $lang)
-                                <option value='{{$lang->code}}'
-                                @if( \Illuminate\Support\Facades\App::getLocale() == $lang->code )selected @endif    >{{$lang->title}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    {!! Form::close() !!}
+           {{--     <li class="dropdown user user-menu" style="color: #fff;padding-top: 15px;padding-bottom: 15px;padding-left: 15px;">
+                @if(auth::user()->doctor)
+                        @if(auth::user()->doctor->status_request == 1)
+                           <span class="px-4 bg-danger">{{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
+                        @elseif(auth::user()->doctor->status_request == 0)
+                        <span>  {{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
+                        @endif
+                    @endif
                 </li>
                 <li class="dropdown user user-menu">
                     <a href="{{ url('/admin/user/edit/'.Auth::user()->id)}}" >
@@ -222,6 +218,71 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
+                </li>--}}
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="{{ asset('public/images/user').(auth::user()->image ? '/'.auth::user()->image : '/profile_user.jpg') }}" class="user-image" alt="User Image">
+                        <span class="hidden-xs">{{auth::user()->title}}</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header">
+                            <img src="{{ asset('public/images/user').(auth::user()->image ? '/'.auth::user()->image : '/profile_user.jpg') }}" class="img-circle" alt="User Image">
+
+                            <p>
+                                {{auth::user()->title}}
+                                @if(auth::user()->role_id == 4)
+                                <small>{{auth::user()->doctor->title_doctor}}</small>
+                                    @elseif(auth::user()->role_id == 1 || auth::user()->role_id == 2)
+                                    <small>{{auth::user()->role->title}}</small>
+                                    @endif
+                            </p>
+                        </li>
+                        <!-- Menu Body -->
+                        <li class="user-body">
+                           <div class="row">
+                                   @if(auth::user()->doctor)
+                                       @if(auth::user()->doctor->status_request == 1)
+                                       <div class="col-xs-7 text-center">
+                                      <span style="color: green"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
+                                       </div>
+                                           @elseif(auth::user()->doctor->status_request == 0)
+                                       <div class="col-xs-7 text-center">
+                                           <span style="color: red">{{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
+                                       </div>
+                                       @endif
+
+                                   @endif
+                                   {{--<div class="col-xs-4 text-center">
+                                       <a href="#">Sales</a>
+                                   </div>
+                                   <div class="col-xs-4 text-center">
+                                       <a href="#">Sales</a>
+                                   </div>
+                                   <div class="col-xs-4 text-center">
+                                       <a href="#">Friends</a>
+                                   </div>--}}
+                            </div>
+                            <!-- /.row -->
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="{{ url('/admin/user/edit/'.Auth::user()->id)}}" class="btn btn-default btn-flat">{{trans('lang.Profile')}}</a>
+                            </div>
+                            <div class="pull-right">
+                                <a class="btn btn-default btn-flat" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ trans('lang.Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+
+                            </div>
+                        </li>
+                    </ul>
                 </li>
                 <!-- Control Sidebar Toggle Button -->
                 {{-- <li>
