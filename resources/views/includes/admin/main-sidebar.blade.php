@@ -453,7 +453,7 @@
                                 </ul>
                             </li>
                         @endif
-                        @if(permission_show('user-list'))
+                        @if(permission_show('user-list') &&( auth::user()->role_id == 1 || auth::user()->role_id == 2) )
                             <li class="treeview">
                                 <a href="#">
                                     <i class="fa fa-circle-o"></i> <span> {{ trans('lang.User') }}</span>
@@ -472,14 +472,16 @@
                                                         class="fa fa-group"></i><span>{{ trans('lang.Create') }}</span></a>
                                         </li>
                                     @endif
-                                        @if(permission_show('user-edit'))
-                                            <li><a href="{{ url('/admin/user/edit/'. auth::user()->id) }}"><i
-                                                            class="fa fa-group"></i><span>{{ trans('lang.Profile') }}</span></a>
-                                            </li>
-                                        @endif
                                 </ul>
                             </li>
                         @endif
+                            @if(permission_show('user-list'))
+                            @if(permission_show('user-edit'))
+                                <li><a href="{{ url('/admin/user/edit/'. auth::user()->id) }}"><i
+                                                class="fa fa-group"></i><span>{{ trans('lang.Profile') }}</span></a>
+                                </li>
+                            @endif
+                            @endif
                         @if(permission_show('patient-list'))
                             <li class="treeview">
                                 <a href="#">

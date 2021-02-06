@@ -40,11 +40,8 @@ class DoctorController extends Controller
 
     public function index_request()
     {
-        if (permission_show('doctor-index-request')) {
             $datas = $this->doctorRepository->Get_All_Data_Request();
             return view('admin.acl.doctor.index_request', compact('datas'));
-        }
-        return view('errors.403');
     }
 
     public function change_status($id)

@@ -26,8 +26,9 @@
             <div class="box-body">
                 <form id='create' action="{{url('admin/user/store')}}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
+                    <div class="row">
                     @foreach(language() as $lang)
-                        <div class="row">
+                            <div class="col-md-6">
                                 <div class="form-group{{ $errors->has('title['.$lang->code.']') ? ' has-error' : "" }}">
                                     {{ $lang->title .' '. trans('lang.Title') }} : <input type="text"
                                                                                                 value="{{Request::old('title['.$lang->code.']')}}"
@@ -37,6 +38,7 @@
                                 </div>
                         </div>
                     @endforeach
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('mobile') ? ' has-error' : "" }}">
