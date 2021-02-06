@@ -88,4 +88,8 @@ Route::group(['middleware' => 'api'], function () {
         Route::get('/search_name', [App\Http\Controllers\Acl\ClinicController::class, 'search_name']);
         Route::get('/show', [App\Http\Controllers\Acl\ClinicController::class, 'show']);
     });
+    Route::prefix('/hospatil')->group(function () {
+        Route::get('/search_name', [App\Http\Controllers\Acl\HospatilController::class, 'search_name']);
+        Route::get('/show', [App\Http\Controllers\Acl\HospatilController::class, 'show']);
+    });
 });
