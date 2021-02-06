@@ -229,6 +229,22 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
                 Route::patch('/update/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'update'])->middleware('permission:doctor-edit');
             });
         });
+        Route::prefix('/hospatil')->group(function () {
+            Route::middleware('permission:hospatil-list')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Acl\HospatilController::class, 'index'])->middleware('permission:hospatil-index');
+            Route::get('/index_request', [App\Http\Controllers\Acl\HospatilController::class, 'index_request'])->middleware('permission:hospatil-index-request');
+            Route::get('/show_request/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'show_request'])->middleware('permission:hospatil-show-request');
+            Route::get('/change_status/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'change_status'])->middleware('permission:hospatil-status');
+            Route::get('/change_many_status', [App\Http\Controllers\Acl\HospatilController::class, 'change_many_status'])->middleware('permission:hospatil-many-stauts');
+            Route::get('/change_status_request/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'change_status_request'])->middleware('permission:hospatil-status-request');
+            });
+            Route::middleware('permission:hospatil-list-information')->group(function () {
+                Route::get('/create', [App\Http\Controllers\Acl\HospatilController::class, 'create'])->middleware('permission:hospatil-create');
+                Route::Post('/store', [App\Http\Controllers\Acl\HospatilController::class, 'store'])->middleware('permission:hospatil-create');
+                Route::get('/edit/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'edit'])->middleware('permission:hospatil-edit');
+                Route::patch('/update/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'update'])->middleware('permission:hospatil-edit');
+            });
+        });
         Route::prefix('/clinic')->group(function () {
             Route::middleware('permission:doctor-list')->group(function () {
             Route::get('/index', [App\Http\Controllers\Acl\ClinicController::class, 'index'])->middleware('permission:clinic-index');
