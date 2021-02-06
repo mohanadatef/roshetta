@@ -20,7 +20,7 @@ class HomeController extends Controller
             return redirect('admin/hospatil/create')->with('message',trans('Message_Doctor_Hospatil'));
         }elseif(Auth::User()->role_id == 6 && !Auth::User()->clinic)
         {
-            return redirect('admin/clinic/create')->with('message',trans('Message_Doctor_Clinic'));
+            return redirect('admin/clinic/create')->with('message',trans('Message_Clinic_Create'));
         }elseif(Auth::User()->role_id == 7 && !Auth::User()->vendor)
         {
             return redirect('admin/vendor/create')->with('message',trans('Message_vendor_Create'));
