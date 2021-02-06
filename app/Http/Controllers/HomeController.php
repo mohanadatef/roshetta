@@ -19,7 +19,8 @@ class HomeController extends Controller
         }
         $count_patient = User::where('role_id', 3)->count();
         $count_doctor = User::where('role_id', 4)->count();
-        return view('admin.admin', compact('count_patient','count_doctor'));
+        $count_clinic = Clinic::where('status', 1)->count();
+        return view('admin.admin', compact('count_patient','count_doctor','count_clinic'));
     }
 
     public function error_403()
