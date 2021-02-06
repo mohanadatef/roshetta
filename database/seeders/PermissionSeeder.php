@@ -598,6 +598,47 @@ class PermissionSeeder extends Seeder
                 'title' => 'doctor-show-request',
                 'display_title' =>['en' => 'doctor show request', 'ar' => 'مشاهده طلب دكتور'] ,
             ],
+            //clinic
+            [
+                'title' => 'clinic-list',
+                'display_title' => ['en' => 'clinic list', 'ar' => 'قائمه اذنات عياده']
+            ],
+            [
+                'title' => 'clinic-index',
+                'display_title' => ['en' => 'index clinic', 'ar' => 'قائمه عياده'],
+            ],
+            [
+                'title' => 'clinic-index-request',
+                'display_title' => ['en' => 'index clinic request', 'ar' => 'قائمه عياده فى طلب'],
+            ],
+            [
+                'title' => 'clinic-status',
+                'display_title' => ['en' => 'clinic status', 'ar' => 'تغير حاله عياده'],
+            ],
+            [
+                'title' => 'clinic-many-status',
+                'display_title' => ['en' =>'clinic many status', 'ar' => 'تغير حاله عياده'],
+            ],
+            [
+                'title' => 'clinic-status-request',
+                'display_title' => ['en' => 'clinic status request', 'ar' => 'تغير حاله عياده فى الطلب'],
+            ],
+            [
+                'title' => 'clinic-list-information',
+                'display_title' => ['en' => 'clinic list information', 'ar' => 'قائمه بيانات عياده']
+            ],
+            [
+                'title' => 'clinic-create',
+                'display_title' =>['en' => 'create clinic', 'ar' => 'اضافه عياده'] ,
+            ],
+            [
+                'title' => 'clinic-edit',
+                'display_title' =>['en' => 'edit clinic', 'ar' => 'تعديل عياده'] ,
+            ],
+            [
+                'title' => 'clinic-show-request',
+                'display_title' =>['en' => 'clinic show request', 'ar' => 'مشاهده طلب عياده'] ,
+            ],
         ];
         foreach ($permissions as $key => $value) {
             Permission::create($value);
