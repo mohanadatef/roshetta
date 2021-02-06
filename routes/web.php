@@ -246,7 +246,7 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
             });
         });
         Route::prefix('/clinic')->group(function () {
-            Route::middleware('permission:doctor-list')->group(function () {
+            Route::middleware('permission:clinic-list')->group(function () {
             Route::get('/index', [App\Http\Controllers\Acl\ClinicController::class, 'index'])->middleware('permission:clinic-index');
             Route::get('/index_request', [App\Http\Controllers\Acl\ClinicController::class, 'index_request'])->middleware('permission:clinic-index-request');
             Route::get('/show_request/{id}', [App\Http\Controllers\Acl\ClinicController::class, 'show_request'])->middleware('permission:clinic-show-request');
