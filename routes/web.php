@@ -229,6 +229,22 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
                 Route::patch('/update/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'update'])->middleware('permission:doctor-edit');
             });
         });
+        Route::prefix('/clinic')->group(function () {
+            Route::middleware('permission:doctor-list')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Acl\ClinicController::class, 'index'])->middleware('permission:clinic-index');
+            Route::get('/index_request', [App\Http\Controllers\Acl\ClinicController::class, 'index_request'])->middleware('permission:clinic-index-request');
+            Route::get('/show_request/{id}', [App\Http\Controllers\Acl\ClinicController::class, 'show_request'])->middleware('permission:clinic-show-request');
+            Route::get('/change_status/{id}', [App\Http\Controllers\Acl\ClinicController::class, 'change_status'])->middleware('permission:clinic-status');
+            Route::get('/change_many_status', [App\Http\Controllers\Acl\ClinicController::class, 'change_many_status'])->middleware('permission:clinic-many-stauts');
+            Route::get('/change_status_request/{id}', [App\Http\Controllers\Acl\ClinicController::class, 'change_status_request'])->middleware('permission:clinic-status-request');
+            });
+            Route::middleware('permission:clinic-list-information')->group(function () {
+                Route::get('/create', [App\Http\Controllers\Acl\ClinicController::class, 'create'])->middleware('permission:clinic-create');
+                Route::Post('/store', [App\Http\Controllers\Acl\ClinicController::class, 'store'])->middleware('permission:clinic-create');
+                Route::get('/edit/{id}', [App\Http\Controllers\Acl\ClinicController::class, 'edit'])->middleware('permission:clinic-edit');
+                Route::patch('/update/{id}', [App\Http\Controllers\Acl\ClinicController::class, 'update'])->middleware('permission:clinic-edit');
+            });
+        });
         Route::prefix('/call_us')->middleware('permission:call-us-index')->group(function () {
             Route::get('/read', [App\Http\Controllers\Setting\CallUsController::class, 'read'])->middleware('permission:call-us-read');
             Route::get('/unread', [App\Http\Controllers\Setting\CallUsController::class, 'unread'])->middleware('permission:call-us-unread');
