@@ -680,6 +680,47 @@ class PermissionSeeder extends Seeder
                 'title' => 'hospatil-show-request',
                 'display_title' =>['en' => 'hospatil show request', 'ar' => 'مشاهده طلب مستشفى'] ,
             ],
+            //vendor
+            [
+                'title' => 'vendor-list',
+                'display_title' => ['en' => 'vendor list', 'ar' => 'قائمه اذنات فيندر']
+            ],
+            [
+                'title' => 'vendor-index',
+                'display_title' => ['en' => 'index vendor', 'ar' => 'قائمه فيندر'],
+            ],
+            [
+                'title' => 'vendor-index-request',
+                'display_title' => ['en' => 'index vendor request', 'ar' => 'قائمه فيندر فى طلب'],
+            ],
+            [
+                'title' => 'vendor-status',
+                'display_title' => ['en' => 'vendor status', 'ar' => 'تغير حاله فيندر'],
+            ],
+            [
+                'title' => 'vendor-many-status',
+                'display_title' => ['en' =>'vendor many status', 'ar' => 'تغير حاله فيندر'],
+            ],
+            [
+                'title' => 'vendor-status-request',
+                'display_title' => ['en' => 'vendor status request', 'ar' => 'تغير حاله فيندر فى الطلب'],
+            ],
+            [
+                'title' => 'vendor-list-information',
+                'display_title' => ['en' => 'vendor list information', 'ar' => 'قائمه بيانات فيندر']
+            ],
+            [
+                'title' => 'vendor-create',
+                'display_title' =>['en' => 'create vendor', 'ar' => 'اضافه فيندر'] ,
+            ],
+            [
+                'title' => 'vendor-edit',
+                'display_title' =>['en' => 'edit vendor', 'ar' => 'تعديل فيندر'] ,
+            ],
+            [
+                'title' => 'vendor-show-request',
+                'display_title' =>['en' => 'vendor show request', 'ar' => 'مشاهده طلب فيندر'] ,
+            ],
         ];
         foreach ($permissions as $key => $value) {
             Permission::create($value);
