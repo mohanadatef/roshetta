@@ -18,16 +18,19 @@ class HomeController extends Controller
         }elseif(Auth::User()->role_id == 5 && !Auth::User()->hospatil)
         {
             return redirect('admin/hospatil/create')->with('message',trans('Message_Doctor_Hospatil'));
-        }
-        elseif(Auth::User()->role_id == 6 && !Auth::User()->clinic)
+        }elseif(Auth::User()->role_id == 6 && !Auth::User()->clinic)
         {
             return redirect('admin/clinic/create')->with('message',trans('Message_Doctor_Clinic'));
+        }elseif(Auth::User()->role_id == 7 && !Auth::User()->vendor)
+        {
+            return redirect('admin/vendor/create')->with('message',trans('Message_vendor_Create'));
         }
         $count_patient = User::where('role_id', 3)->count();
+        $count_vendor = User::where('role_id', 7)->count();
         $count_doctor = User::where('role_id', 4)->count();
         $count_clinic = Clinic::where('status', 1)->count();
         $count_hospatil = Hospatil::where('status', 1)->count();
-        return view('admin.admin', compact('count_patient','count_doctor','count_clinic','count_hospatil'));
+        return view('admin.admin', compact('count_patient','count_doctor','count_clinic','count_hospatil','count_vendor'));
     }
 
     public function error_403()
