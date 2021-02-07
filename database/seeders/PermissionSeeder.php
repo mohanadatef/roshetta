@@ -639,46 +639,46 @@ class PermissionSeeder extends Seeder
                 'title' => 'clinic-show-request',
                 'display_title' =>['en' => 'clinic show request', 'ar' => 'مشاهده طلب عياده'] ,
             ],
-            //hospatil
+            //hospital
             [
-                'title' => 'hospatil-list',
-                'display_title' => ['en' => 'hospatil list', 'ar' => 'قائمه اذنات مستشفى']
+                'title' => 'hospital-list',
+                'display_title' => ['en' => 'hospital list', 'ar' => 'قائمه اذنات مستشفى']
             ],
             [
-                'title' => 'hospatil-index',
-                'display_title' => ['en' => 'index hospatil', 'ar' => 'قائمه مستشفى'],
+                'title' => 'hospital-index',
+                'display_title' => ['en' => 'index hospital', 'ar' => 'قائمه مستشفى'],
             ],
             [
-                'title' => 'hospatil-index-request',
-                'display_title' => ['en' => 'index hospatil request', 'ar' => 'قائمه مستشفى فى طلب'],
+                'title' => 'hospital-index-request',
+                'display_title' => ['en' => 'index hospital request', 'ar' => 'قائمه مستشفى فى طلب'],
             ],
             [
-                'title' => 'hospatil-status',
-                'display_title' => ['en' => 'hospatil status', 'ar' => 'تغير حاله مستشفى'],
+                'title' => 'hospital-status',
+                'display_title' => ['en' => 'hospital status', 'ar' => 'تغير حاله مستشفى'],
             ],
             [
-                'title' => 'hospatil-many-status',
-                'display_title' => ['en' =>'hospatil many status', 'ar' => 'تغير حاله مستشفى'],
+                'title' => 'hospital-many-status',
+                'display_title' => ['en' =>'hospital many status', 'ar' => 'تغير حاله مستشفى'],
             ],
             [
-                'title' => 'hospatil-status-request',
-                'display_title' => ['en' => 'hospatil status request', 'ar' => 'تغير حاله مستشفى فى الطلب'],
+                'title' => 'hospital-status-request',
+                'display_title' => ['en' => 'hospital status request', 'ar' => 'تغير حاله مستشفى فى الطلب'],
             ],
             [
-                'title' => 'hospatil-list-information',
-                'display_title' => ['en' => 'hospatil list information', 'ar' => 'قائمه بيانات مستشفى']
+                'title' => 'hospital-list-information',
+                'display_title' => ['en' => 'hospital list information', 'ar' => 'قائمه بيانات مستشفى']
             ],
             [
-                'title' => 'hospatil-create',
-                'display_title' =>['en' => 'create hospatil', 'ar' => 'اضافه مستشفى'] ,
+                'title' => 'hospital-create',
+                'display_title' =>['en' => 'create hospital', 'ar' => 'اضافه مستشفى'] ,
             ],
             [
-                'title' => 'hospatil-edit',
-                'display_title' =>['en' => 'edit hospatil', 'ar' => 'تعديل مستشفى'] ,
+                'title' => 'hospital-edit',
+                'display_title' =>['en' => 'edit hospital', 'ar' => 'تعديل مستشفى'] ,
             ],
             [
-                'title' => 'hospatil-show-request',
-                'display_title' =>['en' => 'hospatil show request', 'ar' => 'مشاهده طلب مستشفى'] ,
+                'title' => 'hospital-show-request',
+                'display_title' =>['en' => 'hospital show request', 'ar' => 'مشاهده طلب مستشفى'] ,
             ],
             //vendor
             [

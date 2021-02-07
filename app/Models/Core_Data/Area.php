@@ -19,6 +19,10 @@ class Area extends Model
     {
         return $this->belongsTo('App\Models\Core_Data\City','city_id');
     }
+    public function hospital()
+    {
+        return $this->hasMany('App\Models\Acl\Hospital');
+    }
     public $translatable = ['title'];
     protected $table = 'areas';
     public $timestamps = true;

@@ -521,6 +521,28 @@
                                 </ul>
                             </li>
                         @endif
+                            @if(permission_show('hospital-list'))
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Doctor') }}</span>
+                                        <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        @if(permission_show('hospital-index'))
+                                            <li><a href="{{ url('/admin/hospital/index') }}"><i
+                                                            class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
+                                            </li>
+                                        @endif
+                                        @if(permission_show('hospital-index-request'))
+                                            <li><a href="{{ url('/admin/hospital/index_request') }}"><i
+                                                            class="fa fa-group"></i><span>{{ trans('lang.Index_Request') }}</span></a>
+                                            </li>
+                                        @endif
+                                    </ul>
+                                </li>
+                            @endif
                     </ul>
                 </li>
             @endif
@@ -546,6 +568,30 @@
                     </ul>
                 </li>
             @endif
+                @if(permission_show('hospital-list-information'))
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-group"></i> <span> {{ trans('lang.Core_Data') }}</span><span
+                                    class="pull-right-container"><i
+                                        class="fa fa-angle-right pull-left"></i></span></a>
+                        <ul class="treeview-menu">
+                            @if(!Auth::user()->hospital)
+                                @if(permission_show('hospital-create'))
+                                    <li><a href="{{ url('/admin/hospital/create') }}"><i
+                                                    class="fa fa-group"></i><span>{{ trans('lang.Create_Information') }}</span></a>
+                                    </li>
+                                @endif
+                            @else
+                                @if(permission_show('hospital-edit'))
+                                    @foreach(Auth::user()->hospital as $hospital)
+                                    <li><a href="{{ url('/admin/hospital/edit/'. $hospital->id) }}"><i
+                                                    class="fa fa-group"></i><span>{{ trans('lang.Edit_Information') }}</span></a>
+                                    </li>
+                                    @endforeach
+                                @endif
+                            @endif
+                        </ul>
+                    </li>
+                @endif
         </ul>
     </section>
     <!-- /.sidebar -->

@@ -71,7 +71,8 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\CountryController::class, 'change_status'])->middleware('permission:country-status');
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\CountryController::class, 'change_many_status'])->middleware('permission:country-many-status');
         });
-        Route::prefix('/city')->middleware('permission:city-list')->group(function () {
+        Route::prefix('/city')->group(function () {
+        Route::middleware('permission:city-list')->group(function () {
             Route::get('/index', [App\Http\Controllers\Core_Data\CityController::class, 'index'])->middleware('permission:city-index');
             Route::get('/create', [App\Http\Controllers\Core_Data\CityController::class, 'create'])->middleware('permission:city-create');
             Route::Post('/store', [App\Http\Controllers\Core_Data\CityController::class, 'store'])->middleware('permission:city-create');
@@ -79,9 +80,11 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
             Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\CityController::class, 'update'])->middleware('permission:city-edit');
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\CityController::class, 'change_status'])->middleware('permission:city-status');
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\CityController::class, 'change_many_status'])->middleware('permission:city-many-status');
+        });
             Route::get('/get_list_city_json/{country}', [App\Http\Controllers\Core_Data\CityController::class, 'Get_List_City_Json']);
         });
-        Route::prefix('/area')->middleware('permission:area-list')->group(function () {
+        Route::prefix('/area')->group(function () {
+        Route::middleware('permission:area-list')->group(function () {
             Route::get('/index', [App\Http\Controllers\Core_Data\AreaController::class, 'index'])->middleware('permission:area-index');
             Route::get('/create', [App\Http\Controllers\Core_Data\AreaController::class, 'create'])->middleware('permission:area-create');
             Route::Post('/store', [App\Http\Controllers\Core_Data\AreaController::class, 'store'])->middleware('permission:area-create');
@@ -89,6 +92,8 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
             Route::patch('/update/{id}', [App\Http\Controllers\Core_Data\AreaController::class, 'update'])->middleware('permission:area-edit');
             Route::get('/change_status/{id}', [App\Http\Controllers\Core_Data\AreaController::class, 'change_status'])->middleware('permission:area-status');
             Route::get('/change_many_status', [App\Http\Controllers\Core_Data\AreaController::class, 'change_many_status'])->middleware('permission:city-many-status');
+        });
+            Route::get('/get_list_Area_json/{country}/{city}', [App\Http\Controllers\Core_Data\AreaController::class, 'Get_List_Area_Json']);
         });
         Route::prefix('/specialty')->middleware('permission:specialty-list')->group(function () {
             Route::get('/index', [App\Http\Controllers\Core_Data\SpecialtyController::class, 'index'])->middleware('permission:specialty-index');
@@ -229,20 +234,20 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
                 Route::patch('/update/{id}', [App\Http\Controllers\Acl\DoctorController::class, 'update'])->middleware('permission:doctor-edit');
             });
         });
-        Route::prefix('/hospatil')->group(function () {
-            Route::middleware('permission:hospatil-list')->group(function () {
-            Route::get('/index', [App\Http\Controllers\Acl\HospatilController::class, 'index'])->middleware('permission:hospatil-index');
-            Route::get('/index_request', [App\Http\Controllers\Acl\HospatilController::class, 'index_request'])->middleware('permission:hospatil-index-request');
-            Route::get('/show_request/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'show_request'])->middleware('permission:hospatil-show-request');
-            Route::get('/change_status/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'change_status'])->middleware('permission:hospatil-status');
-            Route::get('/change_many_status', [App\Http\Controllers\Acl\HospatilController::class, 'change_many_status'])->middleware('permission:hospatil-many-stauts');
-            Route::get('/change_status_request/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'change_status_request'])->middleware('permission:hospatil-status-request');
+        Route::prefix('/hospital')->group(function () {
+            Route::middleware('permission:hospital-list')->group(function () {
+            Route::get('/index', [App\Http\Controllers\Acl\HospitalController::class, 'index'])->middleware('permission:hospital-index');
+            Route::get('/index_request', [App\Http\Controllers\Acl\HospitalController::class, 'index_request'])->middleware('permission:hospital-index-request');
+            Route::get('/show_request/{id}', [App\Http\Controllers\Acl\HospitalController::class, 'show_request'])->middleware('permission:hospital-show-request');
+            Route::get('/change_status/{id}', [App\Http\Controllers\Acl\HospitalController::class, 'change_status'])->middleware('permission:hospital-status');
+            Route::get('/change_many_status', [App\Http\Controllers\Acl\HospitalController::class, 'change_many_status'])->middleware('permission:hospital-many-stauts');
+            Route::get('/change_status_request/{id}', [App\Http\Controllers\Acl\HospitalController::class, 'change_status_request'])->middleware('permission:hospital-status-request');
             });
-            Route::middleware('permission:hospatil-list-information')->group(function () {
-                Route::get('/create', [App\Http\Controllers\Acl\HospatilController::class, 'create'])->middleware('permission:hospatil-create');
-                Route::Post('/store', [App\Http\Controllers\Acl\HospatilController::class, 'store'])->middleware('permission:hospatil-create');
-                Route::get('/edit/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'edit'])->middleware('permission:hospatil-edit');
-                Route::patch('/update/{id}', [App\Http\Controllers\Acl\HospatilController::class, 'update'])->middleware('permission:hospatil-edit');
+            Route::middleware('permission:hospital-list-information')->group(function () {
+                Route::get('/create', [App\Http\Controllers\Acl\HospitalController::class, 'create'])->middleware('permission:hospital-create');
+                Route::Post('/store', [App\Http\Controllers\Acl\HospitalController::class, 'store'])->middleware('permission:hospital-create');
+                Route::get('/edit/{id}', [App\Http\Controllers\Acl\HospitalController::class, 'edit'])->middleware('permission:hospital-edit');
+                Route::patch('/update/{id}', [App\Http\Controllers\Acl\HospitalController::class, 'update'])->middleware('permission:hospital-edit');
             });
         });
         Route::prefix('/clinic')->group(function () {

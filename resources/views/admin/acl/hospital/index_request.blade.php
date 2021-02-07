@@ -44,7 +44,7 @@
                                     @if(permission_show('hospatil-status-request'))
                                         <th align="center">{{ trans('lang.Status_Request') }}</th>
                                     @endif
-                                    @if(permission_show('hospatil-show-request'))
+                                    @if(permission_show('hospital'))
                                         <th align="center">{{ trans('lang.Show') }}</th>
                                     @endif
                                 </tr>
@@ -95,7 +95,7 @@
                                                 <a href="{{ url('/admin/hospatil/show_request/'.$data->hospatil->id)}}"><i
                                                             class="btn btn-primary ace-icon fa fa-check-country"> {{ trans('lang.Show') }}</i></a>
                                             </td>
-                                        @endif
+                                            @endif
                                     </tr>
                                 @endforeach
                                 </tbody>

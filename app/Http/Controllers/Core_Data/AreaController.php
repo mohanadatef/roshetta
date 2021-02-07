@@ -75,4 +75,10 @@ class AreaController extends Controller
         change_locale_language($request->language_id);
         return response(['status' => 1, 'data' => ['area'=> AreaResource::collection($this->areaRepository->Get_List_Data_For_City($request->country_id,$request->city_id))], 'message' => trans('lang.Index')], 206);
     }
+
+    public function Get_List_Area_Json($country,$city)
+    {
+        return $this->areaRepository->Get_List_Data_For_City($country,$city);
+    }
+
 }

@@ -19,6 +19,10 @@ class Country extends Model
     {
         return $this->hasMany('App\Models\Core_Data\Area');
     }
+    public function hospital()
+    {
+        return $this->hasMany('App\Models\Acl\Hospital');
+    }
     public $translatable = ['title'];
     protected $table = 'countries';
     public $timestamps = true;

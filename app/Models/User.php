@@ -30,6 +30,10 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasMany('App\Models\Acl\Forgot_Password');
     }
+    public function hospital()
+    {
+        return $this->belongsToMany('App\Models\Acl\Hospital', 'hospital_users', 'hospital_id','user_id')->withTimestamps('created_at','updated_at');
+    }
     public function getJWTIdentifier()
     {
         return $this->getKey();
