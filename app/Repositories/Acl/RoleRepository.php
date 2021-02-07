@@ -29,12 +29,12 @@ class RoleRepository implements RoleInterface
 
     public function Create_Data(CreateRequest $request)
     {
-        $this->role->create($request->all());
+        $this->role->create($request->all())->permission()->sync((array)$request->permission);
     }
 
     public function Get_One_Data_Translation($id)
     {
-        $role = $this->role->find($id)->translations;
+        $role = $this->role->findorfail($id)->translations;
         return $role ? array_merge($this->role->find($id)->toarray(), $role) : $this->role->find($id);
     }
 
@@ -52,7 +52,7 @@ class RoleRepository implements RoleInterface
 
     public function Get_List_Data()
     {
-        return Auth::user()->role_id == 1 ? $this->role->select('title', 'id')->get() : $this->role->select('title', 'id')->whereNotIn('id', [1, 3])->get();
+        return Auth::user()->role_id == 1 ? $this->role->select('title', 'id')->get() : $this->role->select('title', 'id')->whereNotIn('id', [1,3])->get();
     }
 
     public function Get_Permission_For_Role($id)
@@ -62,6 +62,6 @@ class RoleRepository implements RoleInterface
 
     public function Get_List_Register()
     {
-        return  $this->role->select('title', 'id')->whereNotIn('id', [1,2, 3])->get();
+        return  $this->role->select('title', 'id')->whereIn('id', [4,5,6,7])->get();
     }
 }
