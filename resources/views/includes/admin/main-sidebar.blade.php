@@ -592,6 +592,25 @@
                                                     class="fa fa-group"></i><span>{{ trans('lang.Edit_Information') }}</span></a>
                                     </li>
                                 @endif
+                                    @if(permission_show('hospital-branch-list'))
+                                        <li class="treeview">
+                                            <a href="#"><i class="fa fa-group"></i> <span> {{ trans('lang.Hospital_Branch') }}</span><span
+                                                        class="pull-right-container"><i
+                                                            class="fa fa-angle-right pull-left"></i></span></a>
+                                            <ul class="treeview-menu">
+                                                @if(permission_show('hospital-branch-index'))
+                                                    <li><a href="{{ url('/admin/hospital/branch/index') }}"><i
+                                                                    class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
+                                                    </li>
+                                                @endif
+                                                    @if(permission_show('hospital-branch-create'))
+                                                        <li><a href="{{ url('/admin/hospital/branch/create') }}"><i
+                                                                        class="fa fa-group"></i><span>{{ trans('lang.Create') }}</span></a>
+                                                        </li>
+                                                    @endif
+                                            </ul>
+                                        </li>
+                                    @endif
                             @endif
                         </ul>
                     </li>

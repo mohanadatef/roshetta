@@ -249,6 +249,13 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
                 Route::get('/edit/{id}', [App\Http\Controllers\Acl\HospitalController::class, 'edit'])->middleware('permission:hospital-edit');
                 Route::patch('/update/{id}', [App\Http\Controllers\Acl\HospitalController::class, 'update'])->middleware('permission:hospital-edit');
             });
+            Route::prefix('/branch')->middleware('permission:hospital-branch-list')->group(function () {
+                Route::get('/index', [App\Http\Controllers\Acl\HospitalBranchController::class, 'index'])->middleware('permission:hospital-branch-index');
+                Route::get('/create', [App\Http\Controllers\Acl\HospitalBranchController::class, 'create'])->middleware('permission:hospital-branch-create');
+                Route::Post('/store', [App\Http\Controllers\Acl\HospitalBranchController::class, 'store'])->middleware('permission:hospital-branch-create');
+                Route::get('/edit/{id}', [App\Http\Controllers\Acl\HospitalBranchController::class, 'edit'])->middleware('permission:hospital-branch-edit');
+                Route::patch('/update/{id}', [App\Http\Controllers\Acl\HospitalBranchController::class, 'update'])->middleware('permission:hospital-branch-edit');
+            });
         });
         Route::prefix('/clinic')->group(function () {
             Route::middleware('permission:clinic-list')->group(function () {

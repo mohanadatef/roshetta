@@ -576,7 +576,7 @@ class PermissionSeeder extends Seeder
             ],
             [
                 'title' => 'doctor-many-status',
-                'display_title' => ['en' =>'doctor many status', 'ar' => 'تغير حاله دكتور'],
+                'display_title' => ['en' =>'doctor many status', 'ar' => 'تغير اكثر حاله دكتور'],
             ],
             [
                 'title' => 'doctor-status-request',
@@ -617,7 +617,7 @@ class PermissionSeeder extends Seeder
             ],
             [
                 'title' => 'clinic-many-status',
-                'display_title' => ['en' =>'clinic many status', 'ar' => 'تغير حاله عياده'],
+                'display_title' => ['en' =>'clinic many status', 'ar' => 'تغير اكثر حاله عياده'],
             ],
             [
                 'title' => 'clinic-status-request',
@@ -658,7 +658,7 @@ class PermissionSeeder extends Seeder
             ],
             [
                 'title' => 'hospital-many-status',
-                'display_title' => ['en' =>'hospital many status', 'ar' => 'تغير حاله مستشفى'],
+                'display_title' => ['en' =>'hospital many status', 'ar' => 'تغير اكثر حاله مستشفى'],
             ],
             [
                 'title' => 'hospital-status-request',
@@ -699,7 +699,7 @@ class PermissionSeeder extends Seeder
             ],
             [
                 'title' => 'vendor-many-status',
-                'display_title' => ['en' =>'vendor many status', 'ar' => 'تغير حاله فيندر'],
+                'display_title' => ['en' =>'vendor many status', 'ar' => 'تغير اكثر حاله فيندر'],
             ],
             [
                 'title' => 'vendor-status-request',
@@ -720,6 +720,23 @@ class PermissionSeeder extends Seeder
             [
                 'title' => 'vendor-show-request',
                 'display_title' =>['en' => 'vendor show request', 'ar' => 'مشاهده طلب فيندر'] ,
+            ],
+            //hospital branch
+            [
+                'title' => 'hospital-branch-list',
+                'display_title' =>['en' => 'hospital branch list', 'ar' => 'قائمه اذنات فرع المستشقى'] ,
+            ],
+            [
+                'title' => 'hospital-branch-index',
+                'display_title' =>['en' => 'index hospital branch', 'ar' => 'قائمه فرع المستشقى'] ,
+            ],
+            [
+                'title' => 'hospital-branch-create',
+                'display_title' =>['en' => 'create hospital branch', 'ar' => 'اضافه فرع المستشقى'] ,
+            ],
+            [
+                'title' => 'hospital-branch-edit',
+                'display_title' =>['en' => 'edit hospital branch', 'ar' => 'تعديل فرع المستشقى'] ,
             ],
         ];
         foreach ($permissions as $key => $value) {

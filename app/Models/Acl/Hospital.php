@@ -31,6 +31,10 @@ class Hospital extends Model
     {
         return $this->belongsTo('App\Models\User','user_id');
     }
+    public function branch()
+    {
+        return $this->hasMany('App\Models\Acl\Hospital_Branch');
+    }
     public $translatable = ['detail','address','title'];
     protected $table = 'hospitals';
     public $timestamps = true;
