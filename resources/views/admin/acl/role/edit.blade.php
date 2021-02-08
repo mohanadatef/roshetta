@@ -7,13 +7,13 @@
     <link rel="stylesheet" type="text/css" href="{{url('public/css/admin/multi-select.css')}}">
     <style>
         .ms-container {
-            width: 25%;
+            width: 50%;
         }
         li.ms-elem-selectable, .ms-selected {
             padding: 5px !important;
         }
         .ms-list {
-            height: 150px !important;
+            height: 250px !important;
         }
     </style>
 @endsection

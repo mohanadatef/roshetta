@@ -93,10 +93,10 @@ class HospitalRepository implements HospitalInterface
         $data['count_view']=0;
         $data['valuation']=0;
         $imagelicenseName = $request->image_license->getClientOriginalname() . '-' . time() . '-image.' . Request()->image_license->getClientOriginalExtension();
-        Request()->image_license->move(public_path('images/user/hospital'), $imagelicenseName);
+        Request()->image_license->move(public_path('images/hospital'), $imagelicenseName);
         $data['image_license'] = $imagelicenseName;
         $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
-        Request()->image->move(public_path('images/user/hospital'), $imageName);
+        Request()->image->move(public_path('images/hospital'), $imageName);
         $data['image'] = $imageName;
         return $this->hospital->create(array_merge($request->all(),$data))->company_insurance()->sync((array)$request->company_insurance);
     }
@@ -107,13 +107,13 @@ class HospitalRepository implements HospitalInterface
         if($request->image_license)
         {
             $imagelicenseName = $request->image_license->getClientOriginalname() . '-' . time() . '-image.' . Request()->image_license->getClientOriginalExtension();
-            Request()->image_license->move(public_path('images/user/hospital'), $imagelicenseName);
+            Request()->image_license->move(public_path('images/hospital'), $imagelicenseName);
             $data['image_license'] = $imagelicenseName;
         }
         if($request->image)
         {
             $imageName = $request->image->getClientOriginalname() . '-' . time() . '-image.' . Request()->image->getClientOriginalExtension();
-            Request()->image->move(public_path('images/user/hospital'), $imageName);
+            Request()->image->move(public_path('images/hospital'), $imageName);
             $data['image'] = $imageName;
         }
         $hospital=$this->Get_One_Data($id);

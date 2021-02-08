@@ -530,7 +530,7 @@
                             @if(permission_show('hospital-list'))
                                 <li class="treeview">
                                     <a href="#">
-                                        <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Doctor') }}</span>
+                                        <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Hospital') }}</span>
                                         <span class="pull-right-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>

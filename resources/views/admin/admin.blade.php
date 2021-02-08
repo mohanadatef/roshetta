@@ -120,7 +120,7 @@
                     <!-- small box -->
                     <div class="small-box bg-blue">
                         <div class="inner">
-                            <h3>{{$count_hospatil}}</h3>
+                            <h3>{{$count_hospital}}</h3>
 
                             <p>{{trans('lang.Hospital')}}</p>
                         </div>

@@ -116,7 +116,11 @@ class HospitalController extends Controller
 
     public function show_request($id)
     {
+        $country = $this->countryRepository->Get_List_Data();
         $data = $this->hospitalRepository->Get_One_Data_Translation($id);
-        return view('admin.acl.hospital.show', compact('data'));
+        $city = $this->cityRepository->Get_List_Data_For_Country($data['country_id']);
+        $area = $this->areaRepository->Get_List_Data_For_City($data['country_id'],$data['city_id']);
+        $company_insurance = $this->company_insuranceRepository->Get_List_Data();
+        return view('admin.acl.hospital.show',compact('data','country','city','area','company_insurance'));
     }
 }

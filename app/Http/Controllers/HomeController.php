@@ -26,11 +26,11 @@ class HomeController extends Controller
             return redirect('admin/vendor/create')->with('message',trans('Message_vendor_Create'));
         }*/
         $count_patient = User::where('role_id', 3)->count();
-    /*    $count_vendor = User::where('role_id', 7)->count();*/
+        $count_vendor = User::where('role_id', 7)->count();
         $count_doctor = User::where('role_id', 4)->count();
-       /* $count_clinic = Clinic::where('status', 1)->count();*/
+        $count_clinic = User::where('role_id', 6)->count();
         $count_hospital = User::where('role_id', 5)->count();
-        return view('admin.admin', compact('count_patient','count_doctor','count_hospital'/*,'count_clinic','count_vendor'*/));
+        return view('admin.admin', compact('count_patient','count_doctor','count_hospital','count_clinic','count_vendor'));
     }
 
     public function error_403()

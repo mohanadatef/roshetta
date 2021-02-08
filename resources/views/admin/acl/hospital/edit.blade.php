@@ -114,7 +114,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="{{url('public/images/user/hospital/'.$data['image_license'])}}" style="width: 50px;height: 50px">
+                            <img src="{{url('public/images/hospital/'.$data['image_license'])}}" style="width: 50px;height: 50px">
                             <div class="form-group{{ $errors->has('image_license') ? ' has-error' : "" }}">
                                 <table class="table">
                                     <tr>
@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <img src="{{url('public/images/user/hospital/'.$data['image'])}}" style="width: 50px;height: 50px">
+                            <img src="{{url('public/images/hospital/'.$data['image'])}}" style="width: 50px;height: 50px">
                             <div class="form-group{{ $errors->has('image') ? ' has-error' : "" }}">
                                 <table class="table">
                                     <tr>
