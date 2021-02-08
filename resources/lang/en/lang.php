@@ -140,4 +140,6 @@ return[
     'Back'=>'Back',
     'View'=>'Count View',
     'Show'=>'Show',
+    'Hospital_Branch'=>'Hospital Branch',
+    'Branch'=>'Branch',
 ];
