@@ -39,7 +39,7 @@ class DoctorDetailRepository implements DoctorDetailInterface
     public function Get_One_Data_Translation($id)
     {
         $doctor = $this->doctor->find($id)->translations;
-        return $doctor ? array_merge($this->doctor->with('sub_specialty','specialty','scientific_degree')->find($id)->toarray(), $doctor) : $this->doctor->with('sub_specialty','specialty','scientific_degree')->find($id);
+        return $doctor ? array_merge($this->doctor->with('sub_specialty','specialty','scientific_degree','company_insurance')->find($id)->toarray(), $doctor) : $this->doctor->with('sub_specialty','specialty','scientific_degree','company_insurance')->find($id);
     }
 
     public function Create_Data(CreateRequest $request)
@@ -54,7 +54,7 @@ class DoctorDetailRepository implements DoctorDetailInterface
         $image_universityName = $request->image_university->getClientOriginalname() . '-' . time() . '-image_university.' . Request()->image_university->getClientOriginalExtension();
         Request()->image_university->move(public_path('images/user/doctor'), $image_universityName);
         $data['image_university'] = $image_universityName;
-        return $this->doctor->create(array_merge($request->all(), $data))->sub_specialty()->sync((array)$request->sub_specialty);
+        return $this->doctor->create(array_merge($request->all(), $data))->sub_specialty()->sync((array)$request->sub_specialty)->company_insurance()->sync((array)$request->company_insurance);
     }
 
     public function Update_Data(EditRequest $request, $id)
@@ -74,6 +74,7 @@ class DoctorDetailRepository implements DoctorDetailInterface
         }
         $doctor=$this->Get_One_Data($id);
         $doctor->sub_specialty()->sync((array)$request->sub_specialty);
+        $doctor->company_insurance()->sync((array)$request->company_insurance);
         $doctor->update(array_merge($request->all(), $data));
     }
 }

@@ -28,6 +28,10 @@ class Doctor extends Model
     {
         return $this->belongsToMany('App\Models\Core_Data\Sub_Specialty', 'doctor_sub_specialties', 'doctor_id','sub_specialty_id')->withTimestamps('created_at','updated_at');
     }
+    public function company_insurance()
+    {
+        return $this->belongsToMany('App\Models\Core_Data\Company_Insurance', 'doctor_company_insurances', 'doctor_id','company_insurance_id')->withTimestamps('created_at','updated_at');
+    }
     public $translatable = ['detail','university','title_doctor'];
     protected $table = 'doctors';
     public $timestamps = true;

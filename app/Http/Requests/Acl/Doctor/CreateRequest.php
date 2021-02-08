@@ -38,12 +38,14 @@ class CreateRequest extends FormRequest
             'scientific_degree_id' => 'required|exists:scientific_degrees,id',
             'date_license_end' => 'required|date',
             'sub_specialty.*' => 'required|exists:sub_specialties,id',
+            'company_insurance.*' => 'exists:company_insurances,id',
         ];
     }
 
     public function messages()
     {
         return Language_Locale() == 'ar' ? [
+            'company_insurance.exists' => 'برجاء ادخال شركه التامين',
             'title_doctor.*.required' => 'برجاء ادخال الاسم',
             'image_license.required' => 'برجاء ادخال صوره الترخيص',
             'image_university.required' => 'برجاء ادخال صوره شهاده الجامعه',

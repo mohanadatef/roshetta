@@ -123,6 +123,17 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <div class="form-group{{ $errors->has('company_insurance') ? ' has-error' : "" }}">
+                                {{ trans('lang.Company_Insurance') }} :
+                                <select id="company_insurance_id" multiple='multiple' class="form-control select2"
+                                        data-placeholder="{{trans('lang.Select')}}" name="company_insurance[]">
+                                    @foreach($company_insurance as  $mycompany_insurance)
+                                        <option value="{{$mycompany_insurance->id}}"> {{$mycompany_insurance->title}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
                             <div class="form-group{{ $errors->has('year_experience') ? ' has-error' : "" }}">
                                 {{ trans('lang.Year_Experience') }} : <input type="text" class="form-control"
                                                                              name="year_experience"
@@ -238,6 +249,12 @@
         $(function () {
             //Initialize Select2 Elements
             $('#sub_specialty_id').select2()
+        })
+    </script>
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('#company_insurance_id').select2()
         })
     </script>
     {!! JsValidator::formRequest('App\Http\Requests\Acl\Doctor\CreateRequest','#create') !!}

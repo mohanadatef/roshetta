@@ -9,6 +9,7 @@ use App\Http\Requests\Acl\Doctor\StatusEditRequest;
 use App\Http\Resources\Acl\DoctorResource;
 use App\Repositories\Acl\DoctorDetailRepository;
 use App\Repositories\Acl\DoctorRepository;
+use App\Repositories\Core_Data\CompanyInsuranceRepository;
 use App\Repositories\Core_Data\ScientificDegreeRepository;
 use App\Repositories\Core_Data\SpecialtyRepository;
 use App\Repositories\Core_Data\SubSpecialtyRepository;
@@ -21,15 +22,17 @@ class DoctorController extends Controller
     private $specialtyRepository;
     private $scientific_degreeRepository;
     private $sub_specialtyRepository;
+    private $company_insuranceRepository;
 
     public function __construct(DoctorRepository $DoctorRepository, DoctorDetailRepository $DoctorDetailRepository,ScientificDegreeRepository $Scientific_DegreeRepository,
-                                SpecialtyRepository $SpecialtyRepository,SubSpecialtyRepository $SubSpecialtyRepository)
+                                SpecialtyRepository $SpecialtyRepository,SubSpecialtyRepository $SubSpecialtyRepository,CompanyInsuranceRepository $Company_InsuranceRepository)
     {
         $this->doctorRepository = $DoctorRepository;
         $this->doctor_detailRepository = $DoctorDetailRepository;
         $this->specialtyRepository = $SpecialtyRepository;
         $this->sub_specialtyRepository = $SubSpecialtyRepository;
         $this->scientific_degreeRepository = $Scientific_DegreeRepository;
+        $this->company_insuranceRepository = $Company_InsuranceRepository;
     }
 
     public function index()
@@ -89,7 +92,8 @@ class DoctorController extends Controller
     {
         $specialty=$this->specialtyRepository->Get_List_Data();
         $scientific_degree=$this->scientific_degreeRepository->Get_List_Data();
-        return view('admin.acl.doctor.create',compact('scientific_degree','specialty'));
+        $company_insurance = $this->company_insuranceRepository->Get_List_Data();
+        return view('admin.acl.doctor.create',compact('scientific_degree','specialty','company_insurance'));
     }
 
     public function store(CreateRequest $request)
@@ -104,7 +108,8 @@ class DoctorController extends Controller
         $scientific_degree=$this->scientific_degreeRepository->Get_List_Data();
         $data = $this->doctor_detailRepository->Get_One_Data_Translation($id);
         $sub_specialty=$this->sub_specialtyRepository->Get_List_Data_For_Specialty($data['specialty_id']);
-        return view('admin.acl.doctor.edit',compact('data','scientific_degree','sub_specialty','specialty'));
+        $company_insurance = $this->company_insuranceRepository->Get_List_Data();
+        return view('admin.acl.doctor.edit',compact('data','scientific_degree','sub_specialty','specialty','company_insurance'));
     }
 
     public function update(EditRequest $request, $id)

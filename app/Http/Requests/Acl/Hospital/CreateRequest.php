@@ -61,7 +61,6 @@ class CreateRequest extends FormRequest
             'city_id.exists' => 'برجاء ادخال المدينه',
             'area_id.required' => 'برجاء ادخال المنطقه',
             'area_id.exists' => 'برجاء ادخال المنطقه',
-            'company_insurance.required' => 'برجاء ادخال شركه التامين',
             'company_insurance.exists' => 'برجاء ادخال شركه التامين',
             'address.*.required' => 'برجاء ادخال العنوان',
             'mobile.required' => 'برجاء ادخال الهاتف',
