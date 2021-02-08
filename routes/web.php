@@ -272,6 +272,11 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
                 Route::get('/edit/{id}', [App\Http\Controllers\Acl\ClinicController::class, 'edit'])->middleware('permission:clinic-edit');
                 Route::patch('/update/{id}', [App\Http\Controllers\Acl\ClinicController::class, 'update'])->middleware('permission:clinic-edit');
             });
+            Route::prefix('/doctor')->middleware('permission:clinic-doctor-list')->group(function () {
+                Route::get('/index', [App\Http\Controllers\Acl\ClinicDoctorController::class, 'index'])->middleware('permission:clinic-doctor-index');
+                Route::get('/create', [App\Http\Controllers\Acl\ClinicDoctorController::class, 'create'])->middleware('permission:clinic-doctor-create');
+                Route::Post('/store', [App\Http\Controllers\Acl\ClinicDoctorController::class, 'store'])->middleware('permission:clinic-doctor-create');
+            });
         });
         Route::prefix('/vendor')->group(function () {
             Route::middleware('permission:vendor-list')->group(function () {

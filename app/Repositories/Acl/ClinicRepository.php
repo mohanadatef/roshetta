@@ -92,6 +92,7 @@ class ClinicRepository implements ClinicInterface
         $data['status_request']=0;
         $data['count_view']=0;
         $data['valuation']=0;
+        $data['code_number']="C-".time().date("Ymd");
         $imagelicenseName = $request->image_license->getClientOriginalname() . '-' . time() . '-image.' . Request()->image_license->getClientOriginalExtension();
         Request()->image_license->move(public_path('images/clinic'), $imagelicenseName);
         $data['image_license'] = $imagelicenseName;

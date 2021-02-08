@@ -48,6 +48,7 @@ class DoctorDetailRepository implements DoctorDetailInterface
         $data['status_request']=0;
         $data['count_view']=0;
         $data['valuation']=0;
+        $data['code_number']="D-".time().date("Ymd");
         $imagelicenseName = $request->image_license->getClientOriginalname() . '-' . time() . '-image.' . Request()->image_license->getClientOriginalExtension();
         Request()->image_license->move(public_path('images/user/doctor'), $imagelicenseName);
         $data['image_license'] = $imagelicenseName;
@@ -76,5 +77,10 @@ class DoctorDetailRepository implements DoctorDetailInterface
         $doctor->sub_specialty()->sync((array)$request->sub_specialty);
         $doctor->company_insurance()->sync((array)$request->company_insurance);
         $doctor->update(array_merge($request->all(), $data));
+    }
+
+    public function Get_One_By_Code($code)
+    {
+        return $this->doctor->where('code_number',$code)->select('id')->first();
     }
 }

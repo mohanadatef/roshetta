@@ -10,7 +10,7 @@ class Doctor extends Model
     use HasTranslations;
     protected $fillable = [
         'university','detail','user_id','specialty_id','scientific_degree_id','university', 'status_request', 'status_mobile','status_home','license',
-        'image_license','image_university','count_view','year_experience','valuation','title_doctor','date_license_end'
+        'image_license','image_university','count_view','year_experience','valuation','title_doctor','date_license_end','code_number'
     ];
     public function user()
     {
@@ -31,6 +31,10 @@ class Doctor extends Model
     public function company_insurance()
     {
         return $this->belongsToMany('App\Models\Core_Data\Company_Insurance', 'doctor_company_insurances', 'doctor_id','company_insurance_id')->withTimestamps('created_at','updated_at');
+    }
+    public function clinic()
+    {
+        return $this->belongsToMany('App\Models\Acl\Clinic', 'clinic_doctors', 'clinic_id','doctor_id')->withTimestamps('created_at','updated_at');
     }
     public $translatable = ['detail','university','title_doctor'];
     protected $table = 'doctors';

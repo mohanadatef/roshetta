@@ -92,6 +92,7 @@ class HospitalRepository implements HospitalInterface
         $data['status_request']=0;
         $data['count_view']=0;
         $data['valuation']=0;
+        $data['code_number']="H-".time().date("Ymd");
         $imagelicenseName = $request->image_license->getClientOriginalname() . '-' . time() . '-image.' . Request()->image_license->getClientOriginalExtension();
         Request()->image_license->move(public_path('images/hospital'), $imagelicenseName);
         $data['image_license'] = $imagelicenseName;

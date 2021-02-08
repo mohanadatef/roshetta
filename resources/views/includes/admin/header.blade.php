@@ -257,30 +257,42 @@
                                     @if(auth::user()->doctor->status_request == 1)
                                         <div class="col-xs-7 text-center">
                                             <span style="color: green"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
+                                            <br>
+                                            <span style="color: red">{{trans('lang.Code_Number') ." : ". auth::user()->doctor->code_number}}</span>
                                         </div>
                                     @elseif(auth::user()->doctor->status_request == 0)
                                         <div class="col-xs-7 text-center">
                                             <span style="color: red">{{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
+                                            <br>
+                                            <span style="color: red">{{trans('lang.Code_Number') ." : ". auth::user()->doctor->code_number}}</span>
                                         </div>
                                     @endif
                                 @elseif(auth::user()->hospital)
                                     @if(auth::user()->hospital->status_request == 1)
                                         <div class="col-xs-7 text-center">
                                             <span style="color: green"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
+                                            <br>
+                                            <span style="color: red">{{trans('lang.Code_Number') ." : ". auth::user()->hospital->code_number}}</span>
                                         </div>
                                     @elseif(auth::user()->hospital->status_request == 0)
                                         <div class="col-xs-7 text-center">
                                             <span style="color: red">{{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
+                                            <br>
+                                            <span style="color: red">{{trans('lang.Code_Number') ." : ". auth::user()->hospital->code_number}}</span>
                                         </div>
                                     @endif
                                 @elseif(auth::user()->clinic)
                                     @if(auth::user()->clinic->status_request == 1)
                                         <div class="col-xs-7 text-center">
                                             <span style="color: green"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
+                                           <br>
+                                            <span style="color: red">{{trans('lang.Code_Number') ." : ". auth::user()->clinic->code_number}}</span>
                                         </div>
                                     @elseif(auth::user()->clinic->status_request == 0)
                                         <div class="col-xs-7 text-center">
                                             <span style="color: red">{{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
+                                            <br>
+                                            <span style="color: red">{{trans('lang.Code_Number') ." : ". auth::user()->clinic->code_number}}</span>
                                         </div>
                                     @endif
                                 @endif

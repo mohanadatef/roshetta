@@ -10,7 +10,7 @@ class Clinic extends Model
     use HasTranslations;
     protected $fillable = [
         'detail','status_request','license','image_license','count_view','valuation','title','date_license_end','image','address','mobile','country_id','city_id',
-        'area_id','user_id','specialty_id','status_type'
+        'area_id','user_id','specialty_id','status_type','code_number'
     ];
     public function country()
     {
@@ -39,6 +39,10 @@ class Clinic extends Model
     public function specialty()
     {
         return $this->belongsTo('App\Models\Core_Data\Specialty','specialty_id');
+    }
+    public function doctor()
+    {
+        return $this->belongsToMany('App\Models\Acl\Doctor', 'clinic_doctors', 'clinic_id','doctor_id')->withTimestamps('created_at','updated_at');
     }
     public $translatable = ['detail','address','title'];
     protected $table = 'clinics';

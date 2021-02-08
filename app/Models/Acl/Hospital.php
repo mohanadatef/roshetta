@@ -9,7 +9,8 @@ class Hospital extends Model
 {
     use HasTranslations;
     protected $fillable = [
-        'detail','status_request','license','image_license','count_view','valuation','title','date_license_end','image','address','mobile','country_id','city_id','area_id','user_id'
+        'detail','status_request','license','image_license','count_view','valuation','title','date_license_end','image','address','mobile','country_id','city_id','area_id','user_id',
+        'code_number'
     ];
     public function country()
     {

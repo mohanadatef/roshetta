@@ -41,7 +41,7 @@
                         <div class="inner">
                             <h3>{{$count_doctor}}</h3>
 
-                            <p>{{trans('lang.Doctor')}}</p>
+                            <p>{{trans('doctor')}}</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person"></i>

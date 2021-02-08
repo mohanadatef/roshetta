@@ -8,7 +8,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            {{ trans('lang.Doctor') }}
+            {{ trans('doctor') }}
             <small>{{ trans('lang.All') }}</small>
         </h1>
         <ol class="breadcrumb">

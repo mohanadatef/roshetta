@@ -738,6 +738,19 @@ class PermissionSeeder extends Seeder
                 'title' => 'hospital-branch-edit',
                 'display_title' =>['en' => 'edit hospital branch', 'ar' => 'تعديل فرع المستشقى'] ,
             ],
+            //clinic doctor
+            [
+                'title' => 'clinic-doctor-list',
+                'display_title' =>['en' => 'clinic doctor list', 'ar' => 'قائمه اذنات دكتور عياده'] ,
+            ],
+            [
+                'title' => 'clinic-doctor-index',
+                'display_title' =>['en' => 'index clinic doctor', 'ar' => 'قائمه دكتور عياده'] ,
+            ],
+            [
+                'title' => 'clinic-doctor-create',
+                'display_title' =>['en' => 'create clinic doctor', 'ar' => 'اضافه دكتور عياده'] ,
+            ],
         ];
         foreach ($permissions as $key => $value) {
             Permission::create($value);

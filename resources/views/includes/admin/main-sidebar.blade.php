@@ -514,7 +514,7 @@
                         @if(permission_show('doctor-list'))
                             <li class="treeview">
                                 <a href="#">
-                                    <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Doctor') }}</span>
+                                    <i class="fa fa-circle-o"></i> <span> {{ trans('doctor') }}</span>
                                     <span class="pull-right-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
@@ -661,6 +661,25 @@
                                                     class="fa fa-group"></i><span>{{ trans('lang.Edit_Information') }}</span></a>
                                     </li>
                                 @endif
+                                    @if(permission_show('clinic-doctor-list'))
+                                        <li class="treeview">
+                                            <a href="#"><i class="fa fa-group"></i> <span> {{ trans('lang.Doctor') }}</span><span
+                                                        class="pull-right-container"><i
+                                                            class="fa fa-angle-right pull-left"></i></span></a>
+                                            <ul class="treeview-menu">
+                                                @if(permission_show('clinic-doctor-index'))
+                                                    <li><a href="{{ url('/admin/clinic/doctor/index') }}"><i
+                                                                    class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
+                                                    </li>
+                                                @endif
+                                                    @if(permission_show('clinic-doctor-create'))
+                                                        <li><a href="{{ url('/admin/clinic/doctor/create') }}"><i
+                                                                        class="fa fa-group"></i><span>{{ trans('lang.Create') }}</span></a>
+                                                        </li>
+                                                    @endif
+                                            </ul>
+                                        </li>
+                                    @endif
                             @endif
                         </ul>
                     </li>
