@@ -9,7 +9,7 @@ class Hospital extends Model
 {
     use HasTranslations;
     protected $fillable = [
-        'detail','status_request','license','image_license','count_view','valuation','title','date_license_end','image','owner','address','mobile','country_id','city_id','area_id'
+        'detail','status_request','license','image_license','count_view','valuation','title','date_license_end','image','address','mobile','country_id','city_id','area_id','user_id'
     ];
     public function country()
     {
@@ -29,9 +29,9 @@ class Hospital extends Model
     }
     public function user()
     {
-        return $this->belongsToMany('App\Models\User', 'hospital_users', 'hospital_id','user_id')->withTimestamps('created_at','updated_at');
+        return $this->belongsTo('App\Models\User','user_id');
     }
-    public $translatable = ['detail','address','title_doctor'];
+    public $translatable = ['detail','address','title'];
     protected $table = 'hospitals';
     public $timestamps = true;
 }

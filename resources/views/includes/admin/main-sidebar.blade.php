@@ -13,6 +13,12 @@
                     @elseif(auth::user()->doctor->status_request == 0)
                             <i class="fa fa-circle text-danger"> {{trans('lang.Profile') ." : ". trans('lang.An_active')}}</i>
                     @endif
+                @elseif(auth::user()->hospital)
+                    @if(auth::user()->hospital->status_request == 1)
+                        <i class="fa fa-circle text-success"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</i>
+                    @elseif(auth::user()->hospital->status_request == 0)
+                        <i class="fa fa-circle text-danger"> {{trans('lang.Profile') ." : ". trans('lang.An_active')}}</i>
+                    @endif
                 @endif
             </div>
         </div>
@@ -582,11 +588,9 @@
                                 @endif
                             @else
                                 @if(permission_show('hospital-edit'))
-                                    @foreach(Auth::user()->hospital as $hospital)
-                                    <li><a href="{{ url('/admin/hospital/edit/'. $hospital->id) }}"><i
+                                    <li><a href="{{ url('/admin/hospital/edit/'. Auth::user()->hospital->id) }}"><i
                                                     class="fa fa-group"></i><span>{{ trans('lang.Edit_Information') }}</span></a>
                                     </li>
-                                    @endforeach
                                 @endif
                             @endif
                         </ul>

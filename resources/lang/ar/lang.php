@@ -17,6 +17,7 @@ return[
     'Create'=>'اضافة',
     'Create_Information'=>'اضافة بيانات',
     'Status'=>'حاله',
+    'Hospital'=>'مستشفى',
     'Status_Request'=>'حاله الطلب',
     'Index_Request'=>'قائمه الطلبات',
     'Controller'=>'تحكم',

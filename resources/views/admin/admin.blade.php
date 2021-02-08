@@ -65,8 +65,8 @@
                         </div>
                     </div>
                 </div>
-        @endif
-         @if(permission_show('vendor-index'))
+            @endif
+            @if(permission_show('vendor-index'))
                 <div class="col-lg-3 col-xs-6">
                     <!-- small box -->
                     <div class="small-box bg-blue">
@@ -97,8 +97,8 @@
                         </div>
                     </div>
                 </div>
-        @endif
-         @if(permission_show('clinic-index'))
+            @endif
+            @if(permission_show('clinic-index'))
                 <div class="col-lg-3 col-xs-6">
                     <!-- small box -->
                     <div class="small-box bg-blue">
@@ -115,23 +115,38 @@
                     </div>
                 </div>
             @endif
-            @if(permission_show('hospatil-index'))
+            @if(permission_show('hospital-index'))
                 <div class="col-lg-3 col-xs-6">
                     <!-- small box -->
                     <div class="small-box bg-blue">
                         <div class="inner">
                             <h3>{{$count_hospatil}}</h3>
 
-                            <p>{{trans('lang.Hospatil')}}</p>
+                            <p>{{trans('lang.Hospital')}}</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person"></i>
                         </div>
-                        <a href="{{ url('/admin/hospatil/index') }}" class="small-box-footer">{{trans('lang.Index')}} <i
+                        <a href="{{ url('/admin/hospital/index') }}" class="small-box-footer">{{trans('lang.Index')}} <i
                                     class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             @endif
+            @if(permission_show('hospital-list-information'))
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-blue">
+                        <div class="inner">
+                            <h3>{{auth::user()->hospital->count_view}}</h3>
+
+                            <p>{{trans('lang.View')}}</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-person"></i>
+                        </div>
+                    </div>
+                </div>
+        @endif
         <!-- ./col -->
         </div>
     {{--<div class="row">

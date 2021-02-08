@@ -7,7 +7,6 @@ use App\Http\Requests\Acl\Hospital\EditRequest;
 use App\Http\Requests\Acl\Hospital\StatusEditRequest;
 use Illuminate\Http\Request;
 
-
 interface HospitalInterface{
     public function Get_All_Data();
     public function Get_All_Data_Request();

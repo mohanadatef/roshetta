@@ -45,7 +45,8 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('mobile') ? ' has-error' : "" }}">
-                                {{ trans('lang.Mobile') }} : <input type="text" class="form-control" name="mobile" value="{{Request::old('mobile')}}"
+                                {{ trans('lang.Mobile') }} : <input type="text" class="form-control" name="mobile"
+                                                                    value="{{Request::old('mobile')}}"
                                                                     placeholder="{{ trans('lang.Message_Mobile') }}">
                             </div>
                         </div>
@@ -97,7 +98,8 @@
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('company_insurance') ? ' has-error' : "" }}">
                                 {{ trans('lang.Company_Insurance') }} :
-                                <select id="company_insurance_id" multiple='multiple' class="form-control select2"  data-placeholder="{{trans('lang.Select')}}" name="company_insurance[]">
+                                <select id="company_insurance_id" multiple='multiple' class="form-control select2"
+                                        data-placeholder="{{trans('lang.Select')}}" name="company_insurance[]">
                                     @foreach($company_insurance as  $mycompany_insurance)
                                         <option value="{{$mycompany_insurance->id}}"> {{$mycompany_insurance->title}}</option>
                                     @endforeach
@@ -109,8 +111,11 @@
                         @foreach(language() as $lang)
                             <div class="col-md-6">
                                 <div class="form-group{{ $errors->has('address['.$lang->code.']') ? ' has-error' : "" }}">
-                                    {{  $lang->title .' '. trans('lang.Address') }} : <input type="text" value="{{Request::old('address['.$lang->code.']')}}"
-                                                                                             class="form-control" name="address[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Address') }}">
+                                    {{  $lang->title .' '. trans('lang.Address') }} : <input type="text"
+                                                                                             value="{{Request::old('address['.$lang->code.']')}}"
+                                                                                             class="form-control"
+                                                                                             name="address[{{$lang->code}}]"
+                                                                                             placeholder="{{ trans('lang.Message_Address') }}">
                                 </div>
                             </div>
                         @endforeach
@@ -162,6 +167,7 @@
                         <div align="center">
                             <input type="submit" class="btn btn-primary" value="{{ trans('lang.Create') }}">
                         </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -227,30 +233,30 @@
         $('#city_id').change(function () {
             var CountryID = $('#country_id').val();
             var CityID = $(this).val();
-                if (CityID) {
-                    $.ajax({
-                        type: "GET",
-                        url: "{{url('admin/area/get_list_Area_json').'/'}}" + CountryID+ "/" +CityID,
-                        success: function (res) {
-                            if (res) {
-                                $("#area_id").empty();
-                                $("#area_id").append('<option>{{trans('lang.Select')}}</option>');
-                                $.each(res, function (key, value) {
-                                    $("#area_id").append('<option value="' + value['id'] + '">' + value['title']['{{language_Locale()}}'] + '</option>');
+            if (CityID) {
+                $.ajax({
+                    type: "GET",
+                    url: "{{url('admin/area/get_list_Area_json').'/'}}" + CountryID + "/" + CityID,
+                    success: function (res) {
+                        if (res) {
+                            $("#area_id").empty();
+                            $("#area_id").append('<option>{{trans('lang.Select')}}</option>');
+                            $.each(res, function (key, value) {
+                                $("#area_id").append('<option value="' + value['id'] + '">' + value['title']['{{language_Locale()}}'] + '</option>');
 
-                                });
-                            } else {
-                                $("#area_id").empty();
-                            }
-                        }, error: function (res) {
-                            console.log(res);
+                            });
+                        } else {
+                            $("#area_id").empty();
                         }
+                    }, error: function (res) {
+                        console.log(res);
+                    }
 
-                    });
-                } else {
-                    $("#area_id").empty();
-                }
-            });
+                });
+            } else {
+                $("#area_id").empty();
+            }
+        });
     </script>
     <script src="{{url('public/AdminLTE/bower_components/select2/dist/js/select2.full.min.js')}}"></script>
     <script>

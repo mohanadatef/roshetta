@@ -30,6 +30,7 @@ return[
     'An_active'=>'An Active',
     'Active'=>'Active',
     'Edit'=>'Edit',
+    'Hospital'=>'Hospital',
     'Message_Index'=>'No Data To Show',
     'Change_Status'=>'Change Status',
     'Code'=>'Code',

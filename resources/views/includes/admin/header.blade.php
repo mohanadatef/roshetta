@@ -2,95 +2,95 @@
     <!-- Logo -->
     <a href="{{url('/admin')}}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>{{ $setting->title ? $setting->title : "CMS"}}</b></span>
-    <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>{{$setting->title ? $setting->title : "CMS"}}</b></span>
+        <span class="logo-mini"><b>{{ $setting->title ? $setting->title : "CMS"}}</b></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>{{$setting->title ? $setting->title : "CMS"}}</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
         <!-- Sidebar toggle button-->
-      {{--  <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-            <span class="sr-only">Toggle navigation</span>
-        </a>--}}
+        {{--  <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+              <span class="sr-only">Toggle navigation</span>
+          </a>--}}
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <!-- Messages: style can be found in dropdown.less-->
-             {{--  <li class="dropdown messages-menu">
-                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                       <i class="fa fa-envelope-o"></i>
-                       <span class="label label-success">4</span>
-                   </a>
-                   <ul class="dropdown-menu">
-                       <li class="header">You have 4 messages</li>
-                       <li>
-                           <!-- inner menu: contains the actual data -->
-                           <ul class="menu">
-                               <li><!-- start message -->
-                                   <a href="#">
-                                       <div class="pull-left">
-                                           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                       </div>
-                                       <h4>
-                                           Support Team
-                                           <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                       </h4>
-                                       <p>Why not buy a new awesome theme?</p>
-                                   </a>
-                               </li>
-                               <!-- end message -->
-                               <li>
-                                   <a href="#">
-                                       <div class="pull-left">
-                                           <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                       </div>
-                                       <h4>
-                                           AdminLTE Design Team
-                                           <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                       </h4>
-                                       <p>Why not buy a new awesome theme?</p>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <div class="pull-left">
-                                           <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                       </div>
-                                       <h4>
-                                           Developers
-                                           <small><i class="fa fa-clock-o"></i> Today</small>
-                                       </h4>
-                                       <p>Why not buy a new awesome theme?</p>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <div class="pull-left">
-                                           <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                       </div>
-                                       <h4>
-                                           Sales Department
-                                           <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                       </h4>
-                                       <p>Why not buy a new awesome theme?</p>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <div class="pull-left">
-                                           <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                       </div>
-                                       <h4>
-                                           Reviewers
-                                           <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                       </h4>
-                                       <p>Why not buy a new awesome theme?</p>
-                                   </a>
-                               </li>
-                           </ul>
-                       </li>
-                       <li class="footer"><a href="#">See All Messages</a></li>
-                   </ul>
-               </li>--}}
+            {{--  <li class="dropdown messages-menu">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-envelope-o"></i>
+                      <span class="label label-success">4</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li class="header">You have 4 messages</li>
+                      <li>
+                          <!-- inner menu: contains the actual data -->
+                          <ul class="menu">
+                              <li><!-- start message -->
+                                  <a href="#">
+                                      <div class="pull-left">
+                                          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                      </div>
+                                      <h4>
+                                          Support Team
+                                          <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                      </h4>
+                                      <p>Why not buy a new awesome theme?</p>
+                                  </a>
+                              </li>
+                              <!-- end message -->
+                              <li>
+                                  <a href="#">
+                                      <div class="pull-left">
+                                          <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                      </div>
+                                      <h4>
+                                          AdminLTE Design Team
+                                          <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                      </h4>
+                                      <p>Why not buy a new awesome theme?</p>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#">
+                                      <div class="pull-left">
+                                          <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                      </div>
+                                      <h4>
+                                          Developers
+                                          <small><i class="fa fa-clock-o"></i> Today</small>
+                                      </h4>
+                                      <p>Why not buy a new awesome theme?</p>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#">
+                                      <div class="pull-left">
+                                          <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                      </div>
+                                      <h4>
+                                          Sales Department
+                                          <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                      </h4>
+                                      <p>Why not buy a new awesome theme?</p>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#">
+                                      <div class="pull-left">
+                                          <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                      </div>
+                                      <h4>
+                                          Reviewers
+                                          <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                      </h4>
+                                      <p>Why not buy a new awesome theme?</p>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="footer"><a href="#">See All Messages</a></li>
+                  </ul>
+              </li>--}}
             <!-- Notifications: style can be found in dropdown.less -->
             {{--  <li class="dropdown notifications-menu">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -191,84 +191,102 @@
                   </ul>
               </li>--}}
             <!-- User Account: style can be found in dropdown.less -->
-           {{--     <li class="dropdown user user-menu" style="color: #fff;padding-top: 15px;padding-bottom: 15px;padding-left: 15px;">
-                @if(auth::user()->doctor)
-                        @if(auth::user()->doctor->status_request == 1)
-                           <span class="px-4 bg-danger">{{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
-                        @elseif(auth::user()->doctor->status_request == 0)
-                        <span>  {{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
-                        @endif
-                    @endif
-                </li>
-                <li class="dropdown user user-menu">
-                    <a href="{{ url('/admin/user/edit/'.Auth::user()->id)}}" >
-                        @if (Route::has('login'))
-                            @auth
-                                <span class="hidden-xs">{{ Auth::user()->title }}</span>
-                            @endauth
-                        @endif
-                    </a>
-                </li>
-                <li class="dropdown user user-menu">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                        {{ trans('lang.Logout') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                </li>--}}
+                {{--     <li class="dropdown user user-menu" style="color: #fff;padding-top: 15px;padding-bottom: 15px;padding-left: 15px;">
+                     @if(auth::user()->doctor)
+                             @if(auth::user()->doctor->status_request == 1)
+                                <span class="px-4 bg-danger">{{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
+                             @elseif(auth::user()->doctor->status_request == 0)
+                             <span>  {{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
+                             @endif
+                         @endif
+                     </li>
+                     <li class="dropdown user user-menu">
+                         <a href="{{ url('/admin/user/edit/'.Auth::user()->id)}}" >
+                             @if (Route::has('login'))
+                                 @auth
+                                     <span class="hidden-xs">{{ Auth::user()->title }}</span>
+                                 @endauth
+                             @endif
+                         </a>
+                     </li>
+                     <li class="dropdown user user-menu">
+                         <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                                          document.getElementById('logout-form').submit();">
+                             {{ trans('lang.Logout') }}
+                         </a>
+                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                             @csrf
+                         </form>
+                     </li>--}}
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="{{ asset('public/images/user').(auth::user()->image ? '/'.auth::user()->image : '/profile_user.jpg') }}" class="user-image" alt="User Image">
+                        <img src="{{ asset('public/images/user').(auth::user()->image ? '/'.auth::user()->image : '/profile_user.jpg') }}"
+                             class="user-image" alt="User Image">
                         <span class="hidden-xs">{{auth::user()->title}}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="{{ asset('public/images/user').(auth::user()->image ? '/'.auth::user()->image : '/profile_user.jpg') }}" class="img-circle" alt="User Image">
+                            <img src="{{ asset('public/images/user').(auth::user()->image ? '/'.auth::user()->image : '/profile_user.jpg') }}"
+                                 class="img-circle" alt="User Image">
 
                             <p>
                                 {{auth::user()->title}}
                                 @if(auth::user()->role_id == 4)
-                                <small>{{auth::user()->doctor->title_doctor}}</small>
-                                    @elseif(auth::user()->role_id == 1 || auth::user()->role_id == 2)
-                                    <small>{{auth::user()->role->title}}</small>
+                                    @if(auth::user()->doctor)
+                                    <small>{{auth::user()->doctor->title_doctor}}</small>
                                     @endif
+                                @elseif(auth::user()->role_id == 1 || auth::user()->role_id == 2)
+                                    <small>{{auth::user()->role->title}}</small>
+                                @elseif(auth::user()->role_id == 5)
+                                    @if(auth::user()->hospital)
+                                    <small>{{auth::user()->hospital->title}}</small>
+                                        @endif
+                                @endif
                             </p>
                         </li>
                         <!-- Menu Body -->
                         <li class="user-body">
-                           <div class="row">
-                                   @if(auth::user()->doctor)
-                                       @if(auth::user()->doctor->status_request == 1)
-                                       <div class="col-xs-7 text-center">
-                                      <span style="color: green"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
-                                       </div>
-                                           @elseif(auth::user()->doctor->status_request == 0)
-                                       <div class="col-xs-7 text-center">
-                                           <span style="color: red">{{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
-                                       </div>
-                                       @endif
-
-                                   @endif
-                                   {{--<div class="col-xs-4 text-center">
-                                       <a href="#">Sales</a>
-                                   </div>
-                                   <div class="col-xs-4 text-center">
-                                       <a href="#">Sales</a>
-                                   </div>
-                                   <div class="col-xs-4 text-center">
-                                       <a href="#">Friends</a>
-                                   </div>--}}
+                            <div class="row">
+                                @if(auth::user()->doctor)
+                                    @if(auth::user()->doctor->status_request == 1)
+                                        <div class="col-xs-7 text-center">
+                                            <span style="color: green"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
+                                        </div>
+                                    @elseif(auth::user()->doctor->status_request == 0)
+                                        <div class="col-xs-7 text-center">
+                                            <span style="color: red">{{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
+                                        </div>
+                                    @endif
+                                @elseif(auth::user()->hospital)
+                                    @if(auth::user()->hospital->status_request == 1)
+                                        <div class="col-xs-7 text-center">
+                                            <span style="color: green"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
+                                        </div>
+                                    @elseif(auth::user()->hospital->status_request == 0)
+                                        <div class="col-xs-7 text-center">
+                                            <span style="color: red">{{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
+                                        </div>
+                                    @endif
+                                @endif
+                                {{--<div class="col-xs-4 text-center">
+                                    <a href="#">Sales</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Sales</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Friends</a>
+                                </div>--}}
                             </div>
                             <!-- /.row -->
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="{{ url('/admin/user/edit/'.Auth::user()->id)}}" class="btn btn-default btn-flat">{{trans('lang.Profile')}}</a>
+                                <a href="{{ url('/admin/user/edit/'.Auth::user()->id)}}"
+                                   class="btn btn-default btn-flat">{{trans('lang.Profile')}}</a>
                             </div>
                             <div class="pull-right">
                                 <a class="btn btn-default btn-flat" href="{{ route('logout') }}"
@@ -276,7 +294,8 @@
                                                      document.getElementById('logout-form').submit();">
                                     {{ trans('lang.Logout') }}
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
                                     @csrf
                                 </form>
 

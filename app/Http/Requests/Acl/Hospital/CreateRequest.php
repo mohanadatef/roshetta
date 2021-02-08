@@ -33,8 +33,10 @@ class CreateRequest extends FormRequest
             'country_id' => 'required|exists:countries,id',
             'city_id' => 'required|exists:cities,id',
             'area_id' => 'required|exists:areas,id',
-            'company_insurance.*' => 'required|exists:company_insurances,id',
+            'company_insurance.*' => 'exists:company_insurances,id',
             'date_license_end' => 'required|date',
+            'address.*'=>'required',
+            'mobile'=>'required|numeric|digits:11',
         ];
     }
 
@@ -61,6 +63,10 @@ class CreateRequest extends FormRequest
             'area_id.exists' => 'برجاء ادخال المنطقه',
             'company_insurance.required' => 'برجاء ادخال شركه التامين',
             'company_insurance.exists' => 'برجاء ادخال شركه التامين',
+            'address.*.required' => 'برجاء ادخال العنوان',
+            'mobile.required' => 'برجاء ادخال الهاتف',
+            'mobile.numeric' => 'برجاء ادخال ارقام',
+            'mobile.digits' => 'برجاء ادخال ارقام 11',
         ] : [];
     }
 }
