@@ -34,6 +34,10 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasOne('App\Models\Acl\Hospital');
     }
+    public function clinic()
+    {
+        return $this->hasOne('App\Models\Acl\Clinic');
+    }
     public function getJWTIdentifier()
     {
         return $this->getKey();

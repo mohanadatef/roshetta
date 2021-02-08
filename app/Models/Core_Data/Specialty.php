@@ -19,6 +19,10 @@ class Specialty extends Model
     {
         return $this->hasMany('App\Models\Acl\Doctor');
     }
+    public function clinic()
+    {
+        return $this->hasMany('App\Models\Acl\Clinic');
+    }
     public $translatable = ['title'];
     protected $table = 'specialties';
     public $timestamps = true;

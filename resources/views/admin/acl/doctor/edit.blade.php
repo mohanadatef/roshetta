@@ -71,7 +71,7 @@
                                 <select id="status_mobile" class="form-control"
                                         data-placeholder="{{trans('lang.Message_Gender')}}" name="status_mobile">
                                     <option value="1" @if($data['status_mobile'] == 1 ) selected @endif> {{trans('lang.Active')}}</option>
-                                    <option value="0" @if($data['status_mobile'] == 1 ) selected @endif> {{trans('lang.An_active')}}</option>
+                                    <option value="0" @if($data['status_mobile'] == 0 ) selected @endif> {{trans('lang.An_active')}}</option>
                                 </select>
                             </div>
                         </div>

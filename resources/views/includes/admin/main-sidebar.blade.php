@@ -19,6 +19,12 @@
                     @elseif(auth::user()->hospital->status_request == 0)
                         <i class="fa fa-circle text-danger"> {{trans('lang.Profile') ." : ". trans('lang.An_active')}}</i>
                     @endif
+                @elseif(auth::user()->clinic)
+                    @if(auth::user()->clinic->status_request == 1)
+                        <i class="fa fa-circle text-success"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</i>
+                    @elseif(auth::user()->clinic->status_request == 0)
+                        <i class="fa fa-circle text-danger"> {{trans('lang.Profile') ." : ". trans('lang.An_active')}}</i>
+                    @endif
                 @endif
             </div>
         </div>
@@ -549,6 +555,28 @@
                                     </ul>
                                 </li>
                             @endif
+                            @if(permission_show('clinic-list'))
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-circle-o"></i> <span> {{ trans('lang.Clinic') }}</span>
+                                        <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        @if(permission_show('clinic-index'))
+                                            <li><a href="{{ url('/admin/clinic/index') }}"><i
+                                                            class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
+                                            </li>
+                                        @endif
+                                        @if(permission_show('clinic-index-request'))
+                                            <li><a href="{{ url('/admin/clinic/index_request') }}"><i
+                                                            class="fa fa-group"></i><span>{{ trans('lang.Index_Request') }}</span></a>
+                                            </li>
+                                        @endif
+                                    </ul>
+                                </li>
+                            @endif
                     </ul>
                 </li>
             @endif
@@ -611,6 +639,28 @@
                                             </ul>
                                         </li>
                                     @endif
+                            @endif
+                        </ul>
+                    </li>
+                @endif
+                @if(permission_show('clinic-list-information'))
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-group"></i> <span> {{ trans('lang.Core_Data') }}</span><span
+                                    class="pull-right-container"><i
+                                        class="fa fa-angle-right pull-left"></i></span></a>
+                        <ul class="treeview-menu">
+                            @if(!Auth::user()->clinic)
+                                @if(permission_show('clinic-create'))
+                                    <li><a href="{{ url('/admin/clinic/create') }}"><i
+                                                    class="fa fa-group"></i><span>{{ trans('lang.Create_Information') }}</span></a>
+                                    </li>
+                                @endif
+                            @else
+                                @if(permission_show('clinic-edit'))
+                                    <li><a href="{{ url('/admin/clinic/edit/'. Auth::user()->clinic->id) }}"><i
+                                                    class="fa fa-group"></i><span>{{ trans('lang.Edit_Information') }}</span></a>
+                                    </li>
+                                @endif
                             @endif
                         </ul>
                     </li>

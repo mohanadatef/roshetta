@@ -14,7 +14,7 @@
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
             </li>
-            <li><a href="{{ url('/admin/clinic/edit/'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{Auth::user()->title}} </a></li>
+            <li><a href="{{ url('clinic'.$data['id']) }}"><i class="fa fa-permsission"></i>{{ trans('lang.Edit') }} : {{Auth::user()->clinic->title}} </a></li>
 
         </ol>
     </section>
@@ -40,41 +40,22 @@
                                 </div>
                             </div>
                         @endforeach
-                    </div>
-                    <div class="row">
-                        @foreach(language() as $lang)
+                        <div class="col-md-6">
+                            <div class="form-group{{ $errors->has('mobile') ? ' has-error' : "" }}">
+                                {{ trans('lang.Mobile') }} : <input type="text" class="form-control" name="mobile" value="{{$data['mobile']}}"
+                                                                    placeholder="{{ trans('lang.Message_Mobile') }}">
+                            </div>
+                        </div>
                             <div class="col-md-6">
-                                <div class="form-group{{ $errors->has('university['.$lang->code.']') ? ' has-error' : "" }}">
-                                    {{ $lang->title .' '. trans('lang.University') }} : <input type="text"
-                                                                                               @if(isset($data['university'][$lang->code])) value="{{$data['university'][$lang->code]}}" @endif
-                                                                                               class="form-control"
-                                                                                               name="university[{{$lang->code}}]"
-                                                                                               placeholder="{{ trans('lang.Message_University') }}">
+                                <div class="form-group{{ $errors->has('status_type') ? ' has-error' : "" }}">
+                                    {{trans('lang.Status_Type')}} :
+                                    <select id="status_type" class="form-control"
+                                            data-placeholder="{{trans('lang.Message_Status_Type')}}" name="status_type">
+                                        <option value="1" @if($data['status_type'] == 1 ) selected @endif> {{trans('lang.Move')}}</option>
+                                        <option value="0" @if($data['status_type'] == 0 ) selected @endif> {{trans('lang.Stand')}}</option>
+                                    </select>
                                 </div>
                             </div>
-                        @endforeach
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group{{ $errors->has('status_home') ? ' has-error' : "" }}">
-                                {{trans('lang.Status_Home')}} :
-                                <select id="status_home" class="form-control"
-                                        data-placeholder="{{trans('lang.Message_Gender')}}" name="status_home">
-                                    <option value="1" @if($data['status_home'] == 1 ) selected @endif> {{trans('lang.Active')}}</option>
-                                    <option value="0" @if($data['status_home'] == 1 ) selected @endif> {{trans('lang.An_active')}}</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group{{ $errors->has('status_mobile') ? ' has-error' : "" }}">
-                                {{trans('lang.Status_Mobile')}} :
-                                <select id="status_mobile" class="form-control"
-                                        data-placeholder="{{trans('lang.Message_Gender')}}" name="status_mobile">
-                                    <option value="1" @if($data['status_mobile'] == 1 ) selected @endif> {{trans('lang.Active')}}</option>
-                                    <option value="0" @if($data['status_mobile'] == 1 ) selected @endif> {{trans('lang.An_active')}}</option>
-                                </select>
-                            </div>
-                        </div>
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('license') ? ' has-error' : "" }}">
                                 {{ trans('lang.License') }} : <input type="text" class="form-control" name="license"
@@ -91,49 +72,70 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group{{ $errors->has('specialty_id') ? ' has-error' : "" }}">
-                                {{trans('lang.Specialty')}} :
-                                <select id="specialty_id" class="form-control" data-placeholder="{{trans('lang.Message_Specialty')}}" name="specialty_id">
-                                    <option value="0" selected>{{trans('lang.Select')}}</option>
-                                    @foreach($specialty as  $myspecialty)
-                                        <option value="{{$myspecialty->id}}" @if($data['specialty_id'] == $myspecialty->id ) selected @endif> {{$myspecialty->title}}</option>
+                            <div class="form-group{{ $errors->has('country_id') ? ' has-error' : "" }}">
+                                {{ trans('lang.Country') }} :
+                                <select id="country_id" class="form-control" data-placeholder="{{trans('lang.Message_Country')}}" name="country_id">
+                                    @foreach($country as  $mycountry)
+                                        <option value="{{$mycountry->id}}" @if($mycountry->id == $data['country_id'])selected @endif > {{$mycountry->title}}</option>
                                     @endforeach
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group{{ $errors->has('scientific_degree_id') ? ' has-error' : "" }}">
-                                {{trans('lang.Scientific_Degree')}} :
-                                <select id="scientific_degree" class="form-control" data-placeholder="{{trans('lang.Message_Scientific_Degree')}}" name="scientific_degree_id">
-                                    <option value="0" selected>{{trans('lang.Select')}}</option>
-                                    @foreach($scientific_degree as  $myscientific_degree)
-                                        <option value="{{$myscientific_degree->id}}" @if($data['scientific_degree_id'] == $myscientific_degree->id ) selected @endif> {{$myscientific_degree->title}}</option>
+                            <div class="form-group{{ $errors->has('city_id') ? ' has-error' : "" }}">
+                                {{ trans('lang.City') }} :
+                                <select id="city_id" class="form-control" data-placeholder="{{trans('lang.Message_City')}}" name="city_id">
+                                    @foreach($city as  $mycity)
+                                        <option value="{{$mycity->id}}" @if($mycity->id == $data['city_id'])selected @endif > {{$mycity->title}}</option>
                                     @endforeach
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group{{ $errors->has('sub_specialty') ? ' has-error' : "" }}">
-                                {{ trans('lang.Sub_Specialty') }} :
-                                <select id="sub_specialty_id" multiple='multiple' class="form-control select2" data-placeholder="{{trans('lang.Select')}}"  name="sub_specialty[]">
-                                    @foreach($sub_specialty as  $mysub_specialty)
-                                        <option value="{{$mysub_specialty->id}}" @foreach($data['sub_specialty'] as  $mysub) @if($mysub_specialty->id == $mysub['id']) selected   @endif @endforeach  > {{$mysub_specialty->title}}</option>
+                            <div class="form-group{{ $errors->has('area_id') ? ' has-error' : "" }}">
+                                {{trans('lang.Area')}} :
+                                <select id="area_id" class="form-control"
+                                        data-placeholder="{{trans('lang.Message_Area')}}" name="area_id">
+                                    @foreach($area as  $myarea)
+                                        <option value="{{$myarea->id}}" @if($myarea->id == $data['area_id'])selected @endif > {{$myarea->title}}</option>
                                     @endforeach
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group{{ $errors->has('year_experience') ? ' has-error' : "" }}">
-                                {{ trans('lang.Year_Experience') }} : <input type="text" class="form-control"
-                                                                             name="year_experience"
-                                                                             value="{{$data['year_experience']}}"
-                                                                             placeholder="{{ trans('lang.Message_Year_Experience') }}">
+                            <div class="form-group{{ $errors->has('company_insurance') ? ' has-error' : "" }}">
+                                {{ trans('lang.Company_Insurance') }} :
+                                <select id="company_insurance_id" multiple='multiple' class="form-control select2"
+                                        data-placeholder="{{trans('lang.Select')}}" name="company_insurance[]">
+                                    @foreach($company_insurance as  $mycompany_insurance)
+                                        <option value="{{$mycompany_insurance->id}}" @foreach($data['company_insurance'] as  $mycompany_insurances) @if($mycompany_insurance->id == $mycompany_insurances['id']) selected   @endif @endforeach> {{$mycompany_insurance->title}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
+                            <div class="col-md-6">
+                                <div class="form-group{{ $errors->has('specialty_id') ? ' has-error' : "" }}">
+                                    {{trans('lang.Specialty')}} :
+                                    <select id="specialty_id" class="form-control" data-placeholder="{{trans('lang.Message_Specialty')}}" name="specialty_id">
+                                        <option value="0" selected>{{trans('lang.Select')}}</option>
+                                        @foreach($specialty as  $myspecialty)
+                                            <option value="{{$myspecialty->id}}" @if($data['specialty_id'] == $myspecialty->id ) selected @endif> {{$myspecialty->title}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        @foreach(language() as $lang)
+                            <div class="col-md-6">
+                                <div class="form-group{{ $errors->has('address['.$lang->code.']') ? ' has-error' : "" }}">
+                                    {{  $lang->title .' '. trans('lang.Address') }} : <input type="text" @if(isset($data['address'][$lang->code]))  value="{{$data['address'][$lang->code]}}" @endif
+                                    class="form-control" name="address[{{$lang->code}}]" placeholder="{{ trans('lang.Message_Address') }}">
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="{{url('public/images/user/clinic/'.$data['image_license'])}}" style="width: 50px;height: 50px">
+                            <img src="{{url('public/images/clinic/'.$data['image_license'])}}" style="width: 50px;height: 50px">
                             <div class="form-group{{ $errors->has('image_license') ? ' has-error' : "" }}">
                                 <table class="table">
                                     <tr>
@@ -148,12 +150,12 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <img src="{{url('public/images/user/clinic/'.$data['image_university'])}}" style="width: 50px;height: 50px">
-                            <div class="form-group{{ $errors->has('image_university') ? ' has-error' : "" }}">
+                            <img src="{{url('public/images/clinic/'.$data['image'])}}" style="width: 50px;height: 50px">
+                            <div class="form-group{{ $errors->has('image') ? ' has-error' : "" }}">
                                 <table class="table">
                                     <tr>
-                                        <td width="40%" align="right"><label>{{ trans('lang.Image_University') }}</label></td>
-                                        <td width="30"><input type="file" value="{{Request::old('image_university')}}" name="image_university"/></td>
+                                        <td width="40%" align="right"><label>{{ trans('lang.Image') }}</label></td>
+                                        <td width="30"><input type="file" value="{{Request::old('image')}}" name="image"/></td>
                                     </tr>
                                     <tr>
                                         <td width="40%" align="right"></td>
@@ -209,29 +211,59 @@
     </script>
     @yield('script_description_language')
     <script type="text/javascript">
-        $('#specialty_id').change(function () {
-            var SpecialtyID = $(this).val();
-            if (SpecialtyID) {
+        $('#country_id').change(function () {
+            var CountryID = $(this).val();
+            if (CountryID) {
                 $.ajax({
                     type: "GET",
-                    url: "{{url('admin/sub_specialty/get_list_sub_specialty_json').'/'}}" + SpecialtyID,
+                    url: "{{url('admin/city/get_list_city_json').'/'}}" + CountryID,
                     success: function (res) {
                         if (res) {
-                            $("#sub_specialty_id").empty();
+                            $("#city_id").empty();
+                            $("#city_id").append('<option>{{trans('lang.Select')}}</option>');
                             $.each(res, function (key, value) {
-                                $("#sub_specialty_id").append('<option value="' + value['id'] + '">' + value['title']['{{language_Locale()}}'] + '</option>');
+                                $("#city_id").append('<option value="' + value['id'] + '">' + value['title']['{{language_Locale()}}'] + '</option>');
 
                             });
                         } else {
-                            $("#sub_specialty_id").empty();
+                            $("#city_id").empty();
                         }
-                    },error:function(res){
+                    }, error: function (res) {
                         console.log(res);
                     }
 
                 });
             } else {
-                $("#sub_specialty_id").empty();
+                $("#city_id").empty();
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $('#city_id').change(function () {
+            var CountryID = $('#country_id').val();
+            var CityID = $(this).val();
+            if (CityID) {
+                $.ajax({
+                    type: "GET",
+                    url: "{{url('admin/area/get_list_Area_json').'/'}}" + CountryID + "/" + CityID,
+                    success: function (res) {
+                        if (res) {
+                            $("#area_id").empty();
+                            $("#area_id").append('<option>{{trans('lang.Select')}}</option>');
+                            $.each(res, function (key, value) {
+                                $("#area_id").append('<option value="' + value['id'] + '">' + value['title']['{{language_Locale()}}'] + '</option>');
+
+                            });
+                        } else {
+                            $("#area_id").empty();
+                        }
+                    }, error: function (res) {
+                        console.log(res);
+                    }
+
+                });
+            } else {
+                $("#area_id").empty();
             }
         });
     </script>
@@ -239,7 +271,7 @@
     <script>
         $(function () {
             //Initialize Select2 Elements
-            $('#sub_specialty_id').select2()
+            $('#company_insurance_id').select2()
         })
     </script>
     {!! JsValidator::formRequest('App\Http\Requests\Acl\Clinic\EditRequest','#edit') !!}

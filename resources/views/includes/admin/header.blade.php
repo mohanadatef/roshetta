@@ -243,6 +243,10 @@
                                     @if(auth::user()->hospital)
                                     <small>{{auth::user()->hospital->title}}</small>
                                         @endif
+                                @elseif(auth::user()->role_id == 6)
+                                    @if(auth::user()->clinic)
+                                        <small>{{auth::user()->clinic->title}}</small>
+                                    @endif
                                 @endif
                             </p>
                         </li>
@@ -265,6 +269,16 @@
                                             <span style="color: green"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
                                         </div>
                                     @elseif(auth::user()->hospital->status_request == 0)
+                                        <div class="col-xs-7 text-center">
+                                            <span style="color: red">{{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
+                                        </div>
+                                    @endif
+                                @elseif(auth::user()->clinic)
+                                    @if(auth::user()->clinic->status_request == 1)
+                                        <div class="col-xs-7 text-center">
+                                            <span style="color: green"> {{trans('lang.Profile') ." : ". trans('lang.Active')}}</span>
+                                        </div>
+                                    @elseif(auth::user()->clinic->status_request == 0)
                                         <div class="col-xs-7 text-center">
                                             <span style="color: red">{{trans('lang.Profile') ." : ". trans('lang.An_active')}}</span>
                                         </div>

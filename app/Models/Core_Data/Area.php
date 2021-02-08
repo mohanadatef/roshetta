@@ -23,6 +23,14 @@ class Area extends Model
     {
         return $this->hasMany('App\Models\Acl\Hospital');
     }
+    public function hospital_branch()
+    {
+        return $this->hasMany('App\Models\Acl\Hospital_Branch');
+    }
+    public function clinic()
+    {
+        return $this->hasMany('App\Models\Acl\Clinic');
+    }
     public $translatable = ['title'];
     protected $table = 'areas';
     public $timestamps = true;
