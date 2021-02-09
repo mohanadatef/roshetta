@@ -5,13 +5,13 @@
 @section('content')
     <section class="content-header">
         <h1>
-            {{ trans('lang.Doctor') }}
+            {{ trans('lang.Clinic') }}
             <small>{{ trans('lang.Create') }}</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin') }}"><i class="fa fa-dashboard"></i>{{ trans('lang.DashBoard') }}</a></li>
-            <li><a href="{{ url('/admin/clinic/doctor/index') }}"><i class="fa fa-permsissions"></i>{{ trans('lang.Index') }}</a></li>
-            <li><a href="{{ url('/admin/clinic/doctor/create') }}"><i class="fa fa-permsission"></i>{{ trans('lang.Create') }}</a>
+            <li><a href="{{ url('/admin/hospital/clinic/index') }}"><i class="fa fa-permsissions"></i>{{ trans('lang.Index') }}</a></li>
+            <li><a href="{{ url('/admin/hospital/clinic/create') }}"><i class="fa fa-permsission"></i>{{ trans('lang.Create') }}</a>
             </li>
         </ol>
     </section>
@@ -22,7 +22,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <form id='create' action="{{url('admin/clinic/doctor/store')}}" method="POST">
+                <form id='create' action="{{url('admin/hospital/clinic/store')}}" method="POST">
                     {{csrf_field()}}
                         <div class="form-group{{ $errors->has('code') ? ' has-error' : "" }}">
                             {{  trans('lang.Code') }} : <input type="text" value="{{Request::old('code')}}"

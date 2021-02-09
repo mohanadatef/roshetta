@@ -20,4 +20,5 @@ interface ClinicInterface{
     public function Update_Data(EditRequest $request, $id);
     public function Create_Data(CreateRequest $request);
     public function Update_Status_One_Data_Request($id);
+    public function Get_One_By_Code($code);
 }

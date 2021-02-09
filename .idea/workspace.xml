@@ -7,23 +7,12 @@
       <change afterPath="$PROJECT_DIR$/../full-version/index.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../full-version/robots.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Interfaces/Acl/DoctorDetailInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Interfaces/Acl/DoctorDetailInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Interfaces/Acl/ClinicInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Interfaces/Acl/ClinicInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Acl/Clinic.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Acl/Clinic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Acl/Doctor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Acl/Doctor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Acl/Hospital.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Acl/Hospital.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Acl/ClinicRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Acl/ClinicRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Acl/DoctorDetailRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Acl/DoctorDetailRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Acl/HospitalRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Acl/HospitalRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/doctor/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/doctor/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/doctor/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/doctor/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/doctor/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/doctor/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/doctor/index_request.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/doctor/index_request.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/doctor/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/doctor/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/role/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/role/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/acl/clinic/doctor/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/acl/clinic/doctor/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -42,19 +31,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/ClinicDoctorController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/HospitalClinicController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+            <state relative-caret-position="255">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/clinic/doctor/index.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/ClinicDoctorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+            <state relative-caret-position="561">
+              <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -62,67 +51,71 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/DoctorDetailRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Acl/Clinic_Doctor/FindRequest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Acl/Doctor/StatusEditRequest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Acl/User/CreateRequest.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Acl/User/EditRequest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="71" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Acl/Clinic_Doctor.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            <state relative-caret-position="695">
+              <caret line="84" column="5" lean-forward="true" selection-start-line="81" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/ClinicDoctorRepository.php">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/ClinicRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="102" selection-start-line="24" selection-start-column="102" selection-end-line="24" selection-end-column="102" />
+            <state relative-caret-position="712">
+              <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Acl/Clinic.php">
+        <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/DoctorDetailInterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="45" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/HospitalClinicInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/ClinicInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/ClinicDoctorInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/clinic/doctor/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeders/PermissionSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="760" column="101" selection-start-line="760" selection-start-column="101" selection-end-line="760" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -183,17 +176,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Models/Acl/Doctor_Company_Insurance.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Hospital/EditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Hospital/CreateRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Doctor/EditRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Doctor/CreateRequest.php" />
-        <option value="$PROJECT_DIR$/resources/lang/ar/lang.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/lang.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Clinic/CreateRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Clinic/EditRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/Acl/ClinicResource.php" />
-        <option value="$PROJECT_DIR$/app/Interfaces/Acl/ClinicInterface.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Clinic/StatusEditRequest.php" />
         <option value="$PROJECT_DIR$/app/Models/Core_Data/Area.php" />
         <option value="$PROJECT_DIR$/app/Models/Core_Data/City.php" />
@@ -210,23 +195,16 @@
         <option value="$USER_HOME$/Downloads/hospitals.sql" />
         <option value="$USER_HOME$/Downloads/hospital_company_insurances.sql" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/clinic/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/Acl/ClinicRepository.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Acl/HospitalRepository.php" />
-        <option value="$PROJECT_DIR$/app/Models/Acl/Hospital.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/admin/header.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Acl/ClinicController.php" />
         <option value="$PROJECT_DIR$/app/Models/Acl/ClinicDoctor.php" />
-        <option value="$PROJECT_DIR$/app/Models/Acl/Clinic.php" />
         <option value="$PROJECT_DIR$/app/Interfaces/Acl/ClinicDoctorInterface.php" />
         <option value="$PROJECT_DIR$/app/Interfaces/Acl/DoctorDetailInterface.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/clinic/Doctor/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/clinic/Doctor/create.blade.php" />
-        <option value="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/acl/role/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Clinic_Doctor/CreateRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/acl/clinic/doctor/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Acl/DoctorDetailRepository.php" />
         <option value="$PROJECT_DIR$/app/Models/Acl/Doctor.php" />
         <option value="$PROJECT_DIR$/app/Models/Acl/Clinic_Doctor.php" />
@@ -234,6 +212,21 @@
         <option value="$PROJECT_DIR$/resources/views/admin/acl/clinic/doctor/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Clinic_Doctor/FindRequest.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Acl/ClinicDoctorRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Acl/HospitalClinicController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Acl/Hospital_Clinic/FindRequest.php" />
+        <option value="$PROJECT_DIR$/app/Models/Acl/Hospital_Clinic.php" />
+        <option value="$PROJECT_DIR$/app/Models/Acl/Hospital.php" />
+        <option value="$PROJECT_DIR$/app/Models/Acl/Clinic.php" />
+        <option value="$PROJECT_DIR$/app/Interfaces/Acl/HospitalClinicInterface.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Acl/HospitalClinicRepository.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/acl/hospital/clinic/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/acl/hospital/clinic/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/acl/clinic/doctor/create.blade.php" />
+        <option value="$PROJECT_DIR$/database/seeders/PermissionSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Interfaces/Acl/ClinicInterface.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Acl/ClinicRepository.php" />
       </list>
     </option>
   </component>
@@ -448,6 +441,15 @@
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Requests" type="462c0819:PsiDirectoryNode" />
               <item name="Acl" type="462c0819:PsiDirectoryNode" />
+              <item name="Hospital_Clinic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Requests" type="462c0819:PsiDirectoryNode" />
+              <item name="Acl" type="462c0819:PsiDirectoryNode" />
               <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -561,6 +563,25 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="acl" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="acl" type="462c0819:PsiDirectoryNode" />
+              <item name="hospital" type="462c0819:PsiDirectoryNode" />
+              <item name="clinic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="roshetta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="roshetta" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="acl" type="462c0819:PsiDirectoryNode" />
               <item name="role" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -601,11 +622,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\roshetta\resources\views\admin\acl\hospital" />
+      <recent name="C:\xampp\htdocs\roshetta\app\Repositories\Acl" />
+      <recent name="C:\xampp\htdocs\roshetta\app\Interfaces\Acl" />
+      <recent name="C:\xampp\htdocs\roshetta\app\Models\Acl" />
       <recent name="C:\xampp\htdocs\roshetta\app\Http\Requests\Acl" />
-      <recent name="C:\xampp\htdocs\roshetta\resources\views\admin\acl\clinic\doctor\s" />
-      <recent name="C:\xampp\htdocs\roshetta\resources\views\admin\acl\clinic\doctor" />
-      <recent name="C:\xampp\htdocs\roshetta\resources\views\admin\acl\clinic" />
-      <recent name="C:\xampp\htdocs\roshetta\resources\views\admin\acl\clinic\Doctor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\roshetta\resources\views\admin\acl\clinic\doctor" />
@@ -649,12 +670,12 @@
       <workItem from="1611996373084" duration="26927000" />
       <workItem from="1612096325898" duration="54276000" />
       <workItem from="1612341304831" duration="49711000" />
-      <workItem from="1612598512764" duration="61558000" />
+      <workItem from="1612598512764" duration="63850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="422154000" />
+    <option name="totallyTimeSpent" value="424446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -708,62 +729,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Acl/Clinic/CreateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Acl/ClinicResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Acl/Clinic/EditRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Acl/Clinic/StatusEditRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/ClinicInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Area.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/City.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Country.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Core_Data/Company_Insurance.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -876,13 +841,6 @@
     <entry file="file://$PROJECT_DIR$/app/Models/Acl/Hospital_Branch.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Acl/Hospital.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -905,24 +863,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/ClinicRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/ClinicController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="663" column="75" selection-start-line="663" selection-start-column="75" selection-end-line="663" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -933,22 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="274" column="79" selection-start-line="274" selection-start-column="61" selection-end-line="274" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeders/PermissionSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="743" column="97" selection-start-line="743" selection-start-column="97" selection-end-line="743" selection-end-column="97" />
-          <caret line="747" column="92" selection-start-line="747" selection-start-column="92" selection-end-line="747" selection-end-column="92" />
-          <caret line="751" column="93" selection-start-line="751" selection-start-column="93" selection-end-line="751" selection-end-column="93" />
         </state>
       </provider>
     </entry>
@@ -983,48 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/ClinicDoctorInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/clinic/doctor/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="77" selection-start-line="39" selection-start-column="77" selection-end-line="39" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Acl/Doctor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/DoctorDetailInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Acl/Clinic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/DoctorDetailRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Acl/Clinic_Doctor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1056,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/ClinicDoctorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/Acl/Clinic_Doctor/FindRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1072,8 +951,148 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/ClinicDoctorRepository.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Acl/Hospital_Clinic/FindRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Acl/Doctor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="3" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Acl/Clinic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Acl/Hospital.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Acl/Hospital_Clinic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/HospitalClinicRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="24" column="102" selection-start-line="24" selection-start-column="102" selection-end-line="24" selection-end-column="102" />
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="252" column="67" selection-start-line="252" selection-start-column="67" selection-end-line="252" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/main-sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="648" column="110" selection-start-line="648" selection-start-column="110" selection-end-line="648" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/hospital/clinic/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/hospital/clinic/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/acl/clinic/doctor/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeders/PermissionSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="760" column="101" selection-start-line="760" selection-start-column="101" selection-end-line="760" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/HospitalClinicController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Acl/ClinicDoctorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/HospitalClinicInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/ClinicDoctorInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/ClinicInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Interfaces/Acl/DoctorDetailInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/DoctorDetailRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="84" column="5" lean-forward="true" selection-start-line="81" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Acl/ClinicRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
         </state>
       </provider>
     </entry>

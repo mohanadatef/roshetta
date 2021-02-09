@@ -639,6 +639,25 @@
                                             </ul>
                                         </li>
                                     @endif
+                                    @if(permission_show('hospital-clinic-list'))
+                                        <li class="treeview">
+                                            <a href="#"><i class="fa fa-group"></i> <span> {{ trans('lang.Clinic') }}</span><span
+                                                        class="pull-right-container"><i
+                                                            class="fa fa-angle-right pull-left"></i></span></a>
+                                            <ul class="treeview-menu">
+                                                @if(permission_show('hospital-clinic-index'))
+                                                    <li><a href="{{ url('/admin/hospital/clinic/index') }}"><i
+                                                                    class="fa fa-group"></i><span>{{ trans('lang.Index') }}</span></a>
+                                                    </li>
+                                                @endif
+                                                @if(permission_show('hospital-clinic-create'))
+                                                    <li><a href="{{ url('/admin/hospital/clinic/create') }}"><i
+                                                                    class="fa fa-group"></i><span>{{ trans('lang.Create') }}</span></a>
+                                                    </li>
+                                                @endif
+                                            </ul>
+                                        </li>
+                                    @endif
                             @endif
                         </ul>
                     </li>

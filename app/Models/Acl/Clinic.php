@@ -44,6 +44,10 @@ class Clinic extends Model
     {
         return $this->belongsToMany('App\Models\Acl\Doctor', 'clinic_doctors', 'clinic_id','doctor_id')->withTimestamps('created_at','updated_at');
     }
+    public function hospital()
+    {
+        return $this->belongsToMany('App\Models\Acl\Hospital', 'hospital_clinics', 'clinic_id','hospital_id')->withTimestamps('created_at','updated_at');
+    }
     public $translatable = ['detail','address','title'];
     protected $table = 'clinics';
     public $timestamps = true;

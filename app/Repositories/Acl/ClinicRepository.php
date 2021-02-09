@@ -121,4 +121,9 @@ class ClinicRepository implements ClinicInterface
         $clinic->company_insurance()->sync((array)$request->company_insurance);
         $clinic->update(array_merge($request->all(), $data));
     }
+
+    public function Get_One_By_Code($code)
+    {
+        return $this->clinic->where('code_number',$code)->select('id')->first();
+    }
 }

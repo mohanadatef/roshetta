@@ -256,6 +256,11 @@ Route::group(['middleware' => 'admin', 'auth', 'language', 'permission:dashboard
                 Route::get('/edit/{id}', [App\Http\Controllers\Acl\HospitalBranchController::class, 'edit'])->middleware('permission:hospital-branch-edit');
                 Route::patch('/update/{id}', [App\Http\Controllers\Acl\HospitalBranchController::class, 'update'])->middleware('permission:hospital-branch-edit');
             });
+            Route::prefix('/clinic')->middleware('permission:hospital-clinic-list')->group(function () {
+                Route::get('/index', [App\Http\Controllers\Acl\HospitalClinicController::class, 'index'])->middleware('permission:hospital-clinic-index');
+                Route::get('/create', [App\Http\Controllers\Acl\HospitalClinicController::class, 'create'])->middleware('permission:hospital-clinic-create');
+                Route::Post('/store', [App\Http\Controllers\Acl\HospitalClinicController::class, 'store'])->middleware('permission:hospital-clinic-create');
+            });
         });
         Route::prefix('/clinic')->group(function () {
             Route::middleware('permission:clinic-list')->group(function () {
